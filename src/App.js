@@ -4,6 +4,7 @@ import axios from 'axios'
 import Home from './components/Home/Home'
 import Login from './components/Login/Login';
 import Register from './components/Login/Register';
+import NavBar from './components/NavBar/NavBar';
 import jwtDecode from 'jwt-decode';
 
 
@@ -54,13 +55,16 @@ class App extends Component {
    }
 
   render () {
-    var user = this.state.user;
+    const user = this.state.user;
     return(
-        <div>
-          <Home />
-          <Register />
-          <Login />
-        </div>  
+      <div>
+        <NavBar/>
+        <Routes> 
+          <Route path='/home' component={Home} />
+          <Route path='/register' component={Register} />
+          <Route path='/login' component={Login} />
+        </Routes>
+      </div>  
     )}
 }
 
