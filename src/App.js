@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
 import { Routes, Route } from 'react-router-dom';
 import axios from 'axios'
-import Home from './components/Home/Home'
 import Login from './components/Login/Login';
 import Register from './components/Login/Register';
+import Home from './components/Home/Home'
 import NavBar from './components/NavBar/NavBar';
 import jwtDecode from 'jwt-decode';
 
@@ -61,9 +61,9 @@ class App extends Component {
         <NavBar/>
         <Routes> 
           <Route path='/home' component={Home} />
-          <Route path='/register' component={Register} />
-          <Route path='/login' component={Login} />
-        </Routes>
+          <Route path='/register' render={props => <Register {...props} createNewUser={this.createNewUser} />} />
+          <Route path='/login'  render ={props => <Login {...props} userSignIn={this.userSignIn}/>}/>
+          </Routes>
       </div>  
     )}
 }
