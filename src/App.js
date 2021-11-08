@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Routes, Route } from 'react-router-dom';
+import { Route, Routes, BrowserRouter as Router, Switch } from 'react-router-dom';
 import axios from 'axios'
 import Login from './components/Login/Login';
 import Register from './components/Login/Register';
@@ -13,10 +13,8 @@ class App extends Component {
   constructor(props){
     super(props);
       this.state = {
-        user: "",
-        allPlayers : [],
-        selectedPlayer : [],
-        playerInfo :[]
+        isUserAuthenticated: false,
+        user: {},
       }
   }
 
@@ -24,16 +22,15 @@ class App extends Component {
     const jwt = localStorage.getItem('token');
     try{
     const user = jwtDecode(jwt);
-    this.setState({user});
-    this.getAllPlayers();
+    this.setState({user, isUserAuthenticated : true});
     } catch (err) {
       
     }
   }
 
-  createNewUser = async(User)=>{
+  createNewUser = async(newUser)=>{
     try{
-      const response = await axios.post(`http://127.0.0.1:8000/api/auth/register/`, User)
+      const response = await axios.post(`http://127.0.0.1:8000/api/auth/register/`, newUser)
     }
     catch(err){  
     }
@@ -43,7 +40,7 @@ class App extends Component {
     try{
       const response = await axios.post('http://127.0.0.1:8000/api/auth/login/', userCredentials)
       localStorage.setItem('token', response.data.token)
-       window.location = '/Home';
+       window.location = '/';
     }
     catch (err){
     }
@@ -59,11 +56,11 @@ class App extends Component {
     return(
       <div>
         <NavBar/>
-        <Routes> 
-          <Route path='/home' component={Home} />
-          <Route path='/register' render={props => <Register {...props} createNewUser={this.createNewUser} />} />
-          <Route path='/login'  render ={props => <Login {...props} userSignIn={this.userSignIn}/>}/>
-          </Routes>
+        <Routes>
+            <Route path='/home' component={Home} />
+            <Route path='/register' render={props => <Register {...props} createNewUser={this.createNewUser} />} />
+            <Route path='/login'  render ={props => <Login {...props} userSignIn={this.userSignIn}/>}/>
+        </Routes>
       </div>  
     )}
 }

@@ -9,36 +9,30 @@ export default function Register(props) {
 
     const handleFirstNameChange = (event) =>{
         setFirstName(event.target.value);
-        console.log("firstName", firstName)
       }
     
       const handleLastNameChange = (event) =>{
         setLastName(event.target.value);
-        console.log("lastName", lastName)
       }
         
       const handleEmailChange = (event) =>{
         setEmail(event.target.value);
-        console.log("email", email)
       }
         
       const handlePasswordChange = (event) =>{
         setPassword(event.target.value)
-        console.log("password", password)
       }
     
     
       const handleSubmit = (event) => {
         event.preventDefault();
         const newUser = {
-            firstname : firstName,
-            lastname : lastName,
+            first_name : firstName,
+            last_name : lastName,
             username : email,
             email : email,
             password : password,
-        } 
-        console.log("handleSubmit:", newUser)
-        console.log("handleSubmit:", props)
+        }
         props.createNewUser(newUser);
       };
 
