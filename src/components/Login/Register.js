@@ -1,6 +1,6 @@
 import React, {useState } from 'react'
 
-export default function Register(props) {
+const Register = (props) => {
 
     const [firstName, setFirstName] = useState();
     const [lastName, setLastName] = useState();
@@ -53,3 +53,4 @@ export default function Register(props) {
         </div>
     )
 }
+export default Register

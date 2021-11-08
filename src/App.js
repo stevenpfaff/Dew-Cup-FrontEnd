@@ -56,11 +56,8 @@ class App extends Component {
     return(
       <div>
         <NavBar/>
-        <Routes>
-            <Route path='/home' component={Home} />
-            <Route path='/register' render={props => <Register {...props} createNewUser={this.createNewUser} />} />
-            <Route path='/login'  render ={props => <Login {...props} userSignIn={this.userSignIn}/>}/>
-        </Routes>
+        <Register createNewUser={this.createNewUser}/>
+        <Login userSignIn={this.userSignIn}/>
       </div>  
     )}
 }
