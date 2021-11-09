@@ -1,4 +1,5 @@
 import React, {useState } from 'react'
+import "./Login.css"
 
 const Login = (props) => {
 
@@ -26,11 +27,11 @@ const Login = (props) => {
     </hgroup>
     <form>
     <div class="group">
-        <input type="text" placeholder="Email" onChange={handleEmailChange}/><span class="highlight"></span><span class="bar"></span>
+        <input type="text" onChange={handleEmailChange}/><span class="highlight"></span><span class="bar"></span>
         <label>Email</label>
     </div>
     <div class="group">
-        <input type="password" placeholder="Password" onChange={handlePasswordChange}/><span class="highlight"></span><span class="bar"></span>
+        <input type="password" onChange={handlePasswordChange}/><span class="highlight"></span><span class="bar"></span>
         <label>Password</label>
     </div>
     <button type="button" class="button buttonBlue" onClick={handleSubmit}>Login
