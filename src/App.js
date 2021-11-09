@@ -5,7 +5,7 @@ import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import Home from './components/Home/Home'
 import NavBar from './components/NavBar/NavBar';
-import CreateTeam from './components/CreateTeam/CreateTeam';
+import Teams from './components/Teams/Teams';
 import jwt_decode from 'jwt-decode';
 
 
@@ -87,7 +87,7 @@ class App extends Component {
           <Route path="/" exact component={Home}/>
           <Route path = "/Register" render={(props) => (<Register {...props} createNewUser={this.createNewUser}/>)}/>
           <Route path="/Login" render={(props) => (<Login {...props} userSignIn={this.userSignIn}/>)}/>
-          <Route path="/Teams" render={(props) => (<CreateTeam {...props} getAllTeams={this.getAllTeams}/>)}/>
+          <Route path="/Teams" render={(props) => (<Teams {...props} getAllTeams={this.getAllTeams}/>)}/>
         </Switch>
       </div>  
     )}

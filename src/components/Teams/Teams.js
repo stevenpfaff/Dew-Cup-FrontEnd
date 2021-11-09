@@ -3,8 +3,9 @@ import axios from 'axios'
 import { render } from 'react-dom';
 import {Table} from 'react-bootstrap'
 import {Button} from '@material-ui/core'
+import "./Teams.css"
 
-class CreateTeam extends Component {
+class Teams extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -61,4 +62,4 @@ render() {
      );
 }
 }
-export default CreateTeam;
+export default Teams;
