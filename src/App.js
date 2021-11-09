@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom';
 import axios from 'axios'
 import Login from './components/Login/Login';
-import Register from './components/Login/Register';
+import Register from './components/Register/Register';
 import Home from './components/Home/Home'
 import NavBar from './components/NavBar/NavBar';
 import jwt_decode from 'jwt-decode';
@@ -58,8 +58,8 @@ class App extends Component {
         <NavBar user={user} logOutUser={this.logOutUser}/>
         <Switch>
           <Route path="/" exact component={Home}/>
-          <Route path = "/Register" component={Register}/>
-          <Route path="/Login" component={Login}/>
+          <Route path = "/Register" render={(props) => (<Register {...props} createNewUser={this.createNewUser}/>)}/>
+          <Route path="/Login" render={(props) => (<Login {...props} userSignIn={this.userSignIn}/>)}/>
         </Switch>
       </div>  
     )}
