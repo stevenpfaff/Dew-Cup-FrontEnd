@@ -7,8 +7,6 @@ import Container from 'react-bootstrap/Container'
 
 function NavBar(props) {
     return(
-        
-
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
   <Container>
         <a class="navbar-brand" href="#">
@@ -22,7 +20,6 @@ function NavBar(props) {
                     <Nav.Link onClick={props.userSignIn} href="/login">Login</Nav.Link>
                     <Nav.Link  onClick={props.createNewUser} href="/register">Register</Nav.Link> 
                     <Nav.Link onClick={props.logOutUser} href="/login">Logout</Nav.Link>
-                    
                 </Nav>
             </Navbar.Collapse>
           </Container>

@@ -1,11 +1,11 @@
 import React, {Component} from 'react'
-import { Route, Routes, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import axios from 'axios'
 import Login from './components/Login/Login';
 import Register from './components/Login/Register';
 import Home from './components/Home/Home'
 import NavBar from './components/NavBar/NavBar';
-import jwtDecode from 'jwt-decode';
+import jwt_decode from 'jwt-decode';
 
 
 
@@ -21,7 +21,7 @@ class App extends Component {
   componentDidMount () {
     const jwt = localStorage.getItem('token');
     try{
-    const user = jwtDecode(jwt);
+    const user = jwt_decode(jwt);
     this.setState({user, isUserAuthenticated : true});
     } catch (err) {
       
@@ -52,12 +52,15 @@ class App extends Component {
    }
 
   render () {
-    const user = this.state.user;
+    var user = this.state.user;
     return(
       <div>
-        <NavBar/>
-        <Register createNewUser={this.createNewUser}/>
-        <Login userSignIn={this.userSignIn}/>
+        <NavBar user={user} logOutUser={this.logOutUser}/>
+        <Switch>
+          <Route path="/" exact component={Home}/>
+          <Route path = "/Register" component={Register}/>
+          <Route path="/Login" component={Login}/>
+        </Switch>
       </div>  
     )}
 }
