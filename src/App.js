@@ -6,6 +6,7 @@ import Register from './components/Register/Register';
 import Home from './components/Home/Home'
 import NavBar from './components/NavBar/NavBar';
 import Teams from './components/Teams/Teams';
+import Players from './components/Players/Players';
 import jwt_decode from 'jwt-decode';
 
 
@@ -76,6 +77,13 @@ class App extends Component {
        catch{
        }
      }
+
+     getAllPlayers = async () => {
+      let response = await axios.get('http://127.0.0.1:8000/api/players/all')
+      this.setState({
+        allPlayers : response.data
+      })
+    }
    
 
   render () {
@@ -88,6 +96,7 @@ class App extends Component {
           <Route path = "/Register" render={(props) => (<Register {...props} createNewUser={this.createNewUser}/>)}/>
           <Route path="/Login" render={(props) => (<Login {...props} userSignIn={this.userSignIn}/>)}/>
           <Route path="/Teams" render={(props) => (<Teams {...props} getAllTeams={this.getAllTeams}/>)}/>
+          <Route path="/Players" render={(props) => (<Players {...props} getAllPlayers={this.getAllPlayers}/>)}/>
         </Switch>
       </div>  
     )}
