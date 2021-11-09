@@ -15,7 +15,8 @@ class App extends Component {
     super(props);
       this.state = {
         user : "",
-        allTeams : []
+        allTeams : [],
+        allPlayers : [],
       }
   }
 
@@ -58,6 +59,24 @@ class App extends Component {
        allTeams : response.data
      })
    }
+
+   playerSearch = async (searchTerm) => {
+     try{
+       const filteredList = [];
+       const filter = this.state.allPlayers.filter(function(player){
+         if(
+         player.name.toLowerCase() == searchTerm.toLowerCase())
+         {
+           filteredList.push(player)
+         }
+       })
+       this.setState({
+         allPlayers : filteredList
+       })}
+       catch{
+       }
+     }
+   
 
   render () {
     var user = this.state.user;

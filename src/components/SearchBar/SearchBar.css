@@ -1,0 +1,16 @@
+.search-bar {
+    width: 100%;
+    margin: 40px auto;
+    line-height: 56px;
+    position: relative
+  }
+
+.input[type="text"] {
+    width: 89%;
+    height: 33px;
+    padding: 0 10px;
+    color: #000;
+    border: 1px solid #BEBEBE;
+    border-radius: 2px 0 0 2px;
+    z-index: 2
+  }
