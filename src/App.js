@@ -8,6 +8,7 @@ import NavBar from './components/NavBar/NavBar';
 import Teams from './components/Teams/Teams';
 import Players from './components/Players/Players';
 import CreateTeam from './components/Teams/CreateTeam';
+import CreatePlayer from './components/Players/CreatePlayer';
 import jwtDecode from 'jwt-decode';
 
 
@@ -71,6 +72,13 @@ class App extends Component {
       return response.status
     }
 
+    createNewPlayer = async (player) => {
+      let response = await axios.post(`http://127.0.0.1:8000/api/teams/`, player)
+      this.getAllPlayers();
+      window.location = "/Players"
+      return response.status
+    }
+
    playerSearch = async (searchTerm) => {
      try{
        const filteredList = [];
@@ -107,6 +115,7 @@ class App extends Component {
           <Route path="/Login" render={props => <Login {...props} userSignIn={this.userSignIn}/>}/>
           <Route path="/Teams" render={props => <Teams {...props} getAllTeams={this.getAllTeams}/>}/>
           <Route path="/CreateTeam" render={props => <CreateTeam {...props} createNewTeam={this.createNewTeam}/>}/>
+          <Route path ="/CreatePlayer" render={props => <CreatePlayer {...props} createNewPlayer={this.createNewPlayer}/>}/>
           <Route path="/Players" render={props => <Players {...props} getAllPlayers={this.getAllPlayers}/>}/>
         </Switch>
       </div>  

@@ -53,7 +53,7 @@ class CreateTeam extends Component {
             players : this.state.players
         }
         console.log('Create Submit', this.props, newTeam)
-        this.props.createTeam(newTeam);
+        this.props.createNewTeam(newTeam);
     };
 
     render() {

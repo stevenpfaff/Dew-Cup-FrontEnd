@@ -18,7 +18,8 @@ function NavBar(props) {
                     <Nav.Link href="/">Home</Nav.Link>
                     <Nav.Link href="/Teams">Teams</Nav.Link>  
                     <Nav.Link href="/CreateTeam"> Create Team </Nav.Link>
-                    <Nav.Link href="/Players">Players</Nav.Link>            
+                    <Nav.Link href="/Players">Players</Nav.Link>
+                    <Nav.Link href="/CreatePlayer">Create Player</Nav.Link>                 
                     </Nav>
                     <Nav>                   
                     <Nav.Link onClick={props.userSignIn} href="/login">Login</Nav.Link>
