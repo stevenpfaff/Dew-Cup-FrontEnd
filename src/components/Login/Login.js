@@ -1,44 +1,48 @@
-import React, {useState } from 'react'
+import React, {Component } from 'react'
+import { render } from 'react-dom';
 import "./Login.css"
 
-const Login = (props) => {
-
-    const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
-
-    const handleEmailChange = (event) => {
-        setEmail(event.target.value)
+class Login extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            email: "",
+            password: ""
+        }
     }
 
-    const handlePasswordChange = (event) => {
-        setPassword(event.target.value)
+    handleChange = (event) => {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
     }
 
-    const handleSubmit = (event) => {
+    handleSubmit = (event) => {
         event.preventDefault();
-        const user = {email : email, password : password}
-        props.userSignIn(user)
+        this.props.userSignIn(this.state)
     }
 
-    return(
-        <div>
-        <hgroup>
-  <h1>Sign In</h1>
-    </hgroup>
-    <form>
-    <div class="group">
-        <input type="text" onChange={handleEmailChange}/><span class="highlight"></span><span class="bar"></span>
-        <label>Email</label>
-    </div>
-    <div class="group">
-        <input type="password" onChange={handlePasswordChange}/><span class="highlight"></span><span class="bar"></span>
-        <label>Password</label>
-    </div>
-    <button type="button" class="button buttonBlue" onClick={handleSubmit}>Login
-        <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
-    </button>
-    </form>
-    </div>
-    )
+    render(){
+        return(
+            <div>
+            <hgroup>
+    <h1>Sign In</h1>
+        </hgroup>
+        <form>
+        <div class="group">
+            <input type="text" onChange={this.handleChange}/><span class="highlight"></span><span class="bar"></span>
+            <label>Email</label>
+        </div>
+        <div class="group">
+            <input type="password" onChange={this.handleChange}/><span class="highlight"></span><span class="bar"></span>
+            <label>Password</label>
+        </div>
+        <button type="button" class="button buttonBlue" onClick={this.handleSubmit}>Login
+            <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+        </button>
+        </form>
+        </div>
+        )
+    }
 }
 export default Login;

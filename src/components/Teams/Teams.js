@@ -21,12 +21,12 @@ componentDidMount = () => {
 getAllTeams = async() => {
     let response = await axios.get('http://127.0.0.1:8000/api/teams/all')
     this.setState({
-        team : response.data
+        teams : response.data
     })
 }
 
 deleteTeam = async(team_id) => {
-    let response = await axios.delete(`http://127.0.0.1:8000/api/teams/all/${team_id}`)
+    let response = await axios.delete(`http://127.0.0.1:8000/api/teams/${team_id}`)
     this.getAllTeams()
     return response.status
 }

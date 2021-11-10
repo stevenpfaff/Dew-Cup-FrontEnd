@@ -7,7 +7,7 @@ import Home from './components/Home/Home'
 import NavBar from './components/NavBar/NavBar';
 import Teams from './components/Teams/Teams';
 import Players from './components/Players/Players';
-import jwt_decode from 'jwt-decode';
+import jwtDecode from 'jwt-decode';
 
 
 
@@ -24,14 +24,14 @@ class App extends Component {
   componentDidMount () {
     const jwt = localStorage.getItem('token');
     try{
-    const user = jwt_decode(jwt);
-    this.setState({user, isUserAuthenticated : true});
+    const user = jwtDecode(jwt);
+    this.setState({user});
     } catch (err) {
-      
+      console.log("Error")
     }
   }
 
-  createNewUser = async(newUser)=>{
+  createNewUser = async (newUser) => {
     try{
       const response = await axios.post(`http://127.0.0.1:8000/api/auth/register/`, newUser)
     }
@@ -39,13 +39,14 @@ class App extends Component {
     }
    }
 
-   userSignIn = async (userCredentials) =>{
+   userSignIn = async (userCredentials) => {
+    const response = await axios.post('http://127.0.0.1:8000/api/auth/login/', userCredentials)
     try{
-      const response = await axios.post('http://127.0.0.1:8000/api/auth/login/', userCredentials)
-      localStorage.setItem('token', response.data.token)
-       window.location = '/';
+      localStorage.setItem('token', response.data.access)
+       window.location = '/login';
     }
     catch (err){
+      console.log("Login Error")
     }
   }
 
@@ -93,10 +94,10 @@ class App extends Component {
         <NavBar user={user} logOutUser={this.logOutUser}/>
         <Switch>
           <Route path="/" exact component={Home}/>
-          <Route path = "/Register" render={(props) => (<Register {...props} createNewUser={this.createNewUser}/>)}/>
-          <Route path="/Login" render={(props) => (<Login {...props} userSignIn={this.userSignIn}/>)}/>
-          <Route path="/Teams" render={(props) => (<Teams {...props} getAllTeams={this.getAllTeams}/>)}/>
-          <Route path="/Players" render={(props) => (<Players {...props} getAllPlayers={this.getAllPlayers}/>)}/>
+          <Route path = "/Register" render={props => <Register {...props} createNewUser={this.createNewUser}/>}/>
+          <Route path="/Login" render={props => <Login {...props} userSignIn={this.userSignIn}/>}/>
+          <Route path="/Teams" render={props => <Teams {...props} getAllTeams={this.getAllTeams}/>}/>
+          <Route path="/Players" render={props => (<Players {...props} getAllPlayers={this.getAllPlayers}/>)}/>
         </Switch>
       </div>  
     )}
