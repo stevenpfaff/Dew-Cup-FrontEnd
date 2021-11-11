@@ -74,7 +74,8 @@ class CreatePlayer extends Component {
                     <Form.Group className="mb-3" controlId="formGroupRating">
                         <Form.Control type="text" placeholder="About Me" onChange={this.handleInfoChange} value={this.state.info}/>
                     </Form.Group>
-                    <Grid style={{marginLeft: "850px"}}><Button type="submit" variant="contained">Submit</Button></Grid>
+                    <Button type="submit" variant="contained">Create Player</Button>
+                    <Grid style={{marginLeft: "850px"}}></Grid>
                 </form>
     );
     }

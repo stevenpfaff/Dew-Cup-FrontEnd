@@ -26,12 +26,6 @@ getAllPlayers = async() => {
     })
 }
 
-deletePlayer = async(player_id) => {
-    let response = await axios.delete(`http://127.0.0.1:8000/api/players/all/${player_id}`)
-    this.getAllPlayers()
-    return response.status
-}
-
 render() {
     return ( 
         <div style={{marginRight: "450px", marginLeft: "250px", marginBottom: "250px"}} >
@@ -53,9 +47,6 @@ render() {
                             <td>{player.games_played}</td>
                             <td>{player.goals}</td>
                             <td>{player.assists}</td>
-                           <td> <Button variant="contained" onClick={()=>this.deleteItem(player.player_id)} 
-                                style={{paddingBottom: "10px", paddingTop: "10px", marginTop: "5px"}}   
-                                >Delete Player</Button> </td>
                             </tr>   
                         </tbody>
                         ))}

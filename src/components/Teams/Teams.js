@@ -25,11 +25,6 @@ getAllTeams = async() => {
     })
 }
 
-deleteTeam = async(team_id) => {
-    let response = await axios.delete(`http://127.0.0.1:8000/api/teams/${team_id}`)
-    this.getAllTeams()
-    return response.status
-}
 
 render() {
     return ( 
@@ -41,7 +36,10 @@ render() {
                             <th>Team Name</th>
                             <th>Wins</th>
                             <th>Losses</th>
+                            <th>Goals</th>
+                            <th>Goals Against </th>
                             <th>Championships</th>
+                            <th>Players</th>
                             </tr>
                         </thead>
                         {this.state.teams.map((team)=>(
@@ -50,10 +48,10 @@ render() {
                             <td>{team.name}</td>
                             <td>{team.wins}</td>
                             <td>{team.losses}</td>
+                            <td>{team.goals}</td>
+                            <td>{team.goals_against}</td>
                             <td>{team.championships}</td>
-                           <td> <Button variant="contained" onClick={()=>this.deleteItem(team.team_id)} 
-                                style={{paddingBottom: "10px", paddingTop: "10px", marginTop: "5px"}}   
-                                >Delete Team</Button> </td>
+                            <td>{team.players}</td>
                             </tr>   
                         </tbody>
                         ))}

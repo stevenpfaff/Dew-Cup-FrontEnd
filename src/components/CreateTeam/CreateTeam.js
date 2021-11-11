@@ -93,7 +93,8 @@ class CreateTeam extends Component {
                     <Form.Group className="mb-3" controlId="formGroupRating">
                         <Form.Control type="text" placeholder="Players" onChange={this.handlePlayerChange} value={this.state.players}/>
                     </Form.Group>
-                    <Grid style={{marginLeft: "850px"}}><Button type="submit" variant="contained">Submit</Button></Grid>
+                    <Button type="submit" variant="contained">Create Team</Button>
+                    <Grid style={{marginLeft: "850px"}}></Grid>
                 </form>
     );
     }
