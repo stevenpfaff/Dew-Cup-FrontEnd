@@ -36,6 +36,7 @@ class App extends Component {
   createNewUser = async (newUser) => {
     try{
       const response = await axios.post(`http://127.0.0.1:8000/api/auth/register/`, newUser)
+      window.location = '/login'
     }
     catch(err){  
     }
@@ -46,7 +47,7 @@ class App extends Component {
     try{
       localStorage.setItem('token', response.data.access)
       console.log("Token", response.data.access)
-       window.location = '/login';
+       window.location = '/';
     }
     catch (err){
       console.log("Login Error")
@@ -73,7 +74,7 @@ class App extends Component {
     }
 
     createNewPlayer = async (player) => {
-      let response = await axios.post(`http://127.0.0.1:8000/api/teams/`, player)
+      let response = await axios.post(`http://127.0.0.1:8000/api/players/`, player)
       this.getAllPlayers();
       window.location = "/Players"
       return response.status

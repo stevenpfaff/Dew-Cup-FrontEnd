@@ -63,7 +63,7 @@ class CreatePlayer extends Component {
                         <Form.Control type="text" placeholder="Player Name" onChange={this.handleNameChange} value={this.state.name}/>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formGroupDescription"> 
-                        <Form.Control type="text" placeholder="Games Played" onChange={this.handleGameChange} value={this.state.games_played}/>
+                        <Form.Control type="number" placeholder="Games Played" onChange={this.handleGameChange} value={this.state.games_played}/>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formGroupPrice">              
                         <Form.Control type="number" placeholder="Goals" onChange={this.handleGoalsChange} value={this.state.goals}/>

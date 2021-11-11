@@ -13,7 +13,6 @@ class CreateTeam extends Component {
         wins : "",
         losses : "",
         championships : "",
-        players : ""
         };
     }
 
@@ -37,12 +36,6 @@ class CreateTeam extends Component {
             championships: event.target.value,
         });
     }
-    handlePlayersChange = (event) => {
-        this.setState({
-           players: event.target.value,
-        });
-    }
-
     handleSubmit = (event) => {
         event.preventDefault();
         const newTeam = {
@@ -50,7 +43,6 @@ class CreateTeam extends Component {
             wins : parseInt(this.state.wins),
             losses : parseInt(this.state.losses),
             championships : parseInt(this.state.championships),
-            players : this.state.players
         }
         console.log('Create Submit', this.props, newTeam)
         this.props.createNewTeam(newTeam);
@@ -63,23 +55,13 @@ class CreateTeam extends Component {
                         <Form.Control type="text" placeholder="Team Name" onChange={this.handleNameChange} value={this.state.name}/>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formGroupDescription">
-                        <Form.Control type="text" placeholder="Wins" onChange={this.handleWinsChange} value={this.state.wins}/>
+                        <Form.Control type="number" placeholder="Wins" onChange={this.handleWinsChange} value={this.state.wins}/>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formGroupPrice">
                         <Form.Control type="number" placeholder="Losses" onChange={this.handleLossesChange} value={this.state.losses}/>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formGroupRating">
                         <Form.Control type="number" placeholder="Championships" onChange={this.handleChampsChange} value={this.state.championships}/>
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formGroupCategory">
-                        <Form.Select aria-label="Floating label select example" onChange={this.handlePlayersChange} value={this.state.players}>
-                                                        <option>Select a Category:</option>
-                                                        <option value="Guitar">Guitar</option>
-                                                        <option value="Amp">Amp</option>
-                                                        <option value="Keyboard">Keyboard</option>
-                                                        <option value="Drums">Drums</option>
-                                                        <option value="Live Sound">Live Sound</option>
-                                                    </Form.Select>
                     </Form.Group>
                     <Grid style={{marginLeft: "850px"}}><Button type="submit" variant="contained">Submit</Button></Grid>
                 </form>
