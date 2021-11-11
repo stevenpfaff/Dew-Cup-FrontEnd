@@ -60,23 +60,18 @@ class CreatePlayer extends Component {
         return (
                 <form onSubmit={this.handleSubmit}>
                     <Form.Group className="mb-3" controlId="formGroupEmail">
-                        <Form.Label>Player Name</Form.Label>
                         <Form.Control type="text" placeholder="Player Name" onChange={this.handleNameChange} value={this.state.name}/>
                     </Form.Group>
-                    <Form.Group className="mb-3" controlId="formGroupDescription">
-                        <Form.Label>Games Played</Form.Label>
+                    <Form.Group className="mb-3" controlId="formGroupDescription"> 
                         <Form.Control type="text" placeholder="Games Played" onChange={this.handleGameChange} value={this.state.games_played}/>
                     </Form.Group>
-                    <Form.Group className="mb-3" controlId="formGroupPrice">
-                        <Form.Label>Goals</Form.Label>
+                    <Form.Group className="mb-3" controlId="formGroupPrice">              
                         <Form.Control type="number" placeholder="Goals" onChange={this.handleGoalsChange} value={this.state.goals}/>
                     </Form.Group>
-                    <Form.Group className="mb-3" controlId="formGroupRating">
-                        <Form.Label>Assists</Form.Label>
+                    <Form.Group className="mb-3" controlId="formGroupRating">                       
                         <Form.Control type="number" placeholder="Assists" onChange={this.handleAssistsChange} value={this.state.assists}/>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formGroupRating">
-                        <Form.Label>About Me</Form.Label>
                         <Form.Control type="text" placeholder="About Me" onChange={this.handleInfoChange} value={this.state.info}/>
                     </Form.Group>
                     <Grid style={{marginLeft: "850px"}}><Button type="submit" variant="contained">Submit</Button></Grid>

@@ -60,23 +60,18 @@ class CreateTeam extends Component {
         return (
                 <form onSubmit={this.handleSubmit}>
                     <Form.Group className="mb-3" controlId="formGroupEmail">
-                        <Form.Label>Product Name</Form.Label>
                         <Form.Control type="text" placeholder="Team Name" onChange={this.handleNameChange} value={this.state.name}/>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formGroupDescription">
-                        <Form.Label>Description</Form.Label>
                         <Form.Control type="text" placeholder="Wins" onChange={this.handleWinsChange} value={this.state.wins}/>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formGroupPrice">
-                        <Form.Label>Price</Form.Label>
                         <Form.Control type="number" placeholder="Losses" onChange={this.handleLossesChange} value={this.state.losses}/>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formGroupRating">
-                        <Form.Label>Rating</Form.Label>
                         <Form.Control type="number" placeholder="Championships" onChange={this.handleChampsChange} value={this.state.championships}/>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formGroupCategory">
-                        <Form.Label>Category</Form.Label>
                         <Form.Select aria-label="Floating label select example" onChange={this.handlePlayersChange} value={this.state.players}>
                                                         <option>Select a Category:</option>
                                                         <option value="Guitar">Guitar</option>

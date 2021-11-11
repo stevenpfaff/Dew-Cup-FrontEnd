@@ -7,8 +7,8 @@ import Home from './components/Home/Home'
 import NavBar from './components/NavBar/NavBar';
 import Teams from './components/Teams/Teams';
 import Players from './components/Players/Players';
-import CreateTeam from './components/Teams/CreateTeam';
-import CreatePlayer from './components/Players/CreatePlayer';
+import CreateTeam from './components/CreateTeam/CreateTeam';
+import CreatePlayer from './components/CreatePlayer/CreatePlayer';
 import jwtDecode from 'jwt-decode';
 
 

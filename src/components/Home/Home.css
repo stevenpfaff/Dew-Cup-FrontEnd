@@ -1,5 +1,9 @@
 h1,
-td,
+td{
+    text-align: center;
+}
+
 thead{
+    background-color: greenyellow;
     text-align: center;
 }
