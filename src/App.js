@@ -44,8 +44,8 @@ class App extends Component {
    }
 
    userSignIn = async (userCredentials) => {
-    const response = await axios.post(`http://127.0.0.1:8000/api/auth/login/`, userCredentials)
     try{
+      const response = await axios.post(`http://127.0.0.1:8000/api/auth/login/`, userCredentials)
       localStorage.setItem('token', response.data.access)
        window.location = '/';
     }
@@ -61,7 +61,7 @@ class App extends Component {
 
    getAllTeams = async () => {
      try {
-     let response = await axios.get('http://127.0.0.1:8000/api/teams/all')
+     let response = await axios.get('http://127.0.0.1:8000/api/teams/all/')
      this.setState({
        teams : response.data
      });} 
@@ -83,26 +83,19 @@ class App extends Component {
       return response.status
     }
 
-   playerSearch = async (searchTerm) => {
-     try{
-       const filteredList = [];
-       const filter = this.state.allPlayers.filter(function(player){
-         if(
-         player.name.toLowerCase() == searchTerm.toLowerCase())
-         {
-           filteredList.push(player)
-         }
-       })
+   playerSearch = (searchTerm) => {
+       const filteredList = this.state.allPlayers.filter(function(player){
+        return player.name.toLowerCase() == searchTerm.toLowerCase()
+        })
        this.setState({
          allPlayers : filteredList
-       })}
-       catch{
-       }
-     }
+       })
+      }
+    
 
      getAllPlayers = async () => {
        try {
-      let response = await axios.get('http://127.0.0.1:8000/api/players/all')
+      let response = await axios.get('http://127.0.0.1:8000/api/players/all/')
       this.setState({
         players : response.data
       })}

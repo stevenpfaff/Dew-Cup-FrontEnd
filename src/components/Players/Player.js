@@ -8,7 +8,7 @@ let { name } = useParams()
 
   return (
     <div>
-        <h1> {name} Stats Page</h1>
+        <h1> {name}'s Stats Page</h1>
     </div>
   )
 }

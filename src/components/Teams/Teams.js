@@ -9,7 +9,15 @@ class Teams extends Component {
     constructor(props){
         super(props);
         this.state = {
-            teams: [],
+            teams : [{
+            name: "",
+            wins: [],
+            losses : [],
+            goals: [],
+            goals_against: [],
+            championships: [],
+            players: "",
+            }]
         }
     }
 
@@ -19,7 +27,7 @@ componentDidMount = () => {
 }
 
 getAllTeams = async() => {
-    let response = await axios.get('http://127.0.0.1:8000/api/teams/all')
+    let response = await axios.get('http://127.0.0.1:8000/api/teams/all/')
     this.setState({
         teams : response.data
     })

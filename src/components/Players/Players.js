@@ -12,21 +12,24 @@ class Players extends Component {
         super(props);
         this.state = {
             players: [{
-                name: "Steven",
-                games_played: 12, 
-                goals: 0, assists: 0, info: "A brutal player",}],
+                name: "",
+                games_played: "", 
+                goals: "",
+                assists: "",
+                info: "",
+            }],
         }
     }
 
 
 componentDidMount = () => {
-    //this.getAllPlayers();
+    this.getAllPlayers();
 }
 
 getAllPlayers = async() => {
-    let response = await axios.get('http://127.0.0.1:8000/api/players/all')
+    let response = await axios.get('http://127.0.0.1:8000/api/players/all/')
     this.setState({
-        player : response.data
+        players : response.data
     })
 }
 
