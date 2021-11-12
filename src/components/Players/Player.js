@@ -6,10 +6,12 @@ import { Table } from 'react-bootstrap'
 
 const Player = (props) => {
   const { name } = useParams()
-  const {goals} = useState()
-  const {games_played} = useState()
-  const {assists} = useState()
-  const {info} = useState()
+  const [goals] = useState()
+  const [games_played] = useState()
+  const [assists] = useState()
+  const [info] = useState()
+
+  
 
 
   return (

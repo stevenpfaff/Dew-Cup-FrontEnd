@@ -11,6 +11,7 @@ import CreateTeam from './components/CreateTeam/CreateTeam';
 import CreatePlayer from './components/CreatePlayer/CreatePlayer';
 import Player from './components/Players/Player';
 import jwtDecode from 'jwt-decode';
+import {Grid} from '@material-ui/core'
 
 
 
@@ -117,9 +118,18 @@ class App extends Component {
   render () {
     var user = this.state.user;
     return(
-      <div>
+      <Grid>
         <NavBar user={user} logOutUser={this.logOutUser}/>
+        <div className="App">
         <Switch>
+          <Route path="/Home" exact render={props => {
+          if(!user){
+            return <Redirect to="/Login" />
+          }
+        else{
+          return <Home {...props} user={user} />
+        }}
+      }/>
           <Route path="/" exact component={Home}/>
           <Route path = "/Register" render={props => <Register {...props} createNewUser={this.createNewUser}/>}/>
           <Route path="/Login" render={props => <Login {...props} userSignIn={this.userSignIn}/>}/>
@@ -129,7 +139,8 @@ class App extends Component {
           <Route path="/Players" render={props => <Players {...props} getAllPlayers={this.getAllPlayers}/>}exact/>
           <Route path="/Players/:name/profile" render={props => <Player {...props} getPlayer={this.getPlayer}/>}/>
         </Switch>
-      </div>  
+      </div> 
+      </Grid> 
     )}
 }
 
