@@ -18,6 +18,15 @@ import {Form} from 'react-bootstrap';
         
     }
 
+    const playerSearch = (searchTerm) => {
+        const filteredList = this.state.allPlayers.filter(function(player){
+         return player.name.toLowerCase() == searchTerm.toLowerCase()
+         })
+        this.setState({
+          allPlayers : filteredList
+        })
+       }
+
     
     return (
         <Container>
