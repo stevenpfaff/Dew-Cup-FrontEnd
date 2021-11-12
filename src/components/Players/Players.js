@@ -45,17 +45,15 @@ render() {
                             <th>Games Played</th>
                             <th>Goals</th>
                             <th>Assists</th>
-                            <th>Info</th>
                             </tr>
                         </thead>                       
                         <tbody>
                         {this.state.players.map((player)=>(
                             <tr>
-                            <td><Link to={`/Players/${player.name}/stats`}>{player.name}</Link></td>
+                            <td><Link to={`/Players/${player.name}/profile`}>{player.name}</Link></td>
                             <td>{player.games_played}</td>
                             <td>{player.goals}</td>
                             <td>{player.assists}</td>
-                            <td>{player.info}</td>
                             </tr>   
                         ))}
                         </tbody>

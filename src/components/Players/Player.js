@@ -8,7 +8,19 @@ let { name } = useParams()
 
   return (
     <div>
-        <h1> {name}'s Stats Page</h1>
+        <h1 style={{marginLeft: "100px", marginBottom: "100px", marginTop: "80px", fontFamily: "inherit"}}> {name}'s Player Profile</h1>
+          <thead>
+            <tr>
+              <th>Games Played</th>
+              <th>Goals</th>
+              <th>Assists</th>  
+            </tr>
+          </thead>
+          <tbody>
+            {/* <td>{player.games_played}</td>
+            <td>{player.goals}</td>
+            <td>{player.assists}</td>  */}
+          </tbody>      
     </div>
   )
 }

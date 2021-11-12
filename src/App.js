@@ -83,6 +83,16 @@ class App extends Component {
       return response.status
     }
 
+    getPlayer = async () => {
+      try {
+      let response = await axios.get('http://127.0.0.1:8000/api/players/:name/profile')
+      this.setState({
+        players : response.data
+      });} 
+      catch (err){
+    }
+   }
+
    playerSearch = (searchTerm) => {
        const filteredList = this.state.allPlayers.filter(function(player){
         return player.name.toLowerCase() == searchTerm.toLowerCase()
@@ -117,7 +127,7 @@ class App extends Component {
           <Route path="/CreateTeam" render={props => <CreateTeam {...props} createNewTeam={this.createNewTeam}/>}/>
           <Route path ="/CreatePlayer" render={props => <CreatePlayer {...props} createNewPlayer={this.createNewPlayer}/>}/>
           <Route path="/Players" render={props => <Players {...props} getAllPlayers={this.getAllPlayers}/>}exact/>
-          <Route path="/Players/:name/stats" render={props => <Player {...props} />}/>
+          <Route path="/Players/:name/profile" render={props => <Player {...props} getPlayer={this.getPlayer}/>}/>
         </Switch>
       </div>  
     )}
