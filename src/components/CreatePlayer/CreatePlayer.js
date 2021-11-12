@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import {Form} from "react-bootstrap"
 import {Button, Grid} from '@material-ui/core';
+import "./CreatePlayer.css"
 
 
 
@@ -59,6 +60,7 @@ class CreatePlayer extends Component {
     render() {
         return (
                 <form onSubmit={this.handleSubmit}>
+                    <h2> Register A Player </h2>
                     <Form.Group className="mb-3" controlId="formGroupEmail">
                         <Form.Control type="text" placeholder="Player Name" onChange={this.handleNameChange} value={this.state.name}/>
                     </Form.Group>
@@ -74,7 +76,7 @@ class CreatePlayer extends Component {
                     <Form.Group className="mb-3" controlId="formGroupRating">
                         <Form.Control type="text" placeholder="About Me" onChange={this.handleInfoChange} value={this.state.info}/>
                     </Form.Group>
-                    <Button type="submit" variant="contained">Create Player</Button>
+                    <Button type="submit" variant="contained" class="btn btn-success">Create Player</Button>
                     <Grid style={{marginLeft: "850px"}}></Grid>
                 </form>
     );

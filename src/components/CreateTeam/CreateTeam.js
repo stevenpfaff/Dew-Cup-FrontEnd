@@ -72,6 +72,7 @@ class CreateTeam extends Component {
     render() {
         return (
                 <form onSubmit={this.handleSubmit}>
+                    <h2> Register A Team </h2>
                     <Form.Group className="mb-3" controlId="formGroupEmail">
                         <Form.Control type="text" placeholder="Team Name" onChange={this.handleNameChange} value={this.state.name}/>
                     </Form.Group>
@@ -93,7 +94,7 @@ class CreateTeam extends Component {
                     <Form.Group className="mb-3" controlId="formGroupRating">
                         <Form.Control type="text" placeholder="Players" onChange={this.handlePlayerChange} value={this.state.players}/>
                     </Form.Group>
-                    <Button type="submit" variant="contained">Create Team</Button>
+                    <Button type="submit" variant="contained" class="btn btn-success">Create Team</Button>
                     <Grid style={{marginLeft: "850px"}}></Grid>
                 </form>
     );

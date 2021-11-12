@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { render } from 'react-dom';
-import "./Login.css"
+import {Form} from "react-bootstrap"
+import {Button, Grid} from '@material-ui/core';
+
 
 export default function Login(props){
 
@@ -26,21 +28,16 @@ export default function Login(props){
 
         return (
             <div>
-                <hgroup>
-                    <h1>Sign In</h1>
-                </hgroup>
-                <form>
-                    <div class="group">
-                        <input placeholder="Username" type="text" name="username" onChange={handleNameChange} /><span class="highlight"></span><span class="bar"></span>
-
-                    </div>
-                    <div class="group">
-                        <input placeholder="Password" type="password" name="password" onChange={handlePasswordChange} /><span class="highlight"></span><span class="bar"></span>
-
-                    </div>
-                    <button type="button" class="button buttonBlue" onClick={handleSubmit}>Login
-                        <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
-                    </button>
+                <form onSubmit={handleSubmit}>
+                    <h2> Sign In </h2>
+                    <Form.Group className="mb-3" controlId="formGroupEmail">
+                        <Form.Control type="text" placeholder="Username" onChange={handleNameChange}/>
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formGroupDescription">
+                        <Form.Control type="password" placeholder="Password" onChange={handlePasswordChange}/>
+                    </Form.Group>
+                    <Button type="submit" variant="contained" class="btn btn-success">Sign In</Button>
+                    <Grid style={{marginLeft: "850px"}}></Grid>
                 </form>
             </div>
         )
