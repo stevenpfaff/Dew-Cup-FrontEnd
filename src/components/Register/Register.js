@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import "./Register.css"
+import {Form} from "react-bootstrap"
+import {Button, Grid} from '@material-ui/core';
 
 const Register = (props) => {
 
@@ -45,28 +46,27 @@ const Register = (props) => {
   return (
     <div>
       <hgroup>
-        <h1>Register</h1>
       </hgroup>
-      <form>
-        <div class="group">
-          <input placeholder="First Name" type="text" onChange={handleFirstNameChange} /><span class="highlight"></span><span class="bar"></span>
-        </div>
-        <div class="group">
-          <input placeholder="Last Name" type="text" onChange={handleLastNameChange} /><span class="highlight"></span><span class="bar"></span>
-        </div>
-        <div class="group">
-          <input placeholder="Email" type="text" onChange={handleEmailChange} /><span class="highlight"></span><span class="bar"></span>
-        </div>
-        <div class="group">
-          <input placeholder="Username" type="text" onChange={handleUsernameChange} /><span class="highlight"></span><span class="bar"></span>
-        </div>
-        <div class="group">
-          <input placeholder="Password" type="password" onChange={handlePasswordChange} /><span class="highlight"></span><span class="bar"></span>
-        </div>
-        <button type="button" class="button buttonBlue" onClick={handleSubmit}>Register
-          <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
-        </button>
-      </form>
+      <form onSubmit={handleSubmit}>
+                    <h2> Register </h2>
+                    <Form.Group className="mb-3" controlId="formGroupEmail">
+                        <Form.Control type="text" placeholder="First Name" onChange={handleFirstNameChange}/>
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formGroupEmail">
+                        <Form.Control type="text" placeholder="Last Name" onChange={handleLastNameChange}/>
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formGroupEmail">
+                        <Form.Control type="email" placeholder="Email" onChange={handleEmailChange}/>
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formGroupEmail">
+                        <Form.Control type="text" placeholder="Username" onChange={handleUsernameChange}/>
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formGroupDescription">
+                        <Form.Control type="password" placeholder="Password" onChange={handlePasswordChange}/>
+                    </Form.Group>
+                    <Button type="submit" variant="contained" class="btn btn-success">Sign In</Button>
+                    <Grid style={{marginLeft: "850px"}}></Grid>
+                </form>
     </div>
   )
 }
