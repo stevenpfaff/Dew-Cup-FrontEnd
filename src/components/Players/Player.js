@@ -5,8 +5,11 @@ import { Table } from 'react-bootstrap'
 
 
 const Player = (props) => {
-
-const { name } = useParams()
+  const { name } = useParams()
+  const {goals} = useState()
+  const {games_played} = useState()
+  const {assists} = useState()
+  const {info} = useState()
 
 
   return (
@@ -18,13 +21,15 @@ const { name } = useParams()
                             <th>Games Played</th>
                             <th>Goals</th>
                             <th>Assists</th>
+                            <th>Bio</th>
                             </tr>
-                        </thead>                       
+                        </thead>                      
                         <tbody>
                             <tr>
-                            {/* <td>{player.games_played}</td>
-                            <td>{player.goals}</td>
-                            <td>{player.assists}</td> */}
+                            <td>{games_played}</td>
+                            <td>{goals}</td>
+                            <td>{assists}</td>
+                            <td>{info}</td>
                             </tr>   
                         </tbody>
             </Table>

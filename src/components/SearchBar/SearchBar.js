@@ -3,7 +3,7 @@ import "./SearchBar.css"
 import {Button, Container, Grid, Paper, TextField} from '@material-ui/core';
 import {Form} from 'react-bootstrap';
 
-    const SearchBar = (props) =>{
+    const SearchBar = (props) => {
 
         const[searchTerm, setSearchTerm] = useState();
 
@@ -18,15 +18,6 @@ import {Form} from 'react-bootstrap';
         
     }
 
-    const playerSearch = (searchTerm) => {
-        const filteredList = this.state.allPlayers.filter(function(player){
-         return player.name.toLowerCase() == searchTerm.toLowerCase()
-         })
-        this.setState({
-          allPlayers : filteredList
-        })
-       }
-
     
     return (
         <Container>
@@ -35,6 +26,7 @@ import {Form} from 'react-bootstrap';
                     <TextField  fullWidth variant="outlined"
                     className="input"  type="text" name="searchTerm" placeholder="Search by player name"
                     onChange={handleChange} value={searchTerm} />
+                    <Button> Search </Button>
                 </Grid>
             </Form>
         </Container>

@@ -94,11 +94,11 @@ class App extends Component {
    }
 
    playerSearch = (searchTerm) => {
-       const filteredList = this.state.allPlayers.filter(function(player){
+       const filteredList = this.state.players.filter(function(player){
         return player.name.toLowerCase() == searchTerm.toLowerCase()
         })
        this.setState({
-         allPlayers : filteredList
+         players : filteredList
        })
       }
     

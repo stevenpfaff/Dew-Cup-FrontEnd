@@ -36,7 +36,7 @@ getAllPlayers = async() => {
 render() {
     return ( 
         <div style={{marginRight: "450px", marginLeft: "250px", marginBottom: "250px"}} >
-            <SearchBar />
+            <SearchBar playerSearch={this.props.playerSearch}/>
             <h1 style={{marginLeft: "100px", marginBottom: "100px", marginTop: "80px", fontFamily: "inherit"}} >Players</h1>
             <Table  striped bordered hover>
                         <thead>
