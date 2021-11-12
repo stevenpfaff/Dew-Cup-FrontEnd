@@ -1,4 +1,4 @@
-import React, {Component } from 'react'
+import React, { Component } from 'react'
 import { render } from 'react-dom';
 import "./Login.css"
 
@@ -6,12 +6,13 @@ class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            email: "",
+            username: "",
             password: ""
         }
     }
 
     handleChange = (event) => {
+        console.log(event.target.name)
         this.setState({
             [event.target.name]: event.target.value
         })
@@ -22,26 +23,26 @@ class Login extends Component {
         this.props.userSignIn(this.state)
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <div>
-            <hgroup>
-    <h1>Sign In</h1>
-        </hgroup>
-        <form>
-        <div class="group">
-            <input type="text" onChange={this.handleChange}/><span class="highlight"></span><span class="bar"></span>
-            <label>Email</label>
-        </div>
-        <div class="group">
-            <input type="password" onChange={this.handleChange}/><span class="highlight"></span><span class="bar"></span>
-            <label>Password</label>
-        </div>
-        <button type="button" class="button buttonBlue" onClick={this.handleSubmit}>Login
-            <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
-        </button>
-        </form>
-        </div>
+                <hgroup>
+                    <h1>Sign In</h1>
+                </hgroup>
+                <form>
+                    <div class="group">
+                        <input placeholder="Username" type="text" name="username" onChange={this.handleChange} /><span class="highlight"></span><span class="bar"></span>
+
+                    </div>
+                    <div class="group">
+                        <input placeholder="Password" type="password" name="password" onChange={this.handleChange} /><span class="highlight"></span><span class="bar"></span>
+
+                    </div>
+                    <button type="button" class="button buttonBlue" onClick={this.handleSubmit}>Login
+                        <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+                    </button>
+                </form>
+            </div>
         )
     }
 }

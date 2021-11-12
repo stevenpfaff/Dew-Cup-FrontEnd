@@ -5,18 +5,22 @@ import {Table} from 'react-bootstrap'
 import {Button} from '@material-ui/core'
 import SearchBar from '../SearchBar/SearchBar';
 import "./Players.css"
+import { Link } from 'react-router-dom';
 
 class Players extends Component {
     constructor(props){
         super(props);
         this.state = {
-            players: [],
+            players: [{
+                name: "Steven",
+                games_played: 12, 
+                goals: 0, assists: 0, info: "A brutal player",}],
         }
     }
 
 
 componentDidMount = () => {
-    this.getAllPlayers();
+    //this.getAllPlayers();
 }
 
 getAllPlayers = async() => {
@@ -38,18 +42,20 @@ render() {
                             <th>Games Played</th>
                             <th>Goals</th>
                             <th>Assists</th>
+                            <th>Info</th>
                             </tr>
-                        </thead>
-                        {this.state.players.map((player)=>(
+                        </thead>                       
                         <tbody>
+                        {this.state.players.map((player)=>(
                             <tr>
-                            <td>{player.name}</td>
+                            <td><Link to={`/Players/${player.name}/stats`}>{player.name}</Link></td>
                             <td>{player.games_played}</td>
                             <td>{player.goals}</td>
                             <td>{player.assists}</td>
+                            <td>{player.info}</td>
                             </tr>   
-                        </tbody>
                         ))}
+                        </tbody>
             </Table>
         </div>
      );

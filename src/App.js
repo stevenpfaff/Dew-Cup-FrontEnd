@@ -9,6 +9,7 @@ import Teams from './components/Teams/Teams';
 import Players from './components/Players/Players';
 import CreateTeam from './components/CreateTeam/CreateTeam';
 import CreatePlayer from './components/CreatePlayer/CreatePlayer';
+import Player from './components/Players/Player';
 import jwtDecode from 'jwt-decode';
 
 
@@ -18,8 +19,8 @@ class App extends Component {
     super(props);
       this.state = {
         user : "",
-        allTeams : [],
-        allPlayers : [],
+        teams : [],
+        players : [],
       }
   }
 
@@ -46,7 +47,6 @@ class App extends Component {
     const response = await axios.post(`http://127.0.0.1:8000/api/auth/login/`, userCredentials)
     try{
       localStorage.setItem('token', response.data.access)
-      console.log("Token", response.data.access)
        window.location = '/';
     }
     catch (err){
@@ -54,17 +54,20 @@ class App extends Component {
     }
   }
 
-  logOutUser = async () =>{
+  logOutUser =  () => {
     localStorage.removeItem('token');
     window.location = '/Login'
    }
 
    getAllTeams = async () => {
+     try {
      let response = await axios.get('http://127.0.0.1:8000/api/teams/all')
      this.setState({
-       allTeams : response.data
-     })
+       teams : response.data
+     });} 
+     catch (err){
    }
+  }
 
     createNewTeam = async (team) => {
       let response = await axios.post(`http://127.0.0.1:8000/api/teams/`, team)
@@ -98,11 +101,14 @@ class App extends Component {
      }
 
      getAllPlayers = async () => {
+       try {
       let response = await axios.get('http://127.0.0.1:8000/api/players/all')
       this.setState({
-        allPlayers : response.data
-      })
+        players : response.data
+      })}
+     catch (err){
     }
+  }
    
 
   render () {
@@ -117,7 +123,8 @@ class App extends Component {
           <Route path="/Teams" render={props => <Teams {...props} getAllTeams={this.getAllTeams}/>}/>
           <Route path="/CreateTeam" render={props => <CreateTeam {...props} createNewTeam={this.createNewTeam}/>}/>
           <Route path ="/CreatePlayer" render={props => <CreatePlayer {...props} createNewPlayer={this.createNewPlayer}/>}/>
-          <Route path="/Players" render={props => <Players {...props} getAllPlayers={this.getAllPlayers}/>}/>
+          <Route path="/Players" render={props => <Players {...props} getAllPlayers={this.getAllPlayers}/>}exact/>
+          <Route path="/Players/:name/stats" render={props => <Player {...props} />}/>
         </Switch>
       </div>  
     )}
