@@ -96,7 +96,7 @@ class App extends Component {
 
    playerSearch = (searchTerm) => {
        const filteredList = this.state.players.filter(function(player){
-        return player.name.toLowerCase() == searchTerm.toLowerCase()
+        return player.name.toLowerCase() === searchTerm.toLowerCase()
         })
        this.setState({
          players : filteredList
