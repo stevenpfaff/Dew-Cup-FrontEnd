@@ -26,6 +26,11 @@ class Players extends Component {
         this.getAllPlayers();
     }
 
+    handleClick = (event) =>{
+        event.preventDefault()
+        this.getAllPlayers()
+    }
+
     getAllPlayers = async () => {
         let response = await axios.get('http://127.0.0.1:8000/api/players/all/')
         this.setState({
@@ -35,7 +40,7 @@ class Players extends Component {
 
     playerSearch = (searchTerm) => {
         const filteredList = this.state.players.filter(function (player) {
-            return player.name.toLowerCase() === searchTerm.toLowerCase()
+            return player.name.toLowerCase() == searchTerm.toLowerCase()
         })
         this.setState({
             players: filteredList
@@ -47,6 +52,7 @@ class Players extends Component {
             <div style={{ marginRight: "450px", marginLeft: "250px", marginBottom: "250px" }} >
                 <SearchBar playerSearch={this.playerSearch} />
                 <h1 style={{ marginLeft: "100px", marginBottom: "100px", marginTop: "80px", fontFamily: "inherit" }} >Players</h1>
+                <Button type="submit" variant="contained" onClick={this.handleClick} class="btn btn-success">Refresh Player List</Button>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
