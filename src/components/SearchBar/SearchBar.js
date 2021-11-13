@@ -21,13 +21,12 @@ import {Form} from 'react-bootstrap';
     
     return (
         <Container>
-            <Form onSubmit={handleSubmit}>
-                <Grid className="search-bar"> 
+            <Form onSubmit={handleSubmit} className="search-bar">
                     <TextField  fullWidth variant="outlined"
                     className="input"  type="text" name="searchTerm" placeholder="Search by player name"
                     onChange={handleChange} value={searchTerm} />
                     <Button type="submit" variant="contained" class="btn btn-success">Search</Button>
-                </Grid>
+                
             </Form>
         </Container>
         
