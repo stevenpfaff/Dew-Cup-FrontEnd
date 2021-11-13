@@ -47,6 +47,8 @@ class Players extends Component {
         })
     }
 
+
+
     render() {
         return (
             <div style={{ marginRight: "450px", marginLeft: "250px", marginBottom: "250px" }} >

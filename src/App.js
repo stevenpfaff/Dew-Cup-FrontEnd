@@ -84,11 +84,11 @@ class App extends Component {
       return response.status
     }
 
-    getPlayer = async () => {
+    getPlayer = async (name) => {
       try {
-      let response = await axios.get('http://127.0.0.1:8000/api/players/:name/profile')
+      let response = await axios.get(`http://127.0.0.1:8000/api/players/${name}/profile/`)
       this.setState({
-        players : response.data
+        player : response.data
       });} 
       catch (err){
     }
