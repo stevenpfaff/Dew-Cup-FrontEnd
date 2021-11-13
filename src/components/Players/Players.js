@@ -33,10 +33,19 @@ getAllPlayers = async() => {
     })
 }
 
+   playerSearch = (searchTerm) => {
+       const filteredList = this.state.players.filter(function(player){
+        return player.name.toLowerCase() == searchTerm.toLowerCase()
+        })
+       this.setState({
+         players : filteredList
+       })
+      }
+
 render() {
     return ( 
         <div style={{marginRight: "450px", marginLeft: "250px", marginBottom: "250px"}} >
-            <SearchBar playerSearch={this.props.playerSearch}/>
+            <SearchBar playerSearch={this.playerSearch}/>
             <h1 style={{marginLeft: "100px", marginBottom: "100px", marginTop: "80px", fontFamily: "inherit"}} >Players</h1>
             <Table  striped bordered hover>
                         <thead>
