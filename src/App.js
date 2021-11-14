@@ -10,7 +10,6 @@ import Players from './components/Players/Players';
 import CreateTeam from './components/CreateTeam/CreateTeam';
 import CreatePlayer from './components/CreatePlayer/CreatePlayer';
 import Player from './components/Players/Player';
-import Tourney from './components/Tournament/Tournament';
 import CreateTourney from './components/Tournament/CreateTournament';
 import jwtDecode from 'jwt-decode';
 import {Grid} from '@material-ui/core'
@@ -130,7 +129,7 @@ class App extends Component {
   createNewTourney = async (tourney) => {
     let response = await axios.post(`http://127.0.0.1:8000/api/tournament/`, tourney)
     this.getTourneys();
-    window.location = "/Tourneys"
+    window.location = "/"
     return response.status
   }
    
@@ -158,7 +157,6 @@ class App extends Component {
           <Route path ="/CreatePlayer" render={props => <CreatePlayer {...props} createNewPlayer={this.createNewPlayer}/>}/>
           <Route path="/Players" render={props => <Players {...props} getAllPlayers={this.getAllPlayers}/>}exact/>
           <Route path="/Players/:name/profile" render={props => <Player {...props} getPlayer={this.getPlayer}/>}/>
-          <Route path="/Tourneys" render={props => <Tourney {...props} getTourneys={this.getTourneys}/>}/>
           <Route path="/CreateTourney" render={props => <CreateTourney {...props} createNewTourney={this.createNewTourney}/>}/>
         </Switch>
       </div> 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Table } from 'react-bootstrap'
-import "./Tournament.css"
+import "./Home.css"
 
 class Tourney extends Component {
     constructor(props) {
@@ -9,7 +9,8 @@ class Tourney extends Component {
         this.state = {
             tourneys: [{
                 name: "",
-                teams: ""
+                teams: "",
+                champions: ""
             }],
         }
     }
@@ -30,13 +31,15 @@ class Tourney extends Component {
 
       render() {
         return (
-            <div style={{ marginRight: "450px", marginLeft: "250px", marginBottom: "250px" }} >
-                <h1 style={{ marginLeft: "100px", marginBottom: "100px", marginTop: "80px", fontFamily: "inherit" }}>Dew Cup Tournaments</h1>
+            <div>
+                <h1 style={{ marginLeft: "100px", marginBottom: "100px", marginTop: "80px", fontFamily: "inherit" }}></h1>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
                             <th>Tournament</th>
                             <th>Teams</th>
+                            <th>Champions</th>
+                            <th>Tournament MVP</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -44,6 +47,8 @@ class Tourney extends Component {
                             <tr>
                                 <td>{tourney.name}</td>
                                 <td>{tourney.teams}</td>
+                                <td>{tourney.champions}</td>
+                                <td>{tourney.mvp}</td>
                             </tr>
                         ))}
                     </tbody>

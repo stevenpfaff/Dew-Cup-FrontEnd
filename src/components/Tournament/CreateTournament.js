@@ -8,6 +8,8 @@ class CreateTourney extends Component {
         this.state = {
             name: "",
             teams: "",
+            champions: "",
+            mvp: ""
         }
     }
 
@@ -23,11 +25,25 @@ class CreateTourney extends Component {
         });
     }
 
+    handleChampsChange = (event) => {
+        this.setState({
+            champions: event.target.value,
+        });
+    }
+
+    handleMvpChange = (event) => {
+        this.setState({
+            mvp: event.target.value,
+        });
+    }
+
     handleSubmit = (event) => {
         event.preventDefault()
         const newTourney = {
             name: this.state.name,
-            teams: this.state.teams
+            teams: this.state.teams,
+            champions: this.state.champions,
+            mvp: this.state.mvp
         }
         this.props.createNewTourney(newTourney)
     }
@@ -40,6 +56,12 @@ class CreateTourney extends Component {
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formGroupDescription">
                         <Form.Control type="text" placeholder="Add Teams To Tournament" onChange={this.handleTeamChange} value={this.state.teams}/>
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formGroupDescription">
+                        <Form.Control type="text" placeholder="Tournament Champs" onChange={this.handleChampsChange} value={this.state.champions}/>
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formGroupDescription">
+                        <Form.Control type="text" placeholder="Tournament MVP" onChange={this.handleMvpChange} value={this.state.mvp}/>
                     </Form.Group>
                     <Button type="submit" variant="contained" class="btn btn-success">Create Tournament</Button>
                     <Grid style={{marginLeft: "850px"}}></Grid>

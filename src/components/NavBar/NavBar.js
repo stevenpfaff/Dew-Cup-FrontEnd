@@ -18,8 +18,7 @@ function NavBar(props) {
                 <Nav className="me-auto">
                     <Nav.Link href="/">Home</Nav.Link>
                     <Nav.Link href="/Teams">Teams</Nav.Link> 
-                    <Nav.Link href="/Players">Players</Nav.Link>
-                    <Nav.Link href="Tourneys">Tournaments</Nav.Link>                 
+                    <Nav.Link href="/Players">Players</Nav.Link>                
                     </Nav>
                     <Nav>
                     {props.user &&<Nav.Link href="/CreatePlayer">Create Player</Nav.Link>}
