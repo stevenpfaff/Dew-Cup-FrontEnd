@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Table } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import "./Home.css"
 
 class Tourney extends Component {
@@ -48,7 +49,7 @@ class Tourney extends Component {
                                 <td>{tourney.name}</td>
                                 <td>{tourney.teams}</td>
                                 <td>{tourney.champions}</td>
-                                <td>{tourney.mvp}</td>
+                                <td><Link to={`/Players/${tourney.mvp}/profile`}>{tourney.mvp}</Link></td>
                             </tr>
                         ))}
                     </tbody>

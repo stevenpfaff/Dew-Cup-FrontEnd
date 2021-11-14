@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import {Form} from "react-bootstrap"
 import {Button, Grid} from '@material-ui/core';
 import "./CreatePlayer.css"
+import axios from "axios";
 
 
 
@@ -14,7 +15,7 @@ class CreatePlayer extends Component {
         games_played : "",
         goals : "",
         assists : "",
-        info : ""
+        info : "",
         };
     }
 
@@ -51,7 +52,7 @@ class CreatePlayer extends Component {
             games_played : parseInt(this.state.games_played),
             goals : parseInt(this.state.goals),
             assists : parseInt(this.state.assists),
-            info : this.state.info
+            info : this.state.info,
         }
         console.log('Create Submit', this.props, newPlayer)
         this.props.createNewPlayer(newPlayer);

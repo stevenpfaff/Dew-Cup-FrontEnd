@@ -17,6 +17,7 @@ class Players extends Component {
                 goals: "",
                 assists: "",
                 info: "",
+                profile_picture: "",
             }],
         }
     }
