@@ -10,22 +10,22 @@ const Player = (props) => {
     const { name } = useParams()
     const [player, setPlayer] = useState({
         name,
-        goals: 10,
-        assists: 19,
-        games_played: 18,
-        info: "A complete pigeon"
+        goals: "",
+        assists: "",
+        games_played: "",
+        info: ""
       })
 
 
-    //   const getPlayer = async (name) => {
-    //     try {
-    //     let response = await axios.get(`http://127.0.0.1:8000/api/players/${name}/profile/`)
-    //     this.setState({
-    //       player : response.data
-    //     });} 
-    //     catch (err){
-    //   }
-    //  }
+      const getPlayer = async (name) => {
+        try {
+        let response = await axios.get(`http://127.0.0.1:8000/api/players/${name}/profile/`)
+        this.setState({
+          player : response.data
+        });} 
+        catch (err){
+      }
+     }
 
 
     return (
