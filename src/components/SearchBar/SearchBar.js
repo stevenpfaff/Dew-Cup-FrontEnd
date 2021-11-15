@@ -5,7 +5,7 @@ import {Form} from 'react-bootstrap';
 
     const SearchBar = (props) => {
 
-        const[searchTerm, setSearchTerm] = useState("");
+        const[searchTerm, setSearchTerm] = useState();
 
 
     const handleChange = (event) => {

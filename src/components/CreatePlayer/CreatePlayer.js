@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Form } from "react-bootstrap"
 import { Button, Grid } from '@material-ui/core';
 import "./CreatePlayer.css"
-import axios from "axios";
 
 
 
@@ -49,10 +48,6 @@ class CreatePlayer extends Component {
     }
 
     fileSelected = event => {
-        //     console.log(event.target.files)
-        //     this.setState({
-        //         file: event.target.files
-        //     })
         let me = this
         var input = event.target
         var reader = new FileReader();
@@ -64,11 +59,6 @@ class CreatePlayer extends Component {
         };
         reader.readAsDataURL(input.files[0]);
     };
-
-
-
-
-
 
     handleSubmit = (event) => {
         console.log(this.state)

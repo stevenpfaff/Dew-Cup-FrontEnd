@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { render } from 'react-dom';
 import { Table } from 'react-bootstrap'
 import { Button } from '@material-ui/core'
 import SearchBar from '../SearchBar/SearchBar';

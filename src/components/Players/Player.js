@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { Table } from 'react-bootstrap'
-
+import "./Players.css"
 
 
 
@@ -21,7 +21,6 @@ const Player = (props) => {
     const getPlayer = async () => {
         try {
             let response = await axios.get(`http://127.0.0.1:8000/api/players/${name}/`)
-            // setPlayer(response.data)
             console.log(response) 
             console.log(response.data) 
             let temp1 = response.data
@@ -41,7 +40,7 @@ const Player = (props) => {
         <div style={{ marginRight: "500px", marginLeft: "250px", marginBottom: "250px" }} >
             <h1 style={{ marginLeft: "100px", marginBottom: "100px", marginTop: "80px", fontFamily: "inherit" }}>{name}'s Player Profile</h1>
             <div>
-                <img src={player.file}/>               
+                <img src={player.file} width="400" height="400" class="center"/>               
                 <h1>About</h1>
                 <p>{player.info}</p>
             </div>

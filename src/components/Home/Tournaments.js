@@ -4,6 +4,7 @@ import { Table } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import "./Home.css"
 
+
 class Tourney extends Component {
     constructor(props) {
         super(props);
