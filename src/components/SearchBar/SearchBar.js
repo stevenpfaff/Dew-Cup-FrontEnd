@@ -25,7 +25,7 @@ import {Form} from 'react-bootstrap';
                     <TextField  fullWidth variant="outlined"
                     className="input"  type="text" name="searchTerm" placeholder="Search by player name"
                     onChange={handleChange} value={searchTerm} />
-                    <Button type="submit" variant="contained" className="btn btn-success">Search</Button>
+                    <Button type="submit" variant="contained" class="btn btn-success">Search</Button>
                 
             </Form>
         </Container>

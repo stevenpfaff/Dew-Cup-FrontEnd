@@ -107,7 +107,7 @@ class CreatePlayer extends Component {
                 <Form.Group className="mb-3" controlId="formGroupRating">
                     <Form.Control type="file" accept='image/*' onChange={this.fileSelected}/>
                 </Form.Group>
-                <Button type="submit" variant="contained" className="btn btn-success">Create Player</Button>
+                <Button type="submit" variant="contained" class="btn btn-success">Create Player</Button>
                 <Grid style={{ marginLeft: "850px" }}></Grid>
             </form>
         );

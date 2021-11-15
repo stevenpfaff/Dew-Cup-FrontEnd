@@ -63,7 +63,7 @@ class CreateTourney extends Component {
                     <Form.Group className="mb-3" controlId="formGroupDescription">
                         <Form.Control type="text" placeholder="Tournament MVP" onChange={this.handleMvpChange} value={this.state.mvp}/>
                     </Form.Group>
-                    <Button type="submit" variant="contained" className="btn btn-success">Create Tournament</Button>
+                    <Button type="submit" variant="contained" class="btn btn-success">Create Tournament</Button>
                     <Grid style={{marginLeft: "850px"}}></Grid>
                 </form>
     );
