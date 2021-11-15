@@ -88,7 +88,7 @@ class App extends Component {
 
     getPlayer = async (name) => {
       try {
-      let response = await axios.get(`http://127.0.0.1:8000/api/players/${name}/profile/`)
+      let response = await axios.get(`http://127.0.0.1:8000/api/players/${name}/`)
       this.setState({
         players : response.data
       });} 

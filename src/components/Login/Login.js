@@ -7,8 +7,8 @@ import "./Login.css"
 
 export default function Login(props){
 
-    const [username, setUsername] = useState();
-    const [password, setPassword] = useState();
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
 
     const handleNameChange = (event) => {
         setUsername(event.target.value)
@@ -37,7 +37,7 @@ export default function Login(props){
                     <Form.Group className="mb-3" controlId="formGroupDescription">
                         <Form.Control type="password" placeholder="Password" onChange={handlePasswordChange}/>
                     </Form.Group>
-                    <Button type="submit" variant="contained" class="btn btn-success">Sign In</Button>
+                    <Button type="submit" variant="contained" className="btn btn-success">Sign In</Button>
                     <Grid style={{marginLeft: "850px"}}></Grid>
                 </form>
             </div>
