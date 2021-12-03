@@ -142,10 +142,10 @@ class CreatePlayer extends Component {
                     <Form.Control type="number" placeholder="Hits" onChange={this.handleHitsChange} value={this.state.hits} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formGroupRating">
-                    <Form.Control type="decimal" placeholder="Assists" onChange={this.handleAverageChange} value={this.state.batting_average} />
+                    <Form.Control type="number" placeholder="Batting Average" onChange={this.handleAverageChange} value={this.state.batting_average} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formGroupRating">
-                    <Form.Control type="number" placeholder="Assists" onChange={this.handleHomerunChange} value={this.state.homeruns} />
+                    <Form.Control type="number" placeholder="Homeruns" onChange={this.handleHomerunChange} value={this.state.homeruns} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formGroupRating">
                     <Form.Control type="text" placeholder="About Me" onChange={this.handleInfoChange} value={this.state.info} />

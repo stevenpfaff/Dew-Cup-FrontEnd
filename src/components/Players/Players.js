@@ -84,7 +84,7 @@ class Players extends Component {
                                 <td>{player.minibat_games_played}</td>
                                 <td>{player.at_bats}</td>
                                 <td>{player.hits}</td>
-                                <td>{player.batting_average}</td>
+                                <td>.{player.batting_average}</td>
                                 <td>{player.homeruns}</td>
                             </tr>
                         ))}

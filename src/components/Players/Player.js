@@ -14,7 +14,12 @@ const Player = (props) => {
         assists: "",
         games_played: "",
         info: "",
-        file: ""
+        file: "",
+        minibat_games_played: "",
+        at_bats: "",
+        hits: "",
+        homeruns: "",
+        batting_average: ""
     })
 
 
@@ -49,7 +54,7 @@ const Player = (props) => {
                 <Table>
                     <tbody>
                         <tr>
-                            <th>Games Played</th>
+                            <th>Hockey Games Played</th>
                             <td>{player.games_played}</td>
                         </tr>
                         <tr>
@@ -59,6 +64,26 @@ const Player = (props) => {
                         <tr>
                             <th>Assists</th>
                             <td>{player.assists}</td>
+                        </tr>
+                        <tr>
+                            <th>Minibat Games Played</th>
+                            <td>{player.minibat_games_played}</td>
+                        </tr>
+                        <tr>
+                            <th>At Bats</th>
+                            <td>{player.at_bats}</td>
+                        </tr>
+                        <tr>
+                            <th>Hits</th>
+                            <td>{player.hits}</td>
+                        </tr>
+                        <tr>
+                            <th>Batting Average</th>
+                            <td>.{player.batting_average}</td>
+                        </tr>
+                        <tr>
+                            <th>Homeruns</th>
+                            <td>{player.homeruns}</td>
                         </tr>
                     </tbody>
                 </Table>
