@@ -16,7 +16,12 @@ class Players extends Component {
                 goals: "",
                 assists: "",
                 info: "",
-                file: ""
+                file: "",
+                minibat_games_played: "",
+                at_bats: "",
+                hits: "",
+                batting_average: ""
+
             }],
         }
     }
@@ -59,9 +64,14 @@ class Players extends Component {
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Games Played</th>
+                            <th>Hockey Games Played</th>
                             <th>Goals</th>
                             <th>Assists</th>
+                            <th>Minibat Games Played</th>
+                            <th>At Bats</th>
+                            <th>Hits</th>
+                            <th>Batting Average</th>
+                            <th>Homeruns</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -71,6 +81,11 @@ class Players extends Component {
                                 <td>{player.games_played}</td>
                                 <td>{player.goals}</td>
                                 <td>{player.assists}</td>
+                                <td>{player.minibat_games_played}</td>
+                                <td>{player.at_bats}</td>
+                                <td>{player.hits}</td>
+                                <td>{player.batting_average}</td>
+                                <td>{player.homeruns}</td>
                             </tr>
                         ))}
                     </tbody>

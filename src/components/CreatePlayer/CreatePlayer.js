@@ -15,7 +15,12 @@ class CreatePlayer extends Component {
             goals: "",
             assists: "",
             info: "",
-            file: ""
+            file: "",
+            minibat_games_played: "",
+            at_bats: "",
+            hits: "",
+            homeruns: "",
+            batting_average: ""
         };
     }
 
@@ -40,6 +45,37 @@ class CreatePlayer extends Component {
             assists: event.target.value,
         });
     }
+
+    handleMiniBatChange = (event) => {
+        this.setState({
+            minibat_games_played: event.target.value,
+        });
+    }
+
+    handleAtBatChange = (event) => {
+        this.setState({
+            at_bats: event.target.value,
+        });
+    }
+
+    handleHitsChange = (event) => {
+        this.setState({
+            hits: event.target.value,
+        });
+    }
+
+    handleHomerunChange = (event) => {
+        this.setState({
+            homeruns: event.target.value,
+        });
+    }
+
+    handleAverageChange = (event) => {
+        this.setState({
+            batting_average: event.target.value,
+        });
+    }
+
     handleInfoChange = (event) => {
         console.log("handleInfoChange", event)
         this.setState({
@@ -69,7 +105,12 @@ class CreatePlayer extends Component {
             goals: parseInt(this.state.goals),
             assists: parseInt(this.state.assists),
             info: this.state.info,
-            file: this.state.file
+            file: this.state.file,
+            minibat_games_played: parseInt(this.state.minibat_games_played),
+            at_bats: parseInt(this.state.at_bats),
+            hits: parseInt(this.state.hits),
+            homeruns: parseInt(this.state.homeruns),
+            batting_average: parseInt(this.state.batting_average)
         }
         console.log('Create Submit', this.props, newPlayer)
         this.props.createNewPlayer(newPlayer);
@@ -83,7 +124,7 @@ class CreatePlayer extends Component {
                     <Form.Control type="text" placeholder="Player Name" onChange={this.handleNameChange} value={this.state.name} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formGroupDescription">
-                    <Form.Control type="number" placeholder="Games Played" onChange={this.handleGameChange} value={this.state.games_played} />
+                    <Form.Control type="number" placeholder="Hockey Games Played" onChange={this.handleGameChange} value={this.state.games_played} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formGroupPrice">
                     <Form.Control type="number" placeholder="Goals" onChange={this.handleGoalsChange} value={this.state.goals} />
@@ -92,10 +133,25 @@ class CreatePlayer extends Component {
                     <Form.Control type="number" placeholder="Assists" onChange={this.handleAssistsChange} value={this.state.assists} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formGroupRating">
+                    <Form.Control type="number" placeholder="Minibat Games Played" onChange={this.handleMiniBatChange} value={this.state.minibat_games_played} />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formGroupRating">
+                    <Form.Control type="number" placeholder="At Bats" onChange={this.handleAtBatChange} value={this.state.at_bats} />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formGroupRating">
+                    <Form.Control type="number" placeholder="Hits" onChange={this.handleHitsChange} value={this.state.hits} />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formGroupRating">
+                    <Form.Control type="decimal" placeholder="Assists" onChange={this.handleAverageChange} value={this.state.batting_average} />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formGroupRating">
+                    <Form.Control type="number" placeholder="Assists" onChange={this.handleHomerunChange} value={this.state.homeruns} />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formGroupRating">
                     <Form.Control type="text" placeholder="About Me" onChange={this.handleInfoChange} value={this.state.info} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formGroupRating">
-                    <Form.Control type="file" accept='image/*' onChange={this.fileSelected}/>
+                    <Form.Control type="file" accept='image/*' onChange={this.fileSelected} />
                 </Form.Group>
                 <Button type="submit" variant="contained" class="btn btn-success">Create Player</Button>
                 <Grid style={{ marginLeft: "850px" }}></Grid>
