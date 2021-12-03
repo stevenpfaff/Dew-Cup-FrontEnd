@@ -13,8 +13,6 @@ class Players extends Component {
             players: [{
                 name: "",
                 games_played: "",
-                goals: "",
-                assists: "",
                 info: "",
                 file: "",
                 minibat_games_played: "",
@@ -65,8 +63,6 @@ class Players extends Component {
                         <tr>
                             <th>Name</th>
                             <th>Hockey Games Played</th>
-                            <th>Goals</th>
-                            <th>Assists</th>
                             <th>Minibat Games Played</th>
                             <th>At Bats</th>
                             <th>Hits</th>
@@ -79,8 +75,6 @@ class Players extends Component {
                             <tr>
                                 <td><Link to={`/Players/${player.name}/profile`}>{player.name}</Link></td>
                                 <td>{player.games_played}</td>
-                                <td>{player.goals}</td>
-                                <td>{player.assists}</td>
                                 <td>{player.minibat_games_played}</td>
                                 <td>{player.at_bats}</td>
                                 <td>{player.hits}</td>

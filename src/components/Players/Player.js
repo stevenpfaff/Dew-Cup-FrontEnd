@@ -10,8 +10,6 @@ const Player = (props) => {
     const { name } = useParams()
     const [player, setPlayer] = useState({
         name,
-        goals: "",
-        assists: "",
         games_played: "",
         info: "",
         file: "",
@@ -56,14 +54,6 @@ const Player = (props) => {
                         <tr>
                             <th>Hockey Games Played</th>
                             <td>{player.games_played}</td>
-                        </tr>
-                        <tr>
-                            <th>Goals</th>
-                            <td>{player.goals}</td>
-                        </tr>
-                        <tr>
-                            <th>Assists</th>
-                            <td>{player.assists}</td>
                         </tr>
                         <tr>
                             <th>Minibat Games Played</th>

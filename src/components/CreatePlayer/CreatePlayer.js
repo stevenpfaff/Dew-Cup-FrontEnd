@@ -12,8 +12,6 @@ class CreatePlayer extends Component {
         this.state = {
             name: "",
             games_played: "",
-            goals: "",
-            assists: "",
             info: "",
             file: "",
             minibat_games_played: "",
@@ -125,12 +123,6 @@ class CreatePlayer extends Component {
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formGroupDescription">
                     <Form.Control type="number" placeholder="Hockey Games Played" onChange={this.handleGameChange} value={this.state.games_played} />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formGroupPrice">
-                    <Form.Control type="number" placeholder="Goals" onChange={this.handleGoalsChange} value={this.state.goals} />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formGroupRating">
-                    <Form.Control type="number" placeholder="Assists" onChange={this.handleAssistsChange} value={this.state.assists} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formGroupRating">
                     <Form.Control type="number" placeholder="Minibat Games Played" onChange={this.handleMiniBatChange} value={this.state.minibat_games_played} />
