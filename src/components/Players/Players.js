@@ -50,7 +50,19 @@ class Players extends Component {
         })
     }
 
-
+    sortPlayer = () => {
+        this.setState(prevState => ({
+            players: [...prevState.players].sort(function (player1, player2) {
+                if (player1.name < player2.name) {
+                    return -1;
+                }
+                if (player1.name > player2.name) {
+                    return 1;
+                }
+                return 0;
+            }),
+        }))
+    }
 
     render() {
         return (
@@ -58,6 +70,7 @@ class Players extends Component {
                 <SearchBar playerSearch={this.playerSearch} />
                 <h1 style={{ marginLeft: "100px", marginBottom: "100px", marginTop: "80px", fontFamily: "inherit" }}>Players</h1>
                 <Button type="submit" variant="contained" onClick={this.handleClick} class="btn btn-success">Refresh Player List</Button>
+                <Button type="submit" variant="contained" onClick={this.sortPlayer} class="btn btn-success">Sort By Name</Button>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
