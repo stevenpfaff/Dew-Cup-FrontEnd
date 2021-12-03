@@ -42,7 +42,7 @@ const Team = (props) => {
         <div style={{ marginRight: "500px", marginLeft: "250px", marginBottom: "250px" }} >
             <h1 style={{ marginLeft: "100px", marginBottom: "100px", marginTop: "80px", fontFamily: "inherit" }}>{name} Team Profile</h1>
             <div>
-                <img src={team.file} width="400" height="400" class="center" />
+                <img src={team.file} class="center" />
             </div>
             <div>
                 <h1>Team Stats</h1>

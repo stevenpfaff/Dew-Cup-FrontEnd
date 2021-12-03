@@ -11,6 +11,7 @@ import CreateTeam from './components/CreateTeam/CreateTeam';
 import CreatePlayer from './components/CreatePlayer/CreatePlayer';
 import Player from './components/Players/Player';
 import Team from './components/Teams/Team';
+import Games from './components/Games/Games';
 import CreateTourney from './components/Tournament/CreateTournament';
 import jwtDecode from 'jwt-decode';
 import { Grid } from '@material-ui/core'
@@ -142,6 +143,13 @@ class App extends Component {
     }
   }
 
+  getAllGames = async () => {
+    let response = await axios.get('http://127.0.0.1:8000/api/games/all/')
+    this.setState({
+      games: response.data
+    })
+  }
+
   createNewTourney = async (tourney) => {
     let response = await axios.post(`http://127.0.0.1:8000/api/tournament/`, tourney)
     this.getTourneys();
@@ -176,6 +184,7 @@ class App extends Component {
             <Route path="/Players/:name/profile" render={props => <Player {...props} getPlayer={this.getPlayer} />} />
             <Route path="/Teams/:name/profile" render={props => <Team {...props} getTeam={this.getTeam} />} />
             <Route path="/CreateTourney" render={props => <CreateTourney {...props} createNewTourney={this.createNewTourney} />} />
+            <Route path="/Games" render={props => <Games {...props} getAllGames={this.getAllGames} />} />
           </Switch>
         </div>
       </Grid>
