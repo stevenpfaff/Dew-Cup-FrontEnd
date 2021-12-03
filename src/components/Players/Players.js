@@ -50,7 +50,7 @@ class Players extends Component {
         })
     }
 
-    sortPlayer = () => {
+    sortPlayerName = () => {
         this.setState(prevState => ({
             players: [...prevState.players].sort(function (player1, player2) {
                 if (player1.name < player2.name) {
@@ -64,13 +64,43 @@ class Players extends Component {
         }))
     }
 
+    sortPlayerHomeruns = () => {
+        this.setState(prevState => ({
+            players: [...prevState.players].sort(function (player1, player2) {
+                if (player1.homeruns < player2.homeruns) {
+                    return 1;
+                }
+                if (player1.homeruns > player2.homeruns) {
+                    return -1;
+                }
+                return 0;
+            }),
+        }))
+    }
+
+    sortPlayerAverage = () => {
+        this.setState(prevState => ({
+            players: [...prevState.players].sort(function (player1, player2) {
+                if (player1.batting_average < player2.batting_average) {
+                    return 1;
+                }
+                if (player1.batting_average > player2.batting_average) {
+                    return -1;
+                }
+                return 0;
+            }),
+        }))
+    }
+
     render() {
         return (
             <div style={{ marginRight: "450px", marginLeft: "250px", marginBottom: "250px" }} >
                 <SearchBar playerSearch={this.playerSearch} />
                 <h1 style={{ marginLeft: "100px", marginBottom: "100px", marginTop: "80px", fontFamily: "inherit" }}>Players</h1>
                 <Button type="submit" variant="contained" onClick={this.handleClick} class="btn btn-success">Refresh Player List</Button>
-                <Button type="submit" variant="contained" onClick={this.sortPlayer} class="btn btn-success">Sort By Name</Button>
+                <Button type="submit" variant="contained" onClick={this.sortPlayerName} class="btn btn-success">Sort By Name</Button>
+                <Button type="submit" variant="contained" onClick={this.sortPlayerAverage} class="btn btn-success">Sort By Batting Average</Button>
+                <Button type="submit" variant="contained" onClick={this.sortPlayerHomeruns} class="btn btn-success">Sort By Homeruns</Button>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
