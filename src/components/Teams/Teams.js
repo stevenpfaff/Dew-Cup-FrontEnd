@@ -54,7 +54,6 @@ class Teams extends Component {
                             <th>Batting Average</th>
                             <th>Homeruns</th>
                             <th>Championships</th>
-                            <th>Players</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -70,7 +69,6 @@ class Teams extends Component {
                                 <td>.{team.batting_average}</td>
                                 <td>{team.homeruns}</td>
                                 <td>{team.championships}</td>
-                                <td>{team.players}</td>
                             </tr>
                         ))}
                     </tbody>

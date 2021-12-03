@@ -16,7 +16,11 @@ const Team = (props) => {
         goals_against: "",
         championships: "",
         players: "",
-        file: ""
+        file: "",
+        runs: "",
+        runs_against: "",
+        batting_average: "",
+        homeruns: ""
     })
 
 
@@ -42,7 +46,7 @@ const Team = (props) => {
         <div style={{ marginRight: "500px", marginLeft: "250px", marginBottom: "250px" }} >
             <h1 style={{ marginLeft: "100px", marginBottom: "100px", marginTop: "80px", fontFamily: "inherit" }}>{name} Team Profile</h1>
             <div>
-                <img src={team.file} class="center" />
+                <img src={team.file} width="500" height="400" class="center" />
             </div>
             <div>
                 <h1>Team Stats</h1>
@@ -63,6 +67,22 @@ const Team = (props) => {
                         <tr>
                             <th>Goals Against</th>
                             <td>{team.goals_against}</td>
+                        </tr>
+                        <tr>
+                            <th>Runs</th>
+                            <td>{team.runs}</td>
+                        </tr>
+                        <tr>
+                            <th>Runs Against</th>
+                            <td>{team.runs_against}</td>
+                        </tr>
+                        <tr>
+                            <th>Batting Average</th>
+                            <td>.{team.batting_average}</td>
+                        </tr>
+                        <tr>
+                            <th>Homeruns</th>
+                            <td>{team.homeruns}</td>
                         </tr>
                         <tr>
                             <th>Championships</th>
