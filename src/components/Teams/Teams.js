@@ -16,7 +16,11 @@ class Teams extends Component {
                 goals_against: "",
                 championships: "",
                 players: "",
-                file: ""
+                file: "",
+                runs: "",
+                runs_against: "",
+                batting_average: "",
+                homeruns: ""
             }]
         }
     }
@@ -45,6 +49,10 @@ class Teams extends Component {
                             <th>Losses</th>
                             <th>Goals</th>
                             <th>Goals Against </th>
+                            <th>Runs</th>
+                            <th>Runs Against</th>
+                            <th>Batting Average</th>
+                            <th>Homeruns</th>
                             <th>Championships</th>
                             <th>Players</th>
                         </tr>
@@ -57,6 +65,10 @@ class Teams extends Component {
                                 <td>{team.losses}</td>
                                 <td>{team.goals}</td>
                                 <td>{team.goals_against}</td>
+                                <td>{team.runs}</td>
+                                <td>{team.runs_against}</td>
+                                <td>.{team.batting_average}</td>
+                                <td>{team.homeruns}</td>
                                 <td>{team.championships}</td>
                                 <td>{team.players}</td>
                             </tr>

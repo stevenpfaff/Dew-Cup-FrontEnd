@@ -15,7 +15,11 @@ class CreateTeam extends Component {
             goals: "",
             goals_against: "",
             championships: "",
-            players: ""
+            players: "",
+            runs: "",
+            runs_against: "",
+            batting_average: "",
+            homeruns: "",
         };
     }
 
@@ -24,34 +28,64 @@ class CreateTeam extends Component {
             name: event.target.value,
         });
     }
+
     handleWinsChange = (event) => {
         this.setState({
             wins: event.target.value,
         });
     }
+
     handleLossesChange = (event) => {
         this.setState({
             losses: event.target.value,
         });
     }
+
     handleChampsChange = (event) => {
         this.setState({
             championships: event.target.value,
         });
     }
+
     handleGoalsChange = (event) => {
         this.setState({
             goals: event.target.value,
         });
     }
+
     handleGoalsAgChange = (event) => {
         this.setState({
             goals_against: event.target.value,
         });
     }
+
     handlePlayerChange = (event) => {
         this.setState({
             players: event.target.value,
+        });
+    }
+
+    handleRunChange = (event) => {
+        this.setState({
+            runs: event.target.value,
+        });
+    }
+
+    handleRunsAgChange = (event) => {
+        this.setState({
+            runs_against: event.target.value,
+        });
+    }
+
+    handleHomerunChange = (event) => {
+        this.setState({
+            homeruns: event.target.value,
+        });
+    }
+
+    handleAverageChange = (event) => {
+        this.setState({
+            batting_average: event.target.value,
         });
     }
 
@@ -78,7 +112,11 @@ class CreateTeam extends Component {
             goals_against: parseInt(this.state.goals_against),
             championships: parseInt(this.state.championships),
             players: this.state.players,
-            file: this.state.file
+            file: this.state.file,
+            runs: parseInt(this.state.runs),
+            runs_against: parseInt(this.state.runs_against),
+            batting_average: parseInt(this.state.batting_average),
+            homeruns: parseInt(this.state.homeruns),
         }
         console.log('Create Submit', this.props, newTeam)
         this.props.createNewTeam(newTeam);
@@ -105,6 +143,18 @@ class CreateTeam extends Component {
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formGroupRating">
                     <Form.Control type="number" placeholder="Goals Against" onChange={this.handleGoalsAgChange} value={this.state.goals_against} />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formGroupRating">
+                    <Form.Control type="number" placeholder="Runs" onChange={this.handleRunChange} value={this.state.runs} />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formGroupRating">
+                    <Form.Control type="number" placeholder="Runs Against" onChange={this.handleRunsAgChange} value={this.state.runs_against} />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formGroupRating">
+                    <Form.Control type="number" placeholder="Batting Average" onChange={this.handleAverageChange} value={this.state.batting_average} />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formGroupRating">
+                    <Form.Control type="number" placeholder="Homeruns" onChange={this.handleHomerunChange} value={this.state.homeruns} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formGroupRating">
                     <Form.Control type="text" placeholder="Players" onChange={this.handlePlayerChange} value={this.state.players} />

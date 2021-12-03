@@ -47,7 +47,7 @@ const Player = (props) => {
             <div>
                 <img src={player.file} width="400" height="400" class="center" />
                 <h1>About</h1>
-                <p>{player.info}</p>
+                <h5>{player.info}</h5>
             </div>
             <div>
                 <h1>Player Stats</h1>
