@@ -50,7 +50,7 @@ class Tourney extends Component {
                             <tr>
                                 <td>{tourney.name}</td>
                                 <td>{tourney.teams}</td>
-                                <td>{tourney.champions}</td>
+                                <td><Link to={`/Teams/${tourney.champions}/profile`}>{tourney.champions}</Link></td>
                                 <td><Link to={`/Players/${tourney.mvp}/profile`}>{tourney.mvp}</Link></td>
                             </tr>
                         ))}
