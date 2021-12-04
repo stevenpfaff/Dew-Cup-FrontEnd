@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { Table } from 'react-bootstrap'
-import "./Teams.css"
+import "./Team.css"
 
 
 
@@ -45,10 +45,10 @@ const Team = (props) => {
     return (
         <div style={{ marginRight: "500px", marginLeft: "250px", marginBottom: "250px" }} >
             <h1 style={{ marginLeft: "100px", marginBottom: "100px", marginTop: "80px", fontFamily: "inherit" }}>{name} Team Profile</h1>
-            <div>
+            <div class="column">
                 <img src={team.file} width="500" height="400" class="center" />
             </div>
-            <div>
+            <div class="column2">
                 <h1>Team Stats</h1>
                 <Table>
                     <tbody>
