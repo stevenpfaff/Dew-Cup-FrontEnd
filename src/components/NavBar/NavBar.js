@@ -10,7 +10,7 @@ function NavBar(props) {
     return (
         <Navbar collapseOnSelect expand="lg" bg="success" variant="dark">
             <Container>
-                <a className="navbar-brand" href="#">
+                <a className="navbar-brand">
                 </a>
                 <img src={DewCup} alt="..." height="75" width="75"></img>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
