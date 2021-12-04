@@ -23,15 +23,16 @@ class Tourney extends Component {
 
     getTourneys = async () => {
         try {
-          let response = await axios.get('http://127.0.0.1:8000/api/tournament/all/')
-          this.setState({
-            tourneys : response.data
-          })}
-         catch(err){
+            let response = await axios.get('http://127.0.0.1:8000/api/tournament/all/')
+            this.setState({
+                tourneys: response.data
+            })
         }
-      }
+        catch (err) {
+        }
+    }
 
-      render() {
+    render() {
         return (
             <div>
                 <h1 style={{ marginLeft: "100px", marginBottom: "100px", marginTop: "80px", fontFamily: "inherit" }}></h1>

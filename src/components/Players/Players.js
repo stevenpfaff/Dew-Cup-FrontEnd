@@ -5,6 +5,8 @@ import { Button } from '@material-ui/core'
 import SearchBar from '../SearchBar/SearchBar';
 import "./Players.css"
 import { Link } from 'react-router-dom';
+import { SortAlphaUp } from 'react-bootstrap-icons'
+import { SortNumericDown } from 'react-bootstrap-icons'
 
 class Players extends Component {
     constructor(props) {
@@ -64,6 +66,34 @@ class Players extends Component {
         }))
     }
 
+    sortPlayerHockey = () => {
+        this.setState(prevState => ({
+            players: [...prevState.players].sort(function (player1, player2) {
+                if (player1.games_played < player2.games_played) {
+                    return 1;
+                }
+                if (player1.games_played > player2.games_played) {
+                    return -1;
+                }
+                return 0;
+            }),
+        }))
+    }
+
+    sortPlayerMinibat = () => {
+        this.setState(prevState => ({
+            players: [...prevState.players].sort(function (player1, player2) {
+                if (player1.minibat_games_played < player2.minibat_games_played) {
+                    return 1;
+                }
+                if (player1.minibat_games_played > player2.minibat_games_played) {
+                    return -1;
+                }
+                return 0;
+            }),
+        }))
+    }
+
     sortPlayerHomeruns = () => {
         this.setState(prevState => ({
             players: [...prevState.players].sort(function (player1, player2) {
@@ -92,25 +122,50 @@ class Players extends Component {
         }))
     }
 
+    sortPlayerAtBats = () => {
+        this.setState(prevState => ({
+            players: [...prevState.players].sort(function (player1, player2) {
+                if (player1.at_bats < player2.at_bats) {
+                    return 1;
+                }
+                if (player1.at_bats > player2.at_bats) {
+                    return -1;
+                }
+                return 0;
+            }),
+        }))
+    }
+
+    sortPlayerHits = () => {
+        this.setState(prevState => ({
+            players: [...prevState.players].sort(function (player1, player2) {
+                if (player1.hits < player2.hits) {
+                    return 1;
+                }
+                if (player1.hits > player2.hits) {
+                    return -1;
+                }
+                return 0;
+            }),
+        }))
+    }
+
     render() {
         return (
             <div style={{ marginRight: "450px", marginLeft: "250px", marginBottom: "250px" }} >
                 <SearchBar playerSearch={this.playerSearch} />
                 <h1 style={{ marginLeft: "100px", marginBottom: "100px", marginTop: "80px", fontFamily: "inherit" }}>Players</h1>
                 <Button type="submit" variant="contained" onClick={this.handleClick} class="btn btn-success">Refresh Player List</Button>
-                <Button type="submit" variant="contained" onClick={this.sortPlayerName} class="btn btn-success">Sort By Name</Button>
-                <Button type="submit" variant="contained" onClick={this.sortPlayerAverage} class="btn btn-success">Sort By Batting Average</Button>
-                <Button type="submit" variant="contained" onClick={this.sortPlayerHomeruns} class="btn btn-success">Sort By Homeruns</Button>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Hockey Games Played</th>
-                            <th>Minibat Games Played</th>
-                            <th>At Bats</th>
-                            <th>Hits</th>
-                            <th>Batting Average</th>
-                            <th>Homeruns</th>
+                            <th>Name<button type="button" class="btn btn-default" onClick={this.sortPlayerName}><SortAlphaUp /></button></th>
+                            <th>Hockey Games Played<button type="button" class="btn btn-default" onClick={this.sortPlayerHockey}><SortNumericDown /></button></th>
+                            <th>Minibat Games Played<button type="button" class="btn btn-default" onClick={this.sortPlayerMinibat}><SortNumericDown /></button></th>
+                            <th>At Bats<button type="button" class="btn btn-default" onClick={this.sortPlayerAtBats}><SortNumericDown /></button></th>
+                            <th>Hits<button type="button" class="btn btn-default" onClick={this.sortPlayerHits}><SortNumericDown /></button></th>
+                            <th>Batting Average<button type="button" class="btn btn-default" onClick={this.sortPlayerAverage}><SortNumericDown /></button></th>
+                            <th>Homeruns<button type="button" class="btn btn-default" onClick={this.sortPlayerHomeruns}><SortNumericDown /></button></th>
                         </tr>
                     </thead>
                     <tbody>
