@@ -5,13 +5,12 @@ import { Link } from 'react-router-dom'
 import "./Home.css"
 
 
-class Tourney extends Component {
+class Tourneys extends Component {
     constructor(props) {
         super(props);
         this.state = {
             tourneys: [{
                 name: "",
-                teams: "",
                 champions: ""
             }],
         }
@@ -40,7 +39,6 @@ class Tourney extends Component {
                     <thead>
                         <tr>
                             <th>Tournament</th>
-                            <th>Teams</th>
                             <th>Champions</th>
                             <th>Tournament MVP</th>
                         </tr>
@@ -48,8 +46,7 @@ class Tourney extends Component {
                     <tbody>
                         {this.state.tourneys.map((tourney) => (
                             <tr>
-                                <td>{tourney.name}</td>
-                                <td>{tourney.teams}</td>
+                                <td><Link to={`/${tourney.name}/tourney`}>{tourney.name}</Link></td>
                                 <td><Link to={`/Teams/${tourney.champions}/profile`}>{tourney.champions}</Link></td>
                                 <td><Link to={`/Players/${tourney.mvp}/profile`}>{tourney.mvp}</Link></td>
                             </tr>
@@ -61,4 +58,4 @@ class Tourney extends Component {
     }
 }
 
-export default Tourney;
+export default Tourneys;

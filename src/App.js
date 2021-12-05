@@ -11,7 +11,7 @@ import CreateTeam from './components/CreateTeam/CreateTeam';
 import CreatePlayer from './components/CreatePlayer/CreatePlayer';
 import Player from './components/Players/Player';
 import Team from './components/Teams/Team';
-import Games from './components/Games/Games';
+import Tourney from './components/Home/Tournament';
 import CreateTourney from './components/Tournament/CreateTournament';
 import jwtDecode from 'jwt-decode';
 import { Grid } from '@material-ui/core'
@@ -111,6 +111,17 @@ class App extends Component {
     }
   }
 
+  getTourney = async (game) => {
+    try {
+      let response = await axios.get(`http://127.0.0.1:8000/api/games/${game}/`)
+      this.setState({
+        tourneys: response.data
+      })
+    }
+    catch (err) {
+    }
+  }
+
   playerSearch = (searchTerm) => {
     const filteredList = this.state.players.filter(function (player) {
       return player.name.toLowerCase() === searchTerm.toLowerCase()
@@ -141,13 +152,6 @@ class App extends Component {
     }
     catch (err) {
     }
-  }
-
-  getAllGames = async () => {
-    let response = await axios.get('http://127.0.0.1:8000/api/games/all/')
-    this.setState({
-      games: response.data
-    })
   }
 
   createNewTourney = async (tourney) => {
@@ -183,8 +187,8 @@ class App extends Component {
             <Route path="/Players" render={props => <Players {...props} getAllPlayers={this.getAllPlayers} />} exact />
             <Route path="/Players/:name/profile" render={props => <Player {...props} getPlayer={this.getPlayer} />} />
             <Route path="/Teams/:name/profile" render={props => <Team {...props} getTeam={this.getTeam} />} />
+            <Route path="/:game/tourney" render={props => <Tourney {...props} getTourney={this.getTourney} />} />
             <Route path="/CreateTourney" render={props => <CreateTourney {...props} createNewTourney={this.createNewTourney} />} />
-            <Route path="/Games" render={props => <Games {...props} getAllGames={this.getAllGames} />} />
           </Switch>
         </div>
       </Grid>
