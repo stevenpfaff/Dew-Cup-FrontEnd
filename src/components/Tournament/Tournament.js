@@ -18,11 +18,8 @@ const Tourney = (props) => {
     const getTourney = async () => {
         try {
             let response = await axios.get(`http://127.0.0.1:8000/api/games/${game}/`)
-            console.log(response)
-            console.log(response.data)
-            let temp1 = response.data
-            let temp2 = temp1[0]
-            setTourney(temp2)
+            let games = response.data[0]
+            setTourney(games)
         }
         catch (err) {
         }
@@ -30,7 +27,7 @@ const Tourney = (props) => {
 
     useEffect(() => {
         getTourney()
-    }, [game])
+    })
 
     return (
         <div style={{ marginRight: "500px", marginLeft: "250px", marginBottom: "250px" }} >

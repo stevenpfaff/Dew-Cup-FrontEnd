@@ -34,7 +34,7 @@ class Tourneys extends Component {
     render() {
         return (
             <div>
-                <h1 style={{ marginLeft: "100px", marginBottom: "100px", marginTop: "80px", fontFamily: "inherit" }}></h1>
+                <h1 style={{ marginLeft: "100px", marginBottom: "100px", marginTop: "80px", fontFamily: "inherit" }}>Tournaments</h1>
                 <Table striped bordered hover>
                     <thead>
                         <tr>

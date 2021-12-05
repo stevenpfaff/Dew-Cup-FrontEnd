@@ -36,7 +36,7 @@ const Player = (props) => {
 
     useEffect(() => {
         getPlayer()
-    }, [name])
+    })
 
 
     return (

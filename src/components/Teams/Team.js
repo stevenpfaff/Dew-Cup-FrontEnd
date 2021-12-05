@@ -39,7 +39,7 @@ const Team = (props) => {
 
     useEffect(() => {
         getTeam()
-    }, [name])
+    })
 
 
     return (

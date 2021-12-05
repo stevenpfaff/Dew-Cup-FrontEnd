@@ -11,8 +11,9 @@ import CreateTeam from './components/CreateTeam/CreateTeam';
 import CreatePlayer from './components/CreatePlayer/CreatePlayer';
 import Player from './components/Players/Player';
 import Team from './components/Teams/Team';
-import Tourney from './components/Home/Tournament';
+import Tourney from './components/Tournament/Tournament';
 import CreateTourney from './components/Tournament/CreateTournament';
+import CreateGame from './components/Tournament/CreateGame';
 import jwtDecode from 'jwt-decode';
 import { Grid } from '@material-ui/core'
 
@@ -42,6 +43,7 @@ class App extends Component {
   createNewUser = async (newUser) => {
     try {
       const response = await axios.post(`http://127.0.0.1:8000/api/auth/register/`, newUser)
+      newUser = response
       window.location = '/login'
     }
     catch (err) {
@@ -115,7 +117,7 @@ class App extends Component {
     try {
       let response = await axios.get(`http://127.0.0.1:8000/api/games/${game}/`)
       this.setState({
-        tourneys: response.data
+        games: response.data
       })
     }
     catch (err) {
@@ -143,6 +145,17 @@ class App extends Component {
     }
   }
 
+  getGames = async () => {
+    try {
+      let response = await axios.get('http://127.0.0.1:8000/api/games/all/')
+      this.setState({
+        games: response.data
+      })
+    }
+    catch (err) {
+    }
+  }
+
   getTourneys = async () => {
     try {
       let response = await axios.get('http://127.0.0.1:8000/api/tournament/all/')
@@ -157,6 +170,13 @@ class App extends Component {
   createNewTourney = async (tourney) => {
     let response = await axios.post(`http://127.0.0.1:8000/api/tournament/`, tourney)
     this.getTourneys();
+    window.location = "/"
+    return response.status
+  }
+
+  createGame = async (game) => {
+    let response = await axios.post(`http://127.0.0.1:8000/api/games/`, game)
+    this.getGames();
     window.location = "/"
     return response.status
   }
@@ -187,8 +207,9 @@ class App extends Component {
             <Route path="/Players" render={props => <Players {...props} getAllPlayers={this.getAllPlayers} />} exact />
             <Route path="/Players/:name/profile" render={props => <Player {...props} getPlayer={this.getPlayer} />} />
             <Route path="/Teams/:name/profile" render={props => <Team {...props} getTeam={this.getTeam} />} />
-            <Route path="/:game/tourney" render={props => <Tourney {...props} getTourney={this.getTourney} />} />
+            <Route path="/:game" render={props => <Tourney {...props} getTourney={this.getTourney} />} />
             <Route path="/CreateTourney" render={props => <CreateTourney {...props} createNewTourney={this.createNewTourney} />} />
+            <Route path="/CreateGame" render={props => <CreateGame {...props} createGame={this.createGame} />} />
           </Switch>
         </div>
       </Grid>
