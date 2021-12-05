@@ -5,28 +5,22 @@ import { Table } from 'react-bootstrap'
 
 const Tourney = (props) => {
     const { game } = useParams()
-    const [games, setTourney] = useState({
+    const [games, setGames] = useState({
         game,
-        home_team: "",
-        home_score: "",
-        home_players: "",
-        away_players: "",
-        away_score: "",
-        away_team: ""
     })
 
-    const getTourney = async () => {
+    const getGames = async () => {
         try {
             let response = await axios.get(`http://127.0.0.1:8000/api/games/${game}/`)
             let games = response.data[0]
-            setTourney(games)
+            setGames(games)
         }
         catch (err) {
         }
     }
 
     useEffect(() => {
-        getTourney()
+        getGames()
     })
 
     return (
@@ -36,17 +30,19 @@ const Tourney = (props) => {
                 <h1>Games</h1>
                 <Table>
                     <thead>
-                        <th>Home Team</th>
-                        <th>Score</th>
                         <th>Away Team</th>
+                        <th>Score</th>
+                        <th>Home Team</th>
                         <th>Score</th>
                         <th>Game Details</th>
                     </thead>
                     <tbody>
-                        <td>{games.home_team}</td>
-                        <td>{games.home_score}</td>
-                        <td>{games.away_team}</td>
-                        <td>{games.away_score}</td>
+                        <tr>
+                            <td>{games.away_team}</td>
+                            <td>{games.away_score}</td>
+                            <td>{games.home_team}</td>
+                            <td>{games.home_score}</td>
+                        </tr>
                     </tbody>
                 </Table>
             </div>

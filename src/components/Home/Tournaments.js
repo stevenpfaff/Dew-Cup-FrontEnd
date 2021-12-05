@@ -46,7 +46,7 @@ class Tourneys extends Component {
                     <tbody>
                         {this.state.tourneys.map((tourney) => (
                             <tr>
-                                <td><Link to={`/${tourney.name}/tourney`}>{tourney.name}</Link></td>
+                                <td><Link to={`/${tourney.name}/`}>{tourney.name}</Link></td>
                                 <td><Link to={`/Teams/${tourney.champions}/profile`}>{tourney.champions}</Link></td>
                                 <td><Link to={`/Players/${tourney.mvp}/profile`}>{tourney.mvp}</Link></td>
                             </tr>
