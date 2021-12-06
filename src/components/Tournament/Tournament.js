@@ -3,25 +3,22 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { Table } from 'react-bootstrap'
 
-const Tourney = (props) => {
+function Tourney() {
     const { game } = useParams()
-    const [games, setGames] = useState({
-        game,
-    })
-
-    const getGames = async () => {
-        try {
-            let response = await axios.get(`http://127.0.0.1:8000/api/games/${game}/`)
-            let games = response.data[0]
-            setGames(games)
-        }
-        catch (err) {
-        }
-    }
+    const [games, setTourney] = useState([])
 
     useEffect(() => {
-        getGames()
+        axios.get(`http://127.0.0.1:8000/api/games/${game}/`)
+            .then(res => {
+                console.log(res)
+                setTourney(res.data)
+            })
+            .catch(err =>
+                console.log(err)
+
+            )
     })
+
 
     return (
         <div style={{ marginRight: "500px", marginLeft: "250px", marginBottom: "250px" }} >
@@ -37,12 +34,14 @@ const Tourney = (props) => {
                         <th>Game Details</th>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>{games.away_team}</td>
-                            <td>{games.away_score}</td>
-                            <td>{games.home_team}</td>
-                            <td>{games.home_score}</td>
-                        </tr>
+                        {games.map(game => (
+                            <tr>
+                                <td>{game.away_team}</td>
+                                <td>{game.away_score}</td>
+                                <td>{game.home_team}</td>
+                                <td>{game.home_score}</td>
+                            </tr>
+                        ))}
                     </tbody>
                 </Table>
             </div>

@@ -27,6 +27,7 @@ class App extends Component {
       teams: [],
       players: [],
       tourneys: [],
+      games: []
     }
   }
 
