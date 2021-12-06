@@ -12,6 +12,7 @@ import CreatePlayer from './components/CreatePlayer/CreatePlayer';
 import Player from './components/Players/Player';
 import Team from './components/Teams/Team';
 import Tourney from './components/Tournament/Tournament';
+import SingleGame from './components/Tournament/GameDetails';
 import CreateTourney from './components/Tournament/CreateTournament';
 import CreateGame from './components/Tournament/CreateGame';
 import jwtDecode from 'jwt-decode';
@@ -114,11 +115,23 @@ class App extends Component {
     }
   }
 
+
   getTourney = async (game) => {
     try {
       let response = await axios.get(`http://127.0.0.1:8000/api/games/${game}/`)
       this.setState({
         games: response.data
+      })
+    }
+    catch (err) {
+    }
+  }
+
+  getGame = async (games_id) => {
+    try {
+      let response = await axios.get(`http://127.0.0.1:8000/api/games/single/${games_id}/`)
+      this.setState({
+        game: response.data
       })
     }
     catch (err) {
@@ -211,6 +224,7 @@ class App extends Component {
             <Route path="/:game" render={props => <Tourney {...props} getTourney={this.getTourney} />} />
             <Route path="/CreateTourney" render={props => <CreateTourney {...props} createNewTourney={this.createNewTourney} />} />
             <Route path="/CreateGame" render={props => <CreateGame {...props} createGame={this.createGame} />} />
+            <Route path="/single/:games_id" render={props => <SingleGame {...props} getGame={this.getGame} />} />
           </Switch>
         </div>
       </Grid>
