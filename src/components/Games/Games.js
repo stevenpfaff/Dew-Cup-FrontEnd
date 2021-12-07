@@ -20,9 +20,11 @@ function Games() {
         <div style={{ marginRight: "15%", marginLeft: "15%", marginBottom: "10%" }} >
             <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>All Games</h1>
             <div>
-                <h1>Game Details</h1>
-                <Table>
+                <h2 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "2%", marginTop: "2%", fontFamily: "inherit" }}>Game Details</h2>
+                <Table striped border hover>
                     <thead>
+                        <th>Series</th>
+                        <th>Type</th>
                         <th>Away Team</th>
                         <th>Score</th>
                         <th>Away Players</th>
@@ -33,6 +35,8 @@ function Games() {
                     <tbody>
                         {games.map(game => (
                             <tr>
+                                <td>{game.game}</td>
+                                <td>{game.type}</td>
                                 <td>{game.away_team}</td>
                                 <td>{game.away_score}</td>
                                 <td>{game.away_players}</td>

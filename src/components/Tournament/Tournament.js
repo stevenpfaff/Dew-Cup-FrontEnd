@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
 import { Table } from 'react-bootstrap'
 
 function Tourney() {
@@ -22,7 +21,7 @@ function Tourney() {
 
 
     return (
-        <div style={{ marginRight: "15%", marginLeft: "15%", marginBottom: "10%" }} >
+        <div style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "10%" }} >
             <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>{game} Results</h1>
             <div>
                 <img src={game.file} width="150%" height="150%" alt=""></img>
@@ -31,9 +30,10 @@ function Tourney() {
                         <th>Game Type</th>
                         <th>Away Team</th>
                         <th>Score</th>
+                        <th>Away Players</th>
                         <th>Home Team</th>
                         <th>Score</th>
-                        <th>Game Details</th>
+                        <th>Home Players</th>
                     </thead>
                     <tbody>
                         {games.map(game => (
@@ -41,9 +41,10 @@ function Tourney() {
                                 <td>{game.type}</td>
                                 <td>{game.away_team}</td>
                                 <td>{game.away_score}</td>
+                                <td>{game.away_players}</td>
                                 <td>{game.home_team}</td>
                                 <td>{game.home_score}</td>
-                                <td><Link to={`/single/${game.id}`}>Click For Details</Link></td>
+                                <td>{game.home_players}</td>
                             </tr>
                         ))}
                     </tbody>

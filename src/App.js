@@ -177,7 +177,7 @@ class App extends Component {
 
   getGame = async (games_id) => {
     try {
-      let response = await axios.get(`http://127.0.0.1:8000/api/games/single/${games_id}/`)
+      let response = await axios.get(`http://127.0.0.1:8000/api/games/games/${games_id}/`)
       this.setState({
         game: response.data
       })
@@ -224,7 +224,7 @@ class App extends Component {
             <Route path="/Players/:name/profile" render={props => <Player {...props} getPlayer={this.getPlayer} />} />
             <Route path="/Teams/:name/profile" render={props => <Team {...props} getTeam={this.getTeam} />} />
             <Route path="/:game" render={props => <Tourney {...props} getTourney={this.getTourney} />} />
-            <Route path="/single/:games_id" render={props => <SingleGame {...props} getGame={this.getGame} />} />
+            <Route path="/games/:games_id" render={props => <SingleGame {...props} getGame={this.getGame} />} />
           </Switch>
         </div>
       </Grid>

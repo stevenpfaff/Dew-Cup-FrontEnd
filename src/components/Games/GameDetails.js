@@ -11,7 +11,7 @@ function SingleGame() {
 
     const getGame = async () => {
         try {
-            let response = await axios.get(`http://127.0.0.1:8000/api/games/single/${games_id}/`)
+            let response = await axios.get(`http://127.0.0.1:8000/api/games/games/${games_id}/`)
             console.log(response)
             console.log(response.data)
             let temp1 = response.data
