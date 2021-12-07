@@ -22,6 +22,7 @@ function NavBar(props) {
                         {props.user && <Nav.Link href="/CreatePlayer">Create Player</Nav.Link>}
                         {props.user && <Nav.Link href="/CreateTeam">Create Team</Nav.Link>}
                         {props.user && <Nav.Link href="/CreateTourney">Create Tournament</Nav.Link>}
+                        {props.user && <Nav.Link href="/CreateGame">Create Game</Nav.Link>}
                         {!props.user && <Nav.Link onClick={props.userSignIn} href="/login">Login</Nav.Link>}
                         {!props.user && <Nav.Link onClick={props.createNewUser} href="/register">Register</Nav.Link>}
                         {props.user && <Nav.Link onClick={props.logOutUser} href="/login">Logout</Nav.Link>}

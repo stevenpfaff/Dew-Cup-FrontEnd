@@ -9,6 +9,7 @@ import Teams from './components/Teams/Teams';
 import Players from './components/Players/Players';
 import CreateTeam from './components/CreateTeam/CreateTeam';
 import CreatePlayer from './components/CreatePlayer/CreatePlayer';
+import CreateGame from './components/CreateGame/CreateGame';
 import Player from './components/Players/Player';
 import Team from './components/Teams/Team';
 import Tourney from './components/Tournament/Tournament';
@@ -100,6 +101,17 @@ class App extends Component {
     }
   }
 
+  getAllGames = async () => {
+    try {
+      let response = await axios.get('http://127.0.0.1:8000/api/games/all/')
+      this.setState({
+        games: response.data
+      })
+    }
+    catch (err) {
+    }
+  }
+
   createNewTeam = async (team) => {
     let response = await axios.post(`http://127.0.0.1:8000/api/teams/`, team)
     this.getAllTeams();
@@ -117,6 +129,13 @@ class App extends Component {
   createNewTourney = async (tourney) => {
     let response = await axios.post(`http://127.0.0.1:8000/api/tournament/`, tourney)
     this.getAllTourneys();
+    window.location = "/"
+    return response.status
+  }
+
+  createNewGame = async (game) => {
+    let response = await axios.post(`http://127.0.0.1:8000/api/games/`, game)
+    this.getAllGames();
     window.location = "/"
     return response.status
   }
@@ -217,6 +236,7 @@ class App extends Component {
             <Route path="/CreateTeam" render={props => <CreateTeam {...props} createNewTeam={this.createNewTeam} />} />
             <Route path="/CreatePlayer" render={props => <CreatePlayer {...props} createNewPlayer={this.createNewPlayer} />} />
             <Route path="/CreateTourney" render={props => <CreateTourney {...props} createNewTourney={this.createNewTourney} />} />
+            <Route path="/CreateGame" render={props => <CreateGame {...props} createNewGame={this.createNewGame} />} />
             <Route path="/Players" render={props => <Players {...props} getAllPlayers={this.getAllPlayers} />} exact />
             <Route path="/Players/:name/profile" render={props => <Player {...props} getPlayer={this.getPlayer} />} />
             <Route path="/Teams/:name/profile" render={props => <Team {...props} getTeam={this.getTeam} />} />
