@@ -42,16 +42,6 @@ class App extends Component {
     }
   }
 
-  createNewUser = async (newUser) => {
-    try {
-      const response = await axios.post(`http://127.0.0.1:8000/api/auth/register/`, newUser)
-      newUser = response
-      window.location = '/login'
-    }
-    catch (err) {
-    }
-  }
-
   userSignIn = async (userCredentials) => {
     try {
       const response = await axios.post(`http://127.0.0.1:8000/api/auth/login/`, userCredentials)
@@ -66,6 +56,16 @@ class App extends Component {
   logOutUser = () => {
     localStorage.removeItem('token');
     window.location = '/Login'
+  }
+
+  createNewUser = async (newUser) => {
+    try {
+      const response = await axios.post(`http://127.0.0.1:8000/api/auth/register/`, newUser)
+      newUser = response
+      window.location = '/login'
+    }
+    catch (err) {
+    }
   }
 
   getAllTeams = async () => {
@@ -193,25 +193,6 @@ class App extends Component {
       players: filteredList
     })
   }
-
-  getGames = async () => {
-    try {
-      let response = await axios.get('http://127.0.0.1:8000/api/games/all/')
-      this.setState({
-        games: response.data
-      })
-    }
-    catch (err) {
-    }
-  }
-
-  createGame = async (game) => {
-    let response = await axios.post(`http://127.0.0.1:8000/api/games/`, game)
-    this.getGames();
-    window.location = "/"
-    return response.status
-  }
-
 
   render() {
     var user = this.state.user;
