@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Table } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import "./Home.css"
+import DewCupGroup from "../../Images/DewCupGroup.jpeg"
 
 
 class Tourneys extends Component {
@@ -33,7 +33,7 @@ class Tourneys extends Component {
 
     render() {
         return (
-            <div style={{ marginRight: "0%", marginLeft: "0%", marginBottom: "0%" }} >
+            <div style={{ marginRight: "15%", marginLeft: "15%", marginBottom: "0%" }} >
                 <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>Tournaments</h1>
                 <Table striped bordered hover>
                     <thead>
@@ -53,6 +53,7 @@ class Tourneys extends Component {
                         ))}
                     </tbody>
                 </Table>
+                <img src={DewCupGroup} width="100%" height="100%" class="center" alt=""></img>
             </div>
         );
     }

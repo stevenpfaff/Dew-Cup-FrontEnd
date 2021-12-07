@@ -14,7 +14,7 @@ function NavBar(props) {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="/">Tournaments</Nav.Link>
+                        <Nav.Link href="/Tourneys">Tournaments</Nav.Link>
                         <Nav.Link href="/Teams">Teams</Nav.Link>
                         <Nav.Link href="/Players">Players</Nav.Link>
                     </Nav>

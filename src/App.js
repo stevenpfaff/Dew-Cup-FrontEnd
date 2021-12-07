@@ -3,7 +3,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import axios from 'axios'
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
-import Home from './components/Home/Home'
+import Home from './components/Home/Home';
 import NavBar from './components/NavBar/NavBar';
 import Teams from './components/Teams/Teams';
 import Players from './components/Players/Players';
@@ -13,6 +13,7 @@ import CreateGame from './components/CreateGame/CreateGame';
 import Player from './components/Players/Player';
 import Team from './components/Teams/Team';
 import Tourney from './components/Tournament/Tournament';
+import Tourneys from './components/Tournament/Tournaments';
 import SingleGame from './components/Games/GameDetails';
 import CreateTourney from './components/CreateTournament/CreateTournament';
 import jwtDecode from 'jwt-decode';
@@ -200,19 +201,19 @@ class App extends Component {
         <NavBar user={user} logOutUser={this.logOutUser} />
         <div className="App">
           <Switch>
-            <Route path="/Home" exact render={props => {
+            <Route path="/" exact render={props => {
               if (!user) {
-                return <Redirect to="/Login" />
+                return <Redirect to="/Tourneys" />
               }
               else {
                 return <Home {...props} user={user} />
               }
             }
             } />
-            <Route path="/" exact component={Home} />
             <Route path="/Register" render={props => <Register {...props} createNewUser={this.createNewUser} />} />
             <Route path="/Login" render={props => <Login {...props} userSignIn={this.userSignIn} />} />
             <Route path="/Teams" render={props => <Teams {...props} getAllTeams={this.getAllTeams} />} exact />
+            <Route path="/Tourneys" render={props => <Tourneys {...props} getAllTourneys={this.getAllTourneys} />} exact />
             <Route path="/CreateTeam" render={props => <CreateTeam {...props} createNewTeam={this.createNewTeam} />} />
             <Route path="/CreatePlayer" render={props => <CreatePlayer {...props} createNewPlayer={this.createNewPlayer} />} />
             <Route path="/CreateTourney" render={props => <CreateTourney {...props} createNewTourney={this.createNewTourney} />} />
@@ -221,7 +222,7 @@ class App extends Component {
             <Route path="/Players/:name/profile" render={props => <Player {...props} getPlayer={this.getPlayer} />} />
             <Route path="/Teams/:name/profile" render={props => <Team {...props} getTeam={this.getTeam} />} />
             <Route path="/:game" render={props => <Tourney {...props} getTourney={this.getTourney} />} />
-            <Route path="/single/:games_id" render={props => <SingleGame {...props} getGame={this.getGame} />} />
+            <Route path="Tourneys/single/:games_id" render={props => <SingleGame {...props} getGame={this.getGame} />} />
           </Switch>
         </div>
       </Grid>
