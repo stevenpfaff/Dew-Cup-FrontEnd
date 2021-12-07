@@ -152,9 +152,9 @@ class Players extends Component {
 
     render() {
         return (
-            <div style={{ marginRight: "450px", marginLeft: "250px", marginBottom: "250px" }} >
+            <div style={{ marginRight: "15%", marginLeft: "15%", marginBottom: "10%" }} >
                 <SearchBar playerSearch={this.playerSearch} />
-                <h1 style={{ marginLeft: "100px", marginBottom: "100px", marginTop: "80px", fontFamily: "inherit" }}>Players</h1>
+                <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>Players</h1>
                 <Button type="submit" variant="contained" onClick={this.handleClick} class="btn btn-success">Refresh Player List</Button>
                 <Table striped bordered hover>
                     <thead>

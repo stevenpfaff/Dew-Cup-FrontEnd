@@ -21,8 +21,8 @@ function Tourney() {
 
 
     return (
-        <div style={{ marginRight: "500px", marginLeft: "250px", marginBottom: "250px" }} >
-            <h1 style={{ marginLeft: "100px", marginBottom: "100px", marginTop: "80px", fontFamily: "inherit" }}>{game} Results</h1>
+        <div style={{ marginRight: "15%", marginLeft: "15%", marginBottom: "10%" }} >
+            <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>{game} Results</h1>
             <div>
                 <img src={game.file} width="150%" height="150%" alt=""></img>
                 <Table striped bordered hover>

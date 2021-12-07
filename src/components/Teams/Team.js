@@ -43,8 +43,8 @@ const Team = (props) => {
 
 
     return (
-        <div style={{ marginRight: "500px", marginLeft: "250px", marginBottom: "250px" }} >
-            <h1 style={{ marginLeft: "100px", marginBottom: "100px", marginTop: "80px", fontFamily: "inherit" }}>{name} Team Profile</h1>
+        <div style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "10%" }} >
+            <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>{name} Team Profile</h1>
             <div class="column">
                 <img src={team.file} width="150%" height="150%" alt="" />
             </div>
