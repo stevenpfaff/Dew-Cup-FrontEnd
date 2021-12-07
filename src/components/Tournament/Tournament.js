@@ -24,16 +24,17 @@ function Tourney() {
         <div style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "10%" }} >
             <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>{game} Results</h1>
             <div>
-                <img src={game.file} width="150%" height="150%" alt=""></img>
                 <Table striped bordered hover>
                     <thead>
-                        <th>Game Type</th>
-                        <th>Away Team</th>
-                        <th>Score</th>
-                        <th>Away Players</th>
-                        <th>Home Team</th>
-                        <th>Score</th>
-                        <th>Home Players</th>
+                        <tr>
+                            <th>Game Type</th>
+                            <th>Away Team</th>
+                            <th>Score</th>
+                            <th>Away Players</th>
+                            <th>Home Team</th>
+                            <th>Score</th>
+                            <th>Home Players</th>
+                        </tr>
                     </thead>
                     <tbody>
                         {games.map(game => (

@@ -18,6 +18,7 @@ class CreateGame extends Component {
             home_score: "",
             game: "",
             type: "",
+            file: ""
         };
     }
 
@@ -67,6 +68,19 @@ class CreateGame extends Component {
         });
     }
 
+    fileSelected = event => {
+        let me = this
+        var input = event.target
+        var reader = new FileReader();
+        reader.onload = function () {
+            var dataURL = reader.result;
+            me.setState({
+                file: dataURL
+            });
+        };
+        reader.readAsDataURL(input.files[0]);
+    };
+
     handleSubmit = (event) => {
         console.log(this.state)
         event.preventDefault();
@@ -78,7 +92,8 @@ class CreateGame extends Component {
             away_score: parseInt(this.state.away_score),
             home_team: this.state.home_team,
             home_players: this.state.home_players,
-            home_score: parseInt(this.state.home_score)
+            home_score: parseInt(this.state.home_score),
+            file: this.state.file
         }
         console.log('Create Submit', this.props, newGame)
         this.props.createNewGame(newGame);
@@ -111,6 +126,9 @@ class CreateGame extends Component {
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formGroupRating">
                     <Form.Control type="number" placeholder="Home Score" onChange={this.handleHomeScoreChange} value={this.state.home_score} />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formGroupRating">
+                    <Form.Control type="file" accept='image/*' onChange={this.fileSelected} />
                 </Form.Group>
                 <Button type="submit" variant="contained" class="btn btn-success">Add Game</Button>
                 <Grid style={{ marginLeft: "850px" }}></Grid>
