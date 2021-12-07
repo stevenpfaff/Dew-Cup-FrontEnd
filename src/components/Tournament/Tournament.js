@@ -5,13 +5,13 @@ import { Table } from 'react-bootstrap'
 
 function Tourney() {
     const { game } = useParams()
-    const [games, setTourney] = useState([])
+    const [games, setGame] = useState([])
 
     useEffect(() => {
         axios.get(`http://127.0.0.1:8000/api/games/${game}/`)
             .then(res => {
                 console.log(res)
-                setTourney(res.data)
+                setGame(res.data)
             })
             .catch(err =>
                 console.log(err)
@@ -24,7 +24,7 @@ function Tourney() {
         <div style={{ marginRight: "500px", marginLeft: "250px", marginBottom: "250px" }} >
             <h1 style={{ marginLeft: "100px", marginBottom: "100px", marginTop: "80px", fontFamily: "inherit" }}>{game} Results</h1>
             <div>
-                <h1>Games</h1>
+                <img src={game.file} width="150%" height="150%" alt=""></img>
                 <Table striped bordered hover>
                     <thead>
                         <th>Game Type</th>

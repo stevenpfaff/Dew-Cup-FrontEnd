@@ -13,8 +13,7 @@ import Player from './components/Players/Player';
 import Team from './components/Teams/Team';
 import Tourney from './components/Tournament/Tournament';
 import SingleGame from './components/Tournament/GameDetails';
-import CreateTourney from './components/Tournament/CreateTournament';
-import CreateGame from './components/Tournament/CreateGame';
+import CreateTourney from './components/CreateTournament/CreateTournament';
 import jwtDecode from 'jwt-decode';
 import { Grid } from '@material-ui/core'
 
@@ -79,6 +78,28 @@ class App extends Component {
     }
   }
 
+  getAllPlayers = async () => {
+    try {
+      let response = await axios.get('http://127.0.0.1:8000/api/players/all/')
+      this.setState({
+        players: response.data
+      })
+    }
+    catch (err) {
+    }
+  }
+
+  getAllTourneys = async () => {
+    try {
+      let response = await axios.get('http://127.0.0.1:8000/api/tournaments/all/')
+      this.setState({
+        tourneys: response.data
+      })
+    }
+    catch (err) {
+    }
+  }
+
   createNewTeam = async (team) => {
     let response = await axios.post(`http://127.0.0.1:8000/api/teams/`, team)
     this.getAllTeams();
@@ -90,6 +111,13 @@ class App extends Component {
     let response = await axios.post(`http://127.0.0.1:8000/api/players/`, player)
     this.getAllPlayers();
     window.location = "/Players"
+    return response.status
+  }
+
+  createNewTourney = async (tourney) => {
+    let response = await axios.post(`http://127.0.0.1:8000/api/tournament/`, tourney)
+    this.getAllTourneys();
+    window.location = "/"
     return response.status
   }
 
@@ -147,18 +175,6 @@ class App extends Component {
     })
   }
 
-
-  getAllPlayers = async () => {
-    try {
-      let response = await axios.get('http://127.0.0.1:8000/api/players/all/')
-      this.setState({
-        players: response.data
-      })
-    }
-    catch (err) {
-    }
-  }
-
   getGames = async () => {
     try {
       let response = await axios.get('http://127.0.0.1:8000/api/games/all/')
@@ -168,24 +184,6 @@ class App extends Component {
     }
     catch (err) {
     }
-  }
-
-  getTourneys = async () => {
-    try {
-      let response = await axios.get('http://127.0.0.1:8000/api/tournament/all/')
-      this.setState({
-        tourneys: response.data
-      })
-    }
-    catch (err) {
-    }
-  }
-
-  createNewTourney = async (tourney) => {
-    let response = await axios.post(`http://127.0.0.1:8000/api/tournament/`, tourney)
-    this.getTourneys();
-    window.location = "/"
-    return response.status
   }
 
   createGame = async (game) => {
@@ -218,12 +216,11 @@ class App extends Component {
             <Route path="/Teams" render={props => <Teams {...props} getAllTeams={this.getAllTeams} />} exact />
             <Route path="/CreateTeam" render={props => <CreateTeam {...props} createNewTeam={this.createNewTeam} />} />
             <Route path="/CreatePlayer" render={props => <CreatePlayer {...props} createNewPlayer={this.createNewPlayer} />} />
+            <Route path="/CreateTourney" render={props => <CreateTourney {...props} createNewTourney={this.createNewTourney} />} />
             <Route path="/Players" render={props => <Players {...props} getAllPlayers={this.getAllPlayers} />} exact />
             <Route path="/Players/:name/profile" render={props => <Player {...props} getPlayer={this.getPlayer} />} />
             <Route path="/Teams/:name/profile" render={props => <Team {...props} getTeam={this.getTeam} />} />
             <Route path="/:game" render={props => <Tourney {...props} getTourney={this.getTourney} />} />
-            <Route path="/CreateTourney" render={props => <CreateTourney {...props} createNewTourney={this.createNewTourney} />} />
-            <Route path="/CreateGame" render={props => <CreateGame {...props} createGame={this.createGame} />} />
             <Route path="/single/:games_id" render={props => <SingleGame {...props} getGame={this.getGame} />} />
           </Switch>
         </div>
