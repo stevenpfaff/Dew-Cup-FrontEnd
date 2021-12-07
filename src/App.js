@@ -13,7 +13,7 @@ import CreateGame from './components/CreateGame/CreateGame';
 import Player from './components/Players/Player';
 import Team from './components/Teams/Team';
 import Tourney from './components/Tournament/Tournament';
-import SingleGame from './components/Tournament/GameDetails';
+import SingleGame from './components/Games/GameDetails';
 import CreateTourney from './components/CreateTournament/CreateTournament';
 import jwtDecode from 'jwt-decode';
 import { Grid } from '@material-ui/core'
@@ -161,7 +161,6 @@ class App extends Component {
     catch (err) {
     }
   }
-
 
   getTourney = async (game) => {
     try {

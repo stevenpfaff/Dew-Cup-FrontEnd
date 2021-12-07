@@ -8,7 +8,7 @@ class Home extends Component {
         return (
             <div style={{ marginRight: "450px", marginLeft: "250px", marginBottom: "250px" }} >
                 <Tourneys />
-                <img src={DewCupGroup} width="1284" height="1000" class="center" alt=""></img>
+                <img src={DewCupGroup} width="100%" height="100%" class="center" alt=""></img>
             </div>
         );
     }
