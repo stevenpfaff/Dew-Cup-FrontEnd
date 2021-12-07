@@ -27,8 +27,8 @@ function SingleGame() {
     })
 
     return (
-        <div style={{ marginRight: "500px", marginLeft: "250px", marginBottom: "250px" }} >
-            <h1 style={{ marginLeft: "100px", marginBottom: "100px", marginTop: "80px", fontFamily: "inherit" }}>{games_id}Details</h1>
+        <div style={{ marginRight: "15%", marginLeft: "15%", marginBottom: "10%" }} >
+            <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>{games_id}Details</h1>
             <div>
                 <h1>Game Details</h1>
                 <Table>

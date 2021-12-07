@@ -7,6 +7,7 @@ import Home from './components/Home/Home';
 import NavBar from './components/NavBar/NavBar';
 import Teams from './components/Teams/Teams';
 import Players from './components/Players/Players';
+import Games from './components/Games/Games';
 import CreateTeam from './components/CreateTeam/CreateTeam';
 import CreatePlayer from './components/CreatePlayer/CreatePlayer';
 import CreateGame from './components/CreateGame/CreateGame';
@@ -214,15 +215,16 @@ class App extends Component {
             <Route path="/Login" render={props => <Login {...props} userSignIn={this.userSignIn} />} />
             <Route path="/Teams" render={props => <Teams {...props} getAllTeams={this.getAllTeams} />} exact />
             <Route path="/Tourneys" render={props => <Tourneys {...props} getAllTourneys={this.getAllTourneys} />} exact />
+            <Route path="/Players" render={props => <Players {...props} getAllPlayers={this.getAllPlayers} />} exact />
+            <Route path="/Games" render={props => <Games {...props} getAllGames={this.getAllGames} />} exact />
             <Route path="/CreateTeam" render={props => <CreateTeam {...props} createNewTeam={this.createNewTeam} />} />
             <Route path="/CreatePlayer" render={props => <CreatePlayer {...props} createNewPlayer={this.createNewPlayer} />} />
             <Route path="/CreateTourney" render={props => <CreateTourney {...props} createNewTourney={this.createNewTourney} />} />
             <Route path="/CreateGame" render={props => <CreateGame {...props} createNewGame={this.createNewGame} />} />
-            <Route path="/Players" render={props => <Players {...props} getAllPlayers={this.getAllPlayers} />} exact />
             <Route path="/Players/:name/profile" render={props => <Player {...props} getPlayer={this.getPlayer} />} />
             <Route path="/Teams/:name/profile" render={props => <Team {...props} getTeam={this.getTeam} />} />
             <Route path="/:game" render={props => <Tourney {...props} getTourney={this.getTourney} />} />
-            <Route path="Tourneys/single/:games_id" render={props => <SingleGame {...props} getGame={this.getGame} />} />
+            <Route path="/single/:games_id" render={props => <SingleGame {...props} getGame={this.getGame} />} />
           </Switch>
         </div>
       </Grid>
