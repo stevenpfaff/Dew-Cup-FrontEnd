@@ -18,6 +18,7 @@ function Games() {
     })
     return (
         <div style={{ marginRight: "15%", marginLeft: "15%", marginBottom: "10%" }} >
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>All Games</h1>
             <div>
                 <h2 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "2%", marginTop: "2%", fontFamily: "inherit" }}>Game Details</h2>

@@ -9,6 +9,7 @@ import DewCup from "../../Images/DewCup.png"
 function NavBar(props) {
     return (
         <Navbar collapseOnSelect expand="lg" bg="success" variant="dark">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <Container>
                 <img src={DewCup} alt="..." height="75" width="75"></img>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />

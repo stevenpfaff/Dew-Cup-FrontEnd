@@ -22,6 +22,7 @@ function Tourney() {
 
     return (
         <div style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "10%" }} >
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>{game} Results</h1>
             <div>
                 <Table striped bordered hover>

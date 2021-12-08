@@ -41,6 +41,7 @@ const Player = (props) => {
 
     return (
         <div style={{ marginRight: "15%", marginLeft: "15%", marginBottom: "10%" }} >
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>{name}'s Player Profile</h1>
             <div class="column">
                 <img src={player.file} width="150%" height="150%" alt=""></img>
