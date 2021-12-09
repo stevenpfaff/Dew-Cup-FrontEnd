@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Table } from 'react-bootstrap'
 import "./Teams.css"
 import { Link } from 'react-router-dom';
+import { SortAlphaUp } from 'react-bootstrap-icons'
 
 class Teams extends Component {
     constructor(props) {
@@ -37,6 +38,20 @@ class Teams extends Component {
         })
     }
 
+    sortTeamName = () => {
+        this.setState(prevState => ({
+            teams: [...prevState.teams].sort(function (team1, team2) {
+                if (team1.name < team2.name) {
+                    return -1;
+                }
+                if (team1.name > team2.name) {
+                    return 1;
+                }
+                return 0;
+            }),
+        }))
+    }
+
     render() {
         return (
             <div style={{ marginRight: "15%", marginLeft: "15%", marginBottom: "10%" }} >
@@ -45,7 +60,7 @@ class Teams extends Component {
                 <Table striped bordered hover>
                     <thead>
                         <tr>
-                            <th>Team Name</th>
+                            <th>Team Name<button type="button" class="btn btn-default" onClick={this.sortTeamName}><SortAlphaUp /></button></th>
                             <th>Wins</th>
                             <th>Losses</th>
                             <th>Goals</th>
