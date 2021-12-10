@@ -55,7 +55,7 @@ class Teams extends Component {
 
     sortWins = () => {
         this.setState(prevState => ({
-            players: [...prevState.teams].sort(function (team1, team2) {
+            teams: [...prevState.teams].sort(function (team1, team2) {
                 if (team1.wins < team2.wins) {
                     return 1;
                 }
@@ -69,7 +69,7 @@ class Teams extends Component {
 
     sortLosses = () => {
         this.setState(prevState => ({
-            players: [...prevState.teams].sort(function (team1, team2) {
+            teams: [...prevState.teams].sort(function (team1, team2) {
                 if (team1.losses < team2.losses) {
                     return 1;
                 }
@@ -83,7 +83,7 @@ class Teams extends Component {
 
     sortGoals = () => {
         this.setState(prevState => ({
-            players: [...prevState.teams].sort(function (team1, team2) {
+            teams: [...prevState.teams].sort(function (team1, team2) {
                 if (team1.goals < team2.goals) {
                     return 1;
                 }
@@ -97,7 +97,7 @@ class Teams extends Component {
 
     sortGoalsAg = () => {
         this.setState(prevState => ({
-            players: [...prevState.teams].sort(function (team1, team2) {
+            teams: [...prevState.teams].sort(function (team1, team2) {
                 if (team1.goals_against < team2.goals_against) {
                     return 1;
                 }
@@ -111,7 +111,7 @@ class Teams extends Component {
 
     sortRuns = () => {
         this.setState(prevState => ({
-            players: [...prevState.teams].sort(function (team1, team2) {
+            teams: [...prevState.teams].sort(function (team1, team2) {
                 if (team1.runs < team2.runs) {
                     return 1;
                 }
@@ -125,7 +125,7 @@ class Teams extends Component {
 
     sortRunsAg = () => {
         this.setState(prevState => ({
-            players: [...prevState.teams].sort(function (team1, team2) {
+            teams: [...prevState.teams].sort(function (team1, team2) {
                 if (team1.runs_against < team2.runs_against) {
                     return 1;
                 }
@@ -139,7 +139,7 @@ class Teams extends Component {
 
     sortAverage = () => {
         this.setState(prevState => ({
-            players: [...prevState.teams].sort(function (team1, team2) {
+            teams: [...prevState.teams].sort(function (team1, team2) {
                 if (team1.batting_average < team2.batting_average) {
                     return 1;
                 }
@@ -153,7 +153,7 @@ class Teams extends Component {
 
     sortHomeruns = () => {
         this.setState(prevState => ({
-            players: [...prevState.teams].sort(function (team1, team2) {
+            teams: [...prevState.teams].sort(function (team1, team2) {
                 if (team1.homeruns < team2.homeruns) {
                     return 1;
                 }
@@ -167,7 +167,7 @@ class Teams extends Component {
 
     sortChampionships = () => {
         this.setState(prevState => ({
-            players: [...prevState.teams].sort(function (team1, team2) {
+            teams: [...prevState.teams].sort(function (team1, team2) {
                 if (team1.championships < team2.championships) {
                     return 1;
                 }
