@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "2019 Dew Cup",
+        "teams": "Goose Chasers, Buds Wood",
+        "champions": "Goose Chasers",
+        "mvp": "none"
+    },
+    {
+        "id": 2,
+        "name": "2020 Dew Cup",
+        "teams": "Buds Wood, Muppets, Squid Niqs, Rat Girl Minions, Goobies Mum",
+        "champions": "Squid Niqs",
+        "mvp": "Hoag Braun"
+    },
+    {
+        "id": 3,
+        "name": "2021 Dew Cup",
+        "teams": "Buds Wood, Squid Niqs, Goobies Mum",
+        "champions": "Goobies Mum",
+        "mvp": "Garry Bob"
+    },
+    {
+        "id": 4,
+        "name": "2021 Bud Wood Memorial",
+        "teams": "Squid Niqs, Goobies Mum, Monty Scoops, Rat Girl Minions",
+        "champions": "Goobies Mum",
+        "mvp": "Garry Bob"
+    }
+]
