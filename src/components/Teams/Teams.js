@@ -5,6 +5,7 @@ import "./Teams.css"
 import { Link } from 'react-router-dom';
 import { SortAlphaUp } from 'react-bootstrap-icons'
 import { SortNumericDown } from 'react-bootstrap-icons'
+import teams from '../../data/teams.json'
 
 class Teams extends Component {
     constructor(props) {
@@ -200,7 +201,7 @@ class Teams extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {this.state.teams.map((team) => (
+                        {teams.map((team) => (
                             <tr>
                                 <td><Link to={`/Teams/${team.name}/profile`}>{team.name}</Link></td>
                                 <td>{team.wins}</td>
