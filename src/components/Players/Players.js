@@ -7,6 +7,7 @@ import "./Players.css"
 import { Link } from 'react-router-dom';
 import { SortAlphaUp } from 'react-bootstrap-icons'
 import { SortNumericDown } from 'react-bootstrap-icons'
+import Data from '../../data/players.json'
 
 class Players extends Component {
     constructor(props) {
@@ -170,7 +171,7 @@ class Players extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {this.state.players.map((player) => (
+                        {Data.map((player) => (
                             <tr>
                                 <td><Link to={`/Players/${player.name}/profile`}>{player.name}</Link></td>
                                 <td>{player.games_played}</td>
