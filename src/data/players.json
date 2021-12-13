@@ -1,35 +1,35 @@
 [
     {
-        "id": 2,
-        "games_played": 0,
-        "info": "Better known as 'Big Daddy Chrome' or 'Funky Kong'. This guy has a huge bat and is electric on the mound.",
-        "name": "Shawn Volesky",
-        "at_bats": 20,
-        "batting_average": 600,
-        "hits": 12,
-        "homeruns": 5,
-        "minibat_games_played": 4
+        "id": 13,
+        "games_played": 12,
+        "info": "A complete assassin in both Hockey and Minibat action. Garry is the only two time MVP and won in a unanimous decision in the first annual BWMC. Garry hit 11 moonbombs in five games.",
+        "name": "Garry Bob",
+        "at_bats": 45,
+        "batting_average": 533,
+        "hits": 24,
+        "homeruns": 11,
+        "minibat_games_played": 5
     },
     {
-        "id": 3,
-        "games_played": 0,
-        "info": "Speed demon on the bases.",
-        "name": "Alex Hunt",
-        "at_bats": 22,
-        "batting_average": 455,
-        "hits": 10,
-        "homeruns": 2,
-        "minibat_games_played": 4
+        "id": 12,
+        "games_played": 12,
+        "info": "The peskiest you can be. Goobies Mum ring leader. Overshadowed by the greatness of Garry Bob and rightfully so.",
+        "name": "John Pfaff",
+        "at_bats": 42,
+        "batting_average": 619,
+        "hits": 26,
+        "homeruns": 7,
+        "minibat_games_played": 5
     },
     {
-        "id": 4,
-        "games_played": 0,
-        "info": "Junk throwing pitcher with a mighty one handed hack at the plate.",
-        "name": "Bryan Pfaff",
-        "at_bats": 25,
-        "batting_average": 520,
-        "hits": 13,
-        "homeruns": 4,
+        "id": 16,
+        "games_played": 11,
+        "info": "2020 Dew Cup MVP. An elite net front presence who scores at a great rate and knocks opposing offense away. The man shows up for any sport in a big way, finishing second in MVP voting behind pesky Garry Bob two times!",
+        "name": "Hoag Braun",
+        "at_bats": 26,
+        "batting_average": 692,
+        "hits": 18,
+        "homeruns": 7,
         "minibat_games_played": 5
     },
     {
@@ -44,25 +44,58 @@
         "minibat_games_played": 4
     },
     {
-        "id": 7,
-        "games_played": 0,
-        "info": "Only person to take a walk in BWMC history.",
-        "name": "Nina Mlodzik",
-        "at_bats": 14,
-        "batting_average": 357,
-        "hits": 5,
-        "homeruns": 0,
-        "minibat_games_played": 3
+        "id": 40,
+        "games_played": 12,
+        "info": "Dew Cup commissioner. This guy is a horrible player and gets picked up by a new team each tournament. He is the Mike Sillinger of the Dew Cup. However, he did create the game of minibats so he is somewhat able to do that.",
+        "name": "Steven Pfaff",
+        "at_bats": 26,
+        "batting_average": 577,
+        "hits": 15,
+        "homeruns": 6,
+        "minibat_games_played": 5
     },
     {
-        "id": 8,
+        "id": 2,
         "games_played": 0,
-        "info": "A clutch line drive hitter.",
-        "name": "Nate Daugherty",
-        "at_bats": 24,
-        "batting_average": 542,
+        "info": "Better known as 'Big Daddy Chrome' or 'Funky Kong'. This guy has a huge bat and is electric on the mound.",
+        "name": "Shawn Volesky",
+        "at_bats": 20,
+        "batting_average": 600,
+        "hits": 12,
+        "homeruns": 5,
+        "minibat_games_played": 4
+    },
+    {
+        "id": 15,
+        "games_played": 5,
+        "info": "Crash.",
+        "name": "Johnny Klabachek",
+        "at_bats": 19,
+        "batting_average": 579,
+        "hits": 11,
+        "homeruns": 5,
+        "minibat_games_played": 4
+    },
+    {
+        "id": 39,
+        "games_played": 6,
+        "info": "Bested by his favorite youtuber in BWMC batting average. This follower of Goobie is extremely pesky.",
+        "name": "Brock Diest",
+        "at_bats": 44,
+        "batting_average": 682,
+        "hits": 30,
+        "homeruns": 5,
+        "minibat_games_played": 5
+    },
+    {
+        "id": 4,
+        "games_played": 0,
+        "info": "Junk throwing pitcher with a mighty one handed hack at the plate.",
+        "name": "Bryan Pfaff",
+        "at_bats": 25,
+        "batting_average": 520,
         "hits": 13,
-        "homeruns": 1,
+        "homeruns": 4,
         "minibat_games_played": 5
     },
     {
@@ -77,59 +110,15 @@
         "minibat_games_played": 4
     },
     {
-        "id": 12,
-        "games_played": 12,
-        "info": "The peskiest you can be. Goobies Mum ring leader. Overshadowed by the greatness of Garry Bob and rightfully so.",
-        "name": "John Pfaff",
-        "at_bats": 42,
-        "batting_average": 619,
-        "hits": 26,
-        "homeruns": 7,
-        "minibat_games_played": 5
-    },
-    {
-        "id": 13,
-        "games_played": 12,
-        "info": "A complete assassin in both Hockey and Minibat action. Garry is the only two time MVP and won in a unanimous decision in the first annual BWMC. Garry hit 11 moonbombs in five games.",
-        "name": "Garry Bob",
-        "at_bats": 45,
-        "batting_average": 533,
-        "hits": 24,
-        "homeruns": 11,
-        "minibat_games_played": 5
-    },
-    {
-        "id": 14,
+        "id": 3,
         "games_played": 0,
-        "info": "Best pitcher in BWMC history. Don't let this man get too many AB's, he needs to save his fuel for the mound.",
-        "name": "Big Ted",
-        "at_bats": 12,
-        "batting_average": 417,
-        "hits": 5,
-        "homeruns": 0,
-        "minibat_games_played": 5
-    },
-    {
-        "id": 15,
-        "games_played": 5,
-        "info": "Crash.",
-        "name": "Johnny Klabachek",
-        "at_bats": 19,
-        "batting_average": 579,
-        "hits": 11,
-        "homeruns": 5,
+        "info": "Speed demon on the bases.",
+        "name": "Alex Hunt",
+        "at_bats": 22,
+        "batting_average": 455,
+        "hits": 10,
+        "homeruns": 2,
         "minibat_games_played": 4
-    },
-    {
-        "id": 16,
-        "games_played": 11,
-        "info": "2020 Dew Cup MVP. An elite net front presence who scores at a great rate and knocks opposing offense away. The man shows up for any sport in a big way, finishing second in MVP voting behind pesky Garry Bob two times!",
-        "name": "Hoag Braun",
-        "at_bats": 26,
-        "batting_average": 692,
-        "hits": 18,
-        "homeruns": 7,
-        "minibat_games_played": 5
     },
     {
         "id": 17,
@@ -141,6 +130,17 @@
         "hits": 12,
         "homeruns": 2,
         "minibat_games_played": 4
+    },
+    {
+        "id": 8,
+        "games_played": 0,
+        "info": "A clutch line drive hitter.",
+        "name": "Nate Daugherty",
+        "at_bats": 24,
+        "batting_average": 542,
+        "hits": 13,
+        "homeruns": 1,
+        "minibat_games_played": 5
     },
     {
         "id": 18,
@@ -162,6 +162,28 @@
         "batting_average": 571,
         "hits": 12,
         "homeruns": 1,
+        "minibat_games_played": 5
+    },
+    {
+        "id": 7,
+        "games_played": 0,
+        "info": "Only person to take a walk in BWMC history.",
+        "name": "Nina Mlodzik",
+        "at_bats": 14,
+        "batting_average": 357,
+        "hits": 5,
+        "homeruns": 0,
+        "minibat_games_played": 3
+    },
+    {
+        "id": 14,
+        "games_played": 0,
+        "info": "Best pitcher in BWMC history. Don't let this man get too many AB's, he needs to save his fuel for the mound.",
+        "name": "Big Ted",
+        "at_bats": 12,
+        "batting_average": 417,
+        "hits": 5,
+        "homeruns": 0,
         "minibat_games_played": 5
     },
     {
@@ -350,27 +372,5 @@
         "hits": 0,
         "homeruns": 0,
         "minibat_games_played": 0
-    },
-    {
-        "id": 39,
-        "games_played": 6,
-        "info": "Bested by his favorite youtuber in BWMC batting average. This follower of Goobie is extremely pesky.",
-        "name": "Brock Diest",
-        "at_bats": 44,
-        "batting_average": 682,
-        "hits": 30,
-        "homeruns": 5,
-        "minibat_games_played": 5
-    },
-    {
-        "id": 40,
-        "games_played": 12,
-        "info": "Dew Cup commissioner. This guy is a horrible player and gets picked up by a new team each tournament. He is the Mike Sillinger of the Dew Cup. However, he did create the game of minibats so he is somewhat able to do that.",
-        "name": "Steven Pfaff",
-        "at_bats": 26,
-        "batting_average": 577,
-        "hits": 15,
-        "homeruns": 6,
-        "minibat_games_played": 5
     }
 ]
