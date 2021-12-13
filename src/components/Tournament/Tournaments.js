@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Table } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
 import DewCupGroup from "../../Images/DewCupGroup.jpeg"
 import tourneys from '../../data/tournaments.json'
 
@@ -48,9 +47,9 @@ class Tourneys extends Component {
                     <tbody>
                         {tourneys.map((tourney) => (
                             <tr>
-                                <td><Link to={`/${tourney.name}/`}>{tourney.name}</Link></td>
-                                <td><Link to={`/Teams/${tourney.champions}/profile`}>{tourney.champions}</Link></td>
-                                <td><Link to={`/Players/${tourney.mvp}/profile`}>{tourney.mvp}</Link></td>
+                                <td>{tourney.name}</td>
+                                <td>{tourney.champions}</td>
+                                <td>{tourney.mvp}</td>
                             </tr>
                         ))}
                     </tbody>
