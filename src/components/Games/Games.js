@@ -22,7 +22,6 @@ function Games() {
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>All Games</h1>
             <div>
-                <h2 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "2%", marginTop: "2%", fontFamily: "inherit" }}>Game Details</h2>
                 <Table striped border hover>
                     <thead>
                         <th>Series</th>
