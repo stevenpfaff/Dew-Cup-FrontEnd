@@ -4,6 +4,7 @@ import { Table } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import DewCupGroup from "../../Images/DewCupGroup.jpeg"
 import "./Tournaments.css"
+import points from '../../data/points.json'
 
 
 class Tourneys extends Component {
@@ -51,6 +52,29 @@ class Tourneys extends Component {
                                 <td><Link to={`/${tourney.name}/`}>{tourney.name}</Link></td>
                                 <td><Link to={`/Teams/${tourney.champions}/profile`}>{tourney.champions}</Link></td>
                                 <td><Link to={`/Players/${tourney.mvp}/profile`}>{tourney.mvp}</Link></td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </Table>
+                <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>Dew Cup IV Point Leaders</h1>
+                <Table striped bordered hover>
+                    <thead>
+                        <tr>
+                            <th>Player</th>
+                            <th>Games Played</th>
+                            <th>Goals</th>
+                            <th>Assists</th>
+                            <th>Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {points.map((point) => (
+                            <tr>
+                                <td>{point.name}</td>
+                                <td>{point.games}</td>
+                                <td>{point.goals}</td>
+                                <td>{point.assists}</td>
+                                <td>{point.points}</td>
                             </tr>
                         ))}
                     </tbody>
