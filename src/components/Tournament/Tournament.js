@@ -31,10 +31,8 @@ function Tourney() {
                             <th>Game Type</th>
                             <th>Away Team</th>
                             <th>Score</th>
-                            <th>Away Players</th>
                             <th>Home Team</th>
                             <th>Score</th>
-                            <th>Home Players</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -43,10 +41,8 @@ function Tourney() {
                                 <td>{game.type}</td>
                                 <td>{game.away_team}</td>
                                 <td>{game.away_score}</td>
-                                <td>{game.away_players}</td>
                                 <td>{game.home_team}</td>
                                 <td>{game.home_score}</td>
-                                <td>{game.home_players}</td>
                             </tr>
                         ))}
                     </tbody>

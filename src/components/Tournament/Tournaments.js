@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Table } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import DewCupGroup from "../../Images/DewCupGroup.jpeg"
-import tourneys from '../../data/tournaments.json'
+import "./Tournaments.css"
 
 
 class Tourneys extends Component {
@@ -39,17 +40,17 @@ class Tourneys extends Component {
                 <Table striped bordered hover>
                     <thead>
                         <tr>
-                            <th>Tournament</th>
+                            <th>Series</th>
                             <th>Champions</th>
-                            <th>Tournament MVP</th>
+                            <th>MVP</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {tourneys.map((tourney) => (
+                        {this.state.tourneys.map((tourney) => (
                             <tr>
-                                <td>{tourney.name}</td>
-                                <td>{tourney.champions}</td>
-                                <td>{tourney.mvp}</td>
+                                <td><Link to={`/${tourney.name}/`}>{tourney.name}</Link></td>
+                                <td><Link to={`/Teams/${tourney.champions}/profile`}>{tourney.champions}</Link></td>
+                                <td><Link to={`/Players/${tourney.mvp}/profile`}>{tourney.mvp}</Link></td>
                             </tr>
                         ))}
                     </tbody>

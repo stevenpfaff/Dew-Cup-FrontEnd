@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Table } from 'react-bootstrap'
+import { Button } from '@material-ui/core'
+import SearchBar from '../SearchBar/SearchBar';
 import "./Players.css"
+import { Link } from 'react-router-dom';
 import { SortAlphaUp } from 'react-bootstrap-icons'
 import { SortNumericDown } from 'react-bootstrap-icons'
-import players from '../../data/players.json'
 
 class Players extends Component {
     constructor(props) {
@@ -71,6 +73,48 @@ class Players extends Component {
                     return 1;
                 }
                 if (player1.games_played > player2.games_played) {
+                    return -1;
+                }
+                return 0;
+            }),
+        }))
+    }
+
+    sortPlayerGoals = () => {
+        this.setState(prevState => ({
+            players: [...prevState.players].sort(function (player1, player2) {
+                if (player1.goals < player2.goals) {
+                    return 1;
+                }
+                if (player1.goals > player2.goals) {
+                    return -1;
+                }
+                return 0;
+            }),
+        }))
+    }
+
+    sortPlayerAssists = () => {
+        this.setState(prevState => ({
+            players: [...prevState.players].sort(function (player1, player2) {
+                if (player1.assists < player2.assists) {
+                    return 1;
+                }
+                if (player1.assists > player2.assists) {
+                    return -1;
+                }
+                return 0;
+            }),
+        }))
+    }
+
+    sortPlayerPoints = () => {
+        this.setState(prevState => ({
+            players: [...prevState.players].sort(function (player1, player2) {
+                if (player1.points < player2.points) {
+                    return 1;
+                }
+                if (player1.points > player2.points) {
                     return -1;
                 }
                 return 0;
@@ -152,12 +196,17 @@ class Players extends Component {
         return (
             <div style={{ marginRight: "15%", marginLeft: "15%", marginBottom: "10%" }} >
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <SearchBar playerSearch={this.playerSearch} />
                 <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>Players</h1>
+                <Button type="submit" variant="contained" onClick={this.handleClick} class="btn btn-success">Refresh Player List</Button>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
                             <th>Name<button type="button" class="btn btn-default" onClick={this.sortPlayerName}><SortAlphaUp /></button></th>
                             <th>Hockey Games Played<button type="button" class="btn btn-default" onClick={this.sortPlayerHockey}><SortNumericDown /></button></th>
+                            <th>Goals<button type="button" class="btn btn-default" onClick={this.sortPlayerGoals}><SortNumericDown /></button></th>
+                            <th>Assists<button type="button" class="btn btn-default" onClick={this.sortPlayerAssists}><SortNumericDown /></button></th>
+                            <th>Points<button type="button" class="btn btn-default" onClick={this.sortPlayerPoints}><SortNumericDown /></button></th>
                             <th>Minibat Games Played<button type="button" class="btn btn-default" onClick={this.sortPlayerMinibat}><SortNumericDown /></button></th>
                             <th>At Bats<button type="button" class="btn btn-default" onClick={this.sortPlayerAtBats}><SortNumericDown /></button></th>
                             <th>Hits<button type="button" class="btn btn-default" onClick={this.sortPlayerHits}><SortNumericDown /></button></th>
@@ -166,10 +215,13 @@ class Players extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {players.map((player) => (
+                        {this.state.players.map((player) => (
                             <tr>
-                                <td>{player.name}</td>
+                                <td><Link to={`/Players/${player.name}/profile`}>{player.name}</Link></td>
                                 <td>{player.games_played}</td>
+                                <td>{player.goals}</td>
+                                <td>{player.assists}</td>
+                                <td>{player.points}</td>
                                 <td>{player.minibat_games_played}</td>
                                 <td>{player.at_bats}</td>
                                 <td>{player.hits}</td>

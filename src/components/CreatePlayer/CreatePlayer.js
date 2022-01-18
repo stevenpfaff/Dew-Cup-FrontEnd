@@ -33,14 +33,22 @@ class CreatePlayer extends Component {
             games_played: event.target.value,
         });
     }
+
     handleGoalsChange = (event) => {
         this.setState({
             goals: event.target.value,
         });
     }
+
     handleAssistsChange = (event) => {
         this.setState({
             assists: event.target.value,
+        });
+    }
+
+    handlePointsChange = (event) => {
+        this.setState({
+            points: event.target.value,
         });
     }
 
@@ -102,6 +110,7 @@ class CreatePlayer extends Component {
             games_played: parseInt(this.state.games_played),
             goals: parseInt(this.state.goals),
             assists: parseInt(this.state.assists),
+            points: parseInt(this.state.points),
             info: this.state.info,
             file: this.state.file,
             minibat_games_played: parseInt(this.state.minibat_games_played),
@@ -123,6 +132,15 @@ class CreatePlayer extends Component {
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formGroupDescription">
                     <Form.Control type="number" placeholder="Hockey Games Played" onChange={this.handleGameChange} value={this.state.games_played} />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formGroupDescription">
+                    <Form.Control type="number" placeholder="Goals" onChange={this.handleGoalsChange} value={this.state.goals} />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formGroupDescription">
+                    <Form.Control type="number" placeholder="Assists" onChange={this.handleAssistsChange} value={this.state.assists} />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formGroupDescription">
+                    <Form.Control type="number" placeholder="Points" onChange={this.handlePointsChange} value={this.state.points} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formGroupRating">
                     <Form.Control type="number" placeholder="Minibat Games Played" onChange={this.handleMiniBatChange} value={this.state.minibat_games_played} />
