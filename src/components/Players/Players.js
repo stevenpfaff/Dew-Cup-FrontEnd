@@ -7,6 +7,7 @@ import "./Players.css"
 import { Link } from 'react-router-dom';
 import { SortAlphaUp } from 'react-bootstrap-icons'
 import { SortNumericDown } from 'react-bootstrap-icons'
+import players from '../../data/players.json'
 
 class Players extends Component {
     constructor(props) {
@@ -196,28 +197,26 @@ class Players extends Component {
         return (
             <div style={{ marginRight: "15%", marginLeft: "15%", marginBottom: "10%" }} >
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <SearchBar playerSearch={this.playerSearch} />
-                <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>Players</h1>
-                <Button type="submit" variant="contained" onClick={this.handleClick} class="btn btn-success">Refresh Player List</Button>
+                <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>Player Stats</h1>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
-                            <th>Name<button type="button" class="btn btn-default" onClick={this.sortPlayerName}><SortAlphaUp /></button></th>
-                            <th>Hockey Games Played<button type="button" class="btn btn-default" onClick={this.sortPlayerHockey}><SortNumericDown /></button></th>
-                            <th>Goals<button type="button" class="btn btn-default" onClick={this.sortPlayerGoals}><SortNumericDown /></button></th>
-                            <th>Assists<button type="button" class="btn btn-default" onClick={this.sortPlayerAssists}><SortNumericDown /></button></th>
-                            <th>Points<button type="button" class="btn btn-default" onClick={this.sortPlayerPoints}><SortNumericDown /></button></th>
-                            <th>Minibat Games Played<button type="button" class="btn btn-default" onClick={this.sortPlayerMinibat}><SortNumericDown /></button></th>
-                            <th>At Bats<button type="button" class="btn btn-default" onClick={this.sortPlayerAtBats}><SortNumericDown /></button></th>
-                            <th>Hits<button type="button" class="btn btn-default" onClick={this.sortPlayerHits}><SortNumericDown /></button></th>
-                            <th>Batting Average<button type="button" class="btn btn-default" onClick={this.sortPlayerAverage}><SortNumericDown /></button></th>
-                            <th>Homeruns<button type="button" class="btn btn-default" onClick={this.sortPlayerHomeruns}><SortNumericDown /></button></th>
+                            <th>Name</th>
+                            <th>Hockey Games Played</th>
+                            <th>Goals</th>
+                            <th>Assists</th>
+                            <th>Points</th>
+                            <th>Minibat Games Played</th>
+                            <th>At Bats</th>
+                            <th>Hits</th>
+                            <th>Batting Average</th>
+                            <th>Homeruns</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {this.state.players.map((player) => (
+                        {players.map((player) => (
                             <tr>
-                                <td><Link to={`/Players/${player.name}/profile`}>{player.name}</Link></td>
+                                <td>{player.name}</td>
                                 <td>{player.games_played}</td>
                                 <td>{player.goals}</td>
                                 <td>{player.assists}</td>

@@ -6,7 +6,7 @@
         "away_score": 4,
         "away_players": "Buddy Wood, Rick Bonis, Ryan Ruona, Evin Stultz",
         "home_players": "Steven Pfaff, Zack Fountain, Alex Fountain, Jeep Aspenleiter, Matt Huinker",
-        "game": "2019 Dew Cup",
+        "game": "Dew Cup I",
         "type": "Championship"
     },
     {
@@ -16,7 +16,7 @@
         "away_score": 5,
         "away_players": "Hoag Braun, Rick Bonis, Max Schickert, Evin Stultz",
         "home_players": "Steven Pfaff, Ryan Ruona, Marvin Bateman, Matt Huinker",
-        "game": "2020 Dew Cup",
+        "game": "Dew Cup II",
         "type": "Round Robin"
     },
     {
@@ -26,7 +26,7 @@
         "away_score": 3,
         "away_players": "John Pfaff, Garry Bob, Brock Diest, Ethan Schickert",
         "home_players": "Breanna Pfaff, Lauren McCormack, Lauren Waraksa, Johnny Klabachek, Seth Mlodzik",
-        "game": "2020 Dew Cup",
+        "game": "Dew Cup II",
         "type": "Round Robin"
     },
     {
@@ -36,7 +36,7 @@
         "away_score": 3,
         "away_players": "Hoag Braun, Rick Bonis, Max Schickert, Evin Stultz",
         "home_players": "Breanna Pfaff, Lauren McCormack, Lauren Waraksa, Johnny Klabachek, Seth Mlodzik",
-        "game": "2020 Dew Cup",
+        "game": "Dew Cup II",
         "type": "Round Robin"
     },
     {
@@ -46,7 +46,7 @@
         "away_score": 2,
         "away_players": "Buddy Wood, Rheese McCardle, Jake Zainer, TJ Graczkowski",
         "home_players": "John Pfaff, Garry Bob, Brock Diest, Ethan Schickert",
-        "game": "2020 Dew Cup",
+        "game": "Dew Cup II",
         "type": "Round Robin"
     },
     {
@@ -56,7 +56,7 @@
         "away_score": 0,
         "away_players": "Buddy Wood, Rheese McCardle, Jake Zainer, TJ Graczkowski",
         "home_players": "Hoag Braun, Rick Bonis, Max Schickert, Evin Stultz",
-        "game": "2020 Dew Cup",
+        "game": "Dew Cup II",
         "type": "Round Robin"
     },
     {
@@ -66,7 +66,7 @@
         "away_score": 0,
         "away_players": "Steven Pfaff, Ryan Ruona, Marvin Bateman, Matt Huinker",
         "home_players": "Breanna Pfaff, Lauren McCormack, Lauren Waraksa, Johnny Klabachek, Seth Mlodzik",
-        "game": "2020 Dew Cup",
+        "game": "Dew Cup II",
         "type": "Round Robin"
     },
     {
@@ -76,7 +76,7 @@
         "away_score": 3,
         "home_players": "Steven Pfaff, Ryan Ruona, Marvin Bateman, Matt Huinker",
         "away_players": "Buddy Wood, Rheese McCardle, Jake Zainer, TJ Graczkowski",
-        "game": "2020 Dew Cup",
+        "game": "Dew Cup II",
         "type": "Round Robin"
     },
     {
@@ -86,7 +86,7 @@
         "away_score": 1,
         "home_players": "Hoag Braun, Rick Bonis, Max Schickert, Evin Stultz",
         "away_players": "John Pfaff, Garry Bob, Brock Diest, Ethan Schickert",
-        "game": "2020 Dew Cup",
+        "game": "Dew Cup II",
         "type": "Round Robin"
     },
     {
@@ -96,7 +96,7 @@
         "away_score": 3,
         "home_players": "Steven Pfaff, Ryan Ruona, Marvin Bateman, Matt Huinker",
         "away_players": "John Pfaff, Garry Bob, Brock Diest, Ethan Schickert",
-        "game": "2020 Dew Cup",
+        "game": "Dew Cup II",
         "type": "Round Robin"
     },
     {
@@ -106,7 +106,7 @@
         "away_score": 4,
         "home_players": "Breanna Pfaff, Lauren McCormack, Lauren Waraksa, Johnny Klabachek, Seth Mlodzik",
         "away_players": "Buddy Wood, Rheese McCardle, Jake Zainer, TJ Graczkowski",
-        "game": "2020 Dew Cup",
+        "game": "Dew Cup II",
         "type": "Round Robin"
     },
     {
@@ -116,7 +116,7 @@
         "away_score": 2,
         "home_players": "Breanna Pfaff, Lauren McCormack, Lauren Waraksa, Johnny Klabachek, Seth Mlodzik",
         "away_players": "Steven Pfaff, Ryan Ruona, Marvin Bateman, Matt Huinker",
-        "game": "2020 Dew Cup",
+        "game": "Dew Cup II",
         "type": "Play In Game"
     },
     {
@@ -126,7 +126,7 @@
         "away_score": 2,
         "home_players": "Buddy Wood, Rheese McCardle, Jake Zainer, TJ Graczkowski",
         "away_players": "John Pfaff, Garry Bob, Brock Diest, Ethan Schickert",
-        "game": "2020 Dew Cup",
+        "game": "Dew Cup II",
         "type": "Semi Final"
     },
     {
@@ -136,7 +136,7 @@
         "away_score": 0,
         "home_players": "Hoag Braun, Rick Bonis, Max Schickert, Evin Stultz",
         "away_players": "Steven Pfaff, Ryan Ruona, Marvin Bateman, Matt Huinker",
-        "game": "2020 Dew Cup",
+        "game": "Dew Cup II",
         "type": "Semi Final"
     },
     {
@@ -146,7 +146,7 @@
         "away_score": 0,
         "home_players": "Buddy Wood, Rheese McCardle, Jake Zainer, TJ Graczkowski",
         "away_players": "Steven Pfaff, Ryan Ruona, Marvin Bateman, Matt Huinker",
-        "game": "2020 Dew Cup",
+        "game": "Dew Cup II",
         "type": "Third Place Game"
     },
     {
@@ -156,7 +156,7 @@
         "away_score": 0,
         "home_players": "Hoag Braun, Rick Bonis, Max Schickert, Evin Stultz",
         "away_players": "John Pfaff, Garry Bob, Brock Diest, Ethan Schickert",
-        "game": "2020 Dew Cup",
+        "game": "Dew Cup II",
         "type": "Championship"
     },
     {
@@ -166,7 +166,7 @@
         "away_score": 5,
         "home_players": "Hoag Braun, Rick Bonis, Dan Hunt, Evin Stultz",
         "away_players": "John Pfaff, Garry Bob, Tyler Bartz",
-        "game": "2021 Dew Cup",
+        "game": "Dew Cup III",
         "type": "Round Robin"
     },
     {
@@ -176,7 +176,7 @@
         "away_score": 5,
         "home_players": "Buddy Wood, Steven Pfaff, Charles Mayer, Matt Huinker",
         "away_players": "Hoag Braun, Rick Bonis, Dan Hunt, Evin Stultz",
-        "game": "2021 Dew Cup",
+        "game": "Dew Cup III",
         "type": "Round Robin"
     },
     {
@@ -186,7 +186,7 @@
         "away_score": 5,
         "home_players": "John Pfaff, Garry Bob, Tyler Bartz",
         "away_players": "Buddy Wood, Steven Pfaff, Charles Mayer, Matt Huinker",
-        "game": "2021 Dew Cup",
+        "game": "Dew Cup III",
         "type": "Round Robin"
     },
     {
@@ -196,7 +196,7 @@
         "away_score": 4,
         "home_players": "John Pfaff, Garry Bob, Tyler Bartz",
         "away_players": "Hoag Braun, Rick Bonis, Dan Hunt, Evin Stultz",
-        "game": "2021 Dew Cup",
+        "game": "Dew Cup III",
         "type": "Round Robin"
     },
     {
@@ -206,7 +206,7 @@
         "away_score": 5,
         "home_players": "Hoag Braun, Rick Bonis, Dan Hunt, Evin Stultz",
         "away_players": "Buddy Wood, Steven Pfaff, Charles Mayer, Matt Huinker",
-        "game": "2021 Dew Cup",
+        "game": "Dew Cup III",
         "type": "Round Robin"
     },
     {
@@ -216,7 +216,7 @@
         "away_score": 5,
         "home_players": "Hoag Braun, Rick Bonis, Dan Hunt, Evin Stultz",
         "away_players": "John Pfaff, Garry Bob, Tyler Bartz",
-        "game": "2021 Dew Cup",
+        "game": "Dew Cup III",
         "type": "Round Robin"
     },
     {
@@ -226,7 +226,7 @@
         "away_score": 3,
         "home_players": "Hoag Braun, Rick Bonis, Dan Hunt, Evin Stultz",
         "away_players": "John Pfaff, Garry Bob, Tyler Bartz",
-        "game": "2021 Dew Cup",
+        "game": "Dew Cup III",
         "type": "Semi Final"
     },
     {
@@ -236,7 +236,7 @@
         "away_score": 5,
         "home_players": "Buddy Wood, Steven Pfaff, Charles Mayer, Matt Huinker",
         "away_players": "John Pfaff, Garry Bob, Tyler Bartz",
-        "game": "2021 Dew Cup",
+        "game": "Dew Cup III",
         "type": "Championship"
     },
     {
@@ -246,7 +246,7 @@
         "away_score": 9,
         "home_players": "Steven Pfaff, Bryan Pfaff, Hoag Braun, Rheese McCardle, Nate Daugherty",
         "away_players": "Rick Bonis, Evin Stultz, Shawn Volesky, Alex Hunt",
-        "game": "2021 Bud Wood Memorial",
+        "game": "Bud Wood Memorial I",
         "type": "Round Robin"
     },
     {
@@ -256,7 +256,7 @@
         "away_score": 12,
         "home_players": "Breanna Pfaff, Natalie Pfaff, Nina Mlodzik, Johnny Klabachek",
         "away_players": "John Pfaff, Garry Bob, Brock Diest, Seth Mlodzik",
-        "game": "2021 Bud Wood Memorial",
+        "game": "Bud Wood Memorial I",
         "type": "Round Robin"
     },
     {
@@ -266,7 +266,7 @@
         "away_score": 13,
         "home_players": "Breanna Pfaff, Natalie Pfaff, Nina Mlodzik, Johnny Klabachek, Big Ted",
         "away_players": "Rick Bonis, Evin Stultz, Shawn Volesky, Alex Hunt",
-        "game": "2021 Bud Wood Memorial",
+        "game": "Bud Wood Memorial I",
         "type": "Round Robin"
     },
     {
@@ -276,7 +276,7 @@
         "away_score": 5,
         "home_players": "Rick Bonis, Evin Stultz, Shawn Volesky, Alex Hunt",
         "away_players": "John Pfaff, Garry Bob, Brock Diest, Seth Mlodzik",
-        "game": "2021 Bud Wood Memorial",
+        "game": "Bud Wood Memorial I",
         "type": "Round Robin"
     },
     {
@@ -286,7 +286,7 @@
         "away_score": 8,
         "home_players": "John Pfaff, Garry Bob, Brock Diest, Big Ted",
         "away_players": "Steven Pfaff, Bryan Pfaff, Hoag Braun, Rheese McCardle, Nate Daugherty",
-        "game": "2021 Bud Wood Memorial",
+        "game": "Bud Wood Memorial I",
         "type": "Round Robin"
     },
     {
@@ -296,7 +296,7 @@
         "home_score": 9,
         "away_players": "Breanna Pfaff, Natalie Pfaff, Nina Mlodzik, Johnny Klabachek, Big Ted",
         "home_players": "Steven Pfaff, Bryan Pfaff, Hoag Braun, Rheese McCardle, Nate Daugherty",
-        "game": "2021 Bud Wood Memorial",
+        "game": "Bud Wood Memorial I",
         "type": "Round Robin"
     },
     {
@@ -306,7 +306,7 @@
         "home_score": 7,
         "away_players": "John Pfaff, Garry Bob, Brock Diest, Big Ted",
         "home_players": "Rick Bonis, Evin Stultz, Shawn Volesky, Alex Hunt",
-        "game": "2021 Bud Wood Memorial",
+        "game": "Bud Wood Memorial I",
         "type": "Semi Final"
     },
     {
@@ -316,7 +316,7 @@
         "away_score": 5,
         "home_players": "Steven Pfaff, Bryan Pfaff, Hoag Braun, Rheese McCardle, Nate Daugherty",
         "away_players": "Breanna Pfaff, Natalie Pfaff, Johnny Klabachek, Big Ted",
-        "game": "2021 Bud Wood Memorial",
+        "game": "Bud Wood Memorial I",
         "type": "Semi Final"
     },
     {
@@ -326,7 +326,127 @@
         "away_score": 15,
         "home_players": "John Pfaff, Garry Bob, Brock Diest, Big Ted",
         "away_players": "Steven Pfaff, Bryan Pfaff, Hoag Braun, Rheese McCardle, Nate Daugherty",
-        "game": "2021 Bud Wood Memorial",
+        "game": "Bud Wood Memorial I",
+        "type": "Championship"
+    },
+    {
+        "away_team": "Buds Wood",
+        "away_score": 3,
+        "home_team": "Squid Niqs",
+        "home_score": 1,
+        "away_players": "Buddy Wood, Steven Pfaff, Matt Huinker, Cash Wichlacz, Brian Huinker",
+        "home_players": "TJ Prange, Max Schickert, Breanna Pfaff, Hannah Vogel",
+        "game": "Dew Cup IV",
+        "type": "Round Robin"
+    },
+    {
+        "away_team": "Hellmo Vitamins",
+        "away_score": 3,
+        "home_team": "Sloshkosh Shooters",
+        "home_score": 2,
+        "away_players": "Rheese McCardle, Mitchell Zale, TJ Graczkowski, Jake Zainer",
+        "home_players": "Evin Stultz, Evan Hunt, Logan Braun, Marvin Bateman",
+        "game": "Dew Cup IV",
+        "type": "Round Robin"
+    },
+    {
+        "away_team": "Squid Niqs",
+        "away_score": 5,
+        "home_team": "Hellmo Vitamins",
+        "home_score": 1,
+        "away_players": "TJ Prange, Max Schickert, Breanna Pfaff, Hannah Vogel",
+        "home_players": "Rheese McCardle, Mitchell Zale, TJ Graczkowski, Jake Zainer",
+        "game": "Dew Cup IV",
+        "type": "Round Robin"
+    },
+    {
+        "away_team": "Goobies Mum",
+        "away_score": 5,
+        "home_team": "Buds Wood",
+        "home_score": 1,
+        "away_players": "John Pfaff, Ethan Schickert, Cooper Petermann, Brock Deist, Charlie Eckert",
+        "home_players": "Buddy Wood, Steven Pfaff, Matt Huinker, Cash Wichlacz, Brian Huinker",
+        "game": "Dew Cup IV",
+        "type": "Round Robin"
+    },
+    {
+        "away_team": "Hellmo Vitamins",
+        "away_score": 1,
+        "home_team": "Goobies Mum",
+        "home_score": 3,
+        "away_players": "Rheese McCardle, Mitchell Zale, TJ Graczkowski, Jake Zainer",
+        "home_players": "John Pfaff, Ethan Schickert, Cooper Petermann, Brock Deist, Charlie Eckert",
+        "game": "Dew Cup IV",
+        "type": "Round Robin"
+    },
+    {
+        "away_team": "Sloshkosh Shooters",
+        "away_score": 2,
+        "home_team": "Squid Niqs",
+        "home_score": 5,
+        "away_players": "Evin Stultz, Evan Hunt, Logan Braun, Marvin Bateman",
+        "home_players": "TJ Prange, Max Schickert, Breanna Pfaff, Hannah Vogel",
+        "game": "Dew Cup IV",
+        "type": "Round Robin"
+    },
+    {
+        "away_team": "Goobies Mum",
+        "away_score": 1,
+        "home_team": "Sloshkosh Shooters",
+        "home_score": 2,
+        "away_players": "John Pfaff, Ethan Schickert, Cooper Petermann, Brock Deist, Charlie Eckert",
+        "home_players": "Evin Stultz, Evan Hunt, Logan Braun, Marvin Bateman",
+        "game": "Dew Cup IV",
+        "type": "Round Robin"
+    },
+    {
+        "away_team": "Buds Wood",
+        "away_score": 5,
+        "home_team": "Hellmo Vitamins",
+        "home_score": 3,
+        "away_players": "Buddy Wood, Steven Pfaff, Matt Huinker, Cash Wichlacz, Brian Huinker",
+        "home_players": "Rheese McCardle, Mitchell Zale, TJ Graczkowski, Jake Zainer",
+        "game": "Dew Cup IV",
+        "type": "Round Robin"
+    },
+    {
+        "away_team": "Hellmo Vitamins",
+        "away_score": 0,
+        "home_team": "Sloshkosh Shooters",
+        "home_score": 3,
+        "away_players": "Rheese McCardle, Mitchell Zale, TJ Graczkowski, Jake Zainer",
+        "home_players": "Evin Stultz, Evan Hunt, Logan Braun, Marvin Bateman",
+        "game": "Dew Cup IV",
+        "type": "Play In Game"
+    },
+    {
+        "away_team": "Goobies Mum",
+        "away_score": 1,
+        "home_team": "Buds Wood",
+        "home_score": 3,
+        "away_players": "John Pfaff, Ethan Schickert, Cooper Petermann, Brock Deist, Charlie Eckert",
+        "home_players": "Buddy Wood, Steven Pfaff, Matt Huinker, Cash Wichlacz, Brian Huinker",
+        "game": "Dew Cup IV",
+        "type": "Playoff Round 1"
+    },
+    {
+        "away_team": "Sloshkosh Shooters",
+        "away_score": 1,
+        "home_team": "Squid Niqs",
+        "home_score": 2,
+        "away_players": "Evin Stultz, Evan Hunt, Logan Braun, Marvin Bateman",
+        "home_players": "TJ Prange, Max Schickert, Breanna Pfaff, Hannah Vogel",
+        "game": "Dew Cup IV",
+        "type": "Playoff Round 1"
+    },
+    {
+        "away_team": "Buds Wood",
+        "away_score": 3,
+        "home_team": "Squid Niqs",
+        "home_score": 5,
+        "away_players": "Buddy Wood, Steven Pfaff, Matt Huinker, Cash Wichlacz, Brian Huinker",
+        "home_players": "TJ Prange, Max Schickert, Breanna Pfaff, Hannah Vogel",
+        "game": "Dew Cup IV",
         "type": "Championship"
     }
 ]

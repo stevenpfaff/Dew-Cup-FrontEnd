@@ -1,30 +1,37 @@
 [
     {
         "id": 1,
-        "name": "2019 Dew Cup",
+        "name": "Dew Cup I",
         "teams": "Goose Chasers, Buds Wood",
         "champions": "Goose Chasers",
-        "mvp": "none"
+        "mvp": "None"
     },
     {
         "id": 2,
-        "name": "2020 Dew Cup",
+        "name": "Dew Cup II",
         "teams": "Buds Wood, Muppets, Squid Niqs, Rat Girl Minions, Goobies Mum",
         "champions": "Squid Niqs",
-        "mvp": "Hoag Braun"
+        "mvp": "Logan Braun"
     },
     {
         "id": 3,
-        "name": "2021 Dew Cup",
+        "name": "Dew Cup III",
         "teams": "Buds Wood, Squid Niqs, Goobies Mum",
         "champions": "Goobies Mum",
         "mvp": "Garry Bob"
     },
     {
         "id": 4,
-        "name": "2021 Bud Wood Memorial",
+        "name": "Bud Wood Memorial Cup I",
         "teams": "Squid Niqs, Goobies Mum, Monty Scoops, Rat Girl Minions",
         "champions": "Goobies Mum",
         "mvp": "Garry Bob"
+    },
+    {
+        "id": 5,
+        "name": "Dew Cup IV",
+        "teams": "Buds Wood, Squid Niqs, Goobies Mum, Hellmo Vitamins, Sloshkosh Shooters",
+        "champions": "Squid Niqs",
+        "mvp": "Max Schickert"
     }
 ]
