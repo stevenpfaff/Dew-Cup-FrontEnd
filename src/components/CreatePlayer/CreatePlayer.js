@@ -82,6 +82,12 @@ class CreatePlayer extends Component {
         });
     }
 
+    handleChampChange = (event) => {
+        this.setState({
+            championships: event.target.value,
+        });
+    }
+
     handleInfoChange = (event) => {
         console.log("handleInfoChange", event)
         this.setState({
@@ -117,7 +123,8 @@ class CreatePlayer extends Component {
             at_bats: parseInt(this.state.at_bats),
             hits: parseInt(this.state.hits),
             homeruns: parseInt(this.state.homeruns),
-            batting_average: parseInt(this.state.batting_average)
+            batting_average: parseInt(this.state.batting_average),
+            championships: parseInt(this.state.championships)
         }
         console.log('Create Submit', this.props, newPlayer)
         this.props.createNewPlayer(newPlayer);
@@ -156,6 +163,9 @@ class CreatePlayer extends Component {
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formGroupRating">
                     <Form.Control type="number" placeholder="Homeruns" onChange={this.handleHomerunChange} value={this.state.homeruns} />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formGroupRating">
+                    <Form.Control type="number" placeholder="Championships" onChange={this.handleChampChange} value={this.state.championships} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formGroupRating">
                     <Form.Control type="text" placeholder="About Me" onChange={this.handleInfoChange} value={this.state.info} />

@@ -4,7 +4,6 @@ import { Table } from 'react-bootstrap'
 import { Button } from '@material-ui/core'
 import SearchBar from '../SearchBar/SearchBar';
 import "./Players.css"
-import { Link } from 'react-router-dom';
 import { SortAlphaUp } from 'react-bootstrap-icons'
 import { SortNumericDown } from 'react-bootstrap-icons'
 import players from '../../data/players.json'
@@ -201,16 +200,16 @@ class Players extends Component {
                 <Table striped bordered hover>
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Hockey Games Played</th>
-                            <th>Goals</th>
-                            <th>Assists</th>
-                            <th>Points</th>
-                            <th>Minibat Games Played</th>
-                            <th>At Bats</th>
-                            <th>Hits</th>
-                            <th>Batting Average</th>
-                            <th>Homeruns</th>
+                            <th>Name<button type="button" class="btn btn-default" onClick={this.sortPlayerName}><SortAlphaUp /></button></th>
+                            <th>Hockey Games Played<button type="button" class="btn btn-default" onClick={this.sortPlayerHockey}><SortNumericDown /></button></th>
+                            <th>Goals<button type="button" class="btn btn-default" onClick={this.sortPlayerGoals}><SortNumericDown /></button></th>
+                            <th>Assists<button type="button" class="btn btn-default" onClick={this.sortPlayerAssists}><SortNumericDown /></button></th>
+                            <th>Points<button type="button" class="btn btn-default" onClick={this.sortPlayerPoints}><SortNumericDown /></button></th>
+                            <th>Minibat Games Played<button type="button" class="btn btn-default" onClick={this.sortPlayerMinibat}><SortNumericDown /></button></th>
+                            <th>At Bats<button type="button" class="btn btn-default" onClick={this.sortPlayerAtBats}><SortNumericDown /></button></th>
+                            <th>Hits<button type="button" class="btn btn-default" onClick={this.sortPlayerHits}><SortNumericDown /></button></th>
+                            <th>Batting Average<button type="button" class="btn btn-default" onClick={this.sortPlayerAverage}><SortNumericDown /></button></th>
+                            <th>Homeruns<button type="button" class="btn btn-default" onClick={this.sortPlayerHomeruns}><SortNumericDown /></button></th>
                         </tr>
                     </thead>
                     <tbody>

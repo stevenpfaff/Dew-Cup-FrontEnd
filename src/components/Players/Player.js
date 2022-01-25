@@ -88,6 +88,10 @@ const Player = (props) => {
                             <th>Homeruns</th>
                             <td>{player.homeruns}</td>
                         </tr>
+                        <tr>
+                            <th>Championships</th>
+                            <td>{player.championships}</td>
+                        </tr>
                     </tbody>
                 </Table>
                 <h1>About</h1>

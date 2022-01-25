@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Table } from 'react-bootstrap'
 import "./Teams.css"
-import { Link } from 'react-router-dom';
 import { SortAlphaUp } from 'react-bootstrap-icons'
 import { SortNumericDown } from 'react-bootstrap-icons'
 import teams from '../../data/teams.json'
@@ -188,16 +187,16 @@ class Teams extends Component {
                 <Table striped bordered hover>
                     <thead>
                         <tr>
-                            <th>Team Name</th>
-                            <th>Wins</th>
-                            <th>Losses</th>
-                            <th>Goals</th>
-                            <th>Goals Against</th>
-                            <th>Runs</th>
-                            <th>Runs Against</th>
-                            <th>Batting Average</th>
-                            <th>Homeruns</th>
-                            <th>Championships</th>
+                            <th>Team Name<button type="button" class="btn btn-default" onClick={this.sortTeamName}><SortAlphaUp /></button></th>
+                            <th>Wins<button type="button" class="btn btn-default" onClick={this.sortWins}><SortNumericDown /></button></th>
+                            <th>Losses<button type="button" class="btn btn-default" onClick={this.sortLosses}><SortNumericDown /></button></th>
+                            <th>Goals<button type="button" class="btn btn-default" onClick={this.sortGoals}><SortNumericDown /></button></th>
+                            <th>Goals Against<button type="button" class="btn btn-default" onClick={this.sortGoalsAg}><SortNumericDown /></button></th>
+                            <th>Runs<button type="button" class="btn btn-default" onClick={this.sortRuns}><SortNumericDown /></button></th>
+                            <th>Runs Against<button type="button" class="btn btn-default" onClick={this.sortRunsAg}><SortNumericDown /></button></th>
+                            <th>Batting Average<button type="button" class="btn btn-default" onClick={this.sortAverage}><SortNumericDown /></button></th>
+                            <th>Homeruns<button type="button" class="btn btn-default" onClick={this.sortHomeruns}><SortNumericDown /></button></th>
+                            <th>Championships<button type="button" class="btn btn-default" onClick={this.sortChampionships}><SortNumericDown /></button></th>
                         </tr>
                     </thead>
                     <tbody>

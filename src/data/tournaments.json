@@ -4,6 +4,7 @@
         "name": "Dew Cup I",
         "teams": "Goose Chasers, Buds Wood",
         "champions": "Goose Chasers",
+        "players": "Alex Fountain, Jeep Aspenleiter, Matt Huinker, Steven Pfaff, Zack Fountain",
         "mvp": "None"
     },
     {
@@ -11,6 +12,7 @@
         "name": "Dew Cup II",
         "teams": "Buds Wood, Muppets, Squid Niqs, Rat Girl Minions, Goobies Mum",
         "champions": "Squid Niqs",
+        "players": "Evin Stultz, Logan Braun, Max Schickert, TJ Prange",
         "mvp": "Logan Braun"
     },
     {
@@ -18,6 +20,7 @@
         "name": "Dew Cup III",
         "teams": "Buds Wood, Squid Niqs, Goobies Mum",
         "champions": "Goobies Mum",
+        "players": "Garry Bob, John Pfaff, Tyler Bartz",
         "mvp": "Garry Bob"
     },
     {
@@ -25,6 +28,7 @@
         "name": "Bud Wood Memorial Cup I",
         "teams": "Squid Niqs, Goobies Mum, Monty Scoops, Rat Girl Minions",
         "champions": "Goobies Mum",
+        "players": "Big Ted, Brock Deist, Garry Bob, John Pfaff, Seth Mlodzik",
         "mvp": "Garry Bob"
     },
     {
@@ -32,6 +36,7 @@
         "name": "Dew Cup IV",
         "teams": "Buds Wood, Squid Niqs, Goobies Mum, Hellmo Vitamins, Sloshkosh Shooters",
         "champions": "Squid Niqs",
+        "players": "Breanna Pfaff, Hannah Vogel, Max Schickert, TJ Prange",
         "mvp": "Max Schickert"
     }
 ]

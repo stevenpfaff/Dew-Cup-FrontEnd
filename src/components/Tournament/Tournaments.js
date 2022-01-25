@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Table } from 'react-bootstrap'
+import DewCupGroup from "../../Images/DewCupGroup.jpeg"
 import "./Tournaments.css"
 import points from '../../data/points.json'
 import tourneys from '../../data/tournaments.json'
@@ -42,6 +43,7 @@ class Tourneys extends Component {
                         <tr>
                             <th>Series</th>
                             <th>Champions</th>
+                            <th>Players</th>
                             <th>MVP</th>
                         </tr>
                     </thead>
@@ -50,6 +52,7 @@ class Tourneys extends Component {
                             <tr>
                                 <td>{tourney.name}</td>
                                 <td>{tourney.champions}</td>
+                                <td>{tourney.players}</td>
                                 <td>{tourney.mvp}</td>
                             </tr>
                         ))}
@@ -78,6 +81,7 @@ class Tourneys extends Component {
                         ))}
                     </tbody>
                 </Table>
+                <img src={DewCupGroup} width="100%" height="100%" class="center" alt=""></img>
             </div>
         );
     }
