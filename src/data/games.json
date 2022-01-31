@@ -448,5 +448,35 @@
         "home_players": "TJ Prange, Max Schickert, Breanna Pfaff, Hannah Vogel",
         "game": "Dew Cup IV",
         "type": "Championship"
+    },
+    {
+        "away_team": "Moon Dawgs",
+        "away_score": 4,
+        "home_team": "Goobies Mum",
+        "home_score": 5,
+        "away_players": "Logan Braun, Steven Pfaff",
+        "home_players": "Brock Deist, John Pfaff",
+        "game": "Trailer Park Classic I",
+        "type": "Best Of 3"
+    },
+    {
+        "away_team": "Moon Dawgs",
+        "away_score": 5,
+        "home_team": "Goobies Mum",
+        "home_score": 4,
+        "away_players": "Logan Braun, Steven Pfaff",
+        "home_players": "Brock Deist, John Pfaff",
+        "game": "Trailer Park Classic I",
+        "type": "Best Of 3"
+    },
+    {
+        "away_team": "Moon Dawgs",
+        "away_score": 1,
+        "home_team": "Goobies Mum",
+        "home_score": 5,
+        "away_players": "Logan Braun, Steven Pfaff",
+        "home_players": "Brock Deist, John Pfaff",
+        "game": "Trailer Park Classic I",
+        "type": "Best Of 3"
     }
 ]

@@ -4,6 +4,7 @@ import { Table } from 'react-bootstrap'
 import { Button } from '@material-ui/core'
 import SearchBar from '../SearchBar/SearchBar';
 import "./Players.css"
+import { Link } from 'react-router-dom';
 import { SortAlphaUp } from 'react-bootstrap-icons'
 import { SortNumericDown } from 'react-bootstrap-icons'
 import players from '../../data/players.json'

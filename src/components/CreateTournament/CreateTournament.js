@@ -38,6 +38,12 @@ class CreateTourney extends Component {
         });
     }
 
+    handlePlayerChange = (event) => {
+        this.setState({
+            players: event.target.value,
+        });
+    }
+
     fileSelected = event => {
         let me = this
         var input = event.target
@@ -58,7 +64,7 @@ class CreateTourney extends Component {
             teams: this.state.teams,
             champions: this.state.champions,
             mvp: this.state.mvp,
-            file: this.state.file
+            players: this.state.players
         }
         this.props.createNewTourney(newTourney)
     }
@@ -78,8 +84,8 @@ class CreateTourney extends Component {
                 <Form.Group className="mb-3" controlId="formGroupDescription">
                     <Form.Control type="text" placeholder="Tournament MVP" onChange={this.handleMvpChange} value={this.state.mvp} />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formGroupRating">
-                    <Form.Control type="file" accept='image/*' onChange={this.fileSelected} />
+                <Form.Group className="mb-3" controlId="formGroupDescription">
+                    <Form.Control type="text" placeholder="Players" onChange={this.handlePlayerChange} value={this.state.players} />
                 </Form.Group>
                 <Button type="submit" variant="contained" class="btn btn-success">Create Tournament</Button>
                 <Grid style={{ marginLeft: "850px" }}></Grid>

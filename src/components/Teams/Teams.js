@@ -4,7 +4,7 @@ import { Table } from 'react-bootstrap'
 import "./Teams.css"
 import { SortAlphaUp } from 'react-bootstrap-icons'
 import { SortNumericDown } from 'react-bootstrap-icons'
-import teams from '../../data/teams.json'
+import team from '../../data/teams.json'
 
 class Teams extends Component {
     constructor(props) {
@@ -183,7 +183,7 @@ class Teams extends Component {
         return (
             <div style={{ marginRight: "15%", marginLeft: "15%", marginBottom: "10%" }} >
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>Teams</h1>
+                <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>Team Stats</h1>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
@@ -200,7 +200,7 @@ class Teams extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {teams.map((team) => (
+                        {team.map((team) => (
                             <tr>
                                 <td>{team.name}</td>
                                 <td>{team.wins}</td>

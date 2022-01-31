@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Table } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import DewCupGroup from "../../Images/DewCupGroup.jpeg"
 import "./Tournaments.css"
 import points from '../../data/points.json'

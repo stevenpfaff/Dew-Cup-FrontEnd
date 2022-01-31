@@ -17,10 +17,8 @@ function NavBar(props) {
                     <Nav className="me-auto">
                         <Nav.Link href="/Tourneys">Tournaments</Nav.Link>
                         <Nav.Link href="/Games">Game Results</Nav.Link>
-
                     </Nav>
                     <Nav>
-
                         <Nav.Link href="/Teams">Team Stats</Nav.Link>
                         <Nav.Link href="/Players">Player Stats</Nav.Link>
                     </Nav>

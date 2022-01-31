@@ -1,9 +1,23 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 import { Table } from 'react-bootstrap'
 import "./Games.css"
 import games from '../../data/games.json'
 
 function Games() {
+    const [setGames] = useState([])
+
+    useEffect(() => {
+        axios.get(`http://127.0.0.1:8000/api/games/all/`)
+            .then(res => {
+                console.log(res)
+                setGames(res.data)
+            })
+            .catch(err =>
+                console.log(err)
+
+            )
+    })
     return (
         <div style={{ marginRight: "15%", marginLeft: "15%", marginBottom: "10%" }} >
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />

@@ -38,5 +38,13 @@
         "champions": "Squid Niqs",
         "players": "Breanna Pfaff, Hannah Vogel, Max Schickert, TJ Prange",
         "mvp": "Max Schickert"
+    },
+    {
+        "id": 5,
+        "name": "Trailer Park Classic I",
+        "teams": "Goobies Mum, Moon Dawgs",
+        "champions": "Goobies Mum",
+        "players": "Brock Deist, John Pfaff",
+        "mvp": "P Goob"
     }
 ]
