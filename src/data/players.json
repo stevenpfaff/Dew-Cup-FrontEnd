@@ -1,33 +1,5 @@
 [
     {
-        "id": 12,
-        "games_played": 20,
-        "info": "The peskiest you can be. Goobies Mum ring leader. Overshadowed by the greatness of Garry Bob and rightfully so.",
-        "name": "John Pfaff",
-        "at_bats": 42,
-        "batting_average": 619,
-        "hits": 26,
-        "homeruns": 7,
-        "minibat_games_played": 5,
-        "goals": 18,
-        "assists": 25,
-        "points": 43
-    },
-    {
-        "id": 40,
-        "games_played": 21,
-        "info": "Dew Cup commissioner. This guy is a horrible player and gets picked up by a new team each tournament. He is the Mike Sillinger of the Dew Cup. However, he did create the game of minibats so he is somewhat able to do that.",
-        "name": "Steven Pfaff",
-        "at_bats": 26,
-        "batting_average": 577,
-        "hits": 15,
-        "homeruns": 6,
-        "minibat_games_played": 5,
-        "goals": 19,
-        "assists": 20,
-        "points": 39
-    },
-    {
         "id": 32,
         "games_played": 18,
         "info": "Bud was drafted in the 12th round of the 2019 GMHL by the Ottawa Sharpshooters. Dan 'Bud' Carlin has been looking for a Dew Cup title for three years despite being the best player in the tournament.",
@@ -56,32 +28,32 @@
         "points": 34
     },
     {
-        "id": 16,
-        "games_played": 20,
-        "info": "2020 Dew Cup MVP. An elite net front presence who scores at a great rate and knocks opposing offense away. The man shows up for any sport in a big way, finishing second in MVP voting behind pesky Garry Bob two times!",
-        "name": "Logan Braun",
+        "id": 40,
+        "games_played": 18,
+        "info": "Dew Cup commissioner. This guy is a horrible player and gets picked up by a new team each tournament. He is the Mike Sillinger of the Dew Cup. However, he did create the game of minibats so he is somewhat able to do that.",
+        "name": "Steven Pfaff",
         "at_bats": 26,
-        "batting_average": 692,
-        "hits": 18,
-        "homeruns": 7,
+        "batting_average": 577,
+        "hits": 15,
+        "homeruns": 6,
         "minibat_games_played": 5,
-        "goals": 21,
-        "assists": 9,
-        "points": 30
+        "goals": 17,
+        "assists": 15,
+        "points": 32
     },
     {
-        "id": 39,
-        "games_played": 11,
-        "info": "Bested by his favorite youtuber in BWMC batting average. This follower of Goobie is extremely pesky.",
-        "name": "Brock Deist",
-        "at_bats": 44,
-        "batting_average": 682,
-        "hits": 30,
-        "homeruns": 5,
+        "id": 12,
+        "games_played": 17,
+        "info": "The peskiest you can be. Goobies Mum ring leader. Overshadowed by the greatness of Garry Bob and rightfully so.",
+        "name": "John Pfaff",
+        "at_bats": 42,
+        "batting_average": 619,
+        "hits": 26,
+        "homeruns": 7,
         "minibat_games_played": 5,
-        "goals": 15,
-        "assists": 12,
-        "points": 27
+        "goals": 11,
+        "assists": 17,
+        "points": 28
     },
     {
         "id": 13,
@@ -110,6 +82,20 @@
         "goals": 13,
         "assists": 9,
         "points": 21
+    },
+    {
+        "id": 16,
+        "games_played": 17,
+        "info": "2020 Dew Cup MVP. An elite net front presence who scores at a great rate and knocks opposing offense away. The man shows up for any sport in a big way, finishing second in MVP voting behind pesky Garry Bob two times!",
+        "name": "Logan Braun",
+        "at_bats": 26,
+        "batting_average": 692,
+        "hits": 18,
+        "homeruns": 7,
+        "minibat_games_played": 5,
+        "goals": 12,
+        "assists": 8,
+        "points": 20
     },
     {
         "id": 31,
@@ -152,6 +138,20 @@
         "goals": 9,
         "assists": 6,
         "points": 15
+    },
+    {
+        "id": 39,
+        "games_played": 8,
+        "info": "Bested by his favorite youtuber in BWMC batting average. This follower of Goobie is extremely pesky.",
+        "name": "Brock Deist",
+        "at_bats": 44,
+        "batting_average": 682,
+        "hits": 30,
+        "homeruns": 5,
+        "minibat_games_played": 5,
+        "goals": 7,
+        "assists": 5,
+        "points": 12
     },
     {
         "id": 24,

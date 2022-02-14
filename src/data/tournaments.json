@@ -1,6 +1,5 @@
 [
     {
-        "id": 1,
         "name": "Dew Cup I",
         "teams": "Goose Chasers, Buds Wood",
         "champions": "Goose Chasers",
@@ -8,7 +7,6 @@
         "mvp": "None"
     },
     {
-        "id": 2,
         "name": "Dew Cup II",
         "teams": "Buds Wood, Muppets, Squid Niqs, Rat Girl Minions, Goobies Mum",
         "champions": "Squid Niqs",
@@ -16,7 +14,6 @@
         "mvp": "Logan Braun"
     },
     {
-        "id": 3,
         "name": "Dew Cup III",
         "teams": "Buds Wood, Squid Niqs, Goobies Mum",
         "champions": "Goobies Mum",
@@ -24,7 +21,6 @@
         "mvp": "Garry Bob"
     },
     {
-        "id": 4,
         "name": "Bud Wood Memorial Cup I",
         "teams": "Squid Niqs, Goobies Mum, Monty Scoops, Rat Girl Minions",
         "champions": "Goobies Mum",
@@ -32,7 +28,6 @@
         "mvp": "Garry Bob"
     },
     {
-        "id": 5,
         "name": "Dew Cup IV",
         "teams": "Buds Wood, Squid Niqs, Goobies Mum, Hellmo Vitamins, Sloshkosh Shooters",
         "champions": "Squid Niqs",
@@ -40,11 +35,10 @@
         "mvp": "Max Schickert"
     },
     {
-        "id": 5,
-        "name": "Trailer Park Classic I",
-        "teams": "Goobies Mum, Moon Dawgs",
-        "champions": "Goobies Mum",
-        "players": "Brock Deist, John Pfaff",
-        "mvp": "P Goob"
+        "name": "Code Red Classic I",
+        "teams": "Goobies Mum, Goobies Cudas, Hypnotoads, Squid Niqs",
+        "champions": "TBD",
+        "players": "TBD",
+        "mvp": "TBD"
     }
 ]

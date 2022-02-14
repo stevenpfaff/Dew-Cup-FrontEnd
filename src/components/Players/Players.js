@@ -197,7 +197,7 @@ class Players extends Component {
         return (
             <div style={{ marginRight: "15%", marginLeft: "15%", marginBottom: "10%" }} >
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>Player Stats</h1>
+                <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>All-Time Player Stats</h1>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
@@ -216,7 +216,7 @@ class Players extends Component {
                     <tbody>
                         {players.map((player) => (
                             <tr>
-                                <td>{player.name}</td>
+                                <td><Link to={`/Players/${player.name}/profile`}>{player.name}</Link></td>
                                 <td>{player.games_played}</td>
                                 <td>{player.goals}</td>
                                 <td>{player.assists}</td>

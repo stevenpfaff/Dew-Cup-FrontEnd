@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Table } from 'react-bootstrap'
 import "./Teams.css"
+import { Link } from 'react-router-dom';
 import { SortAlphaUp } from 'react-bootstrap-icons'
 import { SortNumericDown } from 'react-bootstrap-icons'
-import team from '../../data/teams.json'
+import teams from '../../data/teams.json'
 
 class Teams extends Component {
     constructor(props) {
@@ -200,9 +201,9 @@ class Teams extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {team.map((team) => (
+                        {teams.map((team) => (
                             <tr>
-                                <td>{team.name}</td>
+                                <td><Link to={`/Teams/${team.name}/profile`}>{team.name}</Link></td>
                                 <td>{team.wins}</td>
                                 <td>{team.losses}</td>
                                 <td>{team.goals}</td>
