@@ -1,156 +1,114 @@
 [
     {
-        "name": "TJ Prange",
+        "name": "Charlie Eckert",
         "games": 6,
-        "goals": 10,
-        "assists": 3,
-        "points": 13
+        "goals": 13,
+        "assists": 6,
+        "points": 19
     },
     {
-        "name": "Buddy Wood",
+        "name": "Tyler Bartz",
         "games": 6,
-        "goals": 7,
+        "goals": 11,
         "assists": 5,
-        "points": 12
+        "points": 16
     },
     {
-        "name": "Max Schickert",
+        "name": "Ethan Schickert",
         "games": 6,
         "goals": 9,
+        "assists": 6,
+        "points": 15
+    },
+    {
+        "name": "Garry Bob",
+        "games": 6,
+        "goals": 4,
+        "assists": 11,
+        "points": 15
+    },
+    {
+        "name": "John Pfaff",
+        "games": 6,
+        "goals": 6,
+        "assists": 9,
+        "points": 15
+    },
+    {
+        "name": "TJ Prange",
+        "games": 5,
+        "goals": 11,
         "assists": 3,
-        "points": 12
+        "points": 14
     },
     {
-        "name": "Steven Pfaff",
-        "games": 6,
-        "goals": 9,
-        "assists": 2,
+        "name": "Mitchell Zale",
+        "games": 5,
+        "goals": 8,
+        "assists": 3,
         "points": 11
     },
     {
-        "name": "Charlie Eckert",
+        "name": "Cash Wichlacz",
+        "games": 6,
+        "goals": 6,
+        "assists": 4,
+        "points": 10
+    },
+    {
+        "name": "Matt Huinker",
+        "games": 5,
+        "goals": 5,
+        "assists": 5,
+        "points": 10
+    },
+    {
+        "name": "Hoag Braun",
         "games": 5,
         "goals": 5,
         "assists": 4,
         "points": 9
     },
     {
-        "name": "Ethan Schickert",
-        "games": 5,
+        "name": "Breanna Pfaff",
+        "games": 6,
         "goals": 5,
         "assists": 3,
         "points": 8
     },
     {
-        "name": "Mitchell Zale",
-        "games": 5,
-        "goals": 4,
-        "assists": 4,
-        "points": 8
-    },
-    {
-        "name": "Rheese McCardle",
-        "games": 5,
-        "goals": 4,
-        "assists": 4,
-        "points": 8
-    },
-    {
-        "name": "John Pfaff",
-        "games": 5,
-        "goals": 0,
-        "assists": 7,
-        "points": 7
-    },
-    {
-        "name": "Brock Deist",
-        "games": 5,
-        "goals": 3,
-        "assists": 3,
-        "points": 6
-    },
-    {
         "name": "Evin Stultz",
-        "games": 6,
+        "games": 5,
         "goals": 4,
-        "assists": 2,
-        "points": 6
+        "assists": 4,
+        "points": 8
     },
     {
-        "name": "Evan Gady",
+        "name": "Lauren McCormack",
         "games": 6,
+        "goals": 5,
+        "assists": 3,
+        "points": 8
+    },
+    {
+        "name": "Steven Pfaff",
+        "games": 5,
         "goals": 3,
         "assists": 2,
         "points": 5
     },
     {
-        "name": "Breanna Pfaff",
-        "games": 6,
-        "goals": 1,
-        "assists": 3,
-        "points": 4
-    },
-    {
-        "name": "Hannah Vogel",
-        "games": 6,
+        "name": "Kevin Stultz",
+        "games": 5,
         "goals": 2,
         "assists": 2,
         "points": 4
     },
     {
-        "name": "Hoag Braun",
+        "name": "Natalie Pfaff",
         "games": 6,
         "goals": 2,
-        "assists": 2,
-        "points": 4
-    },
-    {
-        "name": "Marvin Bateman",
-        "games": 6,
-        "goals": 2,
-        "assists": 2,
-        "points": 4
-    },
-    {
-        "name": "Matt Huinker",
-        "games": 6,
-        "goals": 1,
-        "assists": 3,
-        "points": 4
-    },
-    {
-        "name": "Cooper Petermann",
-        "games": 5,
-        "goals": 0,
-        "assists": 2,
-        "points": 2
-    },
-    {
-        "name": "Jake Zainer",
-        "games": 5,
-        "goals": 0,
-        "assists": 2,
-        "points": 2
-    },
-    {
-        "name": "TJ Graczkowski",
-        "games": 5,
-        "goals": 0,
-        "assists": 2,
-        "points": 2
-    },
-    {
-        "name": "Brian Huinker",
-        "games": 5,
-        "goals": 0,
         "assists": 1,
-        "points": 1
-    },
-    {
-        "name": "Cash Wichlacz",
-        "games": 6,
-        "goals": 0,
-        "assists": 1,
-        "points": 1
+        "points": 3
     }
 ]
