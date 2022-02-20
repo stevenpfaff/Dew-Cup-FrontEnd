@@ -60,7 +60,7 @@ class Tourneys extends Component {
                         ))}
                     </tbody>
                 </Table>
-                <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>Dew Cup IV Point Leaders</h1>
+                <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>Code Red Classic I Point Leaders</h1>
                 <div style={{ marginRight: "25%", marginLeft: "25%", marginBottom: "0%" }} >
                     <Table striped bordered hover>
                         <thead>
