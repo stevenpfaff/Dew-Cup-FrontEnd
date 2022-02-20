@@ -1,0 +1,132 @@
+[
+    {
+        "away_team": "Rat Girl Minions",
+        "away_score": 0,
+        "home_team": "Squid Niqs",
+        "home_score": 5,
+        "away_players": "Breanna Pfaff, Lauren McCormack, Natalie Pfaff",
+        "home_players": "Evin Stultz, Kevin Stultz, TJ Prange",
+        "game": "Code Red Classic I",
+        "type": "Round Robin"
+    },
+    {
+        "away_team": "Goobies Mum",
+        "away_score": 4,
+        "home_team": "Squid Niqs",
+        "home_score": 1,
+        "away_players": "Charlie Eckert, Garry Bob, John Pfaff",
+        "home_players": "Evin Stultz, Kevin Stultz, TJ Prange",
+        "game": "Code Red Classic I",
+        "type": "Round Robin"
+    },
+    {
+        "away_team": "Hypnotoads",
+        "away_score": 2,
+        "home_team": "Goobies Cudas",
+        "home_score": 3,
+        "away_players": "Logan Braun, Matt Huinker, Steven Pfaff",
+        "home_players": "Cash Wichlacz, Ethan Schickert, Tyler Bartz",
+        "game": "Code Red Classic I",
+        "type": "Round Robin"
+    },
+    {
+        "away_team": "Goobies Mum",
+        "away_score": 3,
+        "home_team": "Hypnotoads",
+        "home_score": 2,
+        "away_players": "Charlie Eckert, Garry Bob, John Pfaff",
+        "home_players": "Logan Braun, Matt Huinker, Steven Pfaff",
+        "game": "Code Red Classic I",
+        "type": "Round Robin"
+    },
+    {
+        "away_team": "Rat Girl Minions",
+        "away_score": 3,
+        "home_team": "Goobies Cudas",
+        "home_score": 5,
+        "away_players": "Breanna Pfaff, Lauren McCormack, Mitchell Zale, Natalie Pfaff",
+        "home_players": "Cash Wichlacz, Ethan Schickert, Tyler Bartz",
+        "game": "Code Red Classic I",
+        "type": "Round Robin"
+    },
+    {
+        "away_team": "Rat Girl Minions",
+        "away_score": 4,
+        "home_team": "Hypnotoads",
+        "home_score": 3,
+        "away_players": "Breanna Pfaff, Lauren McCormack, Mitchell Zale, Natalie Pfaff",
+        "home_players": "Logan Braun, Matt Huinker, Steven Pfaff",
+        "game": "Code Red Classic I",
+        "type": "Round Robin"
+    },
+    {
+        "away_team": "Goobies Cudas",
+        "away_score": 5,
+        "home_team": "Squid Niqs",
+        "home_score": 4,
+        "away_players": "Cash Wichlacz, Ethan Schickert, Tyler Bartz",
+        "home_players": "Evin Stultz, Kevin Stultz, TJ Prange",
+        "game": "Code Red Classic I",
+        "type": "Round Robin"
+    },
+    {
+        "away_team": "Goobies Mum",
+        "away_score": 4,
+        "home_team": "Rat Girl Minions",
+        "home_score": 5,
+        "away_players": "Charlie Eckert, Garry Bob, John Pfaff",
+        "home_players": "Breanna Pfaff, Lauren McCormack, Mitchell Zale, Natalie Pfaff",
+        "game": "Code Red Classic I",
+        "type": "Round Robin"
+    },
+    {
+        "away_team": "Squid Niqs",
+        "away_score": 5,
+        "home_team": "Hypnotoads",
+        "home_score": 2,
+        "away_players": "Evin Stultz, Kevin Stultz, TJ Prange",
+        "home_players": "Logan Braun, Matt Huinker, Steven Pfaff",
+        "game": "Code Red Classic I",
+        "type": "Round Robin"
+    },
+    {
+        "away_team": "Hypnotoads",
+        "away_score": 4,
+        "home_team": "Rat Girl Minions",
+        "home_score": 5,
+        "away_players": "Logan Braun, Matt Huinker, Steven Pfaff",
+        "home_players": "Breanna Pfaff, Lauren McCormack, Mitchell Zale, Natalie Pfaff",
+        "game": "Code Red Classic I",
+        "type": "Play In Game"
+    },
+    {
+        "away_team": "Goobies Mum",
+        "away_score": 4,
+        "home_team": "Squid Niqs",
+        "home_score": 2,
+        "away_players": "Charlie Eckert, Garry Bob, John Pfaff",
+        "home_players": "Evin Stultz, Kevin Stultz, TJ Prange",
+        "game": "Code Red Classic I",
+        "type": "Round 1"
+    },
+    {
+        "away_team": "Rat Girl Minions",
+        "away_score": 3,
+        "home_team": "Goobies Cudas",
+        "home_score": 5,
+        "away_players": "Breanna Pfaff, Lauren McCormack, Mitchell Zale, Natalie Pfaff",
+        "home_players": "Cash Wichlacz, Ethan Schickert, Tyler Bartz",
+        "game": "Code Red Classic I",
+        "type": "Round 1"
+    },
+    {
+        "away_team": "Goobies Mum",
+        "away_score": 4,
+        "home_team": "Goobies Cudas",
+        "home_score": 3,
+        "away_players": "Charlie Eckert, Garry Bob, John Pfaff",
+        "home_players": "Cash Wichlacz, Ethan Schickert, Tyler Bartz",
+        "game": "Code Red Classic I",
+        "type": "Championship"
+    }
+]

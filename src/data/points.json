@@ -1,6 +1,7 @@
 [
     {
         "name": "Charlie Eckert",
+        "team": "Goobies Mum",
         "games": 6,
         "goals": 13,
         "assists": 6,
@@ -8,6 +9,7 @@
     },
     {
         "name": "Tyler Bartz",
+        "team": "Goobies Cudas",
         "games": 6,
         "goals": 11,
         "assists": 5,
@@ -15,6 +17,7 @@
     },
     {
         "name": "Ethan Schickert",
+        "team": "Goobies Cudas",
         "games": 6,
         "goals": 9,
         "assists": 6,
@@ -22,6 +25,7 @@
     },
     {
         "name": "Garry Bob",
+        "team": "Goobies Mum",
         "games": 6,
         "goals": 4,
         "assists": 11,
@@ -29,6 +33,7 @@
     },
     {
         "name": "John Pfaff",
+        "team": "Goobies Mum",
         "games": 6,
         "goals": 6,
         "assists": 9,
@@ -36,6 +41,7 @@
     },
     {
         "name": "TJ Prange",
+        "team": "Squid Niqs",
         "games": 5,
         "goals": 11,
         "assists": 3,
@@ -43,6 +49,7 @@
     },
     {
         "name": "Mitchell Zale",
+        "team": "Rat Girl Minions",
         "games": 5,
         "goals": 8,
         "assists": 3,
@@ -50,6 +57,7 @@
     },
     {
         "name": "Cash Wichlacz",
+        "team": "Goobies Cudas",
         "games": 6,
         "goals": 6,
         "assists": 4,
@@ -57,6 +65,7 @@
     },
     {
         "name": "Matt Huinker",
+        "team": "Hypnotoads",
         "games": 5,
         "goals": 5,
         "assists": 5,
@@ -64,6 +73,7 @@
     },
     {
         "name": "Hoag Braun",
+        "team": "Hypnotoads",
         "games": 5,
         "goals": 5,
         "assists": 4,
@@ -71,6 +81,7 @@
     },
     {
         "name": "Breanna Pfaff",
+        "team": "Rat Girl Minions",
         "games": 6,
         "goals": 5,
         "assists": 3,
@@ -78,6 +89,7 @@
     },
     {
         "name": "Evin Stultz",
+        "team": "Squid Niqs",
         "games": 5,
         "goals": 4,
         "assists": 4,
@@ -85,6 +97,7 @@
     },
     {
         "name": "Lauren McCormack",
+        "team": "Rat Girl Minions",
         "games": 6,
         "goals": 5,
         "assists": 3,
@@ -92,6 +105,7 @@
     },
     {
         "name": "Steven Pfaff",
+        "team": "Hypnotoads",
         "games": 5,
         "goals": 3,
         "assists": 2,
@@ -99,6 +113,7 @@
     },
     {
         "name": "Kevin Stultz",
+        "team": "Squid Niqs",
         "games": 5,
         "goals": 2,
         "assists": 2,
@@ -106,6 +121,7 @@
     },
     {
         "name": "Natalie Pfaff",
+        "team": "Rat Girl Minions",
         "games": 6,
         "goals": 2,
         "assists": 1,
