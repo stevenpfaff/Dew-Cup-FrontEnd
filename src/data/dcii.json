@@ -1,0 +1,152 @@
+[
+    {
+        "home_team": "Muppets",
+        "home_score": 1,
+        "away_team": "Squid Niqs",
+        "away_score": 5,
+        "away_players": "Hoag Braun, Rick Bonis, Max Schickert, Evin Stultz",
+        "home_players": "Steven Pfaff, Ryan Ruona, Marvin Bateman, Matt Huinker",
+        "game": "Dew Cup II",
+        "type": "Round Robin"
+    },
+    {
+        "home_team": "Rat Girl Minions",
+        "home_score": 1,
+        "away_team": "Goobies Mum",
+        "away_score": 3,
+        "away_players": "John Pfaff, Garry Bob, Brock Diest, Ethan Schickert",
+        "home_players": "Breanna Pfaff, Lauren McCormack, Lauren Waraksa, Johnny Klabachek, Seth Mlodzik",
+        "game": "Dew Cup II",
+        "type": "Round Robin"
+    },
+    {
+        "home_team": "Rat Girl Minions",
+        "home_score": 1,
+        "away_team": "Squid Niqs",
+        "away_score": 3,
+        "away_players": "Hoag Braun, Rick Bonis, Max Schickert, Evin Stultz",
+        "home_players": "Breanna Pfaff, Lauren McCormack, Lauren Waraksa, Johnny Klabachek, Seth Mlodzik",
+        "game": "Dew Cup II",
+        "type": "Round Robin"
+    },
+    {
+        "home_team": "Goobies Mum",
+        "home_score": 3,
+        "away_team": "Buds Wood",
+        "away_score": 2,
+        "away_players": "Buddy Wood, Rheese McCardle, Jake Zainer, TJ Graczkowski",
+        "home_players": "John Pfaff, Garry Bob, Brock Diest, Ethan Schickert",
+        "game": "Dew Cup II",
+        "type": "Round Robin"
+    },
+    {
+        "home_team": "Squid Niqs",
+        "home_score": 2,
+        "away_team": "Buds Wood",
+        "away_score": 0,
+        "away_players": "Buddy Wood, Rheese McCardle, Jake Zainer, TJ Graczkowski",
+        "home_players": "Hoag Braun, Rick Bonis, Max Schickert, Evin Stultz",
+        "game": "Dew Cup II",
+        "type": "Round Robin"
+    },
+    {
+        "home_team": "Rat Girl Minions",
+        "home_score": 1,
+        "away_team": "Muppets",
+        "away_score": 0,
+        "away_players": "Steven Pfaff, Ryan Ruona, Marvin Bateman, Matt Huinker",
+        "home_players": "Breanna Pfaff, Lauren McCormack, Lauren Waraksa, Johnny Klabachek, Seth Mlodzik",
+        "game": "Dew Cup II",
+        "type": "Round Robin"
+    },
+    {
+        "away_team": "Buds Wood",
+        "home_score": 2,
+        "home_team": "Muppets",
+        "away_score": 3,
+        "home_players": "Steven Pfaff, Ryan Ruona, Marvin Bateman, Matt Huinker",
+        "away_players": "Buddy Wood, Rheese McCardle, Jake Zainer, TJ Graczkowski",
+        "game": "Dew Cup II",
+        "type": "Round Robin"
+    },
+    {
+        "home_team": "Squid Niqs",
+        "home_score": 2,
+        "away_team": "Goobies Mum",
+        "away_score": 1,
+        "home_players": "Hoag Braun, Rick Bonis, Max Schickert, Evin Stultz",
+        "away_players": "John Pfaff, Garry Bob, Brock Diest, Ethan Schickert",
+        "game": "Dew Cup II",
+        "type": "Round Robin"
+    },
+    {
+        "home_team": "Muppets",
+        "home_score": 1,
+        "away_team": "Goobies Mum",
+        "away_score": 3,
+        "home_players": "Steven Pfaff, Ryan Ruona, Marvin Bateman, Matt Huinker",
+        "away_players": "John Pfaff, Garry Bob, Brock Diest, Ethan Schickert",
+        "game": "Dew Cup II",
+        "type": "Round Robin"
+    },
+    {
+        "home_team": "Rat Girl Minions",
+        "home_score": 1,
+        "away_team": "Buds Wood",
+        "away_score": 4,
+        "home_players": "Breanna Pfaff, Lauren McCormack, Lauren Waraksa, Johnny Klabachek, Seth Mlodzik",
+        "away_players": "Buddy Wood, Rheese McCardle, Jake Zainer, TJ Graczkowski",
+        "game": "Dew Cup II",
+        "type": "Round Robin"
+    },
+    {
+        "home_team": "Rat Girl Minions",
+        "home_score": 1,
+        "away_team": "Muppets",
+        "away_score": 2,
+        "home_players": "Breanna Pfaff, Lauren McCormack, Lauren Waraksa, Johnny Klabachek, Seth Mlodzik",
+        "away_players": "Steven Pfaff, Ryan Ruona, Marvin Bateman, Matt Huinker",
+        "game": "Dew Cup II",
+        "type": "Play In Game"
+    },
+    {
+        "home_team": "Buds Wood",
+        "home_score": 0,
+        "away_team": "Goobies Mum",
+        "away_score": 2,
+        "home_players": "Buddy Wood, Rheese McCardle, Jake Zainer, TJ Graczkowski",
+        "away_players": "John Pfaff, Garry Bob, Brock Diest, Ethan Schickert",
+        "game": "Dew Cup II",
+        "type": "Semi Final"
+    },
+    {
+        "home_team": "Squid Niqs",
+        "home_score": 1,
+        "away_team": "Muppets",
+        "away_score": 0,
+        "home_players": "Hoag Braun, Rick Bonis, Max Schickert, Evin Stultz",
+        "away_players": "Steven Pfaff, Ryan Ruona, Marvin Bateman, Matt Huinker",
+        "game": "Dew Cup II",
+        "type": "Semi Final"
+    },
+    {
+        "home_team": "Buds Wood",
+        "home_score": 1,
+        "away_team": "Muppets",
+        "away_score": 0,
+        "home_players": "Buddy Wood, Rheese McCardle, Jake Zainer, TJ Graczkowski",
+        "away_players": "Steven Pfaff, Ryan Ruona, Marvin Bateman, Matt Huinker",
+        "game": "Dew Cup II",
+        "type": "Third Place Game"
+    },
+    {
+        "home_team": "Squid Niqs",
+        "home_score": 2,
+        "away_team": "Goobies Mum",
+        "away_score": 0,
+        "home_players": "Hoag Braun, Rick Bonis, Max Schickert, Evin Stultz",
+        "away_players": "John Pfaff, Garry Bob, Brock Diest, Ethan Schickert",
+        "game": "Dew Cup II",
+        "type": "Championship"
+    }
+]

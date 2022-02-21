@@ -45,7 +45,7 @@ const Team = (props) => {
     return (
         <div style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "10%" }} >
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>{name} Team Profile</h1>
+            <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>{name}</h1>
             <div class="column">
                 <img src={team.file} width="150%" height="150%" alt="" />
             </div>
@@ -88,10 +88,6 @@ const Team = (props) => {
                         <tr>
                             <th>Championships</th>
                             <td>{team.championships}</td>
-                        </tr>
-                        <tr>
-                            <th>Players</th>
-                            <td>{team.players}</td>
                         </tr>
                     </tbody>
                 </Table>
