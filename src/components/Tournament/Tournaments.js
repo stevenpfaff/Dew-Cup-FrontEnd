@@ -4,10 +4,6 @@ import { Table } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import DewCupGroup from "../../Images/DewCupGroup.jpeg"
 import "./Tournaments.css"
-import points from '../../data/points.json'
-import tourneys from '../../data/tournaments.json'
-import crc from '../../data/crc.json'
-import games from '../../data/crcgames.json'
 
 
 class Tourneys extends Component {
@@ -51,7 +47,7 @@ class Tourneys extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {tourneys.map((tourney) => (
+                        {this.state.tourneys.map((tourney) => (
                             <tr>
                                 <td>{tourney.name}</td>
                                 <td>{tourney.champions}</td>
@@ -61,79 +57,6 @@ class Tourneys extends Component {
                         ))}
                     </tbody>
                 </Table>
-                <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>Code Red Classic I Results</h1>
-                <div style={{ marginRight: "15%", marginLeft: "15%", marginBottom: "5%" }} >
-                    <Table striped bordered hover>
-                        <thead>
-                            <tr>
-                                <th>Type</th>
-                                <th>Away Team</th>
-                                <th>Away Score</th>
-                                <th>Home Team</th>
-                                <th>Home Score</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {games.map((game) => (
-                                <tr>
-                                    <td>{game.type}</td>
-                                    <td>{game.away_team}</td>
-                                    <td>{game.away_score}</td>
-                                    <td>{game.home_team}</td>
-                                    <td>{game.home_score}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </Table>
-                    <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>Team Stats</h1>
-                    <Table striped bordered hover>
-                        <thead>
-                            <tr>
-                                <th>Team</th>
-                                <th>Wins</th>
-                                <th>Losses</th>
-                                <th>Goals</th>
-                                <th>Goals Against</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {crc.map((crc) => (
-                                <tr>
-                                    <td>{crc.team}</td>
-                                    <td>{crc.wins}</td>
-                                    <td>{crc.losses}</td>
-                                    <td>{crc.goals}</td>
-                                    <td>{crc.goals_ag}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </Table>
-                    <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>Player Stats</h1>
-                    <Table striped bordered hover>
-                        <thead>
-                            <tr>
-                                <th>Player</th>
-                                <th>Team</th>
-                                <th>Games</th>
-                                <th>Goals</th>
-                                <th>Assists</th>
-                                <th>Points</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {points.map((point) => (
-                                <tr>
-                                    <td>{point.name}</td>
-                                    <td>{point.team}</td>
-                                    <td>{point.games}</td>
-                                    <td>{point.goals}</td>
-                                    <td>{point.assists}</td>
-                                    <td>{point.points}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </Table>
-                </div>
             </div>
         );
     }

@@ -196,8 +196,10 @@ class Players extends Component {
     render() {
         return (
             <div style={{ marginRight: "15%", marginLeft: "15%", marginBottom: "10%" }} >
+                <SearchBar playerSearch={this.playerSearch} />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>All-Time Player Stats</h1>
+                <Button type="submit" variant="contained" onClick={this.handleClick} class="btn btn-success">Refresh Player List</Button>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
@@ -214,7 +216,7 @@ class Players extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {players.map((player) => (
+                        {this.state.players.map((player) => (
                             <tr>
                                 <td><Link to={`/Players/${player.name}/profile`}>{player.name}</Link></td>
                                 <td>{player.games_played}</td>

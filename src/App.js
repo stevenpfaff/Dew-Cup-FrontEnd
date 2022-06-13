@@ -63,7 +63,6 @@ class App extends Component {
   createNewUser = async (newUser) => {
     try {
       const response = await axios.post(`http://127.0.0.1:8000/api/auth/register/`, newUser)
-      newUser = response
       window.location = '/login'
     }
     catch (err) {

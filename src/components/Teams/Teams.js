@@ -201,7 +201,7 @@ class Teams extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {teams.map((team) => (
+                        {this.state.teams.map((team) => (
                             <tr>
                                 <td><Link to={`/Teams/${team.name}/profile`}>{team.name}</Link></td>
                                 <td>{team.wins}</td>
