@@ -3,7 +3,6 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container'
 import DewCup from "../../Images/DewCup.png"
-import { NavDropdown } from 'react-bootstrap'
 
 
 
@@ -16,18 +15,15 @@ function NavBar(props) {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="Tourneys">Tournaments</Nav.Link>
-                        <Nav.Link href="/Teams">Teams</Nav.Link>
-                        <Nav.Link href="/Players">Players</Nav.Link>
+                        <Nav.Link href="/">Tournament Results</Nav.Link>
+                        <Nav.Link href="/coorsclash">Coors Clash Standings</Nav.Link>
+                        <Nav.Link href="/Games">Game Results</Nav.Link>
 
                     </Nav>
                     <Nav>
-                        {props.user && <Nav.Link href="/CreatePlayer">Create Player</Nav.Link>}
-                        {props.user && <Nav.Link href="/CreateTeam"> Create Team </Nav.Link>}
-                        {props.user && <Nav.Link href="/CreateTourney">Create Tournament</Nav.Link>}
-                        {!props.user && <Nav.Link onClick={props.userSignIn} href="/login">Login</Nav.Link>}
-                        {!props.user && <Nav.Link onClick={props.createNewUser} href="/register">Register</Nav.Link>}
-                        {props.user && <Nav.Link onClick={props.logOutUser} href="/login">Logout</Nav.Link>}
+                        <Nav.Link href="/Teams">Team Stats</Nav.Link>
+                        <Nav.Link href="/hockeystats">Hockey Stats</Nav.Link>
+                        <Nav.Link href="/mbstats">Minibat Stats</Nav.Link>
                     </Nav>
 
                 </Navbar.Collapse>
