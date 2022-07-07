@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Table } from 'react-bootstrap'
+import { SortNumericDown } from 'react-bootstrap-icons'
 
 class MBPlayers extends Component {
     constructor(props) {
@@ -7,6 +8,13 @@ class MBPlayers extends Component {
         this.state = {
             player: []
         }
+        this.byGames = this.byGames.bind(this);
+        this.byHits = this.byHits.bind(this);
+        this.byDoubles = this.byDoubles.bind(this);
+        this.byTriples = this.byTriples.bind(this);
+        this.byHomers = this.byHomers.bind(this);
+        this.byAvg = this.byAvg.bind(this);
+        this.byRbi = this.byRbi.bind(this);
     }
 
     refreshList() {
@@ -21,15 +29,79 @@ class MBPlayers extends Component {
         this.refreshList();
     }
 
-    componentDidUpdate() {
-        this.refreshList();
+    byGames() {
+        let games = this.state.player.sort((a, b) => {
+            return b.MBGP - a.MBGP;
+        });
+
+        this.setState({
+            player: games
+        });
+    }
+
+    byHits() {
+        let hits = this.state.player.sort((a, b) => {
+            return b.Hits - a.Hits;
+        });
+
+        this.setState({
+            player: hits
+        });
+    }
+
+    byDoubles() {
+        let doubles = this.state.player.sort((a, b) => {
+            return b.doubles - a.doubles;
+        });
+
+        this.setState({
+            player: doubles
+        });
+    }
+
+    byTriples() {
+        let triples = this.state.player.sort((a, b) => {
+            return b.triples - a.triples;
+        });
+
+        this.setState({
+            player: triples
+        });
+    }
+
+    byHomers() {
+        let homers = this.state.player.sort((a, b) => {
+            return b.Homeruns - a.Homeruns;
+        });
+
+        this.setState({
+            player: homers
+        });
+    }
+
+    byAvg() {
+        let avg = this.state.player.sort((a, b) => {
+            return b.batavg - a.batavg;
+        });
+
+        this.setState({
+            player: avg
+        });
+    }
+
+    byRbi() {
+        let rbi = this.state.player.sort((a, b) => {
+            return b.RBI - a.RBI;
+        });
+
+        this.setState({
+            player: rbi
+        });
     }
 
 
 
     render() {
-        const { player } = this.state;
-        const sortedName = player.sort((a, b) => b.batavg > a.batavg ? 1 : -1)
         return (
             <div style={{ marginRight: "25%", marginLeft: "25%", marginBottom: "10%" }} >
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -38,26 +110,26 @@ class MBPlayers extends Component {
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>GP</th>
-                            <th>H</th>
-                            <th>2B</th>
-                            <th>3B</th>
-                            <th>HR</th>
-                            <th>RBI</th>
-                            <th>AVG</th>
+                            <th>GP<button type="button" class="btn btn-default" onClick={this.byGames}><SortNumericDown /></button></th>
+                            <th>H<button type="button" class="btn btn-default" onClick={this.byHits}><SortNumericDown /></button></th>
+                            <th>AVG<button type="button" class="btn btn-default" onClick={this.byAvg}><SortNumericDown /></button></th>
+                            <th>2B<button type="button" class="btn btn-default" onClick={this.byDoubles}><SortNumericDown /></button></th>
+                            <th>3B<button type="button" class="btn btn-default" onClick={this.byTriples}><SortNumericDown /></button></th>
+                            <th>HR<button type="button" class="btn btn-default" onClick={this.byHomers}><SortNumericDown /></button></th>
+                            <th>RBI<button type="button" class="btn btn-default" onClick={this.byRbi}><SortNumericDown /></button></th>
                         </tr>
                     </thead>
                     <tbody>
-                        {sortedName.map((player) => (
+                        {this.state.player.map((player) => (
                             <tr key={player.Id}>
                                 <td>{player.PlayerName}</td>
                                 <td>{player.MBGP}</td>
                                 <td>{player.Hits}</td>
+                                <td>{player.batavg}</td>
                                 <td>{player.doubles}</td>
                                 <td>{player.triples}</td>
                                 <td>{player.Homeruns}</td>
                                 <td>{player.RBI}</td>
-                                <td>{player.batavg}</td>
                             </tr>
                         ))}
                     </tbody>

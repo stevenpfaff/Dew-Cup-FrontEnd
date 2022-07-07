@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Table } from 'react-bootstrap'
+import { SortNumericDown } from 'react-bootstrap-icons'
 
 class Players extends Component {
     constructor(props) {
@@ -7,6 +8,10 @@ class Players extends Component {
         this.state = {
             player: []
         }
+        this.byGames = this.byGames.bind(this);
+        this.byGoals = this.byGoals.bind(this);
+        this.byAssists = this.byAssists.bind(this);
+        this.byPoints = this.byPoints.bind(this);
     }
 
     refreshList() {
@@ -21,15 +26,47 @@ class Players extends Component {
         this.refreshList();
     }
 
-    componentDidUpdate() {
-        this.refreshList();
+    byGames() {
+        let games = this.state.player.sort((a, b) => {
+            return b.HockeyGP - a.HockeyGP;
+        });
+
+        this.setState({
+            player: games
+        });
     }
 
+    byGoals() {
+        let goals = this.state.player.sort((a, b) => {
+            return b.Goals - a.Goals;
+        });
 
+        this.setState({
+            player: goals
+        });
+    }
+
+    byAssists() {
+        let assists = this.state.player.sort((a, b) => {
+            return b.Assists - a.Assists;
+        });
+
+        this.setState({
+            player: assists
+        });
+    }
+
+    byPoints() {
+        let points = this.state.player.sort((a, b) => {
+            return b.Points - a.Points;
+        });
+
+        this.setState({
+            player: points
+        });
+    }
 
     render() {
-        const { player } = this.state;
-        const sortedName = player.sort((a, b) => b.Points > a.Points ? 1 : -1)
         return (
             <div style={{ marginRight: "25%", marginLeft: "25%", marginBottom: "10%" }} >
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -38,14 +75,14 @@ class Players extends Component {
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>GP</th>
-                            <th>Goals</th>
-                            <th>Assists</th>
-                            <th>Points</th>
+                            <th>GP<button type="button" class="btn btn-default" onClick={this.byGames}><SortNumericDown /></button></th>
+                            <th>Goals<button type="button" class="btn btn-default" onClick={this.byGoals}><SortNumericDown /></button></th>
+                            <th>Assists<button type="button" class="btn btn-default" onClick={this.byAssists}><SortNumericDown /></button></th>
+                            <th>Points<button type="button" class="btn btn-default" onClick={this.byPoints}><SortNumericDown /></button></th>
                         </tr>
                     </thead>
                     <tbody>
-                        {sortedName.map((player) => (
+                        {this.state.player.map((player) => (
                             <tr key={player.Id}>
                                 <td>{player.PlayerName}</td>
                                 <td>{player.HockeyGP}</td>
@@ -56,7 +93,7 @@ class Players extends Component {
                         ))}
                     </tbody>
                 </Table>
-            </div>
+            </div >
         );
     }
 }

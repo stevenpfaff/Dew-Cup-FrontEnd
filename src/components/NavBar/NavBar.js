@@ -6,7 +6,7 @@ import DewCup from "../../Images/DewCup.png"
 
 
 
-function NavBar(props) {
+function NavBar() {
     return (
         <Navbar collapseOnSelect expand="lg" bg="success" variant="dark">
             <Container>
