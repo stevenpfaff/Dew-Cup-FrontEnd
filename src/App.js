@@ -10,8 +10,12 @@ import Create from './components/CreatePlayer/AddPlayer';
 import MBPlayers from './components/Players/MBPlayerStats';
 import Tourneys from './components/Tournament/Tournaments';
 import CreateTourney from './components/CreateTournament/CreateTournament';
-import CoorsClash from './components/Tournament/CoorsClash';
-
+import CoorsClash from './components/CoorsClash/CoorsClash';
+import BudWood from './components/BudWood/BWII';
+import BudWoodI from './components/BudWood/BWI';
+import BudWoodStats from './components/BudWood/BudWoodIIStats';
+import BudWoodIStats from './components/BudWood/BudWoodIStats';
+import CoorsClashStats from './components/CoorsClash/CoorsClashStats';
 
 
 
@@ -29,6 +33,11 @@ function App() {
       <Route path="/AddGame" exact component={AddGame} />
       <Route path="/mbstats" exact component={MBPlayers} />
       <Route path="/coorsclash" exact component={CoorsClash} />
+      <Route path="/budwood2" exact component={BudWood} />
+      <Route path="/budwood" exact component={BudWoodI} />
+      <Route path="/budwood2stats" exact component={BudWoodStats} />
+      <Route path="/budwoodstats" exact component={BudWoodIStats} />
+      <Route path="/coorsclashstats" exact component={CoorsClashStats} />
     </div>
   )
 }
