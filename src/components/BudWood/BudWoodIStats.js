@@ -1,6 +1,8 @@
 import { SortNumericDown } from 'react-bootstrap-icons'
 import React, { Component } from 'react'
 import { Table } from 'react-bootstrap'
+import { Link } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 
 class BudWoodIStats extends Component {
     constructor(props) {
@@ -65,6 +67,8 @@ class BudWoodIStats extends Component {
             <div style={{ marginRight: "25%", marginLeft: "25%", marginBottom: "10%" }} >
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>Buddy Wood Memorial I Player Stats</h1>
+                <Link to={'/coorsclashstats'}><Button type="submit" variant="contained" class="btn btn-success">Coors Clash Stats</Button></Link>
+                <Link to={'/budwood2stats'}><Button type="submit" variant="contained" class="btn btn-success">Buddy Wood Memorial II Stats</Button></Link>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
