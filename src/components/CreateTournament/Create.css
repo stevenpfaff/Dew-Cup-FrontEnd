@@ -4,7 +4,7 @@
 
 body {
     font-family: Helvetica;
-    background: #eee;
+    background: rgb(238, 238, 238);
     -webkit-font-smoothing: antialiased;
 }
 
@@ -21,7 +21,7 @@ h3 {
 }
 
 h1 {
-    color: #636363;
+    color: #000000;
 }
 
 h3 {
@@ -286,8 +286,8 @@ td {
 
 thead {
     text-align: center;
-    background-color: rgb(104, 255, 49);
-    color: Black;
+    background-color: rgb(1, 58, 104);
+    color: white;
 
 }
 

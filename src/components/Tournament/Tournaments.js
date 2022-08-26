@@ -26,8 +26,10 @@ class Tourneys extends Component {
 
     render() {
         const { tourney } = this.state;
+        const sorted = tourney.sort((a, b) => a.TourneyName > b.TourneyName ? 1 : -1)
+
         return (
-            <div style={{ marginRight: "25%", marginLeft: "25%", marginBottom: "10%" }} >
+            <div style={{ marginRight: "25%", marginLeft: "25%", marginBottom: "10%" }}>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>Tournaments</h1>
                 <Table striped bordered hover>
@@ -41,7 +43,7 @@ class Tourneys extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {tourney.map((trny) => (
+                        {sorted.map((trny) => (
                             <tr key={trny.Id}>
                                 <td>{trny.TourneyName}</td>
                                 <td>{trny.Winner}</td>

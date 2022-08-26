@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Table } from 'react-bootstrap'
+import { Link } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 
 class Teams extends Component {
     constructor(props) {
@@ -30,6 +32,7 @@ class Teams extends Component {
             <div style={{ marginRight: "25%", marginLeft: "25%", marginBottom: "10%" }} >
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>All-Time Team Stats</h1>
+                <Link to={'/coorsclash'}><Button type="submit" variant="contained" class="btn btn-dark">Coors Clash Standings</Button></Link>
                 <Table striped bordered hover>
                     <thead>
                         <tr>

@@ -2,17 +2,15 @@ import React from 'react'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container'
-import DewCup from "../../Images/DewCup.png"
-import BudWood from "../../Images/bud wood.png"
+import PBS from "../../Images/PBS.png"
 
 
 
 function NavBar() {
     return (
-        <Navbar collapseOnSelect expand="lg" bg="success" variant="dark">
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
-                <img src={DewCup} alt="..." height="75" width="75"></img>
-                <img src={BudWood} alt="..." height="50" width="150"></img>
+                <img src={PBS} alt="..." height="75" width="75"></img>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">

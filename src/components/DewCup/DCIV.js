@@ -17,7 +17,7 @@ class DCIV extends Component {
     }
 
     refreshList() {
-        fetch(process.env.REACT_APP_API + 'crci')
+        fetch(process.env.REACT_APP_API + 'dciv')
             .then(response => response.json())
             .then(data => {
                 this.setState({ player: data })
@@ -66,7 +66,7 @@ class DCIV extends Component {
             <div style={{ marginRight: "25%", marginLeft: "25%", marginBottom: "10%" }} >
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>Dew Cup IV Player Stats</h1>
-                <Link to={'/crci'}><Button type="submit" variant="contained" class="btn btn-success">Code Red Classic I Player Stats</Button></Link>
+                <Link to={'/crci'}><Button type="submit" variant="contained" class="btn btn-dark">Code Red Classic I Player Stats</Button></Link>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
