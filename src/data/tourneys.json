@@ -1,0 +1,72 @@
+[
+    {
+        "tourney": "Dew Cup I",
+        "winner": "Goose Chasers",
+        "runnerup": "Buds Wood",
+        "players": "Alex Fountain, Jeep Aspenleiter, Matt Huinker, Steven Pfaff, Zack Fountain",
+        "MVP": "N/A"
+    },
+    {
+        "tourney": "Dew Cup II",
+        "winner": "Squid Niqs",
+        "runnerup": "Goobies Mum",
+        "players": "Boog Schickert, Evin Stultz, Hoag Braun, Rick Bonis",
+        "MVP": "Hoag Braun"
+    },
+    {
+        "tourney": "Dew Cup III",
+        "winner": "Goobies Mum",
+        "runnerup": "Buds Wood",
+        "players": "Garry Bob, Pesky Zub, Tyler Bartz",
+        "MVP": "Garry Bob"
+    },
+    {
+        "tourney": "Buddy Wood Memorial I",
+        "winner": "Goobies Mum",
+        "runnerup": "Moon Baboons",
+        "players": "Big Ted, Brock Deist, Garry Bob, Pesky Zub, Seth Mlodzik",
+        "MVP": "Garry Bob"
+    },
+    {
+        "tourney": "Jemile Weeks Homerun Derby I",
+        "winner": "Pesky Zub",
+        "runnerup": "Garry Bob",
+        "players": "N/A",
+        "MVP": "N/A"
+    },
+    {
+        "tourney": "Dew Cup IV",
+        "winner": "Squid Niqs",
+        "runnerup": "Buds Wood",
+        "players": "BB Pfaff, Boog Schickert, Hannah Vogel, Rick Bonis",
+        "MVP": "Boog Schickert"
+    },
+    {
+        "tourney": "Code Red Classic I",
+        "winner": "Goobies Mum",
+        "runnerup": "Goobies Cudas",
+        "players": "Charles Eckert, Garry Bob, Pesky Zub",
+        "MVP": "Charles Eckert"
+    },
+    {
+        "tourney": "Coors Clash I",
+        "winner": "Goobies Mum",
+        "runnerup": "Moon Baboons",
+        "players": "Boog Schickert, Ethan Schickert, Garry Bob, Pesky Zub",
+        "MVP": "Boog Schickert"
+    },
+    {
+        "tourney": "Buddy Wood Memorial II",
+        "winner": "Squid Niqs",
+        "runnerup": "Goobies Mum",
+        "players": "Boog Schickert, Evin Stultz, Michael Greenfield, Rick Bonis",
+        "MVP": "Evin Stultz"
+    },
+    {
+        "tourney": "Jemile Weeks Homerun Derby II",
+        "winner": "BB Pfaff",
+        "runnerup": "Hoag Braun",
+        "players": "N/A",
+        "MVP": "N/A"
+    }
+]
