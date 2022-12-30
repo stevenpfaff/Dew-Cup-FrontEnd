@@ -34,8 +34,8 @@ class Tourneys extends Component {
             <div style={{ marginRight: "25%", marginLeft: "25%", marginBottom: "10%" }}>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>Tournaments</h1>
-                <a target="_blank" href="https://docs.google.com/spreadsheets/d/1--Z4rwRCaDi32B6K8KxQHrcy5mvSjfYOzOZjyPbgK20/edit#gid=820517614"><Button type="submit" variant="contained" class="btn btn-primary">Minibat Stats And Results</Button></a>
-                <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-S9klqwfLvodu_MMg5HCc9CZSUmf3a7aA6NT9dRb7ro/edit#gid=469599973"><Button type="submit" variant="contained" class="btn btn-primary">Pond Hockey Stats And Results</Button></a>
+                <a target="_blank" href="https://docs.google.com/spreadsheets/d/1--Z4rwRCaDi32B6K8KxQHrcy5mvSjfYOzOZjyPbgK20/edit#gid=820517614"><Button type="submit" variant="contained" class="btn btn-dark">Minibat Stats And Results</Button></a>
+                <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-S9klqwfLvodu_MMg5HCc9CZSUmf3a7aA6NT9dRb7ro/edit#gid=1341328881"><Button type="submit" variant="contained" class="btn btn-dark">Pond Hockey Stats And Results</Button></a>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
