@@ -1,0 +1,262 @@
+[
+    {
+        "name": "Garry Bob",
+        "games": 19,
+        "hits": 75,
+        "average": 556,
+        "doubles": 16,
+        "triples": 2,
+        "homeruns": 29,
+        "rbi": 65
+    },
+    {
+        "name": "Boog Schickert",
+        "games": 12,
+        "hits": 44,
+        "average": 571,
+        "doubles": 8,
+        "triples": 1,
+        "homeruns": 19,
+        "rbi": 44
+    },
+    {
+        "name": "Hoag Braun",
+        "games": 16,
+        "hits": 52,
+        "average": 578,
+        "doubles": 10,
+        "triples": 0,
+        "homeruns": 18,
+        "rbi": 40
+    },
+    {
+        "name": "Pesky Zub",
+        "games": 18,
+        "hits": 84,
+        "average": 600,
+        "doubles": 24,
+        "triples": 7,
+        "homeruns": 12,
+        "rbi": 46
+    },
+    {
+        "name": "Steven Pfaff",
+        "games": 17,
+        "hits": 45,
+        "average": 441,
+        "doubles": 14,
+        "triples": 1,
+        "homeruns": 12,
+        "rbi": 32
+    },
+    {
+        "name": "P Brain",
+        "games": 19,
+        "hits": 38,
+        "average": 528,
+        "doubles": 10,
+        "triples": 0,
+        "homeruns": 9,
+        "rbi": 20
+    },
+    {
+        "name": "Rick Bonis",
+        "games": 15,
+        "hits": 51,
+        "average": 580,
+        "doubles": 12,
+        "triples": 3,
+        "homeruns": 8,
+        "rbi": 36
+    },
+    {
+        "name": "Noot Pengu",
+        "games": 15,
+        "hits": 40,
+        "average": 482,
+        "doubles": 9,
+        "triples": 1,
+        "homeruns": 8,
+        "rbi": 18
+    },
+    {
+        "name": "Kaleb Baker",
+        "games": 7,
+        "hits": 22,
+        "average": 550,
+        "doubles": 4,
+        "triples": 0,
+        "homeruns": 7,
+        "rbi": 21
+    },
+    {
+        "name": "Johnny Klabachek",
+        "games": 4,
+        "hits": 10,
+        "average": 556,
+        "doubles": 1,
+        "triples": 0,
+        "homeruns": 6,
+        "rbi": 13
+    },
+    {
+        "name": "Ethan Schickert",
+        "games": 13,
+        "hits": 32,
+        "average": 337,
+        "doubles": 2,
+        "triples": 2,
+        "homeruns": 6,
+        "rbi": 16
+    },
+    {
+        "name": "BB Pfaff",
+        "games": 11,
+        "hits": 19,
+        "average": 328,
+        "doubles": 4,
+        "triples": 2,
+        "homeruns": 6,
+        "rbi": 13
+    },
+    {
+        "name": "Shawn Volesky",
+        "games": 4,
+        "hits": 12,
+        "average": 632,
+        "doubles": 1,
+        "triples": 1,
+        "homeruns": 5,
+        "rbi": 12
+    },
+    {
+        "name": "Brock Deist",
+        "games": 10,
+        "hits": 36,
+        "average": 590,
+        "doubles": 14,
+        "triples": 2,
+        "homeruns": 5,
+        "rbi": 18
+    },
+    {
+        "name": "Ryan Ruona",
+        "games": 9,
+        "hits": 29,
+        "average": 509,
+        "doubles": 16,
+        "triples": 2,
+        "homeruns": 5,
+        "rbi": 18
+    },
+    {
+        "name": "Charles Eckert",
+        "games": 6,
+        "hits": 23,
+        "average": 511,
+        "doubles": 3,
+        "triples": 0,
+        "homeruns": 4,
+        "rbi": 13
+    },
+    {
+        "name": "Nate Daugherty",
+        "games": 11,
+        "hits": 18,
+        "average": 486,
+        "doubles": 7,
+        "triples": 2,
+        "homeruns": 2,
+        "rbi": 10
+    },
+    {
+        "name": "Michael Greenfield",
+        "games": 4,
+        "hits": 14,
+        "average": 483,
+        "doubles": 7,
+        "triples": 0,
+        "homeruns": 2,
+        "rbi": 11
+    },
+    {
+        "name": "Alex Hunt",
+        "games": 4,
+        "hits": 10,
+        "average": 435,
+        "doubles": 3,
+        "triples": 3,
+        "homeruns": 2,
+        "rbi": 8
+    },
+    {
+        "name": "Rheese McCardle",
+        "games": 5,
+        "hits": 12,
+        "average": 522,
+        "doubles": 4,
+        "triples": 0,
+        "homeruns": 1,
+        "rbi": 10
+    },
+    {
+        "name": "Deer Hunt",
+        "games": 8,
+        "hits": 24,
+        "average": 471,
+        "doubles": 8,
+        "triples": 2,
+        "homeruns": 1,
+        "rbi": 10
+    },
+    {
+        "name": "Big Ted",
+        "games": 10,
+        "hits": 4,
+        "average": 333,
+        "doubles": 1,
+        "triples": 0,
+        "homeruns": 1,
+        "rbi": 2
+    },
+    {
+        "name": "Seth Mlodzik",
+        "games": 3,
+        "hits": 7,
+        "average": 412,
+        "doubles": 3,
+        "triples": 0,
+        "homeruns": 0,
+        "rbi": 3
+    },
+    {
+        "name": "Kimberly Braaksma",
+        "games": 4,
+        "hits": 10,
+        "average": 400,
+        "doubles": 3,
+        "triples": 1,
+        "homeruns": 0,
+        "rbi": 2
+    },
+    {
+        "name": "Cyen Bero",
+        "games": 7,
+        "hits": 14,
+        "average": 326,
+        "doubles": 0,
+        "triples": 0,
+        "homeruns": 0,
+        "rbi": 6
+    },
+    {
+        "name": "Nina Mlodzik",
+        "games": 2,
+        "hits": 4,
+        "average": 308,
+        "doubles": 0,
+        "triples": 0,
+        "homeruns": 0,
+        "rbi": 1
+    }
+]

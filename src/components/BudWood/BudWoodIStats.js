@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import { Table } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
+import player from '../../data/bats.json'
 
 class BudWoodIStats extends Component {
     constructor(props) {
@@ -10,55 +11,55 @@ class BudWoodIStats extends Component {
         this.state = {
             player: []
         }
-        this.byHits = this.byHits.bind(this);
+        // this.byHits = this.byHits.bind(this);
 
-        this.byHomers = this.byHomers.bind(this);
-        this.byAvg = this.byAvg.bind(this);
+        // this.byHomers = this.byHomers.bind(this);
+        // this.byAvg = this.byAvg.bind(this);
 
     }
 
-    refreshList() {
-        fetch(process.env.REACT_APP_API + 'budstats')
-            .then(response => response.json())
-            .then(data => {
-                this.setState({ player: data })
-            })
-    }
+    // refreshList() {
+    //     fetch(process.env.REACT_APP_API + 'budstats')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             this.setState({ player: data })
+    //         })
+    // }
 
-    componentDidMount() {
-        this.refreshList();
-    }
+    // componentDidMount() {
+    //     this.refreshList();
+    // }
 
 
-    byHits() {
-        let hits = this.state.player.sort((a, b) => {
-            return b.Hits - a.Hits;
-        });
+    // byHits() {
+    //     let hits = this.state.player.sort((a, b) => {
+    //         return b.Hits - a.Hits;
+    //     });
 
-        this.setState({
-            player: hits
-        });
-    }
+    //     this.setState({
+    //         player: hits
+    //     });
+    // }
 
-    byHomers() {
-        let homers = this.state.player.sort((a, b) => {
-            return b.HR - a.HR;
-        });
+    // byHomers() {
+    //     let homers = this.state.player.sort((a, b) => {
+    //         return b.HR - a.HR;
+    //     });
 
-        this.setState({
-            player: homers
-        });
-    }
+    //     this.setState({
+    //         player: homers
+    //     });
+    // }
 
-    byAvg() {
-        let avg = this.state.player.sort((a, b) => {
-            return b.bAVG - a.bAVG;
-        });
+    // byAvg() {
+    //     let avg = this.state.player.sort((a, b) => {
+    //         return b.bAVG - a.bAVG;
+    //     });
 
-        this.setState({
-            player: avg
-        });
-    }
+    //     this.setState({
+    //         player: avg
+    //     });
+    // }
 
 
     render() {
@@ -66,27 +67,29 @@ class BudWoodIStats extends Component {
         return (
             <div style={{ marginRight: "25%", marginLeft: "25%", marginBottom: "10%" }} >
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>Buddy Wood Memorial I Player Stats</h1>
-                <Link to={'/coorsclashstats'}><Button type="submit" variant="contained" class="btn btn-dark">Coors Clash Stats</Button></Link>
-                <Link to={'/budwood2stats'}><Button type="submit" variant="contained" class="btn btn-dark">Buddy Wood Memorial II Stats</Button></Link>
+                <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>Minibat Individual Player Stats</h1>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
                             <th>Player</th>
-                            <th>H<button type="button" class="btn btn-default" onClick={this.byHits}><SortNumericDown /></button></th>
-                            <th>AVG<button type="button" class="btn btn-default" onClick={this.byAvg}><SortNumericDown /></button></th>
-
-                            <th>HR<button type="button" class="btn btn-default" onClick={this.byHomers}><SortNumericDown /></button></th>
+                            <th>H</th>
+                            <th>AVG</th>
+                            <th>2B</th>
+                            <th>3B</th>
+                            <th>HR</th>
+                            <th>RBI</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {this.state.player.map((trny) => (
+                        {player.map((trny) => (
                             <tr>
-                                <td>{trny.Player}</td>
-                                <td>{trny.Hits}</td>
-                                <td>{trny.bAVG}</td>
-                                <td>{trny.HR}</td>
-
+                                <td>{trny.name}</td>
+                                <td>{trny.hits}</td>
+                                <td>{trny.average}</td>
+                                <td>{trny.doubles}</td>
+                                <td>{trny.triples}</td>
+                                <td>{trny.homeruns}</td>
+                                <td>{trny.rbi}</td>
                             </tr>
                         ))}
                     </tbody>
