@@ -20,7 +20,7 @@ function NavBar() {
                     </Nav>
                     <Nav>
                         <Nav.Link href="/hockeystats">Hockey Player Stats</Nav.Link>
-                        <Nav.Link href="/minibatstats">Minibats Player Stats</Nav.Link>
+                        <Nav.Link href="/minibatstats">Minibat Player Stats</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

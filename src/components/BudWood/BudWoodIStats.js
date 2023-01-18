@@ -85,7 +85,7 @@ class BudWoodIStats extends Component {
                             <tr>
                                 <td>{trny.name}</td>
                                 <td>{trny.hits}</td>
-                                <td>{trny.average}</td>
+                                <td>.{trny.average}</td>
                                 <td>{trny.doubles}</td>
                                 <td>{trny.triples}</td>
                                 <td>{trny.homeruns}</td>
