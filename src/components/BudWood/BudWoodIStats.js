@@ -72,6 +72,7 @@ class BudWoodIStats extends Component {
                     <thead>
                         <tr>
                             <th>Player</th>
+                            <th>GP</th>
                             <th>H</th>
                             <th>AVG</th>
                             <th>2B</th>
@@ -84,6 +85,7 @@ class BudWoodIStats extends Component {
                         {player.map((trny) => (
                             <tr>
                                 <td>{trny.name}</td>
+                                <td>{trny.games}</td>
                                 <td>{trny.hits}</td>
                                 <td>.{trny.average}</td>
                                 <td>{trny.doubles}</td>
