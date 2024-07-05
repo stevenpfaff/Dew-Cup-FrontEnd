@@ -19,11 +19,11 @@
         "goals": 90,
         "goalsag": 80,
         "hockeychampionships": 2,
-        "batswins": 11,
-        "batslosses": 7,
-        "runs": 201,
-        "runsag": 146,
-        "batschampionships": 2
+        "batswins": 20,
+        "batslosses": 11,
+        "runs": 406,
+        "runsag": 317,
+        "batschampionships": 4
     },
     {
         "name": "Buds Wood",
@@ -59,9 +59,9 @@
         "goalsag": 58,
         "hockeychampionships": 0,
         "batswins": 1,
-        "batslosses": 10,
-        "runs": 63,
-        "runsag": 114,
+        "batslosses": 15,
+        "runs": 78,
+        "runsag": 158,
         "batschampionships": 0
     },
     {
@@ -84,10 +84,10 @@
         "goals": 23,
         "goalsag": 38,
         "hockeychampionships": 1,
-        "batswins": 9,
-        "batslosses": 8,
-        "runs": 157,
-        "runsag": 165,
+        "batswins": 15,
+        "batslosses": 16,
+        "runs": 339,
+        "runsag": 351,
         "batschampionships": 0
     },
     {

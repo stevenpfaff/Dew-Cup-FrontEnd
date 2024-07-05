@@ -10,25 +10,8 @@ class Teams extends Component {
         this.state = { team: [] }
     }
 
-    // refreshList() {
-    //     fetch(process.env.REACT_APP_API + 'team')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             this.setState({ team: data })
-    //         })
-    // }
-
-    // componentDidMount() {
-    //     this.refreshList();
-    // }
-
-    // componentDidUpdate() {
-    //     this.refreshList();
-    // }
 
     render() {
-        // const { team } = this.state;
-        // const sortedTitle = team.sort((a, b) => b.Championships > a.Championships ? 1 : -1)
         return (
             <div style={{ marginRight: "25%", marginLeft: "25%", marginBottom: "10%" }} >
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />

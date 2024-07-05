@@ -1,6 +1,7 @@
 [
     {
         "tourney": "Dew Cup I",
+        "year": "2019",
         "winner": "Moon Baboons",
         "runnerup": "Buds Wood",
         "players": "Alex Fountain, Jeep Aspenleiter, Matt Huinker, Steven Pfaff, Zack Fountain",
@@ -8,6 +9,7 @@
     },
     {
         "tourney": "Dew Cup II",
+        "year": "2021",
         "winner": "Squid Niqs",
         "runnerup": "Goobies Mum",
         "players": "Boog Schickert, Evin Stultz, Hoag Braun, Rick Bonis",
@@ -15,6 +17,7 @@
     },
     {
         "tourney": "Dew Cup III",
+        "year": "2021",
         "winner": "Goobies Mum",
         "runnerup": "Buds Wood",
         "players": "Garry Bob, Pesky Zub, Tyler Bartz",
@@ -22,6 +25,7 @@
     },
     {
         "tourney": "Buddy Wood Memorial I",
+        "year": "2021",
         "winner": "Goobies Mum",
         "runnerup": "Moon Baboons",
         "players": "Big Ted, Brock Deist, Garry Bob, Pesky Zub, Seth Mlodzik",
@@ -29,6 +33,7 @@
     },
     {
         "tourney": "Jemile Weeks Homerun Derby I",
+        "year": "2021",
         "winner": "Pesky Zub",
         "runnerup": "Garry Bob",
         "players": "N/A",
@@ -36,6 +41,7 @@
     },
     {
         "tourney": "Dew Cup IV",
+        "year": "2022",
         "winner": "Squid Niqs",
         "runnerup": "Buds Wood",
         "players": "BB Pfaff, Boog Schickert, Hannah Vogel, Rick Bonis",
@@ -43,6 +49,7 @@
     },
     {
         "tourney": "Code Red Classic I",
+        "year": "2022",
         "winner": "Goobies Mum",
         "runnerup": "Goobies Cudas",
         "players": "Charles Eckert, Garry Bob, Pesky Zub",
@@ -50,6 +57,7 @@
     },
     {
         "tourney": "Coors Clash I",
+        "year": "2022",
         "winner": "Goobies Mum",
         "runnerup": "Moon Baboons",
         "players": "Boog Schickert, Ethan Schickert, Garry Bob, Pesky Zub",
@@ -57,6 +65,7 @@
     },
     {
         "tourney": "Buddy Wood Memorial II",
+        "year": "2022",
         "winner": "Squid Niqs",
         "runnerup": "Goobies Mum",
         "players": "Boog Schickert, Evin Stultz, Michael Greenfield, Rick Bonis",
@@ -64,6 +73,7 @@
     },
     {
         "tourney": "Jemile Weeks Homerun Derby II",
+        "year": "2022",
         "winner": "BB Pfaff",
         "runnerup": "Hoag Braun",
         "players": "N/A",
@@ -71,9 +81,34 @@
     },
     {
         "tourney": "Dew Cup V",
+        "year": "2023",
         "winner": "Squid Niqs",
         "runnerup": "Goobies Cudas",
         "players": "Matt Huinker, Rick Bonis, Zack Fountain",
         "MVP": "Zack Fountain"
+    },
+    {
+        "tourney": "Coors Clash II",
+        "year": "2023",
+        "winner": "Goobies Mum",
+        "runnerup": "Moon Baboons",
+        "players": "Charles Eckert, Ethan Shickert, Garry Bob, Pesky Zub, Rhino Meyer",
+        "MVP": "Garry Bob"
+    },
+    {
+        "tourney": "Buddy Wood Memorial III",
+        "year": "2023",
+        "winner": "Goobies Mum",
+        "runnerup": "Moon Baboons",
+        "players": "Charles Eckert, Garry Bob, Pesky Zub, Rhino Meyer",
+        "MVP": "Garry Bob"
+    },
+    {
+        "tourney": "Jemile Weeks Homerun Derby III",
+        "year": "2023",
+        "winner": "Pesky Zub",
+        "runnerup": "Marvin Bateman",
+        "players": "N/A",
+        "MVP": "N/A"
     }
 ]

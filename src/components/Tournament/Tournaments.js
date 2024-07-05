@@ -40,6 +40,7 @@ class Tourneys extends Component {
                     <thead>
                         <tr>
                             <th>Series</th>
+                            <th>Year</th>
                             <th>Winner</th>
                             <th>Runner Up</th>
                             <th>Players</th>
@@ -50,6 +51,7 @@ class Tourneys extends Component {
                         {tourney.map((trny) => (
                             <tr>
                                 <td>{trny.tourney}</td>
+                                <td>{trny.year}</td>
                                 <td>{trny.winner}</td>
                                 <td>{trny.runnerup}</td>
                                 <td>{trny.players}</td>
