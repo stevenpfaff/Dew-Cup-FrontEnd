@@ -1,47 +1,47 @@
 [
     {
         "name": "Garry Bob",
-        "games": 30,
-        "ab": 239,
-        "hits": 141,
-        "average": 590,
-        "doubles": 33,
+        "games": 32,
+        "ab": 262,
+        "hits": 153,
+        "average": 584,
+        "doubles": 37,
         "triples": 3,
-        "homeruns": 47,
-        "rbi": 117
+        "homeruns": 51,
+        "rbi": 123
     },
     {
         "name": "Hoag Braun",
-        "games": 30,
-        "ab": 207,
-        "hits": 108,
-        "average": 537,
-        "doubles": 18,
+        "games": 32,
+        "ab": 220,
+        "hits": 114,
+        "average": 518,
+        "doubles": 19,
         "triples": 1,
         "homeruns": 32,
-        "rbi": 83
+        "rbi": 86
     },
     {
         "name": "Pesky Zub",
-        "games": 31,
-        "ab": 265,
-        "hits": 160,
-        "average": 604,
-        "doubles": 36,
-        "triples": 12,
-        "homeruns": 28,
-        "rbi": 97
+        "games": 33,
+        "ab": 293,
+        "hits": 176,
+        "average": 609,
+        "doubles": 39,
+        "triples": 13,
+        "homeruns": 34,
+        "rbi": 113
     },
     {
         "name": "Steven Pfaff",
-        "games": 31,
-        "ab": 207,
-        "hits": 99,
-        "average": 478,
-        "doubles": 29,
+        "games": 33,
+        "ab": 227,
+        "hits": 106,
+        "average": 473,
+        "doubles": 30,
         "triples": 4,
-        "homeruns": 24,
-        "rbi": 66
+        "homeruns": 25,
+        "rbi": 70
     },
     {
         "name": "Boog Schickert",
@@ -56,47 +56,47 @@
     },
     {
         "name": "Charles Eckert",
-        "games": 19,
-        "ab": 173,
-        "hits": 82,
-        "average": 474,
-        "doubles": 14,
+        "games": 21,
+        "ab": 198,
+        "hits": 95,
+        "average": 480,
+        "doubles": 17,
         "triples": 4,
-        "homeruns": 19,
-        "rbi": 63
+        "homeruns": 21,
+        "rbi": 68
     },
     {
         "name": "Rick Bonis",
-        "games": 25,
-        "ab": 174,
-        "hits": 95,
-        "average": 546,
-        "doubles": 20,
+        "games": 27,
+        "ab": 195,
+        "hits": 106,
+        "average": 552,
+        "doubles": 23,
         "triples": 7,
-        "homeruns": 14,
-        "rbi": 62
+        "homeruns": 16,
+        "rbi": 69
     },
     {
         "name": "Kaleb Baker",
-        "games": 15,
-        "ab": 93,
-        "hits": 53,
-        "average": 570,
-        "doubles": 13,
+        "games": 17,
+        "ab": 111,
+        "hits": 62,
+        "average": 559,
+        "doubles": 16,
         "triples": 1,
-        "homeruns": 11,
-        "rbi": 44
+        "homeruns": 13,
+        "rbi": 52
     },
     {
         "name": "P Brain",
-        "games": 26,
-        "ab": 105,
-        "hits": 53,
-        "average": 505,
-        "doubles": 18,
+        "games": 28,
+        "ab": 130,
+        "hits": 61,
+        "average": 469,
+        "doubles": 20,
         "triples": 0,
-        "homeruns": 10,
-        "rbi": 27
+        "homeruns": 11,
+        "rbi": 36
     },
     {
         "name": "Noot Pengu",
@@ -111,14 +111,14 @@
     },
     {
         "name": "Michael Greenfield",
-        "games": 13,
-        "ab": 63,
-        "hits": 29,
-        "average": 460,
-        "doubles": 10,
+        "games": 15,
+        "ab": 81,
+        "hits": 42,
+        "average": 519,
+        "doubles": 12,
         "triples": 0,
-        "homeruns": 9,
-        "rbi": 27
+        "homeruns": 14,
+        "rbi": 37
     },
     {
         "name": "Ryan Ruona",

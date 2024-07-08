@@ -55,55 +55,55 @@ class MBPlayers extends Component {
                         <tr>
                             <th>
                                 Player 
-                                <Button onClick={() => this.sortData('name')}>
+                                <Button onClick={() => this.sortData('name')} style={{ color: 'white' }}>
                                     <SortNumericDown />
                                 </Button>
                             </th>
                             <th>
                                 GP 
-                                <Button onClick={() => this.sortData('games')}>
+                                <Button onClick={() => this.sortData('games')} style={{ color: 'white' }}>
                                     <SortNumericDown />
                                 </Button>
                             </th>
                             <th>
                                 AB 
-                                <Button onClick={() => this.sortData('ab')}>
+                                <Button onClick={() => this.sortData('ab')} style={{ color: 'white' }}>
                                     <SortNumericDown />
                                 </Button>
                             </th>
                             <th>
                                 H 
-                                <Button onClick={() => this.sortData('hits')}>
+                                <Button onClick={() => this.sortData('hits')} style={{ color: 'white' }}>
                                     <SortNumericDown />
                                 </Button>
                             </th>
                             <th>
                                 AVG 
-                                <Button onClick={() => this.sortData('average')}>
+                                <Button onClick={() => this.sortData('average')} style={{ color: 'white' }}>
                                     <SortNumericDown />
                                 </Button>
                             </th>
                             <th>
                                 2B 
-                                <Button onClick={() => this.sortData('doubles')}>
+                                <Button onClick={() => this.sortData('doubles')} style={{ color: 'white' }}>
                                     <SortNumericDown />
                                 </Button>
                             </th>
                             <th>
                                 3B 
-                                <Button onClick={() => this.sortData('triples')}>
+                                <Button onClick={() => this.sortData('triples')} style={{ color: 'white' }}>
                                     <SortNumericDown />
                                 </Button>
                             </th>
                             <th>
                                 HR 
-                                <Button onClick={() => this.sortData('homeruns')}>
+                                <Button onClick={() => this.sortData('homeruns')} style={{ color: 'white' }}>
                                     <SortNumericDown />
                                 </Button>
                             </th>
                             <th>
                                 RBI 
-                                <Button onClick={() => this.sortData('rbi')}>
+                                <Button onClick={() => this.sortData('rbi')} style={{ color: 'white' }}>
                                     <SortNumericDown />
                                 </Button>
                             </th>
