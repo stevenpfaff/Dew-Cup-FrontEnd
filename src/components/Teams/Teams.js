@@ -1,17 +1,47 @@
-import React, { Component } from 'react'
-import { Table } from 'react-bootstrap'
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react';
+import { Table } from 'react-bootstrap';
+import { SortNumericDown } from 'react-bootstrap-icons';
 import Button from '@material-ui/core/Button';
-import team from '../../data/teams.json';
+import teamData from '../../data/teams.json';
 
 class Teams extends Component {
     constructor(props) {
         super(props);
-        this.state = { team: [] }
+        this.state = { 
+            team: teamData,
+            sortConfig: { key: '', direction: '' }
+        };
     }
 
+    sortData = (key) => {
+        const { team, sortConfig } = this.state;
+        let direction = 'asc';
+        
+        if (sortConfig.key === key && sortConfig.direction === 'asc') {
+            direction = 'desc';
+        }
+
+        const sortedData = [...team].sort((a, b) => {
+            if (a[key] < b[key]) {
+                return direction === 'asc' ? -1 : 1;
+            }
+            if (a[key] > b[key]) {
+                return direction === 'asc' ? 1 : -1;
+            }
+            return 0;
+        });
+
+        this.setState({
+            team: sortedData,
+            sortConfig: {
+                key,
+                direction,
+            },
+        });
+    };
 
     render() {
+        const { team } = this.state;
         return (
             <div style={{ marginRight: "25%", marginLeft: "25%", marginBottom: "10%" }} >
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,17 +49,72 @@ class Teams extends Component {
                 <Table striped bordered hover>
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Hockey W</th>
-                            <th>Hockey L</th>
-                            <th>G</th>
-                            <th>GA</th>
-                            <th>Bats W</th>
-                            <th>Bats L</th>
-                            <th>R</th>
-                            <th>RA</th>
-                            <th>Hockey Titles</th>
-                            <th>Bats Titles</th>
+                            <th>
+                                Team
+                                <Button onClick={() => this.sortData('name')} style={{ color: 'white' }}>
+                                    <SortNumericDown />
+                                </Button>
+                            </th>
+                            <th>
+                                Hockey W
+                                <Button onClick={() => this.sortData('hockeywins')} style={{ color: 'white' }}>
+                                    <SortNumericDown />
+                                </Button>
+                            </th>
+                            <th>
+                                Hockey L
+                                <Button onClick={() => this.sortData('hockeylosses')} style={{ color: 'white' }}>
+                                    <SortNumericDown />
+                                </Button>
+                            </th>
+                            <th>
+                                G
+                                <Button onClick={() => this.sortData('goals')} style={{ color: 'white' }}>
+                                    <SortNumericDown />
+                                </Button>
+                            </th>
+                            <th>
+                                GA
+                                <Button onClick={() => this.sortData('goalsag')} style={{ color: 'white' }}>
+                                    <SortNumericDown />
+                                </Button>
+                            </th>
+                            <th>
+                                Bats W
+                                <Button onClick={() => this.sortData('batswins')} style={{ color: 'white' }}>
+                                    <SortNumericDown />
+                                </Button>
+                            </th>
+                            <th>
+                                Bats L
+                                <Button onClick={() => this.sortData('batslosses')} style={{ color: 'white' }}>
+                                    <SortNumericDown />
+                                </Button>
+                            </th>
+                            <th>
+                                R
+                                <Button onClick={() => this.sortData('runs')} style={{ color: 'white' }}>
+                                    <SortNumericDown />
+                                </Button>
+                            </th>
+                            <th>
+                                RA
+                                <Button onClick={() => this.sortData('runsag')} style={{ color: 'white' }}>
+                                    <SortNumericDown />
+                                </Button>
+                            </th>
+                            <th>
+                                Hockey Titles
+                                <Button onClick={() => this.sortData('hockeychampionships')} style={{ color: 'white' }}>
+                                    <SortNumericDown />
+                                </Button>
+                            </th>
+                            <th>
+                                Bats Titles
+                                <Button onClick={() => this.sortData('batschampionships')} style={{ color: 'white' }}>
+                                    <SortNumericDown />
+                                </Button>
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -54,4 +139,5 @@ class Teams extends Component {
         );
     }
 }
+
 export default Teams;

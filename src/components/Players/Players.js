@@ -56,31 +56,31 @@ class Players extends Component {
                         <tr>
                             <th>
                                 Player
-                                <Button onClick={() => this.sortData('name')}>
+                                <Button onClick={() => this.sortData('name')} style={{ color: 'white' }}>
                                     <SortNumericDown />
                                 </Button>
                             </th>
                             <th>
                                 Games
-                                <Button onClick={() => this.sortData('games')}>
+                                <Button onClick={() => this.sortData('games')} style={{ color: 'white' }}>
                                     <SortNumericDown />
                                 </Button>
                             </th>
                             <th>
                                 Goals
-                                <Button onClick={() => this.sortData('goals')}>
+                                <Button onClick={() => this.sortData('goals')} style={{ color: 'white' }}>
                                     <SortNumericDown />
                                 </Button>
                             </th>
                             <th>
                                 Assists
-                                <Button onClick={() => this.sortData('assists')}>
+                                <Button onClick={() => this.sortData('assists')} style={{ color: 'white' }}>
                                     <SortNumericDown />
                                 </Button>
                             </th>
                             <th>
                                 Points
-                                <Button onClick={() => this.sortData('points')}>
+                                <Button onClick={() => this.sortData('points')} style={{ color: 'white' }}>
                                     <SortNumericDown />
                                 </Button>
                             </th>
