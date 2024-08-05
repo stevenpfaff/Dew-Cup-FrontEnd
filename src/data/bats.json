@@ -1,14 +1,14 @@
 [
     {
         "name": "Garry Bob",
-        "games": 32,
-        "ab": 262,
-        "hits": 153,
-        "average": 584,
-        "doubles": 37,
-        "triples": 3,
-        "homeruns": 51,
-        "rbi": 123
+        "games": 34,
+        "ab": 272,
+        "hits": 160,
+        "average": 588,
+        "doubles": 38,
+        "triples": 4,
+        "homeruns": 52,
+        "rbi": 128
     },
     {
         "name": "Hoag Braun",
@@ -18,30 +18,30 @@
         "average": 518,
         "doubles": 19,
         "triples": 1,
-        "homeruns": 32,
+        "homeruns": 33,
         "rbi": 86
     },
     {
         "name": "Pesky Zub",
-        "games": 33,
-        "ab": 293,
-        "hits": 176,
-        "average": 609,
+        "games": 35,
+        "ab": 303,
+        "hits": 178,
+        "average": 587,
         "doubles": 39,
-        "triples": 13,
+        "triples": 14,
         "homeruns": 34,
-        "rbi": 113
+        "rbi": 114
     },
     {
         "name": "Steven Pfaff",
-        "games": 33,
-        "ab": 227,
-        "hits": 106,
-        "average": 473,
+        "games": 35,
+        "ab": 237,
+        "hits": 114,
+        "average": 481,
         "doubles": 30,
-        "triples": 4,
-        "homeruns": 25,
-        "rbi": 70
+        "triples": 5,
+        "homeruns": 26,
+        "rbi": 76
     },
     {
         "name": "Boog Schickert",
@@ -67,25 +67,25 @@
     },
     {
         "name": "Rick Bonis",
-        "games": 27,
-        "ab": 195,
-        "hits": 106,
-        "average": 552,
-        "doubles": 23,
+        "games": 29,
+        "ab": 205,
+        "hits": 112,
+        "average": 546,
+        "doubles": 26,
         "triples": 7,
         "homeruns": 16,
-        "rbi": 69
+        "rbi": 70
     },
     {
         "name": "Kaleb Baker",
-        "games": 17,
-        "ab": 111,
-        "hits": 62,
-        "average": 559,
+        "games": 19,
+        "ab": 125,
+        "hits": 70,
+        "average": 560,
         "doubles": 16,
         "triples": 1,
-        "homeruns": 13,
-        "rbi": 52
+        "homeruns": 18,
+        "rbi": 65
     },
     {
         "name": "P Brain",
@@ -111,14 +111,14 @@
     },
     {
         "name": "Michael Greenfield",
-        "games": 15,
-        "ab": 81,
-        "hits": 42,
-        "average": 519,
+        "games": 17,
+        "ab": 93,
+        "hits": 46,
+        "average": 495,
         "doubles": 12,
-        "triples": 0,
-        "homeruns": 14,
-        "rbi": 37
+        "triples": 1,
+        "homeruns": 15,
+        "rbi": 41
     },
     {
         "name": "Ryan Ruona",
@@ -133,11 +133,11 @@
     },
     {
         "name": "Ethan Schickert",
-        "games": 15,
-        "ab": 112,
-        "hits": 39,
-        "average": 348,
-        "doubles": 3,
+        "games": 17,
+        "ab": 124,
+        "hits": 42,
+        "average": 339,
+        "doubles": 4,
         "triples": 2,
         "homeruns": 8,
         "rbi": 20
@@ -155,14 +155,14 @@
     },
     {
         "name": "Brock Deist",
-        "games": 10,
-        "ab": 61,
-        "hits": 36,
-        "average": 590,
-        "doubles": 14,
+        "games": 12,
+        "ab": 74,
+        "hits": 41,
+        "average": 554,
+        "doubles": 15,
         "triples": 2,
         "homeruns": 5,
-        "rbi": 18
+        "rbi": 20
     },
     {
         "name": "Ryan Meyer",
@@ -287,14 +287,14 @@
     },
     {
         "name": "Samuel Baker",
-        "games": 4,
-        "ab": 31,
-        "hits": 9,
-        "average": 290,
+        "games": 6,
+        "ab": 44,
+        "hits": 14,
+        "average": 318,
         "doubles": 2,
         "triples": 0,
         "homeruns": 0,
-        "rbi": 3
+        "rbi": 4
     },
     {
         "name": "Kimberly Braaksma",
@@ -328,5 +328,38 @@
         "triples": 0,
         "homeruns": 0,
         "rbi": 1
+    },
+    {
+        "name": "Sam Schroedon",
+        "games": 2,
+        "ab": 13,
+        "hits": 5,
+        "average": 385,
+        "doubles": 1,
+        "triples": 0,
+        "homeruns": 1,
+        "rbi": 5
+    },
+    {
+        "name": "Joshua Baker",
+        "games": 2,
+        "ab": 11,
+        "hits": 2,
+        "average": 182,
+        "doubles": 1,
+        "triples": 0,
+        "homeruns": 0,
+        "rbi": 1
+    },
+    {
+        "name": "Anthony Poco",
+        "games": 2,
+        "ab": 14,
+        "hits": 10,
+        "average": 714,
+        "doubles": 3,
+        "triples": 0,
+        "homeruns": 1,
+        "rbi": 2
     }
 ]
