@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Table } from 'react-bootstrap';
-import { SortNumericDown } from 'react-bootstrap-icons';
+import { SortNumericUp } from 'react-bootstrap-icons';
 import Button from '@material-ui/core/Button';
 import teamData from '../../data/teams.json';
 
@@ -22,10 +22,10 @@ class Teams extends Component {
         }
 
         const sortedData = [...team].sort((a, b) => {
-            if (a[key] < b[key]) {
+            if (a[key] > b[key]) {
                 return direction === 'asc' ? -1 : 1;
             }
-            if (a[key] > b[key]) {
+            if (a[key] < b[key]) {
                 return direction === 'asc' ? 1 : -1;
             }
             return 0;
@@ -56,68 +56,68 @@ class Teams extends Component {
                         <tr>
                             <th>
                                 Team
-                                <Button onClick={() => this.sortData('name')} style={{ color: 'white' }}>
-                                    <SortNumericDown />
+                                <Button onClick={() => this.sortData('name')}>
+                                    <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 Hockey W
-                                <Button onClick={() => this.sortData('hockeywins')} style={{ color: 'white' }}>
-                                    <SortNumericDown />
+                                <Button onClick={() => this.sortData('hockeywins')}>
+                                    <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 Hockey L
-                                <Button onClick={() => this.sortData('hockeylosses')} style={{ color: 'white' }}>
-                                    <SortNumericDown />
+                                <Button onClick={() => this.sortData('hockeylosses')}>
+                                    <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 G
-                                <Button onClick={() => this.sortData('goals')} style={{ color: 'white' }}>
-                                    <SortNumericDown />
+                                <Button onClick={() => this.sortData('goals')}>
+                                    <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 GA
-                                <Button onClick={() => this.sortData('goalsag')} style={{ color: 'white' }}>
-                                    <SortNumericDown />
+                                <Button onClick={() => this.sortData('goalsag')}>
+                                    <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 Bats W
-                                <Button onClick={() => this.sortData('batswins')} style={{ color: 'white' }}>
-                                    <SortNumericDown />
+                                <Button onClick={() => this.sortData('batswins')}>
+                                    <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 Bats L
-                                <Button onClick={() => this.sortData('batslosses')} style={{ color: 'white' }}>
-                                    <SortNumericDown />
+                                <Button onClick={() => this.sortData('batslosses')}>
+                                    <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 R
-                                <Button onClick={() => this.sortData('runs')} style={{ color: 'white' }}>
-                                    <SortNumericDown />
+                                <Button onClick={() => this.sortData('runs')}>
+                                    <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 RA
-                                <Button onClick={() => this.sortData('runsag')} style={{ color: 'white' }}>
-                                    <SortNumericDown />
+                                <Button onClick={() => this.sortData('runsag')}>
+                                    <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 Hockey Titles
-                                <Button onClick={() => this.sortData('hockeychampionships')} style={{ color: 'white' }}>
-                                    <SortNumericDown />
+                                <Button onClick={() => this.sortData('hockeychampionships')}>
+                                    <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 Bats Titles
-                                <Button onClick={() => this.sortData('batschampionships')} style={{ color: 'white' }}>
-                                    <SortNumericDown />
+                                <Button onClick={() => this.sortData('batschampionships')}>
+                                    <SortNumericUp />
                                 </Button>
                             </th>
                         </tr>

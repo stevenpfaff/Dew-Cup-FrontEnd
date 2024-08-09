@@ -22,6 +22,10 @@ const TeamCard = () => {
         <Table>
             <tbody>
                 <tr>
+                    <th>Team Captain</th>
+                    <td>{team.captain}</td>
+                </tr>                
+                <tr>
                     <th>Minibat Wins</th>
                     <td>{team.batswins}</td>
                 </tr>

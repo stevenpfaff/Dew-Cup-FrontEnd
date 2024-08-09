@@ -1,4 +1,4 @@
-import { SortNumericDown } from 'react-bootstrap-icons';
+import { SortNumericUp } from 'react-bootstrap-icons';
 import React, { Component } from 'react';
 import { Table } from 'react-bootstrap';
 import Button from '@material-ui/core/Button';
@@ -7,11 +7,15 @@ import data from '../../data/playerstats.json';
 class Minibats extends Component {
     constructor(props) {
         super(props);
+
+        // Pre-sort the data by homeruns in descending order
+        const sortedPlayerData = [...data].sort((a, b) => b.homeruns - a.homeruns);
+
         this.state = {
-            player: data,
+            player: sortedPlayerData,
             sortConfig: {
-                key: null,
-                direction: 'asc',
+                key: 'homeruns',
+                direction: 'desc',
             },
         };
     }
@@ -25,10 +29,10 @@ class Minibats extends Component {
         }
 
         const sortedData = [...player].sort((a, b) => {
-            if (a[key] < b[key]) {
+            if (a[key] > b[key]) {
                 return direction === 'asc' ? -1 : 1;
             }
-            if (a[key] > b[key]) {
+            if (a[key] < b[key]) {
                 return direction === 'asc' ? 1 : -1;
             }
             return 0;
@@ -62,55 +66,55 @@ class Minibats extends Component {
                             <th>
                                 Player 
                                 <Button onClick={() => this.sortData('name')}>
-                                    <SortNumericDown />
+                                    <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 GP 
                                 <Button onClick={() => this.sortData('mbgames')}>
-                                    <SortNumericDown />
+                                    <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 AB 
                                 <Button onClick={() => this.sortData('ab')}>
-                                    <SortNumericDown />
+                                    <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 H 
                                 <Button onClick={() => this.sortData('hits')}>
-                                    <SortNumericDown />
+                                    <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 AVG 
                                 <Button onClick={() => this.sortData('average')}>
-                                    <SortNumericDown />
+                                    <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 2B 
                                 <Button onClick={() => this.sortData('doubles')}>
-                                    <SortNumericDown />
+                                    <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 3B 
                                 <Button onClick={() => this.sortData('triples')}>
-                                    <SortNumericDown />
+                                    <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 HR 
                                 <Button onClick={() => this.sortData('homeruns')}>
-                                    <SortNumericDown />
+                                    <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 RBI 
                                 <Button onClick={() => this.sortData('rbi')}>
-                                    <SortNumericDown />
+                                    <SortNumericUp />
                                 </Button>
                             </th>
                         </tr>

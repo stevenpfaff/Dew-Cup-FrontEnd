@@ -1,4 +1,4 @@
-import { SortNumericDown } from 'react-bootstrap-icons';
+import { SortNumericUp } from 'react-bootstrap-icons';
 import React, { Component } from 'react';
 import { Table } from 'react-bootstrap';
 import Button from '@material-ui/core/Button';
@@ -7,11 +7,15 @@ import hockeyData from '../../data/playerstats.json';
 class Hockey extends Component {
     constructor(props) {
         super(props);
+        
+        // Pre-sort the data by points in descending order
+        const sortedHockeyData = [...hockeyData].sort((a, b) => b.points - a.points);
+
         this.state = {
-            hockey: hockeyData,
+            hockey: sortedHockeyData,
             sortConfig: {
-                key: null,
-                direction: 'asc',
+                key: 'points',
+                direction: 'desc',
             },
         };
     }
@@ -25,10 +29,10 @@ class Hockey extends Component {
         }
 
         const sortedData = [...hockey].sort((a, b) => {
-            if (a[key] < b[key]) {
+            if (a[key] > b[key]) {
                 return direction === 'asc' ? -1 : 1;
             }
-            if (a[key] > b[key]) {
+            if (a[key] < b[key]) {
                 return direction === 'asc' ? 1 : -1;
             }
             return 0;
@@ -61,31 +65,31 @@ class Hockey extends Component {
                             <th>
                                 Player
                                 <Button onClick={() => this.sortData('name')}>
-                                    <SortNumericDown />
+                                    <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 Games
                                 <Button onClick={() => this.sortData('hgames')}>
-                                    <SortNumericDown />
+                                    <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 Goals
                                 <Button onClick={() => this.sortData('goals')}>
-                                    <SortNumericDown />
+                                    <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 Assists
                                 <Button onClick={() => this.sortData('assists')}>
-                                    <SortNumericDown />
+                                    <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 Points
                                 <Button onClick={() => this.sortData('points')}>
-                                    <SortNumericDown />
+                                    <SortNumericUp />
                                 </Button>
                             </th>
                         </tr>
