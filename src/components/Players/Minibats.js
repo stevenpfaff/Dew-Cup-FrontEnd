@@ -2,13 +2,13 @@ import { SortNumericDown } from 'react-bootstrap-icons';
 import React, { Component } from 'react';
 import { Table } from 'react-bootstrap';
 import Button from '@material-ui/core/Button';
-import playerData from '../../data/bats.json';
+import data from '../../data/playerstats.json';
 
-class MBPlayers extends Component {
+class Minibats extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            player: playerData,
+            player: data,
             sortConfig: {
                 key: null,
                 direction: 'asc',
@@ -43,8 +43,14 @@ class MBPlayers extends Component {
         });
     };
 
+    handlePlayerClick = (id) => {
+        this.props.history.push(`/player/${id}`);
+    };
+
     render() {
         const { player } = this.state;
+
+        const filteredBats = player.filter((data) => data.mbgames !== 0);
 
         return (
             <div style={{ marginRight: "25%", marginLeft: "25%", marginBottom: "10%" }} >
@@ -55,72 +61,74 @@ class MBPlayers extends Component {
                         <tr>
                             <th>
                                 Player 
-                                <Button onClick={() => this.sortData('name')} style={{ color: 'white' }}>
+                                <Button onClick={() => this.sortData('name')}>
                                     <SortNumericDown />
                                 </Button>
                             </th>
                             <th>
                                 GP 
-                                <Button onClick={() => this.sortData('games')} style={{ color: 'white' }}>
+                                <Button onClick={() => this.sortData('mbgames')}>
                                     <SortNumericDown />
                                 </Button>
                             </th>
                             <th>
                                 AB 
-                                <Button onClick={() => this.sortData('ab')} style={{ color: 'white' }}>
+                                <Button onClick={() => this.sortData('ab')}>
                                     <SortNumericDown />
                                 </Button>
                             </th>
                             <th>
                                 H 
-                                <Button onClick={() => this.sortData('hits')} style={{ color: 'white' }}>
+                                <Button onClick={() => this.sortData('hits')}>
                                     <SortNumericDown />
                                 </Button>
                             </th>
                             <th>
                                 AVG 
-                                <Button onClick={() => this.sortData('average')} style={{ color: 'white' }}>
+                                <Button onClick={() => this.sortData('average')}>
                                     <SortNumericDown />
                                 </Button>
                             </th>
                             <th>
                                 2B 
-                                <Button onClick={() => this.sortData('doubles')} style={{ color: 'white' }}>
+                                <Button onClick={() => this.sortData('doubles')}>
                                     <SortNumericDown />
                                 </Button>
                             </th>
                             <th>
                                 3B 
-                                <Button onClick={() => this.sortData('triples')} style={{ color: 'white' }}>
+                                <Button onClick={() => this.sortData('triples')}>
                                     <SortNumericDown />
                                 </Button>
                             </th>
                             <th>
                                 HR 
-                                <Button onClick={() => this.sortData('homeruns')} style={{ color: 'white' }}>
+                                <Button onClick={() => this.sortData('homeruns')}>
                                     <SortNumericDown />
                                 </Button>
                             </th>
                             <th>
                                 RBI 
-                                <Button onClick={() => this.sortData('rbi')} style={{ color: 'white' }}>
+                                <Button onClick={() => this.sortData('rbi')}>
                                     <SortNumericDown />
                                 </Button>
                             </th>
                         </tr>
                     </thead>
                     <tbody>
-                        {player.map((trny) => (
-                            <tr key={trny.name}>
-                                <td>{trny.name}</td>
-                                <td>{trny.games}</td>
-                                <td>{trny.ab}</td>
-                                <td>{trny.hits}</td>
-                                <td>.{trny.average}</td>
-                                <td>{trny.doubles}</td>
-                                <td>{trny.triples}</td>
-                                <td>{trny.homeruns}</td>
-                                <td>{trny.rbi}</td>
+                        {filteredBats.map((data) => (
+                             <tr key={data.id}>
+                                <td style={{ cursor: 'pointer', color: 'blue' }} onClick={() => this.handlePlayerClick(data.id)}>
+                                    {data.name}
+                                </td>
+                                <td>{data.mbgames}</td>
+                                <td>{data.ab}</td>
+                                <td>{data.hits}</td>
+                                <td>.{data.average}</td>
+                                <td>{data.doubles}</td>
+                                <td>{data.triples}</td>
+                                <td>{data.homeruns}</td>
+                                <td>{data.rbi}</td>
                             </tr>
                         ))}
                     </tbody>
@@ -130,4 +138,4 @@ class MBPlayers extends Component {
     }
 }
 
-export default MBPlayers;
+export default Minibats;

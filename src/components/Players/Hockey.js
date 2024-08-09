@@ -2,9 +2,9 @@ import { SortNumericDown } from 'react-bootstrap-icons';
 import React, { Component } from 'react';
 import { Table } from 'react-bootstrap';
 import Button from '@material-ui/core/Button';
-import hockeyData from '../../data/hockey.json';
+import hockeyData from '../../data/playerstats.json';
 
-class Players extends Component {
+class Hockey extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -43,9 +43,13 @@ class Players extends Component {
         });
     };
 
+    handlePlayerClick = (id) => {
+        this.props.history.push(`/player/${id}`);
+    };
+
     render() {
         const { hockey } = this.state;
-
+        const filteredHockey = hockey.filter((data) => data.hgames !== 0);
         return (
             <div style={{ marginRight: "25%", marginLeft: "25%", marginBottom: "10%" }} >
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -56,44 +60,46 @@ class Players extends Component {
                         <tr>
                             <th>
                                 Player
-                                <Button onClick={() => this.sortData('name')} style={{ color: 'white' }}>
+                                <Button onClick={() => this.sortData('name')}>
                                     <SortNumericDown />
                                 </Button>
                             </th>
                             <th>
                                 Games
-                                <Button onClick={() => this.sortData('games')} style={{ color: 'white' }}>
+                                <Button onClick={() => this.sortData('hgames')}>
                                     <SortNumericDown />
                                 </Button>
                             </th>
                             <th>
                                 Goals
-                                <Button onClick={() => this.sortData('goals')} style={{ color: 'white' }}>
+                                <Button onClick={() => this.sortData('goals')}>
                                     <SortNumericDown />
                                 </Button>
                             </th>
                             <th>
                                 Assists
-                                <Button onClick={() => this.sortData('assists')} style={{ color: 'white' }}>
+                                <Button onClick={() => this.sortData('assists')}>
                                     <SortNumericDown />
                                 </Button>
                             </th>
                             <th>
                                 Points
-                                <Button onClick={() => this.sortData('points')} style={{ color: 'white' }}>
+                                <Button onClick={() => this.sortData('points')}>
                                     <SortNumericDown />
                                 </Button>
                             </th>
                         </tr>
                     </thead>
                     <tbody>
-                        {hockey.map((trny) => (
-                            <tr key={trny.name}>
-                                <td>{trny.name}</td>
-                                <td>{trny.games}</td>
-                                <td>{trny.goals}</td>
-                                <td>{trny.assists}</td>
-                                <td>{trny.points}</td>
+                        {filteredHockey.map((data) => (
+                             <tr key={data.id}>
+                             <td style={{ cursor: 'pointer', color: 'blue' }} onClick={() => this.handlePlayerClick(data.id)}>
+                                 {data.name}
+                             </td>
+                                <td>{data.hgames}</td>
+                                <td>{data.goals}</td>
+                                <td>{data.assists}</td>
+                                <td>{data.points}</td>
                             </tr>
                         ))}
                     </tbody>
@@ -103,4 +109,4 @@ class Players extends Component {
     }
 }
 
-export default Players;
+export default Hockey;

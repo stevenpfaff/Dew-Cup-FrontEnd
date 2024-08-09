@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Table } from 'react-bootstrap'
 import tourney from '../../data/tourneys.json'
-import Button from '@material-ui/core/Button';
 
 
 class Tourneys extends Component {

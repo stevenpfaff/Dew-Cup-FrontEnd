@@ -40,6 +40,11 @@ class Teams extends Component {
         });
     };
 
+    handleTeamClick = (id) => {
+        this.props.history.push(`/team/${id}`);
+    };
+
+
     render() {
         const { team } = this.state;
         return (
@@ -119,8 +124,10 @@ class Teams extends Component {
                     </thead>
                     <tbody>
                         {team.map((team) => (
-                            <tr key={team.Id}>
-                                <td>{team.name}</td>
+                            <tr key={team.id}>
+                                <td style={{ cursor: 'pointer', color: 'blue' }} onClick={() => this.handleTeamClick(team.id)}>
+                                    {team.name}
+                                </td>
                                 <td>{team.hockeywins}</td>
                                 <td>{team.hockeylosses}</td>
                                 <td>{team.goals}</td>
