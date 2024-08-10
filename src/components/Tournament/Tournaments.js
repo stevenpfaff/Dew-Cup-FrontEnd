@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Table } from 'react-bootstrap'
 import tourney from '../../data/tourneys.json'
+import './Table.css'
 
 
 class Tourneys extends Component {

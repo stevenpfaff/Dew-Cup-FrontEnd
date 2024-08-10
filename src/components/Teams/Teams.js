@@ -56,67 +56,67 @@ class Teams extends Component {
                         <tr>
                             <th>
                                 Team
-                                <Button onClick={() => this.sortData('name')}>
+                                <Button onClick={() => this.sortData('name')} style={{ color: 'white' }}>
                                     <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 Hockey W
-                                <Button onClick={() => this.sortData('hockeywins')}>
+                                <Button onClick={() => this.sortData('hockeywins')} style={{ color: 'white' }}>
                                     <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 Hockey L
-                                <Button onClick={() => this.sortData('hockeylosses')}>
+                                <Button onClick={() => this.sortData('hockeylosses')} style={{ color: 'white' }}>
                                     <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 G
-                                <Button onClick={() => this.sortData('goals')}>
+                                <Button onClick={() => this.sortData('goals')} style={{ color: 'white' }}>
                                     <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 GA
-                                <Button onClick={() => this.sortData('goalsag')}>
+                                <Button onClick={() => this.sortData('goalsag')} style={{ color: 'white' }}>
                                     <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 Bats W
-                                <Button onClick={() => this.sortData('batswins')}>
+                                <Button onClick={() => this.sortData('batswins')} style={{ color: 'white' }}>
                                     <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 Bats L
-                                <Button onClick={() => this.sortData('batslosses')}>
+                                <Button onClick={() => this.sortData('batslosses')}style={{ color: 'white' }}>
                                     <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 R
-                                <Button onClick={() => this.sortData('runs')}>
+                                <Button onClick={() => this.sortData('runs')} style={{ color: 'white' }}>
                                     <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 RA
-                                <Button onClick={() => this.sortData('runsag')}>
+                                <Button onClick={() => this.sortData('runsag')} style={{ color: 'white' }}>
                                     <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 Hockey Titles
-                                <Button onClick={() => this.sortData('hockeychampionships')}>
+                                <Button onClick={() => this.sortData('hockeychampionships')} style={{ color: 'white' }}>
                                     <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 Bats Titles
-                                <Button onClick={() => this.sortData('batschampionships')}>
+                                <Button onClick={() => this.sortData('batschampionships')} style={{ color: 'white' }}>
                                     <SortNumericUp />
                                 </Button>
                             </th>
