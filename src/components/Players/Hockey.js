@@ -57,8 +57,8 @@ class Hockey extends Component {
         return (
             <div style={{ marginRight: "25%", marginLeft: "25%", marginBottom: "10%" }} >
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>Individual Hockey Stats</h1>
-                <a>*Individual goals and assists not tracked prior to Dew Cup IV*</a>
+                <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" , textAlign: 'center'}}>Individual Hockey Stats</h1>
+                <p>*Individual goals and assists not tracked prior to Dew Cup IV*</p>
                 <Table striped bordered hover>
                     <thead>
                         <tr>

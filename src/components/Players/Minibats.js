@@ -59,7 +59,8 @@ class Minibats extends Component {
         return (
             <div style={{ marginRight: "25%", marginLeft: "25%", marginBottom: "10%" }} >
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" }}>Minibat Individual Player Stats</h1>
+                <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit", textAlign:'center' }}>Minibat Individual Player Stats</h1>
+                <p>*Must have 50 AB's to qualify for batting average leaderboard.</p>
                 <Table striped bordered hover>
                     <thead>
                         <tr>

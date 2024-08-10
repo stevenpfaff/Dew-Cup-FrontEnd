@@ -12,7 +12,8 @@
         "runs": 88,
         "runsag": 75,
         "batschampionships": 1,
-        "captain": "Rick Bonis"
+        "captain": "Rick Bonis",
+        "image": "/Images/Squid.png"
     },
     {
         "id": 2,
