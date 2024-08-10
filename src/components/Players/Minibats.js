@@ -3,12 +3,12 @@ import React, { Component } from 'react';
 import { Table } from 'react-bootstrap';
 import Button from '@material-ui/core/Button';
 import data from '../../data/playerstats.json';
+import './Statsheet.css'; 
 
 class Minibats extends Component {
     constructor(props) {
         super(props);
 
-        // Pre-sort the data by homeruns in descending order
         const sortedPlayerData = [...data].sort((a, b) => b.homeruns - a.homeruns);
 
         this.state = {
@@ -23,7 +23,7 @@ class Minibats extends Component {
     sortData = (key) => {
         const { player, sortConfig } = this.state;
         let direction = 'asc';
-        
+
         if (sortConfig.key === key && sortConfig.direction === 'asc') {
             direction = 'desc';
         }
@@ -57,87 +57,89 @@ class Minibats extends Component {
         const filteredBats = player.filter((data) => data.mbgames !== 0);
 
         return (
-            <div style={{ marginRight: "25%", marginLeft: "25%", marginBottom: "10%" }} >
+            <div className="minibats-container">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit", textAlign:'center' }}>Minibat Individual Player Stats</h1>
+                <h1 className="minibats-title">Minibat Individual Player Stats</h1>
                 <p>*Must have 50 AB's to qualify for batting average leaderboard.</p>
-                <Table striped bordered hover>
-                    <thead>
-                        <tr>
-                            <th>
-                                Player 
-                                <Button onClick={() => this.sortData('name')} style={{ color: 'white' }}>
-                                    <SortNumericUp />
-                                </Button>
-                            </th>
-                            <th>
-                                GP 
-                                <Button onClick={() => this.sortData('mbgames')} style={{ color: 'white' }}>
-                                    <SortNumericUp />
-                                </Button>
-                            </th>
-                            <th>
-                                AB 
-                                <Button onClick={() => this.sortData('ab')} style={{ color: 'white' }}>
-                                    <SortNumericUp />
-                                </Button>
-                            </th>
-                            <th>
-                                H 
-                                <Button onClick={() => this.sortData('hits')} style={{ color: 'white' }}>
-                                    <SortNumericUp />
-                                </Button>
-                            </th>
-                            <th>
-                                AVG 
-                                <Button onClick={() => this.sortData('average')} style={{ color: 'white' }}> 
-                                    <SortNumericUp />
-                                </Button>
-                            </th>
-                            <th>
-                                2B 
-                                <Button onClick={() => this.sortData('doubles')} style={{ color: 'white' }}>
-                                    <SortNumericUp />
-                                </Button>
-                            </th>
-                            <th>
-                                3B 
-                                <Button onClick={() => this.sortData('triples')} style={{ color: 'white' }}>
-                                    <SortNumericUp />
-                                </Button>
-                            </th>
-                            <th>
-                                HR 
-                                <Button onClick={() => this.sortData('homeruns')} style={{ color: 'white' }}>
-                                    <SortNumericUp />
-                                </Button>
-                            </th>
-                            <th>
-                                RBI 
-                                <Button onClick={() => this.sortData('rbi')} style={{ color: 'white' }}>
-                                    <SortNumericUp />
-                                </Button>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {filteredBats.map((data) => (
-                             <tr key={data.id}>
-                                <td style={{ cursor: 'pointer', color: 'blue' }} onClick={() => this.handlePlayerClick(data.id)}>
-                                    {data.name}
-                                </td>
-                                <td>{data.mbgames}</td>
-                                <td>{data.ab}</td>
-                                <td>{data.hits}</td>
-                                <td>.{data.average}</td>
-                                <td>{data.doubles}</td>
-                                <td>{data.triples}</td>
-                                <td>{data.homeruns}</td>
-                                <td>{data.rbi}</td>
+                <div className="table-responsive">
+                    <Table striped bordered hover className="minibats-table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Player 
+                                    <Button onClick={() => this.sortData('name')} style={{ color: 'white' }}>
+                                        <SortNumericUp />
+                                    </Button>
+                                </th>
+                                <th>
+                                    GP 
+                                    <Button onClick={() => this.sortData('mbgames')} style={{ color: 'white' }}>
+                                        <SortNumericUp />
+                                    </Button>
+                                </th>
+                                <th>
+                                    AB 
+                                    <Button onClick={() => this.sortData('ab')} style={{ color: 'white' }}>
+                                        <SortNumericUp />
+                                    </Button>
+                                </th>
+                                <th>
+                                    H 
+                                    <Button onClick={() => this.sortData('hits')} style={{ color: 'white' }}>
+                                        <SortNumericUp />
+                                    </Button>
+                                </th>
+                                <th>
+                                    AVG 
+                                    <Button onClick={() => this.sortData('average')} style={{ color: 'white' }}> 
+                                        <SortNumericUp />
+                                    </Button>
+                                </th>
+                                <th>
+                                    2B 
+                                    <Button onClick={() => this.sortData('doubles')} style={{ color: 'white' }}>
+                                        <SortNumericUp />
+                                    </Button>
+                                </th>
+                                <th>
+                                    3B 
+                                    <Button onClick={() => this.sortData('triples')} style={{ color: 'white' }}>
+                                        <SortNumericUp />
+                                    </Button>
+                                </th>
+                                <th>
+                                    HR 
+                                    <Button onClick={() => this.sortData('homeruns')} style={{ color: 'white' }}>
+                                        <SortNumericUp />
+                                    </Button>
+                                </th>
+                                <th>
+                                    RBI 
+                                    <Button onClick={() => this.sortData('rbi')} style={{ color: 'white' }}>
+                                        <SortNumericUp />
+                                    </Button>
+                                </th>
                             </tr>
-                        ))}
-                    </tbody>
-                </Table>
+                        </thead>
+                        <tbody>
+                            {filteredBats.map((data) => (
+                                <tr key={data.id}>
+                                    <td style={{ cursor: 'pointer', color: 'blue' }} onClick={() => this.handlePlayerClick(data.id)}>
+                                        {data.name}
+                                    </td>
+                                    <td>{data.mbgames}</td>
+                                    <td>{data.ab}</td>
+                                    <td>{data.hits}</td>
+                                    <td>.{data.average}</td>
+                                    <td>{data.doubles}</td>
+                                    <td>{data.triples}</td>
+                                    <td>{data.homeruns}</td>
+                                    <td>{data.rbi}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </Table>
+                </div>
             </div>
         );
     }

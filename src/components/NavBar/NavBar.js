@@ -36,8 +36,8 @@ function NavBar() {
                     </Nav>
                     <Nav>
                         <Nav.Link href="/Teams">Team Stats</Nav.Link>
-                        <Nav.Link href="/hockeystats">All-Time Hockey Stats</Nav.Link>
-                        <Nav.Link href="/minibatstats">All-Time Minibat Stats</Nav.Link>
+                        <Nav.Link href="/hockeystats">Hockey Stats</Nav.Link>
+                        <Nav.Link href="/minibatstats">Minibat Stats</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

@@ -3,6 +3,7 @@ import { Table } from 'react-bootstrap';
 import { SortNumericUp } from 'react-bootstrap-icons';
 import Button from '@material-ui/core/Button';
 import teamData from '../../data/teams.json';
+import '../Players/Statsheet.css'
 
 class Teams extends Component {
     constructor(props) {
@@ -48,10 +49,11 @@ class Teams extends Component {
     render() {
         const { team } = this.state;
         return (
-            <div style={{ marginRight: "25%", marginLeft: "25%", marginBottom: "10%" }} >
+            <div className="minibats-container">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit", textAlign: "center" }}>All-Time Team Stats</h1>
-                <Table striped bordered hover>
+                <h1 className="minibats-title">All-Time Team Stats</h1>
+                <div className="table-responsive">
+                    <Table striped bordered hover className="minibats-table">
                     <thead>
                         <tr>
                             <th>
@@ -73,13 +75,13 @@ class Teams extends Component {
                                 </Button>
                             </th>
                             <th>
-                                G
+                                Goals
                                 <Button onClick={() => this.sortData('goals')} style={{ color: 'white' }}>
                                     <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
-                                GA
+                                Goals Ag
                                 <Button onClick={() => this.sortData('goalsag')} style={{ color: 'white' }}>
                                     <SortNumericUp />
                                 </Button>
@@ -97,13 +99,13 @@ class Teams extends Component {
                                 </Button>
                             </th>
                             <th>
-                                R
+                                Runs
                                 <Button onClick={() => this.sortData('runs')} style={{ color: 'white' }}>
                                     <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
-                                RA
+                                Runs Ag
                                 <Button onClick={() => this.sortData('runsag')} style={{ color: 'white' }}>
                                     <SortNumericUp />
                                 </Button>
@@ -143,6 +145,7 @@ class Teams extends Component {
                     </tbody>
                 </Table>
             </div>
+        </div>
         );
     }
 }

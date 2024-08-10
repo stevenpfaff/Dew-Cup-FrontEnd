@@ -1,18 +1,4 @@
-thead {
-    text-align: center;
-    background-color: rgb(1, 58, 104);
-    color: white;
-
-}
-th {
-    text-align: center;
-
-  }
-  td {
-    text-align: center;
-
-  }
-  .minibats-container {
+.minibats-container {
     margin: 0 5%;
     margin-bottom: 5%;
 }

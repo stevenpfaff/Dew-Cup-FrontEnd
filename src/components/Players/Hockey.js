@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { Table } from 'react-bootstrap';
 import Button from '@material-ui/core/Button';
 import hockeyData from '../../data/playerstats.json';
+import './Statsheet.css';
 
 class Hockey extends Component {
     constructor(props) {
@@ -55,11 +56,12 @@ class Hockey extends Component {
         const { hockey } = this.state;
         const filteredHockey = hockey.filter((data) => data.hgames !== 0);
         return (
-            <div style={{ marginRight: "25%", marginLeft: "25%", marginBottom: "10%" }} >
+            <div className="minibats-container">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit" , textAlign: 'center'}}>Individual Hockey Stats</h1>
-                <p>*Individual goals and assists not tracked prior to Dew Cup IV*</p>
-                <Table striped bordered hover>
+                <h1 className="minibats-title">Hockey Individual Player Stats</h1>
+                <p>*Individual goals and assists not tracked prior to Dew Cup IV.</p>
+                <div className="table-responsive">
+                    <Table striped bordered hover className="minibats-table">
                     <thead>
                         <tr>
                             <th>
@@ -109,6 +111,7 @@ class Hockey extends Component {
                     </tbody>
                 </Table>
             </div>
+        </div>
         );
     }
 }

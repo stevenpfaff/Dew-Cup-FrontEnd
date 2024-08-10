@@ -14,10 +14,11 @@ class Tourneys extends Component {
     render() {
 
         return (
-                <div style={{ marginRight: "25%", marginLeft: "25%", marginBottom: "10%" }}>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <h1 style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit", textAlign: "center" }}>Tournaments</h1>
-                <Table striped bordered hover>
+            <div className="minibats-container">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <h1 className="minibats-title">Tournaments</h1>
+            <div className="table-responsive">
+                <Table striped bordered hover className="minibats-table">
                     <thead>
                         <tr>
                             <th>Series</th>
@@ -42,6 +43,7 @@ class Tourneys extends Component {
                     </tbody>
                 </Table>
             </div >
+        </div>
         );
     }
 }
