@@ -13,12 +13,13 @@ const PlayerCard = () => {
   }
 
   return (
-    <div style={{ marginRight: "5%", marginLeft: "5%", marginBottom: "5%" }} >
-    <h1 style={{ marginLeft: "5%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit", textAlign: "center" }}>{player.name}</h1>
+    <div style={{ marginRight: "10%", marginLeft: "10%", marginBottom: "5%" }} >
     <div class="column">
+    <h1 style={{ marginLeft: "5%", marginBottom: "5%", marginTop: "10%", fontFamily: "inherit", textAlign: "right" }}>{player.name}</h1>
         <img src={player.image} width="150%" height="150%" alt="" />
     </div>
     <div class="column2">
+    <h1 style={{ marginLeft: "5%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit", textAlign: "center" }}>Career Stats</h1>
         <Table>
             <tbody>
                 <tr>
