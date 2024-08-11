@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 import data from '../../data/playerstats.json';
 import './Statsheet.css';
 
-class Minibats extends Component {
+class Pitching extends Component {
     constructor(props) {
         super(props);
 
@@ -28,11 +28,11 @@ class Minibats extends Component {
             direction = 'desc';
         }
 
-        if (key === 'average' || key === 'slug') {
-            const playersWith50ABs = player.filter((p) => p.ab >= 50);
-            const playersWithLessThan50ABs = player.filter((p) => p.ab < 50);
+        if (key === 'era') {
+            const playersWith10Ip = player.filter((p) => p.ip >= 10);
+            const playersWithLessThan10Ip = player.filter((p) => p.ip > 0 && p.ip < 10);
 
-            const sorted50ABsData = [...playersWith50ABs].sort((a, b) => {
+            const sorted10IpData = [...playersWith10Ip].sort((a, b) => {
                 if (a[key] > b[key]) {
                     return direction === 'asc' ? -1 : 1;
                 }
@@ -42,7 +42,7 @@ class Minibats extends Component {
                 return 0;
             });
 
-            const combinedSortedData = [...sorted50ABsData, ...playersWithLessThan50ABs];
+            const combinedSortedData = [...sorted10IpData, ...playersWithLessThan10Ip];
 
             this.setState({
                 player: combinedSortedData,
@@ -79,13 +79,14 @@ class Minibats extends Component {
     render() {
         const { player } = this.state;
 
-        const filteredBats = player.filter((data) => data.mbgames !== 0);
+        // Filter out players with 0 IP
+        const filteredPlayers = player.filter((data) => data.ip > 0);
 
         return (
             <div className="minibats-container">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <h1 className="minibats-title">Minibat All-Time Batting Stats</h1>
-                <p>*Must have 50 AB's to qualify for batting average/slugging % leaderboard.</p>
+                <h1 className="minibats-title">Minibat All-Time Pitching Stats</h1>
+                <p>*Must have 10 innings to qualify for the ERA Leaderboard</p>
                 <div className="table-responsive">
                     <Table striped bordered hover className="minibats-table">
                         <thead>
@@ -97,76 +98,62 @@ class Minibats extends Component {
                                     </Button>
                                 </th>
                                 <th>
-                                    GP 
-                                    <Button onClick={() => this.sortData('mbgames')} style={{ color: 'white' }}>
+                                    IP
+                                    <Button onClick={() => this.sortData('ip')} style={{ color: 'white' }}>
                                         <SortNumericUp />
                                     </Button>
                                 </th>
                                 <th>
-                                    AB 
-                                    <Button onClick={() => this.sortData('ab')} style={{ color: 'white' }}>
+                                    W
+                                    <Button onClick={() => this.sortData('w')} style={{ color: 'white' }}>
                                         <SortNumericUp />
                                     </Button>
                                 </th>
                                 <th>
-                                    H 
-                                    <Button onClick={() => this.sortData('hits')} style={{ color: 'white' }}>
+                                    L 
+                                    <Button onClick={() => this.sortData('l')} style={{ color: 'white' }}>
                                         <SortNumericUp />
                                     </Button>
                                 </th>
                                 <th>
-                                    AVG 
-                                    <Button onClick={() => this.sortData('average')} style={{ color: 'white' }}> 
+                                    SV 
+                                    <Button onClick={() => this.sortData('sv')} style={{ color: 'white' }}> 
                                         <SortNumericUp />
                                     </Button>
                                 </th>
                                 <th>
-                                    SLG 
-                                    <Button onClick={() => this.sortData('slug')} style={{ color: 'white' }}> 
+                                    ERA
+                                    <Button onClick={() => this.sortData('era')} style={{ color: 'white' }}> 
                                         <SortNumericUp />
                                     </Button>
                                 </th>
                                 <th>
-                                    2B 
-                                    <Button onClick={() => this.sortData('doubles')} style={{ color: 'white' }}>
+                                    K 
+                                    <Button onClick={() => this.sortData('so')} style={{ color: 'white' }}>
                                         <SortNumericUp />
                                     </Button>
                                 </th>
                                 <th>
-                                    3B 
-                                    <Button onClick={() => this.sortData('triples')} style={{ color: 'white' }}>
-                                        <SortNumericUp />
-                                    </Button>
-                                </th>
-                                <th>
-                                    HR 
-                                    <Button onClick={() => this.sortData('homeruns')} style={{ color: 'white' }}>
-                                        <SortNumericUp />
-                                    </Button>
-                                </th>
-                                <th>
-                                    RBI 
-                                    <Button onClick={() => this.sortData('rbi')} style={{ color: 'white' }}>
+                                    HR
+                                    <Button onClick={() => this.sortData('hra')} style={{ color: 'white' }}>
                                         <SortNumericUp />
                                     </Button>
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
-                            {filteredBats.map((data) => (
+                            {filteredPlayers.map((data) => (
                                 <tr key={data.id}>
                                     <td style={{ cursor: 'pointer', color: 'blue' }} onClick={() => this.handlePlayerClick(data.id)}>
                                         {data.name}
                                     </td>
-                                    <td>{data.mbgames}</td>
-                                    <td>{data.ab}</td>
-                                    <td>{data.hits}</td>
-                                    <td>{data.average}</td>
-                                    <td>{data.slug}</td>
-                                    <td>{data.doubles}</td>
-                                    <td>{data.triples}</td>
-                                    <td>{data.homeruns}</td>
-                                    <td>{data.rbi}</td>
+                                    <td>{data.ip}</td>
+                                    <td>{data.w}</td>
+                                    <td>{data.l}</td>
+                                    <td>{data.sv}</td>
+                                    <td>{data.era}</td>
+                                    <td>{data.so}</td>
+                                    <td>{data.hra}</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -177,4 +164,4 @@ class Minibats extends Component {
     }
 }
 
-export default Minibats;
+export default Pitching;

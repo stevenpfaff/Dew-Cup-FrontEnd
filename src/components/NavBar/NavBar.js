@@ -37,7 +37,10 @@ function NavBar() {
                     <Nav>
                         <Nav.Link href="/Teams">Team Stats</Nav.Link>
                         <Nav.Link href="/hockeystats">Hockey Stats</Nav.Link>
-                        <Nav.Link href="/minibatstats">Minibat Stats</Nav.Link>
+                        <NavDropdown title="Minibat Stats" id="collasible-nav-dropdown">
+                            <NavDropdown.Item href="/minibatstats">Batting Stats</NavDropdown.Item>
+                            <NavDropdown.Item href="/minibatpitching">Pitching Stats</NavDropdown.Item>
+                        </NavDropdown> 
                     </Nav>
                 </Navbar.Collapse>
             </Container>

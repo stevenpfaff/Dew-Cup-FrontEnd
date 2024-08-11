@@ -58,7 +58,7 @@ class Hockey extends Component {
         return (
             <div className="minibats-container">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <h1 className="minibats-title">Hockey Individual Player Stats</h1>
+                <h1 className="minibats-title">Hockey All-Time Stats</h1>
                 <p>*Individual goals and assists not tracked prior to Dew Cup IV.</p>
                 <div className="table-responsive">
                     <Table striped bordered hover className="minibats-table">

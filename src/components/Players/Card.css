@@ -1,15 +1,107 @@
-.column {
-    float: left;
-    width: 25%;
-    margin-bottom: 5%;
+.player-card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5% 10%;
+}
+
+.player-image-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.player-name {
+  margin-bottom: 20px;
+  font-family: inherit;
+}
+
+.player-image {
+  max-width: 100%;
+  height: auto;
+  width: 75%;
+}
+
+.player-stats-section {
+  flex: 2;
+  margin-left: 20px;
+}
+
+.stats-title {
+  text-align: center;
+  font-family: inherit;
+  margin-bottom: 20px;
+}
+
+.player-stats-section .stats-header {
+  text-align: center;
+  background-color: rgb(1, 58, 104);
+  color: #ffffff !important;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .player-card-container {
+    flex-direction: column;
+    align-items: center;
   }
 
-.column2 {
-    float: right;
-    width: 50%;
-    margin-bottom: 5%;
+  .player-stats-section {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .player-image {
+    width: 100%;
+  }
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 20px;
 }
 
-.tr {
-  text-align: left;
+.column2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
+
+.team-name {
+  margin-left: 5%;
+  margin-bottom: 5%;
+  margin-top: 10%;
+  font-family: inherit;
+  text-align: right;
+}
+
+.team-image {
+  width: 100%;
+  height: auto;
+  max-width: 300px; /* Adjust this based on your design */
+  margin-left: 5%;
+}
+
+.team-stats-header {
+  margin-left: 5%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  font-family: inherit;
+  text-align: center;
+  background-color: #0047ab; /* Dark blue background */
+  color: white; /* White text color */
+  padding: 10px;
+}
+
+th.team-stats-header {
+  background-color: #0047ab; /* Dark blue background */
+  color: white; /* White text color */
+  text-align: center;
+}
+
