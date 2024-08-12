@@ -15,9 +15,11 @@ function NavBar() {
                     <Nav className="me-auto">
                         <Nav.Link href="/">Home</Nav.Link>
                         <NavDropdown title="Tournament Results" id="collasible-nav-dropdown">
+                        <NavDropdown.Item href="/Tournaments">Tournament List</NavDropdown.Item>
                             <NavDropdown.Item href="https://docs.google.com/spreadsheets/d/1--Z4rwRCaDi32B6K8KxQHrcy5mvSjfYOzOZjyPbgK20/edit?gid=0#gid=0">Buddy Wood Memorial I</NavDropdown.Item>
                             <NavDropdown.Item href="https://docs.google.com/spreadsheets/d/1--Z4rwRCaDi32B6K8KxQHrcy5mvSjfYOzOZjyPbgK20/edit?gid=1137722889#gid=1137722889">Buddy Wood Memorial II</NavDropdown.Item>
                             <NavDropdown.Item href="https://docs.google.com/spreadsheets/d/1--Z4rwRCaDi32B6K8KxQHrcy5mvSjfYOzOZjyPbgK20/edit?gid=66455220#gid=66455220">Buddy Wood Memorial III</NavDropdown.Item>
+                            <NavDropdown.Item href="https://docs.google.com/spreadsheets/d/1--Z4rwRCaDi32B6K8KxQHrcy5mvSjfYOzOZjyPbgK20/edit?gid=541396674#gid=541396674">Buddy Wood Memorial IV</NavDropdown.Item>
                             <NavDropdown.Item href="https://docs.google.com/spreadsheets/d/1-S9klqwfLvodu_MMg5HCc9CZSUmf3a7aA6NT9dRb7ro/edit?gid=1652233830#gid=1652233830">Code Red Classic I</NavDropdown.Item>
                             <NavDropdown.Item href="https://docs.google.com/spreadsheets/d/1--Z4rwRCaDi32B6K8KxQHrcy5mvSjfYOzOZjyPbgK20/edit?gid=1133740162#gid=1133740162">Coors Clash I</NavDropdown.Item>
                             <NavDropdown.Item href="https://docs.google.com/spreadsheets/d/1--Z4rwRCaDi32B6K8KxQHrcy5mvSjfYOzOZjyPbgK20/edit?gid=520397780#gid=520397780">Coors Clash II</NavDropdown.Item>
@@ -36,10 +38,13 @@ function NavBar() {
                     </Nav>
                     <Nav>
                         <Nav.Link href="/Teams">Team Stats</Nav.Link>
-                        <Nav.Link href="/hockeystats">Hockey Stats</Nav.Link>
+                        <Nav.Link href="/Hockey">Hockey Stats</Nav.Link>
                         <NavDropdown title="Minibat Stats" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="/minibatstats">Batting Stats</NavDropdown.Item>
-                            <NavDropdown.Item href="/minibatpitching">Pitching Stats</NavDropdown.Item>
+                            <NavDropdown.Item href="/Batting">Batting Stats</NavDropdown.Item>
+                            <NavDropdown.Item href="/Pitching">Pitching Stats</NavDropdown.Item>
+                            <NavDropdown.Item href="https://docs.google.com/spreadsheets/d/1--Z4rwRCaDi32B6K8KxQHrcy5mvSjfYOzOZjyPbgK20/edit?gid=1710491935#gid=1710491935">2024 Season Stats</NavDropdown.Item>
+                            <NavDropdown.Item href="https://docs.google.com/spreadsheets/d/1--Z4rwRCaDi32B6K8KxQHrcy5mvSjfYOzOZjyPbgK20/edit?gid=2146129277#gid=2146129277">2023 Season Stats</NavDropdown.Item>
+                            <NavDropdown.Item href="https://docs.google.com/spreadsheets/d/1--Z4rwRCaDi32B6K8KxQHrcy5mvSjfYOzOZjyPbgK20/edit?gid=802527048#gid=802527048">2022 Season Stats</NavDropdown.Item>
                         </NavDropdown> 
                     </Nav>
                 </Navbar.Collapse>

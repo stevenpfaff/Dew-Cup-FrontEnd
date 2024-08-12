@@ -172,7 +172,8 @@
         "hgames": 17,
         "goals": 25,
         "assists": 13,
-        "points": 38
+        "points": 38,
+        "image": "/Images/Chuckly.PNG"
     },
     {
         "id": 53,
@@ -245,7 +246,8 @@
         "hgames": 6,
         "goals": 2,
         "assists": 1,
-        "points": 3
+        "points": 3,
+        "image":"/Images/Noot.PNG"
     },
     {
         "id": 10,
@@ -266,10 +268,11 @@
         "so": 0,
         "era": 0,
         "hra": 0,
-        "hgames": 6,
-        "goals": 2,
-        "assists": 1,
-        "points": 3
+        "hgames": 0,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "image": "/Images/MJ.PNG"
     },
     {
         "id": 11,
@@ -293,7 +296,8 @@
         "hgames": 6,
         "goals": 0,
         "assists": 0,
-        "points": 0
+        "points": 0,
+        "image": "/Images/Boof.PNG"
     },
     {
         "id": 12,
@@ -366,7 +370,8 @@
         "hgames": 16,
         "goals": 7,
         "assists": 6,
-        "points": 13
+        "points": 13,
+        "image": "/Images/Brock.jpg"
     },
     {
         "id": 15,
@@ -822,7 +827,8 @@
         "hgames": 16,
         "goals": 19,
         "assists": 14,
-        "points": 33
+        "points": 33,
+        "image":"/Images/zale.jpg"
     },
     {
         "id": 34,
@@ -1077,7 +1083,8 @@
         "hgames": 5,
         "goals": 3,
         "assists": 2,
-        "points": 5
+        "points": 5,
+        "image":"/Images/winter.jpg"
     },
     {
         "id": 45,

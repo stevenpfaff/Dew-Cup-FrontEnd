@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
+import Home from './components/Home/Home';
 import Teams from './components/Teams/Teams';
 import Minibats from './components/Players/Minibats';
 import Pitching from './components/Players/Pitching';
@@ -15,11 +16,12 @@ function App() {
   return (
     <div>
       <NavBar />
+      <Route path="/" exact component={Home} />
       <Route path="/Teams" exact component={Teams} />
-      <Route path="/" exact component={Tourneys} />
-      <Route path="/minibatstats" exact component={Minibats} />
-      <Route path="/minibatpitching" exact component={Pitching} />
-      <Route path="/hockeystats" exact component={Hockey} />
+      <Route path="/Tournaments" exact component={Tourneys} />
+      <Route path="/Batting" exact component={Minibats} />
+      <Route path="/Pitching" exact component={Pitching} />
+      <Route path="/Hockey" exact component={Hockey} />
       <Route path="/player/:id" exact component={PlayerCard} />
       <Route path="/team/:id" exact component={TeamCard} />
     </div>
