@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 5% 10%;
+  margin: 5% 5%;
 }
 
 .player-image-section {
@@ -14,25 +14,25 @@
 }
 
 .player-name {
-  margin-bottom: 20px;
+  margin-bottom: 5%;
   font-family: inherit;
 }
 
 .player-image {
   max-width: 100%;
   height: auto;
-  width: 75%;
+  width: 100%;
 }
 
 .player-stats-section {
   flex: 2;
-  margin-left: 20px;
+  margin-left: 5%;
 }
 
 .stats-title {
   text-align: center;
   font-family: inherit;
-  margin-bottom: 20px;
+  margin-bottom: 5%;
 }
 
 .player-stats-section .stats-header {
@@ -42,6 +42,7 @@
   font-weight: bold;
   font-size: 1.1em;
 }
+
 
 
 /* Responsive adjustments */
@@ -84,7 +85,7 @@
 .team-image {
   width: 100%;
   height: auto;
-  max-width: 300px; /* Adjust this based on your design */
+  max-width: 300px;
   margin-left: 5%;
 }
 
@@ -94,14 +95,14 @@
   margin-top: 5%;
   font-family: inherit;
   text-align: center;
-  background-color: #0047ab; /* Dark blue background */
-  color: white; /* White text color */
+  background-color: #0047ab; 
+  color: white;
   padding: 10px;
 }
 
 th.team-stats-header {
-  background-color: #0047ab; /* Dark blue background */
-  color: white; /* White text color */
+  background-color: #0047ab; 
+  color: white; 
   text-align: center;
 }
 
