@@ -58,7 +58,8 @@
         "assists": 17,
         "points": 48,
         "image":"/Images/bone.jpg",
-        "mini": "/Images/squid-mini.png"
+        "mini": "/Images/squid-mini.png",
+        "mini2":"/Images/baboon-mini.png"
     },
     {
         "id": 3,
@@ -363,7 +364,8 @@
         "assists": 0,
         "points": 0,
         "image": "/Images/Boof.PNG",
-        "mini":"/Images/baboon-mini.png"
+        "mini":"/Images/baboon-mini.png",
+        "mini2":"/Images/squid-mini.png"
     },
     {
         "id": 12,
