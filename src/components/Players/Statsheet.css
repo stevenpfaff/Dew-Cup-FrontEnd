@@ -11,11 +11,18 @@
 
 .table-responsive {
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+.minibats-table {
+    min-width: 1000px; /* Ensure the table is wide enough to require scrolling on smaller screens */
 }
 
 .minibats-table th, .minibats-table td {
     text-align: center;
     vertical-align: middle;
+    font-size: 1rem;
+    padding: 8px;
 }
 
 .sticky-column {
@@ -29,8 +36,21 @@
     padding: 0; /* Ensure padding is consistent */
 }
 
+@media (max-width: 1024px) {
+    .minibats-container {
+        margin: 0 4%;
+        margin-bottom: 8%;
+    }
 
+    .minibats-title {
+        font-size: 1.5rem;
+    }
 
+    .minibats-table th, .minibats-table td {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+}
 
 @media (max-width: 768px) {
     .minibats-container {
@@ -39,16 +59,17 @@
     }
 
     .minibats-title {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .minibats-table th, .minibats-table td {
         font-size: 0.8rem;
+        padding: 5px;
     }
 
     .sort-button {
         padding: 0;
-        margin-left: 5px;
+        margin-left: 4px;
     }
 }
 
@@ -58,7 +79,8 @@
     }
 
     .minibats-table th, .minibats-table td {
-        font-size: 0.6rem;
+        font-size: 0.7rem;
+        padding: 4px;
     }
 
     .sort-button {
