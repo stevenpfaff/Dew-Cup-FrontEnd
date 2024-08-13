@@ -26,9 +26,6 @@
     min-width: 375px;
 }
 
-.tourney-table{
-    min-width: 500px;
-}
 
 .minibats-table th, .minibats-table td {
     text-align: center;
@@ -38,14 +35,14 @@
 }
 
 .sticky-column {
-    position: -webkit-sticky; /* For Safari */
+    position: -webkit-sticky;
     position: sticky;
     left: 0;
-    background-color: white; /* Solid background to prevent bleed-through */
-    z-index: 100; /* High z-index to ensure it stays above other columns */
-    border-right: 2px solid #ddd; /* Slightly thicker border for clearer separation */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Shadow for visual distinction */
-    padding: 0; /* Ensure padding is consistent */
+    background-color: white;
+    z-index: 100;
+    border-right: 2px solid #ddd;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 0;
 }
 
 @media (max-width: 1024px) {

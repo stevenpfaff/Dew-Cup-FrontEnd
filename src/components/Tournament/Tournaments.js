@@ -14,9 +14,9 @@ class Tourneys extends Component {
     render() {
 
         return (
-            <div className="minibats-container">
+            <div className="tourney-container">
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <h1 className="minibats-title">Tournaments</h1>
+            <h1 className="title">Tournaments</h1>
             <div className="table-responsive">
                 <Table striped bordered hover className="tourney-table">
                     <thead>
@@ -24,8 +24,8 @@ class Tourneys extends Component {
                             <th>Series</th>
                             <th>Year</th>
                             <th>Winner</th>
-                            <th>Runner Up</th>
-                            <th>Players</th>
+                            {/* <th>Runner Up</th> */}
+                            {/* <th>Players</th> */}
                             <th>MVP</th>
                         </tr>
                     </thead>
@@ -35,8 +35,8 @@ class Tourneys extends Component {
                                 <td>{trny.tourney}</td>
                                 <td>{trny.year}</td>
                                 <td>{trny.winner}</td>
-                                <td>{trny.runnerup}</td>
-                                <td>{trny.players}</td>
+                                {/* <td>{trny.runnerup}</td> */}
+                                {/* <td>{trny.players}</td> */}
                                 <td>{trny.MVP}</td>
                             </tr>
                         ))}

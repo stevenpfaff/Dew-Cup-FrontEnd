@@ -12,12 +12,12 @@ th {
     text-align: center;
 
   }
-  .minibats-container {
+  .tourney-container {
     margin: 0 5%;
     margin-bottom: 5%;
 }
 
-.minibats-title {
+.title {
     margin: 5% 0;
     font-family: inherit;
     text-align: center;
@@ -27,23 +27,27 @@ th {
     overflow-x: auto;
 }
 
-.minibats-table th, .minibats-table td {
+.tourney-table th, .tourney-table td {
     text-align: center;
     vertical-align: middle;
 }
 
+.tourney-table{
+    min-width: 350px;
+}
+
 
 @media (max-width: 768px) {
-    .minibats-container {
+    .tourney-container {
         margin: 0 2%;
         margin-bottom: 10%;
     }
 
-    .minibats-title {
+    .tourney-title {
         font-size: 1.5rem;
     }
 
-    .minibats-table th, .minibats-table td {
+    .tourney-table th, .tourney-table td {
         font-size: 0.8rem;
     }
 
@@ -54,11 +58,11 @@ th {
 }
 
 @media (max-width: 480px) {
-    .minibats-title {
+    .title {
         font-size: 1.2rem;
     }
 
-    .minibats-table th, .minibats-table td {
+    .tourney-table th, .tourney-table td {
         font-size: 0.6rem;
     }
 

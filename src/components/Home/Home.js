@@ -17,7 +17,8 @@ class Home extends Component {
                         site is designed to act as a record book for those tournaments.
                     </p>
                     <div className="gallery">
-                        <img src="./Images/group.jpg" alt="Dew Cup 2023" />
+                        <img src="./Images/dewcup1.jpg" alt="Dew Cup 2019" />
+                        <img src="./Images/boons1.jpg" alt="Bud Wood 2021" />
                     </div>
                 </section>
 
@@ -33,7 +34,7 @@ class Home extends Component {
                     </p>
                     <div className="gallery">
                         <img src="./Images/sqd.jpg" alt="Squid Niqs 2023 Dew Cup" />
-                        <img src="./Images/sqn22.jpg" alt="Squid Niqs 2022 Dew Cup" />
+                        <img src="./Images/group.jpg" alt="2023 Dew Cup Group" />
                     </div>
                 </section>
 

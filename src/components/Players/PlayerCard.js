@@ -56,11 +56,15 @@ const PlayerCard = () => {
                     <th>AB</th>
                     <th>H</th>
                     <th>AVG</th>
+                    <th>OBP</th>
+                    <th>SLG</th>
+                    <th>OPS</th>
                     <th>2B</th>
                     <th>3B</th>
                     <th>HR</th>
                     <th>RBI</th>
                     <th>R</th>
+                    <th>K</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -69,11 +73,15 @@ const PlayerCard = () => {
                     <td>{player.ab}</td>
                     <td>{player.hits}</td>
                     <td>{player.average}</td>
+                    <td>{player.obp}</td>
+                    <td>{player.slug}</td>
+                    <td>{player.ops}</td>
                     <td>{player.doubles}</td>
                     <td>{player.triples}</td>
                     <td>{player.homeruns}</td>
                     <td>{player.rbi}</td>
                     <td>{player.runs}</td>
+                    <td>{player.k}</td>
                   </tr>
                 </tbody>
               </Table>

@@ -91,7 +91,7 @@ class Pitching extends Component {
                     <Table striped bordered hover className="pitching-table">
                         <thead>
                             <tr>
-                                <th>
+                                <th className='sticky-column'>
                                     Player 
                                     <Button onClick={() => this.sortData('name')} style={{ color: 'white' }}>
                                         <SortNumericUp />
@@ -144,7 +144,7 @@ class Pitching extends Component {
                         <tbody>
                             {filteredPlayers.map((data) => (
                                 <tr key={data.id}>
-                                    <td style={{ cursor: 'pointer', color: 'blue' }} onClick={() => this.handlePlayerClick(data.id)}>
+                                    <td className="sticky-column" style={{ cursor: 'pointer', color: 'blue' }} onClick={() => this.handlePlayerClick(data.id)}>
                                         {data.name}
                                     </td>
                                     <td>{data.ip}</td>
