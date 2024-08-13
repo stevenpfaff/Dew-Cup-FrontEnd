@@ -23,102 +23,106 @@ const PlayerCard = () => {
           <tbody>
             {player.mbgames > 0 && (
               <>
+              <h2 className='player-stat-headers'>Batting</h2>
                 <tr>
-                  <th colSpan="2" className="stats-header">Minibat Batting Stats</th>
-                </tr>
-                <tr>
-                  <th>Minibat Games</th>
-                  <td>{player.mbgames}</td>
-                </tr>
-                <tr>
-                  <th>At Bats</th>
-                  <td>{player.ab}</td>
-                </tr>
-                <tr>
-                  <th>Hits</th>
-                  <td>{player.hits}</td>
-                </tr>
-                <tr>
-                  <th>Batting Average</th>
-                  <td>{player.average}</td>
-                </tr>
-                <tr>
-                  <th>Slugging Percentage</th>
-                  <td>{player.slug}</td>
-                </tr>
-                <tr>
-                  <th>Doubles</th>
-                  <td>{player.doubles}</td>
-                </tr>
-                <tr>
-                  <th>Triples</th>
-                  <td>{player.triples}</td>
-                </tr>
-                <tr>
-                  <th>Homeruns</th>
-                  <td>{player.homeruns}</td>
-                </tr>
-                <tr>
-                  <th>RBI's</th>
-                  <td>{player.rbi}</td>
+                  <td colSpan="2">
+                    <Table bordered>
+                      <thead>
+                        <tr>
+                          <th>GP</th>
+                          <th>AB</th>
+                          <th>H</th>
+                          <th>AVG</th>
+                          <th>OBP</th>
+                          <th>SLG</th>
+                          <th>OPS</th>
+                          <th>2B</th>
+                          <th>3B</th>
+                          <th>HR</th>
+                          <th>RBI</th>
+                          <th>R</th>
+                          <th>K</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>{player.mbgames}</td>
+                          <td>{player.ab}</td>
+                          <td>{player.hits}</td>
+                          <td>{player.average}</td>
+                          <td>{player.obp}</td>
+                          <td>{player.slug}</td>
+                          <td>{player.ops}</td>
+                          <td>{player.doubles}</td>
+                          <td>{player.triples}</td>
+                          <td>{player.homeruns}</td>
+                          <td>{player.rbi}</td>
+                          <td>{player.runs}</td>
+                          <td>{player.k}</td>
+                        </tr>
+                      </tbody>
+                    </Table>
+                  </td>
                 </tr>
               </>
             )}
             {player.ip > 0 && (
               <>
                 <tr>
-                  <th colSpan="2" className="stats-header">Minibat Pitching Stats</th>
-                </tr>
-                <tr>
-                  <th>Innings Pitched</th>
-                  <td>{player.ip}</td>
-                </tr>
-                <tr>
-                  <th>Wins</th>
-                  <td>{player.w}</td>
-                </tr>
-                <tr>
-                  <th>Losses</th>
-                  <td>{player.l}</td>
-                </tr>
-                <tr>
-                  <th>Saves</th>
-                  <td>{player.sv}</td>
-                </tr>
-                <tr>
-                  <th>Earned Run Average</th>
-                  <td>{player.era}</td>
-                </tr>
-                <tr>
-                  <th>Strikeouts</th>
-                  <td>{player.so}</td>
-                </tr>
-                <tr>
-                  <th>Homeruns Allowed</th>
-                  <td>{player.hra}</td>
+                  <td colSpan="2">
+                    <h2 className="player-stat-headers">Pitching</h2>
+                    <Table bordered>
+                      <thead>
+                        <tr>
+                          <th>IP</th>
+                          <th>W</th>
+                          <th>L</th>
+                          <th>SV</th>
+                          <th>ERA</th>
+                          <th>SO</th>
+                          <th>HR</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>{player.ip}</td>
+                          <td>{player.w}</td>
+                          <td>{player.l}</td>
+                          <td>{player.sv}</td>
+                          <td>{player.era}</td>
+                          <td>{player.so}</td>
+                          <td>{player.hra}</td>
+                        </tr>
+                      </tbody>
+                    </Table>
+                  </td>
                 </tr>
               </>
             )}
             {player.hgames > 0 && (
               <>
                 <tr>
-                  <th colSpan="2" className="stats-header">Hockey Stats</th>
-                </tr>
-                <tr>
-                  <th>Hockey Games</th>
-                  <td>{player.hgames}</td>
-                </tr>
-                <tr>
-                  <th>Goals</th>
-                  <td>{player.goals}</td>
-                </tr>
-                <tr>
-                  <th>Assists</th>
-                  <td>{player.assists}</td>
-                </tr>
-                <tr>
-                  <th>Points</th>
-                  <td>{player.points}</td>
+                  <td colSpan="2">
+                    <h2 className="player-stat-headers">Hockey</h2>
+                    <Table bordered>
+                      <thead>
+                        <tr>
+                          <th>GP</th>
+                          <th>G</th>
+                          <th>A</th>
+                          <th>P</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>{player.hgames}</td>
+                          <td>{player.goals}</td>
+                          <td>{player.assists}</td>
+                          <td>{player.points}</td>
+                        </tr>
+                      </tbody>
+                    </Table>
+                  </td>
                 </tr>
               </>
             )}

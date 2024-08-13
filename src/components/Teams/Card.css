@@ -1,11 +1,115 @@
-.column {
-  float: left;
-  width: 25%;
+.player-card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5% 5%;
+}
+
+.player-image-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.player-name {
+  margin-bottom: 5%;
+  font-family: inherit;
+  text-align: center;
+}
+
+.player-stat-headers {
+  margin-bottom: 2%;
+  font-family: inherit;
+  text-align: center;
+}
+
+.player-image {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+
+.player-stats-section {
+  flex: 2;
+  margin-left: 5%;
+}
+
+.stats-title {
+  text-align: center;
+  font-family: inherit;
   margin-bottom: 5%;
 }
 
-.column2 {
-  float: right;
-  width: 50%;
-  margin-bottom: 5%;
+.player-stats-section .stats-header {
+  text-align: center;
+  background-color: rgb(1, 58, 104);
+  color: #ffffff !important;
+  font-weight: bold;
+  font-size: 1.1em;
 }
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .player-card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .player-stats-section {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .player-image {
+    width: 100%;
+  }
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.column2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.team-name {
+  margin-left: 5%;
+  margin-bottom: 5%;
+  margin-top: 10%;
+  font-family: inherit;
+  text-align: right;
+}
+
+.team-image {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  margin-left: 5%;
+}
+
+.team-stats-header {
+  margin-left: 5%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  font-family: inherit;
+  text-align: center;
+  background-color: #0047ab; 
+  color: white;
+  padding: 10px;
+}
+
+th.team-stats-header {
+  background-color: #0047ab; 
+  color: white; 
+  text-align: center;
+}
+

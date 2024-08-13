@@ -13,63 +13,72 @@ const TeamCard = () => {
   }
 
   return (
-    <div style={{ marginRight: "5%", marginLeft: "5%", marginBottom: "5%" }} >
-    <div class="column">
-    <h1 style={{ marginLeft: "5%", marginBottom: "5%", marginTop: "10%", fontFamily: "inherit", textAlign: "right" }}>{team.name}</h1>
-        <img src={team.image} width="150%" height="150%" alt="" />
-    </div>
-    <div class="column2">
-    <h1 style={{ marginLeft: "5%", marginBottom: "5%", marginTop: "5%", fontFamily: "inherit", textAlign: "center" }}>Team Stats</h1>
+<div className="player-card-container">
+      <div className="player-image-section">
+        <h1 className="player-name">{team.name}</h1>
+        <img src={team.image} className="player-image" alt={`${team.name}`} />
+      </div>
+      <div className="player-stats-section">
         <Table>
-            <tbody>
+          <tbody>
+              <>
+              <h2 className='player-stat-headers'>Minibats</h2>
                 <tr>
-                    <th>Team Captain</th>
-                    <td>{team.captain}</td>
-                </tr>                
-                <tr>
-                    <th>Minibat Wins</th>
-                    <td>{team.batswins}</td>
+                  <td colSpan="2">
+                    <Table bordered>
+                      <thead>
+                        <tr>
+                          <th>W</th>
+                          <th>L</th>
+                          <th>R</th>
+                          <th>RA</th>
+                          <th>Titles</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>{team.batswins}</td>
+                          <td>{team.batslosses}</td>
+                          <td>{team.runs}</td>
+                          <td>{team.runsag}</td>
+                          <td>{team.batschampionships}</td>
+                        </tr>
+                      </tbody>
+                    </Table>
+                  </td>
                 </tr>
+              </>
+              <>
                 <tr>
-                    <th>Minibat Losses</th>
-                    <td>{team.batslosses}</td>
+                  <td colSpan="2">
+                    <h2 className="player-stat-headers">Hockey</h2>
+                    <Table bordered>
+                      <thead>
+                        <tr>
+                          <th>W</th>
+                          <th>L</th>
+                          <th>G</th>
+                          <th>GA</th>
+                          <th>Titles</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>{team.hockeywins}</td>
+                          <td>{team.hockeylosses}</td>
+                          <td>{team.goals}</td>
+                          <td>{team.goalsag}</td>
+                          <td>{team.hockeychampionships}</td>
+                        </tr>
+                      </tbody>
+                    </Table>
+                  </td>
                 </tr>
-                <tr>
-                    <th>Runs</th>
-                    <td>{team.runs}</td>
-                </tr>
-                <tr>
-                    <th>Runs Against</th>
-                    <td>{team.runsag}</td>
-                </tr>
-                <tr>
-                    <th>Minibat Titles</th>
-                    <td>{team.batschampionships}</td>
-                </tr>
-                <tr>
-                    <th>Hockey Wins</th>
-                    <td>{team.hockeywins}</td>
-                </tr>
-                <tr>
-                    <th>Hockey Losses</th>
-                    <td>{team.hockeylosses}</td>
-                </tr>
-                <tr>
-                    <th>Goals</th>
-                    <td>{team.goals}</td>
-                </tr>
-                <tr>
-                    <th>Goals Against</th>
-                    <td>{team.goalsag}</td>
-                </tr>
-                <tr>
-                    <th>Hockey Titles</th>
-                    <td>{team.hockeychampionships}</td>
-                </tr>
-            </tbody>
+              </>
+          </tbody>
         </Table>
+      </div>
     </div>
-</div>
     // <div>
     //   <h1>{team.name}</h1>
       

@@ -28,7 +28,7 @@ class Minibats extends Component {
             direction = 'desc';
         }
 
-        if (key === 'average' || key === 'slug') {
+        if (key === 'average' || key === 'slug' || key === 'obp' || key === 'ops') {
             const playersWith50ABs = player.filter((p) => p.ab >= 50);
             const playersWithLessThan50ABs = player.filter((p) => p.ab < 50);
 
@@ -85,7 +85,7 @@ class Minibats extends Component {
             <div className="minibats-container">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <h1 className="minibats-title">Minibat All-Time Batting Stats</h1>
-                <p>*Must have 50 AB's to qualify for batting average/slugging % leaderboard.</p>
+                <p>*Must have 50 AB's to qualify for slashing leaderboard.</p>
                 <div className="table-responsive">
                     <Table striped bordered hover className="minibats-table">
                         <thead>
@@ -121,8 +121,20 @@ class Minibats extends Component {
                                     </Button>
                                 </th>
                                 <th>
+                                    OBP 
+                                    <Button onClick={() => this.sortData('obp')} style={{ color: 'white' }}> 
+                                        <SortNumericUp />
+                                    </Button>
+                                </th>
+                                <th>
                                     SLG 
                                     <Button onClick={() => this.sortData('slug')} style={{ color: 'white' }}> 
+                                        <SortNumericUp />
+                                    </Button>
+                                </th>
+                                <th>
+                                    OPS
+                                    <Button onClick={() => this.sortData('ops')} style={{ color: 'white' }}> 
                                         <SortNumericUp />
                                     </Button>
                                 </th>
@@ -150,6 +162,18 @@ class Minibats extends Component {
                                         <SortNumericUp />
                                     </Button>
                                 </th>
+                                <th>
+                                    R 
+                                    <Button onClick={() => this.sortData('runs')} style={{ color: 'white' }}>
+                                        <SortNumericUp />
+                                    </Button>
+                                </th>
+                                <th>
+                                    K
+                                    <Button onClick={() => this.sortData('k')} style={{ color: 'white' }}>
+                                        <SortNumericUp />
+                                    </Button>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -162,11 +186,15 @@ class Minibats extends Component {
                                     <td>{data.ab}</td>
                                     <td>{data.hits}</td>
                                     <td>{data.average}</td>
+                                    <td>{data.obp}</td>
                                     <td>{data.slug}</td>
+                                    <td>{data.ops}</td>
                                     <td>{data.doubles}</td>
                                     <td>{data.triples}</td>
                                     <td>{data.homeruns}</td>
                                     <td>{data.rbi}</td>
+                                    <td>{data.runs}</td>
+                                    <td>{data.k}</td>
                                 </tr>
                             ))}
                         </tbody>

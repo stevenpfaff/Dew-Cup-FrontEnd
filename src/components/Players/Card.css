@@ -16,6 +16,13 @@
 .player-name {
   margin-bottom: 5%;
   font-family: inherit;
+  text-align: center;
+}
+
+.player-stat-headers {
+  margin-bottom: 2%;
+  font-family: inherit;
+  text-align: center;
 }
 
 .player-image {
