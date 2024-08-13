@@ -394,6 +394,7 @@
         "goals": 17,
         "assists": 16,
         "points": 33,
+        "image":"/Images/ethan.jpg",
         "mini": "/Images/mummini.png",
         "mini2": "/Images/cudas-mini.png"
     },
@@ -424,7 +425,7 @@
         "goals": 11,
         "assists": 12,
         "points": 23,
-        "image": "/Images/bb.jpg",
+        "image": "/Images/bb2.jpg",
         "mini":"/Images/minions-mini.png"
     },
     {
@@ -513,6 +514,7 @@
         "goals": 0,
         "assists": 0,
         "points": 0,
+        "image":"/Images/ferrari.jpg",
         "mini":"/Images/baboon-mini.png"
     },
     {
@@ -659,6 +661,7 @@
         "goals": 4,
         "assists": 4,
         "points": 8,
+        "image":"/Images/weethie.jpg",
         "mini":"/Images/baboon-mini.png"
     },
     {
@@ -777,6 +780,7 @@
         "goals": 2,
         "assists": 2,
         "points": 4,
+        "image":"/Images/markiki.jpg",
         "mini":"/Images/baboon-mini.png"
     },
     {
@@ -1029,6 +1033,7 @@
         "goals": 15,
         "assists": 11,
         "points": 26,
+        "image":"/Images/zack.jpg",
         "mini": "/Images/squid-mini.png",
         "mini2":"/Images/baboon-mini.png"
     },
@@ -1320,7 +1325,8 @@
         "hgames": 11,
         "goals": 0,
         "assists": 2,
-        "points": 2
+        "points": 2,
+        "image":"/Images/zainer.jpg"
     },
     {
         "id": 47,
