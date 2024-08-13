@@ -13,7 +13,8 @@
         "runsag": 101,
         "batschampionships": 2,
         "captain": "Rick Bonis",
-        "image": "/Images/Squid.png"
+        "image": "/Images/Squid.png",
+        "mini": "/Images/squid-mini.png"
     },
     {
         "id": 2,
@@ -29,7 +30,8 @@
         "runsag": 392,
         "batschampionships": 5,
         "captain" : "Pesky Zub",
-        "image": "/Images/mum.jpg"
+        "image": "/Images/mum.jpg",
+        "mini": "/Images/mummini.png"
     },
     {
         "id": 3,
@@ -45,7 +47,8 @@
         "runsag": 0,
         "batschampionships": 0,
         "captain": "Buddy Wood",
-        "image": "/Images/budswood.jpg"
+        "image": "/Images/budswood.jpg",
+        "mini":"/Images/wood-mini.png"
     },
     {
         "id": 4,
@@ -60,7 +63,9 @@
         "runs": 0,
         "runsag": 0,
         "batschampionships": 0,
-        "captain": "Capn Bartz"
+        "captain": "Capn Bartz",
+        "image" :"/Images/cudas.png",
+        "mini":"/Images/cudas-mini.png"
     },
     {
         "id": 5,
@@ -75,7 +80,9 @@
         "runs": 78,
         "runsag": 158,
         "batschampionships": 0,
-        "captain": "BB Pfaff"
+        "captain": "BB Pfaff",
+        "image":"/Images/minions.png",
+        "mini":"/Images/minions-mini.png"
     },
     {
         "id": 6,
@@ -106,7 +113,8 @@
         "runsag": 427,
         "batschampionships": 0,
         "captain": "Sven Goose",
-        "image":"/Images/baboon.jpg"
+        "image":"/Images/baboon.jpg",
+        "mini": "/Images/baboon-mini.png"
     },
     {
         "id": 8,

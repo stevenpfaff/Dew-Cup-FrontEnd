@@ -27,7 +27,8 @@
         "goals": 7,
         "assists": 17,
         "points": 24,
-        "image": "/Images/Gbob.png"
+        "image": "/Images/Gbob.png",
+        "mini": "/Images/mummini.png"
     },
     {
         "id": 2,
@@ -56,7 +57,8 @@
         "goals": 31,
         "assists": 17,
         "points": 48,
-        "image":"/Images/bone.jpg"
+        "image":"/Images/bone.jpg",
+        "mini": "/Images/squid-mini.png"
     },
     {
         "id": 3,
@@ -85,7 +87,8 @@
         "goals": 11,
         "assists": 20,
         "points": 31,
-        "image": "/Images/zub.jpg"
+        "image": "/Images/zub.jpg",
+        "mini": "/Images/mummini.png"
     },
     {
         "id": 4,
@@ -114,7 +117,9 @@
         "goals": 9,
         "assists": 7,
         "points": 16,
-        "image": "/Images/hoag.jpg"
+        "image": "/Images/hoag.jpg",
+        "mini":"/Images/baboon-mini.png",
+        "mini2": "/Images/squid-mini.png"
     },
     {
         "id": 5,
@@ -143,7 +148,9 @@
         "goals": 18,
         "assists": 10,
         "points": 28,
-        "image": "/Images/sven.jpg"
+        "image": "/Images/sven.jpg",
+        "mini":"/Images/baboon-mini.png",
+        "mini2": "/Images/wood-mini.png"
     },
     {
         "id": 6,
@@ -172,7 +179,9 @@
         "goals": 9,
         "assists": 3,
         "points": 12,
-        "image": "/Images/boog.png"
+        "image": "/Images/boog.png",
+        "mini": "/Images/squid-mini.png",
+        "mini2": "/Images/mummini.png"
     },
     {
         "id": 7,
@@ -201,7 +210,9 @@
         "goals": 25,
         "assists": 13,
         "points": 38,
-        "image": "/Images/Chuckly.PNG"
+        "image": "/Images/Chuckly.PNG",
+        "mini": "/Images/mummini.png",
+        "mini2": "/Images/cudas-mini.png"
     },
     {
         "id": 53,
@@ -230,7 +241,8 @@
         "goals": 0,
         "assists": 0,
         "points": 0,
-        "image": "/Images/leb.png"
+        "image": "/Images/leb.png",
+        "mini":"/Images/baboon-mini.png"
     },
     {
         "id": 8,
@@ -258,7 +270,9 @@
         "hgames": 0,
         "goals": 0,
         "assists": 0,
-        "points": 0
+        "points": 0,
+        "mini":"/Images/baboon-mini.png",
+        "mini2":"/Images/minions-mini.png"
     },
     {
         "id": 9,
@@ -287,7 +301,8 @@
         "goals": 2,
         "assists": 1,
         "points": 3,
-        "image":"/Images/Noot.PNG"
+        "image":"/Images/Noot.PNG",
+        "mini":"/Images/minions-mini.png"
     },
     {
         "id": 10,
@@ -316,7 +331,9 @@
         "goals": 0,
         "assists": 0,
         "points": 0,
-        "image": "/Images/MJ.PNG"
+        "image": "/Images/MJ.PNG",
+        "mini": "/Images/squid-mini.png",
+        "mini2":"/Images/baboon-mini.png"
     },
     {
         "id": 11,
@@ -345,7 +362,8 @@
         "goals": 0,
         "assists": 0,
         "points": 0,
-        "image": "/Images/Boof.PNG"
+        "image": "/Images/Boof.PNG",
+        "mini":"/Images/baboon-mini.png"
     },
     {
         "id": 12,
@@ -373,7 +391,9 @@
         "hgames": 23,
         "goals": 17,
         "assists": 16,
-        "points": 33
+        "points": 33,
+        "mini": "/Images/mummini.png",
+        "mini2": "/Images/cudas-mini.png"
     },
     {
         "id": 13,
@@ -402,7 +422,8 @@
         "goals": 11,
         "assists": 12,
         "points": 23,
-        "image": "/Images/bb.jpg"
+        "image": "/Images/bb.jpg",
+        "mini":"/Images/minions-mini.png"
     },
     {
         "id": 14,
@@ -431,7 +452,8 @@
         "goals": 7,
         "assists": 6,
         "points": 13,
-        "image": "/Images/Brock.jpg"
+        "image": "/Images/Brock.jpg",
+        "mini": "/Images/mummini.png"
     },
     {
         "id": 15,
@@ -459,7 +481,8 @@
         "hgames": 0,
         "goals": 0,
         "assists": 0,
-        "points": 0
+        "points": 0,
+        "mini": "/Images/mummini.png"
     },
     {
         "id": 16,
@@ -487,7 +510,8 @@
         "hgames": 0,
         "goals": 0,
         "assists": 0,
-        "points": 0
+        "points": 0,
+        "mini":"/Images/baboon-mini.png"
     },
     {
         "id": 17,
@@ -516,7 +540,8 @@
         "goals": 15,
         "assists": 10,
         "points": 25,
-        "image": "/Images/hunt.jpg"
+        "image": "/Images/hunt.jpg",
+        "mini": "/Images/squid-mini.png"
     },
     {
         "id": 18,
@@ -544,7 +569,8 @@
         "hgames": 0,
         "goals": 0,
         "assists": 0,
-        "points": 0
+        "points": 0,
+        "mini":"/Images/minions-mini.png"
     },
     {
         "id": 19,
@@ -572,7 +598,8 @@
         "hgames": 0,
         "goals": 0,
         "assists": 0,
-        "points": 0
+        "points": 0,
+        "mini": "/Images/squid-mini.png"
     },
     {
         "id": 20,
@@ -600,7 +627,8 @@
         "hgames": 5,
         "goals": 0,
         "assists": 0,
-        "points": 0
+        "points": 0,
+        "mini":"/Images/minions-mini.png"
     },
     {
         "id": 21,
@@ -628,7 +656,8 @@
         "hgames": 11,
         "goals": 4,
         "assists": 4,
-        "points": 8
+        "points": 8,
+        "mini":"/Images/baboon-mini.png"
     },
     {
         "id": 22,
@@ -656,7 +685,9 @@
         "hgames": 5,
         "goals": 0,
         "assists": 0,
-        "points": 0
+        "points": 0,
+        "mini":"/Images/minions-mini.png",
+        "mini2":"/Images/mummini.png"
     },
     {
         "id": 23,
@@ -684,7 +715,8 @@
         "hgames": 0,
         "goals": 0,
         "assists": 0,
-        "points": 0
+        "points": 0,
+        "mini": "/Images/squid-mini.png"
     },
     {
         "id": 24,
@@ -712,7 +744,9 @@
         "hgames": 0,
         "goals": 0,
         "assists": 0,
-        "points": 0
+        "points": 0,
+        "mini":"/Images/minions-mini.png",
+        "mini2":"/Images/mummini.png"
     },
     {
         "id": 25,
@@ -740,7 +774,8 @@
         "hgames": 12,
         "goals": 2,
         "assists": 2,
-        "points": 4
+        "points": 4,
+        "mini":"/Images/baboon-mini.png"
     },
     {
         "id": 26,
@@ -768,7 +803,8 @@
         "hgames": 0,
         "goals": 0,
         "assists": 0,
-        "points": 0
+        "points": 0,
+        "mini":"/Images/baboon-mini.png"
     },
     {
         "id": 27,
@@ -796,7 +832,8 @@
         "hgames": 0,
         "goals": 0,
         "assists": 0,
-        "points": 0
+        "points": 0,
+        "mini":"/Images/minions-mini.png"
     },
     {
         "id": 28,
@@ -824,7 +861,8 @@
         "hgames": 0,
         "goals": 0,
         "assists": 0,
-        "points": 0
+        "points": 0,
+        "mini":"/Images/minions-mini.png"
     },
     {
         "id": 29,
@@ -852,7 +890,8 @@
         "hgames": 0,
         "goals": 0,
         "assists": 0,
-        "points": 0
+        "points": 0,
+        "mini":"/Images/minions-mini.png"
     },
     {
         "id": 30,
@@ -880,7 +919,8 @@
         "hgames": 0,
         "goals": 0,
         "assists": 0,
-        "points": 0
+        "points": 0,
+        "mini": "/Images/squid-mini.png"
     },
     {
         "id": 31,
@@ -908,7 +948,8 @@
         "hgames": 0,
         "goals": 0,
         "assists": 0,
-        "points": 0
+        "points": 0,
+        "mini": "/Images/squid-mini.png"
     },
     {
         "id": 32,
@@ -936,7 +977,8 @@
         "hgames": 0,
         "goals": 0,
         "assists": 0,
-        "points": 0
+        "points": 0,
+        "mini":"/Images/baboon-mini.png"
     },
     {
         "id": 33,
@@ -960,7 +1002,8 @@
         "goals": 19,
         "assists": 14,
         "points": 33,
-        "image":"/Images/zale.jpg"
+        "image":"/Images/zale.jpg",
+        "mini":"/Images/minions-mini.png"
     },
     {
         "id": 34,
@@ -983,7 +1026,9 @@
         "hgames": 7,
         "goals": 15,
         "assists": 11,
-        "points": 26
+        "points": 26,
+        "mini": "/Images/squid-mini.png",
+        "mini2":"/Images/baboon-mini.png"
     },
     {
         "id": 35,
@@ -1007,7 +1052,8 @@
         "goals": 10,
         "assists": 15,
         "points": 25,
-        "image": "/Images/bud.jpg"
+        "image": "/Images/bud.jpg",
+        "mini": "/Images/wood-mini.png"
     },
     {
         "id": 36,
@@ -1030,7 +1076,8 @@
         "hgames": 18,
         "goals": 15,
         "assists": 10,
-        "points": 25
+        "points": 25,
+        "mini": "/Images/cudas-mini.png"
     },
     {
         "id": 37,
@@ -1054,7 +1101,9 @@
         "goals": 10,
         "assists": 11,
         "points": 21,
-        "image": "/Images/matt.jpg"
+        "image": "/Images/matt.jpg",
+        "mini": "/Images/wood-mini.png",
+        "mini2": "/Images/squid-mini.png"
     },
     {
         "id": 38,
@@ -1077,7 +1126,9 @@
         "hgames": 18,
         "goals": 12,
         "assists": 9,
-        "points": 21
+        "points": 21,
+        "mini1": "/Images/cudas-mini.png",
+        "mini2": "/Images/wood-mini.png"
     },
     {
         "id": 39,
@@ -1100,7 +1151,8 @@
         "hgames": 16,
         "goals": 10,
         "assists": 7,
-        "points": 17
+        "points": 17,
+        "mini":"/Images/minions-mini.png"
     },
     {
         "id": 40,
@@ -1123,7 +1175,8 @@
         "hgames": 10,
         "goals": 2,
         "assists": 10,
-        "points": 12
+        "points": 12,
+        "mini": "/Images/mummini.png"
     },
     {
         "id": 41,
@@ -1169,7 +1222,8 @@
         "hgames": 5,
         "goals": 3,
         "assists": 3,
-        "points": 6
+        "points": 6,
+        "mini":"/Images/minions-mini.png"
     },
     {
         "id": 43,
@@ -1216,7 +1270,8 @@
         "goals": 3,
         "assists": 2,
         "points": 5,
-        "image":"/Images/winter.jpg"
+        "image":"/Images/winter.jpg",
+        "mini": "/Images/wood-mini.png"
     },
     {
         "id": 45,
@@ -1239,7 +1294,8 @@
         "hgames": 6,
         "goals": 2,
         "assists": 2,
-        "points": 4
+        "points": 4,
+        "mini": "/Images/squid-mini.png"
     },
     {
         "id": 46,
@@ -1309,7 +1365,8 @@
         "hgames": 5,
         "goals": 0,
         "assists": 1,
-        "points": 1
+        "points": 1,
+        "mini":"/Images/wood-mini.png"
     },
     {
         "id": 49,
@@ -1332,7 +1389,8 @@
         "hgames": 5,
         "goals": 0,
         "assists": 0,
-        "points": 0
+        "points": 0,
+        "mini":"/Images/minions-mini.png"
     },
     {
         "id": 50,
@@ -1355,7 +1413,8 @@
         "hgames": 5,
         "goals": 0,
         "assists": 0,
-        "points": 0
+        "points": 0,
+        "mini": "/Images/squid-mini.png"
     },
     {
         "id": 51,
@@ -1378,7 +1437,8 @@
         "hgames": 1,
         "goals": 0,
         "assists": 0,
-        "points": 0
+        "points": 0,
+        "mini":"/Images/baboon-mini.png"
     },
     {
         "id": 52,
@@ -1401,6 +1461,31 @@
         "hgames": 1,
         "goals": 0,
         "assists": 0,
-        "points": 0
+        "points": 0,
+        "mini":"/Images/baboon-mini.png"
+    },
+    {
+        "id": 54,
+        "name": "Charles Mayer",
+        "mbgames": 0,
+        "ab": 0,
+        "hits": 0,
+        "average": 0,
+        "doubles": 0,
+        "triples": 0,
+        "homeruns": 0,
+        "rbi": 0,
+        "ip": 0,
+        "w": 0,
+        "l": 0,
+        "sv": 0,
+        "so": 0,
+        "era": 0,
+        "hra": 0,
+        "hgames": 4,
+        "goals": 0,
+        "assists": 0,
+        "points": 0,
+        "mini": "/Images/wood-mini.png"
     }
 ]

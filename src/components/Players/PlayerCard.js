@@ -15,7 +15,33 @@ const PlayerCard = () => {
   return (
     <div className="player-card-container">
       <div className="player-image-section">
-        <h1 className="player-name">{player.name}</h1>
+        <h1 className="player-name">
+          {player.name}
+          {player.mini && (
+            <img
+              src={player.mini}
+              className="player-mini-logo"
+              style={{
+                width: '50px',
+                height: '50px',
+                marginLeft: '10px',
+                verticalAlign: 'middle'
+              }}
+            />
+          )}
+          {player.mini2 && (
+            <img
+              src={player.mini2}
+              className="player-mini-logo"
+              style={{
+                width: '50px',
+                height: '50px',
+                marginLeft: '10px',
+                verticalAlign: 'middle'
+              }}
+            />
+          )}
+        </h1>
         <img src={player.image} className="player-image" alt={`${player.name}`} />
       </div>
       <div className="player-stats-section">

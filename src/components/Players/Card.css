@@ -27,6 +27,7 @@
   font-size: 1.2em;
   margin-top: 20px;
   text-align: center;
+
 }
 
 .table-responsive {
@@ -37,13 +38,13 @@
 .table-responsive table {
   width: 100%;
   margin: 0 auto;
-  table-layout: fixed; /* Ensures even column width */
+  table-layout: fixed;
 }
 
 .table-responsive th, 
 .table-responsive td {
-  text-align: center; /* Center text */
-  padding: 8px; /* Adjust padding for better spacing */
+  text-align: center;
+  padding: 8px;
 }
 
 @media (max-width: 768px) {
@@ -61,7 +62,7 @@
 
   .player-stats-section table th, 
   .player-stats-section table td {
-      padding: 6px; /* Smaller padding for smaller screens */
+      padding: 6px;
   }
 }
 
@@ -84,7 +85,7 @@
 
   .table-responsive th, 
   .table-responsive td {
-      padding: 4px; /* Even smaller padding for tiny screens */
-      font-size: 0.8em; /* Smaller font size for readability */
+      padding: 4px;
+      font-size: 0.8em;
   }
 }

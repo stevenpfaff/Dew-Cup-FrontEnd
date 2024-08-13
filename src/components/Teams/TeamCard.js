@@ -16,6 +16,7 @@ const TeamCard = () => {
 <div className="player-card-container">
       <div className="player-image-section">
         <h1 className="player-name">{team.name}</h1>
+        <p>Captian: {team.captain}</p>
         <img src={team.image} className="player-image" alt={`${team.name}`} />
       </div>
       <div className="player-stats-section">
