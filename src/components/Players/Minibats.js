@@ -90,7 +90,7 @@ class Minibats extends Component {
                     <Table striped bordered hover className="minibats-table">
                         <thead>
                             <tr>
-                                <th>
+                            <th className="sticky-column">
                                     Player 
                                     <Button onClick={() => this.sortData('name')} style={{ color: 'white' }}>
                                         <SortNumericUp />
@@ -179,7 +179,7 @@ class Minibats extends Component {
                         <tbody>
                             {filteredBats.map((data) => (
                                 <tr key={data.id}>
-                                    <td style={{ cursor: 'pointer', color: 'blue' }} onClick={() => this.handlePlayerClick(data.id)}>
+                                    <td className="sticky-column" style={{ cursor: 'pointer', color: 'blue' }} onClick={() => this.handlePlayerClick(data.id)}>
                                         {data.name}
                                     </td>
                                     <td>{data.mbgames}</td>

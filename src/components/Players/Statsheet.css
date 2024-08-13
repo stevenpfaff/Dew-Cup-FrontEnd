@@ -18,6 +18,19 @@
     vertical-align: middle;
 }
 
+.sticky-column {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    left: 0;
+    background-color: white; /* Solid background to prevent bleed-through */
+    z-index: 100; /* High z-index to ensure it stays above other columns */
+    border-right: 2px solid #ddd; /* Slightly thicker border for clearer separation */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Shadow for visual distinction */
+    padding: 0; /* Ensure padding is consistent */
+}
+
+
+
 
 @media (max-width: 768px) {
     .minibats-container {
