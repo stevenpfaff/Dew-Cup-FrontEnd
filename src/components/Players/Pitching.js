@@ -88,7 +88,7 @@ class Pitching extends Component {
                 <h1 className="minibats-title">Minibat All-Time Pitching Stats</h1>
                 <p>*Must have 10 innings to qualify for the ERA Leaderboard</p>
                 <div className="table-responsive">
-                    <Table striped bordered hover className="minibats-table">
+                    <Table striped bordered hover className="pitching-table">
                         <thead>
                             <tr>
                                 <th>

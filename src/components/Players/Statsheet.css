@@ -11,11 +11,23 @@
 
 .table-responsive {
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    -webkit-overflow-scrolling: touch;
 }
 
 .minibats-table {
-    min-width: 1000px; /* Ensure the table is wide enough to require scrolling on smaller screens */
+    min-width: 900px;
+}
+
+.pitching-table{
+    min-width: 550px;
+}
+
+.hockey-table{
+    min-width: 375px;
+}
+
+.tourney-table{
+    min-width: 500px;
 }
 
 .minibats-table th, .minibats-table td {

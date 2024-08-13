@@ -18,7 +18,7 @@ class Tourneys extends Component {
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <h1 className="minibats-title">Tournaments</h1>
             <div className="table-responsive">
-                <Table striped bordered hover className="minibats-table">
+                <Table striped bordered hover className="tourney-table">
                     <thead>
                         <tr>
                             <th>Series</th>

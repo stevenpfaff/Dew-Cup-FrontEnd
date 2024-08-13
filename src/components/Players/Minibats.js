@@ -120,24 +120,24 @@ class Minibats extends Component {
                                         <SortNumericUp />
                                     </Button>
                                 </th>
-                                {/* <th>
+                                <th>
                                     OBP 
                                     <Button onClick={() => this.sortData('obp')} style={{ color: 'white' }}> 
                                         <SortNumericUp />
                                     </Button>
-                                </th> */}
+                                </th>
                                 <th>
                                     SLG 
                                     <Button onClick={() => this.sortData('slug')} style={{ color: 'white' }}> 
                                         <SortNumericUp />
                                     </Button>
                                 </th>
-                                {/* <th>
+                                <th>
                                     OPS
                                     <Button onClick={() => this.sortData('ops')} style={{ color: 'white' }}> 
                                         <SortNumericUp />
                                     </Button>
-                                </th> */}
+                                </th>
                                 <th>
                                     2B 
                                     <Button onClick={() => this.sortData('doubles')} style={{ color: 'white' }}>
@@ -186,9 +186,9 @@ class Minibats extends Component {
                                     <td>{data.ab}</td>
                                     <td>{data.hits}</td>
                                     <td>{data.average}</td>
-                                    {/* <td>{data.obp}</td> */}
+                                    <td>{data.obp}</td>
                                     <td>{data.slug}</td>
-                                    {/* <td>{data.ops}</td> */}
+                                    <td>{data.ops}</td>
                                     <td>{data.doubles}</td>
                                     <td>{data.triples}</td>
                                     <td>{data.homeruns}</td>

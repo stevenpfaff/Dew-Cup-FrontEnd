@@ -61,7 +61,7 @@ class Hockey extends Component {
                 <h1 className="minibats-title">Hockey All-Time Stats</h1>
                 <p>*Individual goals and assists not tracked prior to Dew Cup IV.</p>
                 <div className="table-responsive">
-                    <Table striped bordered hover className="minibats-table">
+                    <Table striped bordered hover className="hockey-table">
                     <thead>
                         <tr>
                             <th>
