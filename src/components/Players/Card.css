@@ -1,115 +1,90 @@
 .player-card-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 5% 5%;
+  padding: 20px;
 }
 
 .player-image-section {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
-}
-
-.player-name {
-  margin-bottom: 5%;
-  font-family: inherit;
-  text-align: center;
-}
-
-.player-stat-headers {
-  margin-bottom: 2%;
-  font-family: inherit;
-  text-align: center;
-}
-
-.player-image {
-  max-width: 100%;
-  height: auto;
-  width: 100%;
-}
-
-.player-stats-section {
-  flex: 2;
-  margin-left: 5%;
-}
-
-.stats-title {
-  text-align: center;
-  font-family: inherit;
-  margin-bottom: 5%;
-}
-
-.player-stats-section .stats-header {
-  text-align: center;
-  background-color: rgb(1, 58, 104);
-  color: #ffffff !important;
-  font-weight: bold;
-  font-size: 1.1em;
-}
-
-
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .player-card-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .player-stats-section {
-    margin-left: 0;
-    width: 100%;
-  }
-
-  .player-image {
-    width: 100%;
-  }
-}
-.column {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
   margin-bottom: 20px;
 }
 
-.column2 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.player-name {
+  font-size: 1.5em;
+  margin-bottom: 10px;
 }
 
-.team-name {
-  margin-left: 5%;
-  margin-bottom: 5%;
-  margin-top: 10%;
-  font-family: inherit;
-  text-align: right;
-}
-
-.team-image {
+.player-image {
   width: 100%;
+  max-width: 200px;
   height: auto;
-  max-width: 300px;
-  margin-left: 5%;
+  border-radius: 10px;
 }
 
-.team-stats-header {
-  margin-left: 5%;
-  margin-bottom: 5%;
-  margin-top: 5%;
-  font-family: inherit;
-  text-align: center;
-  background-color: #0047ab; 
-  color: white;
-  padding: 10px;
+.player-stats-section {
+  margin-bottom: 20px;
 }
 
-th.team-stats-header {
-  background-color: #0047ab; 
-  color: white; 
+.player-stat-headers {
+  font-size: 1.2em;
+  margin-top: 20px;
   text-align: center;
 }
 
+.table-responsive {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.table-responsive table {
+  width: 100%;
+  margin: 0 auto;
+  table-layout: fixed; /* Ensures even column width */
+}
+
+.table-responsive th, 
+.table-responsive td {
+  text-align: center; /* Center text */
+  padding: 8px; /* Adjust padding for better spacing */
+}
+
+@media (max-width: 768px) {
+  .player-name {
+      font-size: 1.2em;
+  }
+
+  .player-image {
+      max-width: 150px;
+  }
+
+  .player-stats-section table {
+      width: 100%;
+  }
+
+  .player-stats-section table th, 
+  .player-stats-section table td {
+      padding: 6px; /* Smaller padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .player-name {
+      font-size: 1em;
+  }
+
+  .player-image {
+      max-width: 100px;
+  }
+
+  .player-stat-headers {
+      font-size: 1em;
+  }
+
+  .table-responsive table {
+      width: 100%;
+  }
+
+  .table-responsive th, 
+  .table-responsive td {
+      padding: 4px; /* Even smaller padding for tiny screens */
+      font-size: 0.8em; /* Smaller font size for readability */
+  }
+}
