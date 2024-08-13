@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import "./Home.css"
+import DewCup from '../../Images/DewCup.png';
+import Crc from '../../Images/Code Red Classic Logo.png';
+import BudWood from '../../Images/bud wood.png'
+import PBS from '../../Images/PBS.png'
 
 class Home extends Component {
     constructor(props) {
@@ -10,7 +14,7 @@ class Home extends Component {
         return (
             <div>
                 <section id="about">
-                    <h2>Pfaff Backyard Sports</h2>
+                <img src={PBS} alt="..." height="75" width="75"></img>
                     <p>
                         We are a group of friends and family who love to get together and play backyard sports games
                         we created growing up together. We have been putting together tournaments since 2019. This 
@@ -23,7 +27,7 @@ class Home extends Component {
                 </section>
 
                 <section id="about">
-                    <h2>Dew Cup</h2>
+                    <img src={DewCup} alt="..." height="75" width="75"></img>
                     <p>
                         The Dew Cup was the original kickstarter for us and our main tournament. 
                         In 2019 our dear friend Bud Wood came from
@@ -39,7 +43,7 @@ class Home extends Component {
                 </section>
 
                 <section id="about">
-                    <h2>Buddy Wood Memorial</h2>
+                    <img src={BudWood} alt="..." height="75" width="200"></img>
                     <p>
                         In 2021 we decided to expand into another sport with our own made up game, minibat baseball. 
                         Due to Bud not being able to make it or being very good at baseball, we dedicated this tournament to him.
@@ -63,7 +67,7 @@ class Home extends Component {
                 </section>
 
                 <section id="about">
-                    <h2>Code Red Classic</h2>
+                <img src={Crc} alt="..." height="75" width="150"></img>
                     <p>
                         In 2022, the weather was near perfect for pond hockey and it allowed us to operate a second tournament.
                         Unfortunately, this could not be registered as a Dew Cup due to Mr. Wood being away at basic training.
