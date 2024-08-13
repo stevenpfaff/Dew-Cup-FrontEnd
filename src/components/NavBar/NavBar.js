@@ -14,22 +14,7 @@ function NavBar() {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link href="/">Home</Nav.Link>
-                        <NavDropdown title="Tournament Results" id="collasible-nav-dropdown">
-                        <NavDropdown.Item href="/Tournaments">Tournament List</NavDropdown.Item>
-                            <NavDropdown.Item href="https://docs.google.com/spreadsheets/d/1--Z4rwRCaDi32B6K8KxQHrcy5mvSjfYOzOZjyPbgK20/edit?gid=0#gid=0">Buddy Wood Memorial I</NavDropdown.Item>
-                            <NavDropdown.Item href="https://docs.google.com/spreadsheets/d/1--Z4rwRCaDi32B6K8KxQHrcy5mvSjfYOzOZjyPbgK20/edit?gid=1137722889#gid=1137722889">Buddy Wood Memorial II</NavDropdown.Item>
-                            <NavDropdown.Item href="https://docs.google.com/spreadsheets/d/1--Z4rwRCaDi32B6K8KxQHrcy5mvSjfYOzOZjyPbgK20/edit?gid=66455220#gid=66455220">Buddy Wood Memorial III</NavDropdown.Item>
-                            <NavDropdown.Item href="https://docs.google.com/spreadsheets/d/1--Z4rwRCaDi32B6K8KxQHrcy5mvSjfYOzOZjyPbgK20/edit?gid=541396674#gid=541396674">Buddy Wood Memorial IV</NavDropdown.Item>
-                            <NavDropdown.Item href="https://docs.google.com/spreadsheets/d/1-S9klqwfLvodu_MMg5HCc9CZSUmf3a7aA6NT9dRb7ro/edit?gid=1652233830#gid=1652233830">Code Red Classic I</NavDropdown.Item>
-                            <NavDropdown.Item href="https://docs.google.com/spreadsheets/d/1--Z4rwRCaDi32B6K8KxQHrcy5mvSjfYOzOZjyPbgK20/edit?gid=1133740162#gid=1133740162">Coors Clash I</NavDropdown.Item>
-                            <NavDropdown.Item href="https://docs.google.com/spreadsheets/d/1--Z4rwRCaDi32B6K8KxQHrcy5mvSjfYOzOZjyPbgK20/edit?gid=520397780#gid=520397780">Coors Clash II</NavDropdown.Item>
-                            <NavDropdown.Item href="https://docs.google.com/spreadsheets/d/1--Z4rwRCaDi32B6K8KxQHrcy5mvSjfYOzOZjyPbgK20/edit?gid=646347205#gid=646347205">Coors Clash III</NavDropdown.Item>
-                            <NavDropdown.Item href="https://docs.google.com/spreadsheets/d/1-S9klqwfLvodu_MMg5HCc9CZSUmf3a7aA6NT9dRb7ro/edit?gid=2068213351#gid=2068213351">Dew Cup I</NavDropdown.Item>
-                            <NavDropdown.Item href="https://docs.google.com/spreadsheets/d/1-S9klqwfLvodu_MMg5HCc9CZSUmf3a7aA6NT9dRb7ro/edit?gid=1925577430#gid=1925577430">Dew Cup II</NavDropdown.Item>
-                            <NavDropdown.Item href="https://docs.google.com/spreadsheets/d/1-S9klqwfLvodu_MMg5HCc9CZSUmf3a7aA6NT9dRb7ro/edit?gid=554011796#gid=554011796">Dew Cup III</NavDropdown.Item>
-                            <NavDropdown.Item href="https://docs.google.com/spreadsheets/d/1-S9klqwfLvodu_MMg5HCc9CZSUmf3a7aA6NT9dRb7ro/edit?gid=1203846632#gid=1203846632">Dew Cup IV</NavDropdown.Item>
-                            <NavDropdown.Item href="https://docs.google.com/spreadsheets/d/1-S9klqwfLvodu_MMg5HCc9CZSUmf3a7aA6NT9dRb7ro/edit?gid=469599973#gid=469599973">Dew Cup V</NavDropdown.Item>
-                        </NavDropdown>
+                        <Nav.Link href="/Tournaments">Tournament Results</Nav.Link>
                         <NavDropdown title="YouTube Videos" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="https://www.youtube.com/watch?v=Qij91wxzoTA&t=70s">Dew Cup II</NavDropdown.Item>
                             <NavDropdown.Item href="https://www.youtube.com/watch?v=_DZEWvEPLPU">Dew Cup IV</NavDropdown.Item>

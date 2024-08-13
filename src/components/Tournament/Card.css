@@ -1,0 +1,64 @@
+.tourney-card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5%;
+}
+
+.tourney-info-section {
+  flex: 3; /* Increase the flex value to make the table section larger */
+  margin-right: 20px; /* Add some space between the table and image */
+}
+
+.tourney-image-section {
+  flex: 1; /* Decrease the flex value to make the image section smaller */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tourney-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-left: 20px
+}
+
+.tourney-info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-left: 20px;
+}
+
+.tourney-info-table th, .tourney-info-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.tourney-info-table th {
+  background-color: rgb(1, 58, 104);
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tourney-card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tourney-info-section {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .tourney-image-section {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .tourney-image {
+    width: 100%;
+  }
+}
