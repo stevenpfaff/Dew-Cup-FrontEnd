@@ -52,7 +52,7 @@ class Teams extends Component {
     render() {
         const { team } = this.state;
         return (
-            <div className="minibats-container">
+            <div className="teams-container">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <h1 className="minibats-title">All-Time Team Stats</h1>
                 <div className="table-responsive">
@@ -137,7 +137,7 @@ class Teams extends Component {
                                             style={{ width: '30px', height: '30px', marginRight: '10px' }} 
                                         />
                                     </td>
-                                    <td style={{ cursor: 'pointer', color: 'blue' }} onClick={() => this.handleTeamClick(team.id)}>
+                                    <td className="sticky-column" style={{ cursor: 'pointer', color: 'blue' }} onClick={() => this.handlePlayerClick(team.id)}>
                                         {team.name}
                                     </td>
                                     <td>{team.hockeywins}</td>

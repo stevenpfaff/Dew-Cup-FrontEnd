@@ -83,7 +83,7 @@ class Pitching extends Component {
         const filteredPlayers = player.filter((data) => data.ip > 0);
 
         return (
-            <div className="minibats-container">
+            <div className="pitching-container">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <h1 className="minibats-title">Minibat All-Time Pitching Stats</h1>
                 <p>*Must have 10 innings to qualify for the ERA Leaderboard</p>

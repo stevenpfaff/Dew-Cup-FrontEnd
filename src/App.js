@@ -25,7 +25,7 @@ function App() {
       <Route path="/Hockey" exact component={Hockey} />
       <Route path="/player/:id" exact component={PlayerCard} />
       <Route path="/team/:id" exact component={TeamCard} />
-      <Route path="/tourney/:id" exact component={TourneyCard} />
+      <Route path="/tourney/:tourney_id" exact component={TourneyCard} />
     </div>
   )
 }

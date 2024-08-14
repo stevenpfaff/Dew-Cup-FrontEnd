@@ -3,6 +3,21 @@
     margin-bottom: 5%;
 }
 
+.pitching-container {
+    margin: 0 15%;
+    margin-bottom: 5%;
+}
+
+.hockey-container {
+    margin: 0 20%;
+    margin-bottom: 5%;
+}
+
+.teams-container {
+    margin: 0 10%;
+    margin-bottom: 5%;
+}
+
 .minibats-title {
     margin: 5% 0;
     font-family: inherit;
@@ -47,12 +62,27 @@
 
 @media (max-width: 1024px) {
     .minibats-container {
-        margin: 0 4%;
+        margin: 0 5%;
         margin-bottom: 8%;
     }
+    
+    .hockey-container {
+        margin: 0 5%;
+        margin-bottom: 5%;
+    }
 
+    .pitching-container {
+        margin: 0 5%;
+        margin-bottom: 5%;
+    }
+
+    .teams-container {
+        margin: 0 4%;
+        margin-bottom: 5%;
+    }
+    
     .minibats-title {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .minibats-table th, .minibats-table td {
@@ -66,9 +96,28 @@
         margin: 0 2%;
         margin-bottom: 10%;
     }
+    
+    .hockey-container {
+        margin: 0 2%;
+        margin-bottom: 10%;
+    }
+
+    .pitching-container {
+        margin: 0 2%;
+        margin-bottom: 10%;
+    }
+
+    .teams-container {
+        margin: 0 2%;
+        margin-bottom: 10%;
+    }
 
     .minibats-title {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
+    }
+
+    .p {
+        font-size: .5rem;
     }
 
     .minibats-table th, .minibats-table td {

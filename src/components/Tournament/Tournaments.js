@@ -10,8 +10,8 @@ class Tourneys extends Component {
         this.state = { tourney: [] }
     }
 
-    handleTourneyClick = (id) => {
-        this.props.history.push(`/tourney/${id}`);
+    handleTourneyClick = (tourney_id) => {
+        this.props.history.push(`/tourney/${tourney_id}`);
     };
 
     render() {
@@ -32,8 +32,8 @@ class Tourneys extends Component {
                     </thead>
                     <tbody>
                     {tourney.map((tourney) => (
-                                <tr key={tourney.id}>
-                                    <td style={{ cursor: 'pointer', color: 'blue' }} onClick={() => this.handleTourneyClick(tourney.id)}>
+                                <tr key={tourney.tourney_id}>
+                                    <td style={{ cursor: 'pointer', color: 'blue' }} onClick={() => this.handleTourneyClick(tourney.tourney_id)}>
                                         {tourney.tourney}
                                     </td>
                                 <td>{tourney.year}</td>

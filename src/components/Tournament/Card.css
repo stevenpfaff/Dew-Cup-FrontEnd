@@ -1,64 +1,67 @@
 .tourney-card-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 5%;
-}
-
-.tourney-info-section {
-  flex: 3; /* Increase the flex value to make the table section larger */
-  margin-right: 20px; /* Add some space between the table and image */
+  margin: 20px auto; /* Center the container horizontally */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-width: 1000px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a more polished look */
+  background-color: #fff; /* Ensure a consistent background color */
 }
 
 .tourney-image-section {
-  flex: 1; /* Decrease the flex value to make the image section smaller */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .tourney-image {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  margin-left: 20px
 }
 
-.tourney-info-table {
+.tourney-info-section {
+  margin-bottom: 20px;
+}
+
+.tourney-info-table, .tourney-games-table {
   width: 100%;
   border-collapse: collapse;
-  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
-.tourney-info-table th, .tourney-info-table td {
+.tourney-info-table th, .tourney-info-table td,
+.tourney-games-table th, .tourney-games-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.tourney-info-table th, .tourney-games-table th {
+  background-color: rgb(1, 58, 104);
+  font-weight: bold;
+}
+
+.tourney-games-section {
+  margin-top: 20px;
+}
+
+.tourney-games-table th, .tourney-games-table td {
   padding: 10px;
   text-align: left;
   border: 1px solid #ddd;
 }
 
-.tourney-info-table th {
-  background-color: rgb(1, 58, 104);
-  color: white;
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .tourney-card-container {
-    flex-direction: column;
-    align-items: center;
+    padding: 10px;
+    margin: 10px; /* Reduce margin on smaller screens */
+    max-width: 100%; /* Ensure the card takes full width on mobile */
+    box-shadow: none; /* Remove shadow for a cleaner mobile look */
   }
 
-  .tourney-info-section {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .tourney-image-section {
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  .tourney-image {
-    width: 100%;
+  .tourney-info-table th, .tourney-info-table td,
+  .tourney-games-table th, .tourney-games-table td {
+    padding: 5px; /* Reduce padding to save space on smaller screens */
   }
 }

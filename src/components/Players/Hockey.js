@@ -56,7 +56,7 @@ class Hockey extends Component {
         const { hockey } = this.state;
         const filteredHockey = hockey.filter((data) => data.hgames !== 0);
         return (
-            <div className="minibats-container">
+            <div className="hockey-container">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <h1 className="minibats-title">Hockey All-Time Stats</h1>
                 <p>*Individual goals and assists not tracked prior to Dew Cup IV.</p>
