@@ -137,7 +137,7 @@ class Teams extends Component {
                                             style={{ width: '30px', height: '30px', marginRight: '10px' }} 
                                         />
                                     </td>
-                                    <td className="sticky-column" style={{ cursor: 'pointer', color: 'blue' }} onClick={() => this.handlePlayerClick(team.id)}>
+                                    <td className="sticky-column" style={{ cursor: 'pointer', color: 'blue' }} onClick={() => this.handleTeamClick(team.id)}>
                                         {team.name}
                                     </td>
                                     <td>{team.hockeywins}</td>
