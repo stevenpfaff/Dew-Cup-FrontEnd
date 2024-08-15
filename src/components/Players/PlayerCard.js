@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import data from '../../data/playerstats.json';
 import { Table } from 'react-bootstrap';
-import './Card.css';
+import './PlayerCard.css';
 
 const PlayerCard = () => {
   const { id } = useParams();
@@ -16,40 +16,61 @@ const PlayerCard = () => {
     <div className="player-card-container">
       <div className="player-image-section">
         <h1 className="player-name">
-          {player.name}
           {player.mini && (
             <img
               src={player.mini}
               className="player-mini-logo"
+              alt="mini logo 1"
             />
           )}
           {player.mini2 && (
             <img
               src={player.mini2}
               className="player-mini-logo"
+              alt="mini logo 2"
             />
           )}
+          {player.name}
         </h1>
         <img src={player.image} className="player-image" alt={`${player.name}`} />
-        {player.championships != null && (
-          <>
-          <Table className='player-accolades-table'>
+        {(player.championships || player.awards) && (
+          <Table className="player-accolades-table">
             <thead>
               <tr>
-                <th>Championships</th>
+                {player.championships && <th>Championships</th>}
+                {player.awards && <th>Awards</th>}
               </tr>
-              </thead>
-              <tbody>
-                <td>{player.championships}</td>
-              </tbody>
+            </thead>
+            <tbody>
+              <tr>
+                {player.championships && (
+                  <td>
+                    <ul>
+                      {player.championships.map((championship, index) => (
+                        <li key={index}>{championship}</li>
+                      ))}
+                    </ul>
+                  </td>
+                )}
+                {player.awards && (
+                  <td>
+                    <ul>
+                      {player.awards.map((award, index) => (
+                        <li key={index}>{award}</li>
+                      ))}
+                    </ul>
+                  </td>
+                )}
+              </tr>
+            </tbody>
           </Table>
-          </>
         )}
-        </div>
+      </div>
       <div className="player-stats-section">
+        <h1 className='player-name'>Career Stats</h1>
         {player.mbgames > 0 && (
           <>
-            <h2 className='player-stat-headers'>Batting</h2>
+          <h5 className="player-stat-headers">Batting</h5>
             <div className="table-responsive">
               <Table bordered>
                 <thead>
@@ -92,7 +113,7 @@ const PlayerCard = () => {
         )}
         {player.ip > 0 && (
           <>
-            <h2 className="player-stat-headers">Pitching</h2>
+          <h5 className='player-stat-headers'>Pitching</h5>
             <div className="table-responsive">
               <Table bordered>
                 <thead>
@@ -123,7 +144,7 @@ const PlayerCard = () => {
         )}
         {player.hgames > 0 && (
           <>
-            <h2 className="player-stat-headers">Hockey</h2>
+          <h5 className='player-stat-headers'>Hockey</h5>
             <div className="table-responsive">
               <Table bordered>
                 <thead>
@@ -146,20 +167,6 @@ const PlayerCard = () => {
             </div>
           </>
         )}
-          {player.awards != null && (
-            <>
-          <Table className='player-accolades-table'>
-            <thead>
-              <tr>
-                <th>Awards</th>
-              </tr>
-              </thead>
-              <tbody>
-                <td>{player.awards}</td>
-              </tbody>
-          </Table>
-          </>
-          )}
       </div>
     </div>
   );

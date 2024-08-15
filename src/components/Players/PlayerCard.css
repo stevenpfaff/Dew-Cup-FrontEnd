@@ -1,23 +1,26 @@
+/* Base styles applied to all devices */
 .player-card-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
+  padding-bottom: 10px;
 }
 
 .player-image-section {
   text-align: center;
   margin-bottom: 20px;
-  margin-left: 0%
 }
 
 .player-accolades-section {
   margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 .player-accolades-table {
   border: 1px solid #ddd;
-  /* padding: 8px; */
+  padding: 8px;
   text-align: left;
+  margin-bottom: 5px;
 }
 
 .player-accolades-table th {
@@ -25,13 +28,16 @@
   font-weight: bold;
   font-size: .9em;
 }
-.player-accolades-table td{
+
+.player-accolades-table td {
   font-size: .9em;
+  padding: 5px;
 }
 
 .player-name {
-  font-size: 1.5em;
+  font-size: 2em; /* Adjust as needed */
   margin-bottom: 10px;
+  text-align: left; /* Align player name text to the left */
 }
 
 .player-image {
@@ -44,7 +50,7 @@
 .player-mini-logo {
   width: 50px;
   height: 50px;
-  margin-left: 10px;
+  margin-right: 10px;
   vertical-align: middle;
 }
 
@@ -53,40 +59,35 @@
   margin-right: 5%;
 }
 
+
 .player-stat-headers {
-  font-size: 1em;
+  font-size: 1.5em; /* Adjust this to be smaller than .player-name */
+  text-align: left; /* Align header text to the left */
+  margin-top: 15px; /* Optional: add spacing before headers */
 }
 
-/* Make tables scrollable horizontally */
 .table-responsive {
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-  margin-bottom: 20px;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 15px;
 }
 
-/* Ensure tables are responsive */
 .table-responsive table {
   width: 100%;
-  min-width: 600px; /* Minimum width to enable horizontal scrolling */
+  min-width: 600px;
   margin: 0 auto;
-  table-layout: auto; /* Allows columns to auto-size */
+  table-layout: auto;
 }
 
-/* Adjust table cells for better readability */
 .table-responsive th, 
 .table-responsive td {
   text-align: center;
-  padding: 12px; /* Increased padding for better legibility */
-  font-size: 1em; /* Default font size for readability */
+  padding: 10px;
+  font-size: 1em;
 }
 
-
-/* Responsive styles for smaller screens */
-@media (max-width: 768px) {
-  .player-name {
-    font-size: 1.2em;
-  }
-
+/* Responsive styles for screens 1024px and smaller (iPads and iPhones) */
+@media (max-width: 1024px) {
   .player-image {
     max-width: 150px;
   }
@@ -94,52 +95,57 @@
   .player-mini-logo {
     width: 40px;
     height: 40px;
-    margin-left: 10px;
+    margin-right: 10px;
     vertical-align: middle;
   }
 
+  .player-name {
+    font-size: 1.8em;
+  }
+
   .player-stat-headers {
-    font-size: 1.1em;
+    font-size: 1.2em; /* Smaller on mobile */
   }
 
   .table-responsive table {
-    min-width: 500px; /* Adjust minimum width if needed */
+    min-width: 500px;
   }
 
   .table-responsive th, 
   .table-responsive td {
-    padding: 10px; /* Increased padding for readability */
-    font-size: 0.9em; /* Slightly smaller font size */
+    padding: 10px;
+    font-size: 0.9em;
   }
 }
 
+/* Further adjustments for very small screens (480px and smaller) */
 @media (max-width: 480px) {
-  .player-name {
-    font-size: 1.5em;
-  }
-
   .player-image {
     max-width: 100px;
   }
 
   .player-mini-logo {
-    width: 30px;
-    height: 30px;
-    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
     vertical-align: middle;
   }
 
+  .player-name {
+    font-size: 1.5em;
+  }
+
   .player-stat-headers {
-    font-size: 1em;
+    font-size: 1em; /* Further reduced on very small screens */
   }
 
   .table-responsive table {
-    min-width: 300px; /* Adjust minimum width if needed */
+    min-width: 300px;
   }
 
   .table-responsive th, 
   .table-responsive td {
-    padding: 8px; /* Increased padding for readability */
-    font-size: 0.8em; /* Further reduced font size for small screens */
+    padding: 8px;
+    font-size: 0.8em;
   }
 }
