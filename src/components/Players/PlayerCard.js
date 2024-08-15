@@ -21,29 +21,31 @@ const PlayerCard = () => {
             <img
               src={player.mini}
               className="player-mini-logo"
-              style={{
-                width: '50px',
-                height: '50px',
-                marginLeft: '10px',
-                verticalAlign: 'middle'
-              }}
             />
           )}
           {player.mini2 && (
             <img
               src={player.mini2}
               className="player-mini-logo"
-              style={{
-                width: '50px',
-                height: '50px',
-                marginLeft: '10px',
-                verticalAlign: 'middle'
-              }}
             />
           )}
         </h1>
         <img src={player.image} className="player-image" alt={`${player.name}`} />
-      </div>
+        {player.championships != null && (
+          <>
+          <Table className='player-accolades-table'>
+            <thead>
+              <tr>
+                <th>Championships</th>
+              </tr>
+              </thead>
+              <tbody>
+                <td>{player.championships}</td>
+              </tbody>
+          </Table>
+          </>
+        )}
+        </div>
       <div className="player-stats-section">
         {player.mbgames > 0 && (
           <>
@@ -144,6 +146,20 @@ const PlayerCard = () => {
             </div>
           </>
         )}
+          {player.awards != null && (
+            <>
+          <Table className='player-accolades-table'>
+            <thead>
+              <tr>
+                <th>Awards</th>
+              </tr>
+              </thead>
+              <tbody>
+                <td>{player.awards}</td>
+              </tbody>
+          </Table>
+          </>
+          )}
       </div>
     </div>
   );

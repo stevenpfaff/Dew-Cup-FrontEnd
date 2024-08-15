@@ -29,7 +29,30 @@
         "points": 28,
         "image": "/Images/sven.jpg",
         "mini":"/Images/baboon-mini.png",
-        "mini2": "/Images/wood-mini.png"
+        "mini2": "/Images/wood-mini.png",
+        "championships": "Dew Cup I",
+        "2024_stats": {
+            "mbgames": 10,
+            "ab": 65,
+            "hits": 35,
+            "average": 0.538,
+            "obp": 0.545,
+            "slug": 0.923,
+            "ops": 1.469,
+            "doubles": 8,
+            "triples": 4,
+            "homeruns": 3,
+            "rbi": 21,
+            "runs": 26,
+            "k": 13,
+            "ip": 43,
+            "w": 2,
+            "l": 4,
+            "sv": 0,
+            "so": 11,
+            "era": 11.72,
+            "hra": 28
+        }
     },
     {
         "id": 2,
@@ -54,7 +77,8 @@
         "assists": 15,
         "points": 25,
         "image": "/Images/bud.jpg",
-        "mini": "/Images/wood-mini.png"
+        "mini": "/Images/wood-mini.png",
+        "awards": "Ice Technician of the Year 2021 | Ice Technician of the Year 2022"
     },
     {
         "id": 3,
@@ -85,7 +109,9 @@
         "points": 48,
         "image":"/Images/bone.jpg",
         "mini": "/Images/squid-mini.png",
-        "mini2":"/Images/baboon-mini.png"
+        "mini2":"/Images/baboon-mini.png",
+        "awards": "2022 Batting Champion | 2024 Batting Champion",
+        "championships": "Dew Cup II | Dew Cup IV | Dew Cup V | Buddy Wood Memorial II | Buddy Wood Memorial IV"
     },
     {
         "id": 4,
@@ -109,7 +135,8 @@
         "goals": 0,
         "assists": 0,
         "points": 0,
-        "mini":"/Images/baboon-mini.png"
+        "mini":"/Images/baboon-mini.png",
+        "championships": "Dew Cup I"
     },
     {
         "id": 5,
@@ -133,7 +160,8 @@
         "goals": 0,
         "assists": 0,
         "points": 0,
-        "mini":"/Images/baboon-mini.png"
+        "mini":"/Images/baboon-mini.png",
+        "championships": "Dew Cup I"
     },
     {
         "id": 6,
@@ -159,7 +187,8 @@
         "points": 21,
         "image": "/Images/matt.jpg",
         "mini": "/Images/wood-mini.png",
-        "mini2": "/Images/squid-mini.png"
+        "mini2": "/Images/squid-mini.png",
+        "championships": "Dew Cup I | Dew Cup V"
     },
     {
         "id": 7,
@@ -220,7 +249,9 @@
         "assists": 10,
         "points": 25,
         "image": "/Images/hunt.jpg",
-        "mini": "/Images/squid-mini.png"
+        "mini": "/Images/squid-mini.png",
+        "awards": "Buddy Wood Memorial II MVP",
+        "championships": "Dew Cup II | Buddy Wood Memorial II"
     },
     {
         "id": 9,
@@ -277,7 +308,9 @@
         "points": 16,
         "image": "/Images/hoag.jpg",
         "mini":"/Images/baboon-mini.png",
-        "mini2": "/Images/squid-mini.png"
+        "mini2": "/Images/squid-mini.png",
+        "awards": "Dew Cup II MVP",
+        "championships": "Dew Cup II"
     },  
     {
         "id": 11,
@@ -308,7 +341,9 @@
         "points": 12,
         "image": "/Images/boog.png",
         "mini": "/Images/squid-mini.png",
-        "mini2": "/Images/mummini.png"
+        "mini2": "/Images/mummini.png",
+        "awards": "Coors Clash I MVP | Dew Cup IV MVP | 2022 Homerun Champion",
+        "championships":"Dew Cup II | Dew Cup IV  | Buddy Wood Memorial II | Coors Clash I"
     },
     {
         "id": 12,
@@ -338,7 +373,9 @@
         "assists": 20,
         "points": 31,
         "image": "/Images/zub.jpg",
-        "mini": "/Images/mummini.png"
+        "mini": "/Images/mummini.png",
+        "awards": "Jemile Weeks I | Jemile Weeks III | 2024 Homerun Champion",
+        "championships": "Dew Cup III | Code Red Classic I | Buddy Wood Memorial I | Buddy Wood Memorial III "
     },
     {
         "id": 13,
@@ -368,7 +405,9 @@
         "assists": 17,
         "points": 24,
         "image": "/Images/Gbob.png",
-        "mini": "/Images/mummini.png"
+        "mini": "/Images/mummini.png",
+        "awards": "Dew Cup III MVP | Buddy Wood Memorial I MVP | Buddy Wood Memorial III MVP | Jemile Weeks IV | Coors Clash II MVP | Coors Clash III MVP | 2023 Triple Crown",
+        "championships": "Dew Cup III | Buddy Wood Memorial I | Buddy Wood Memorial III"
     },
     {
         "id": 14,
@@ -429,7 +468,8 @@
         "assists": 6,
         "points": 13,
         "image": "/Images/Brock.jpg",
-        "mini": "/Images/mummini.png"
+        "mini": "/Images/mummini.png",
+        "championships": "Buddy Wood Memorial I"
     },
     {
         "id": 16,
@@ -746,7 +786,8 @@
         "goals": 15,
         "assists": 10,
         "points": 25,
-        "mini": "/Images/cudas-mini.png"
+        "mini": "/Images/cudas-mini.png",
+        "championships": "Dew Cup III"
     },
     {
         "id": 28,
@@ -895,7 +936,8 @@
         "assists": 0,
         "points": 0,
         "mini":"/Images/minions-mini.png",
-        "mini2":"/Images/mummini.png"
+        "mini2":"/Images/mummini.png",
+        "championships": "Buddy Wood Memorial I"
     },
     {
         "id": 33,
@@ -984,7 +1026,8 @@
         "points": 38,
         "image": "/Images/Chuckly.PNG",
         "mini": "/Images/mummini.png",
-        "mini2": "/Images/cudas-mini.png"
+        "mini2": "/Images/cudas-mini.png",
+        "championships": "Code Red Classic I | Buddy Wood Memorial III"
     },
     {
         "id": 36,
@@ -1080,7 +1123,8 @@
         "goals": 2,
         "assists": 2,
         "points": 4,
-        "mini": "/Images/squid-mini.png"
+        "mini": "/Images/squid-mini.png",
+        "championships": "Dew Cup IV"
     },
     {
         "id": 40,
@@ -1183,7 +1227,8 @@
         "points": 0,
         "image": "/Images/MJ.PNG",
         "mini": "/Images/squid-mini.png",
-        "mini2":"/Images/baboon-mini.png"
+        "mini2":"/Images/baboon-mini.png",
+        "championships": "Buddy Wood Memorial II | Buddy Wood Memorial IV"
     },
     {
         "id": 44,
@@ -1212,7 +1257,8 @@
         "goals": 0,
         "assists": 0,
         "points": 0,
-        "mini": "/Images/mummini.png"
+        "mini": "/Images/mummini.png",
+        "championships": "Buddy Wood Memorial III"
     },
     {
         "id": 45,
@@ -1436,7 +1482,8 @@
         "goals": 0,
         "assists": 0,
         "points": 0,
-        "mini": "/Images/squid-mini.png"
+        "mini": "/Images/squid-mini.png",
+        "championships": "Buddy Wood Memorial IV"
     },
     {
         "id": 53,
@@ -1465,7 +1512,8 @@
         "goals": 0,
         "assists": 0,
         "points": 0,
-        "mini": "/Images/squid-mini.png"
+        "mini": "/Images/squid-mini.png",
+        "championships": "Buddy Wood Memorial IV"
     },
     {
         "id": 54,

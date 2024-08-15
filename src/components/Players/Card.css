@@ -7,7 +7,26 @@
 .player-image-section {
   text-align: center;
   margin-bottom: 20px;
-  margin-left: 5%
+  margin-left: 0%
+}
+
+.player-accolades-section {
+  margin-top: 10px;
+}
+
+.player-accolades-table {
+  border: 1px solid #ddd;
+  /* padding: 8px; */
+  text-align: left;
+}
+
+.player-accolades-table th {
+  background-color: rgb(1, 58, 104);
+  font-weight: bold;
+  font-size: .9em;
+}
+.player-accolades-table td{
+  font-size: .9em;
 }
 
 .player-name {
@@ -22,15 +41,20 @@
   border-radius: 10px;
 }
 
+.player-mini-logo {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
 .player-stats-section {
   margin-bottom: 20px;
   margin-right: 5%;
 }
 
 .player-stat-headers {
-  font-size: 1.2em;
-  margin-top: 20px;
-  text-align: center;
+  font-size: 1em;
 }
 
 /* Make tables scrollable horizontally */
@@ -57,7 +81,6 @@
 }
 
 
-
 /* Responsive styles for smaller screens */
 @media (max-width: 768px) {
   .player-name {
@@ -66,6 +89,13 @@
 
   .player-image {
     max-width: 150px;
+  }
+
+  .player-mini-logo {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    vertical-align: middle;
   }
 
   .player-stat-headers {
@@ -85,11 +115,18 @@
 
 @media (max-width: 480px) {
   .player-name {
-    font-size: 1em;
+    font-size: 1.5em;
   }
 
   .player-image {
     max-width: 100px;
+  }
+
+  .player-mini-logo {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    vertical-align: middle;
   }
 
   .player-stat-headers {
