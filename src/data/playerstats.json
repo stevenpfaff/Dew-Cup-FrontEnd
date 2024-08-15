@@ -345,7 +345,7 @@
         "mini": "/Images/squid-mini.png",
         "mini2": "/Images/mummini.png",
         "awards": ["Coors Clash I MVP", "Dew Cup IV MVP", "2022 Homerun Champion"],
-        "championships": ["Dew Cup II", "Dew Cup IV", "Buddy Wood Memorial II", "Coors Clash I"]
+        "championships": ["Dew Cup II", "Dew Cup IV", "Buddy Wood Memorial II"]
     },
     {
         "id": 12,
