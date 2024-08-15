@@ -123,7 +123,7 @@ const PlayerCard = () => {
                     <th>L</th>
                     <th>SV</th>
                     <th>ERA</th>
-                    <th>SO</th>
+                    <th>K</th>
                     <th>HR</th>
                   </tr>
                 </thead>
