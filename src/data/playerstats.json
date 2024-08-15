@@ -610,7 +610,8 @@
         "points": 23,
         "image": "/Images/bb2.jpg",
         "mini":"/Images/minions-mini.png",
-        "awards": ["Dew Cup IV", "Jemile Weeks II"]
+        "awards": ["Jemile Weeks II"],
+        "championships":["Dew Cup IV"] 
     },
     {
         "id": 21,
