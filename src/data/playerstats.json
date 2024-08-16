@@ -44,7 +44,7 @@
             "homeruns": 3,
             "rbi": 21,
             "runs": 26,
-            "k": 13,
+            "k": 3,
             "ip": 43,
             "w": 2,
             "l": 4,
@@ -111,7 +111,22 @@
         "mini": "/Images/squid-mini.png",
         "mini2":"/Images/baboon-mini.png",
         "awards": ["2022 Batting Champion","2024 Batting Champion"],
-        "championships": ["Dew Cup II", "Dew Cup IV", "Dew Cup V", "Buddy Wood Memorial II", "Buddy Wood Memorial IV"]
+        "championships": ["Dew Cup II", "Dew Cup IV", "Dew Cup V", "Buddy Wood Memorial II", "Buddy Wood Memorial IV"],
+        "2024_stats": {
+            "mbgames": 11,
+            "ab": 82,
+            "hits": 50,
+            "average": 0.610,
+            "obp": 0.614,
+            "slug": 0.976,
+            "ops": 1.590,
+            "doubles": 15,
+            "triples": 3,
+            "homeruns": 3,
+            "rbi": 22,
+            "runs": 37,
+            "k": 1
+        }
     },
     {
         "id": 4,
@@ -312,7 +327,29 @@
         "mini":"/Images/baboon-mini.png",
         "mini2": "/Images/squid-mini.png",
         "awards": ["Dew Cup II MVP"],
-        "championships": ["Dew Cup II"]
+        "championships": ["Dew Cup II"],
+        "2024_stats": {
+            "mbgames": 8,
+            "ab": 50,
+            "hits": 19,
+            "average": 0.388,
+            "obp": 0.360,
+            "slug": 0.735,
+            "ops": 1.095,
+            "doubles": 2,
+            "triples": 0,
+            "homeruns": 5,
+            "rbi": 20,
+            "runs": 14,
+            "k": 4,
+            "ip": 5.1,
+            "w": 0,
+            "l": 1,
+            "sv": 0,
+            "so": 2,
+            "era": 21.01,
+            "hra": 2
+        }
     },  
     {
         "id": 11,
@@ -377,7 +414,21 @@
         "image": "/Images/zub.jpg",
         "mini": "/Images/mummini.png",
         "awards": ["Jemile Weeks I", "Jemile Weeks III", "2024 Homerun Champion"],
-        "championships": ["Dew Cup III", "Code Red Classic I",  "Buddy Wood Memorial I", "Buddy Wood Memorial III"]
+        "championships": ["Dew Cup III", "Code Red Classic I",  "Buddy Wood Memorial I", "Buddy Wood Memorial III"],
+        "2024_stats": {
+            "mbgames": 11,
+            "ab": 91,
+            "hits": 52,
+            "average": 0.591,
+            "obp": 0.538,
+            "slug": 1.295,
+            "ops": 1.834,
+            "doubles": 10,
+            "triples": 2,
+            "homeruns": 16,
+            "rbi": 39,
+            "runs": 37,
+            "k": 3        }
     },
     {
         "id": 13,
@@ -409,7 +460,29 @@
         "image": "/Images/Gbob.png",
         "mini": "/Images/mummini.png",
         "awards": ["Dew Cup III MVP", "Buddy Wood Memorial I MVP", "Buddy Wood Memorial III MVP", "Jemile Weeks IV", "Coors Clash II MVP", "Coors Clash III MVP", "2023 Triple Crown"],
-        "championships": ["Dew Cup III", "Buddy Wood Memorial I", "Buddy Wood Memorial III"]
+        "championships": ["Dew Cup III", "Buddy Wood Memorial I", "Buddy Wood Memorial III"],
+        "2024_stats": {
+            "mbgames": 11,
+            "ab": 86,
+            "hits": 50,
+            "average": 0.581,
+            "obp": 0.563,
+            "slug": 1.128,
+            "ops": 1.709,
+            "doubles": 16,
+            "triples": 2,
+            "homeruns": 9,
+            "rbi": 28,
+            "runs": 35,
+            "k": 2,
+            "ip": 2,
+            "w": 0,
+            "l": 0,
+            "sv": 2,
+            "so": 0,
+            "era": 3.50,
+            "hra": 0
+        }
     },
     {
         "id": 14,
@@ -440,7 +513,29 @@
         "points": 33,
         "image":"/Images/ethan.jpg",
         "mini": "/Images/mummini.png",
-        "mini2": "/Images/cudas-mini.png"
+        "mini2": "/Images/cudas-mini.png",
+        "2024_stats": {
+            "mbgames": 5,
+            "ab": 29,
+            "hits": 10,
+            "average": 0.345,
+            "obp": 0.345,
+            "slug": 0.586,
+            "ops": 0.931,
+            "doubles": 2,
+            "triples": 1,
+            "homeruns": 1,
+            "rbi": 4,
+            "runs": 8,
+            "k": 3,
+            "ip": 5.2,
+            "w": 0,
+            "l": 1,
+            "sv": 0,
+            "so": 5,
+            "era": 3.70,
+            "hra": 1
+        }
     },
     {
         "id": 15,
@@ -471,7 +566,29 @@
         "points": 13,
         "image": "/Images/Brock.jpg",
         "mini": "/Images/mummini.png",
-        "championships": ["Buddy Wood Memorial I"]
+        "championships": ["Buddy Wood Memorial I"],
+        "2024_stats": {
+            "mbgames": 2,
+            "ab": 14,
+            "hits": 5,
+            "average": 0.385,
+            "obp": 0.385,
+            "slug": 0.462,
+            "ops": 0.846,
+            "doubles": 1,
+            "triples": 0,
+            "homeruns": 0,
+            "rbi": 2,
+            "runs": 2,
+            "k": 0,
+            "ip": 2.2,
+            "w": 0,
+            "l": 1,
+            "sv": 0,
+            "so": 1,
+            "era": 27.04,
+            "hra": 4
+        }
     },
     {
         "id": 16,
@@ -611,7 +728,22 @@
         "image": "/Images/bb2.jpg",
         "mini":"/Images/minions-mini.png",
         "awards": ["Jemile Weeks II"],
-        "championships":["Dew Cup IV"] 
+        "championships":["Dew Cup IV"] ,
+        "2024_stats": {
+            "mbgames": 2,
+            "ab": 14,
+            "hits": 5,
+            "average": 0.357,
+            "obp": 0.357,
+            "slug": 0.500,
+            "ops": 0.857,
+            "doubles": 2,
+            "triples": 0,
+            "homeruns": 0,
+            "rbi": 2,
+            "runs": 3,
+            "k": 0
+        }
     },
     {
         "id": 21,
@@ -821,7 +953,29 @@
         "assists": 0,
         "points": 0,
         "mini":"/Images/baboon-mini.png",
-        "mini2":"/Images/minions-mini.png"
+        "mini2":"/Images/minions-mini.png",
+        "2024_stats": {
+            "mbgames": 8,
+            "ab": 63,
+            "hits": 20,
+            "average": 0.323,
+            "obp": 0.302,
+            "slug": 0.581,
+            "ops": 0.882,
+            "doubles": 7,
+            "triples": 0,
+            "homeruns": 3,
+            "rbi": 19,
+            "runs": 15,
+            "k": 3,
+            "ip": 51.1,
+            "w": 4,
+            "l": 5,
+            "sv": 0,
+            "so": 22,
+            "era": 13.91,
+            "hra": 29
+        }
     },
     {
         "id": 29,
@@ -881,7 +1035,22 @@
         "assists": 1,
         "points": 3,
         "image":"/Images/Noot.PNG",
-        "mini":"/Images/minions-mini.png"
+        "mini":"/Images/minions-mini.png",
+        "2024_stats": {
+            "mbgames": 5,
+            "ab": 29,
+            "hits": 8,
+            "average": 0.310,
+            "obp": 0.310,
+            "slug": 0.414,
+            "ops": 0.724,
+            "doubles": 0,
+            "triples": 0,
+            "homeruns": 1,
+            "rbi": 4,
+            "runs": 7,
+            "k": 3
+        }
     },
     {
         "id": 31,
@@ -1032,7 +1201,29 @@
         "mini": "/Images/mummini.png",
         "mini2": "/Images/cudas-mini.png",
         "championships": ["Code Red Classic I", "Buddy Wood Memorial III"],
-        "awards": ["Code Red Classic I MVP"]
+        "awards": ["Code Red Classic I MVP"],
+        "2024_stats": {
+            "mbgames": 9,
+            "ab": 79,
+            "hits": 38,
+            "average": 0.481,
+            "obp": 0.481,
+            "slug": 1.089,
+            "ops": 1.570,
+            "doubles": 9,
+            "triples": 0,
+            "homeruns": 13,
+            "rbi": 33,
+            "runs": 33,
+            "k": 12,
+            "ip": 2,
+            "w": 0,
+            "l": 0,
+            "sv": 0,
+            "so": 0,
+            "era": 14.00,
+            "hra": 2
+        }
     },
     {
         "id": 36,
@@ -1233,7 +1424,22 @@
         "image": "/Images/MJ.PNG",
         "mini": "/Images/squid-mini.png",
         "mini2":"/Images/baboon-mini.png",
-        "championships": ["Buddy Wood Memorial II", "Buddy Wood Memorial IV"]
+        "championships": ["Buddy Wood Memorial II", "Buddy Wood Memorial IV"],
+        "2024_stats": {
+            "mbgames": 8,
+            "ab": 57,
+            "hits": 31,
+            "average": 0.544,
+            "obp": 0.517,
+            "slug": 1.263,
+            "ops": 1.780,
+            "doubles": 4,
+            "triples": 2,
+            "homeruns": 11,
+            "rbi": 30,
+            "runs": 23,
+            "k": 6
+        }
     },
     {
         "id": 44,
@@ -1263,7 +1469,29 @@
         "assists": 0,
         "points": 0,
         "mini": "/Images/mummini.png",
-        "championships": ["Buddy Wood Memorial III"]
+        "championships": ["Buddy Wood Memorial III"],
+        "2024_stats": {
+            "mbgames": 2,
+            "ab": 17,
+            "hits": 11,
+            "average": 0.647,
+            "obp": 0.647,
+            "slug": 1.000,
+            "ops": 1.647,
+            "doubles": 0,
+            "triples": 0,
+            "homeruns": 2,
+            "rbi": 9,
+            "runs": 6,
+            "k": 0,
+            "ip": 7,
+            "w": 1,
+            "l": 0,
+            "sv": 0,
+            "so": 1,
+            "era": 11.00,
+            "hra": 0
+        }
     },
     {
         "id": 45,
@@ -1293,7 +1521,29 @@
         "assists": 0,
         "points": 0,
         "image": "/Images/leb.png",
-        "mini":"/Images/baboon-mini.png"
+        "mini":"/Images/baboon-mini.png",
+        "2024_stats": {
+            "mbgames": 10,
+            "ab": 69,
+            "hits": 39,
+            "average": 0.565,
+            "obp": 0.549,
+            "slug": 1.159,
+            "ops": 1.709,
+            "doubles": 6,
+            "triples": 1,
+            "homeruns": 11,
+            "rbi": 35,
+            "runs": 32,
+            "k": 4,
+            "ip": 6,
+            "w": 1,
+            "l": 0,
+            "sv": 0,
+            "so": 2,
+            "era": 9.33,
+            "hra": 5
+        }
     },
     {
         "id": 46,
@@ -1429,7 +1679,22 @@
         "goals": 0,
         "assists": 0,
         "points": 0,
-        "mini":"/Images/minions-mini.png"
+        "mini":"/Images/minions-mini.png",
+        "2024_stats": {
+            "mbgames": 1,
+            "ab": 4,
+            "hits": 0,
+            "average": 0.00,
+            "obp": 0.000,
+            "slug": 0.000,
+            "ops": 0.000,
+            "doubles": 0,
+            "triples": 0,
+            "homeruns": 0,
+            "rbi": 0,
+            "runs": 0,
+            "k": 1
+        }
     },
     {
         "id": 51,
@@ -1458,7 +1723,22 @@
         "goals": 0,
         "assists": 0,
         "points": 0,
-        "mini":"/Images/baboon-mini.png"
+        "mini":"/Images/baboon-mini.png",
+        "2024_stats": {
+            "mbgames": 8,
+            "ab": 54,
+            "hits": 18,
+            "average": 0.333,
+            "obp": 0.309,
+            "slug": 0.389,
+            "ops": 0.698,
+            "doubles": 3,
+            "triples": 0,
+            "homeruns": 0,
+            "rbi": 12,
+            "runs": 13,
+            "k": 6
+        }
     },
     {
         "id": 52,
@@ -1489,7 +1769,29 @@
         "points": 0,
         "mini": "/Images/squid-mini.png",
         "championships": ["Buddy Wood Memorial IV"],
-        "awards": ["Buddy Wood Memorial IV MVP"]
+        "awards": ["Buddy Wood Memorial IV MVP"],
+        "2024_stats": {
+            "mbgames": 5,
+            "ab": 35,
+            "hits": 12,
+            "average": 0.343,
+            "obp": 0.343,
+            "slug": 0.714,
+            "ops": 1.057,
+            "doubles": 1,
+            "triples": 1,
+            "homeruns": 3,
+            "rbi": 12,
+            "runs": 13,
+            "k": 1,
+            "ip": 26,
+            "w": 4,
+            "l": 1,
+            "sv": 0,
+            "so": 10,
+            "era": 7.54,
+            "hra": 12
+        }
     },
     {
         "id": 53,
@@ -1519,7 +1821,22 @@
         "assists": 0,
         "points": 0,
         "mini": "/Images/squid-mini.png",
-        "championships": ["Buddy Wood Memorial IV"]
+        "championships": ["Buddy Wood Memorial IV"],
+        "2024_stats": {
+            "mbgames": 5,
+            "ab": 32,
+            "hits": 11,
+            "average": 0.344,
+            "obp": 0.303,
+            "slug": 0.406,
+            "ops": 0.709,
+            "doubles": 2,
+            "triples": 1,
+            "homeruns": 0,
+            "rbi": 8,
+            "runs": 8,
+            "k": 1
+        }
     },
     {
         "id": 54,
@@ -1548,7 +1865,22 @@
         "goals": 0,
         "assists": 0,
         "points": 0,
-        "mini":"/Images/baboon-mini.png"
+        "mini":"/Images/baboon-mini.png",
+        "2024_stats": {
+            "mbgames": 2,
+            "ab": 14,
+            "hits": 10,
+            "average": 0.714,
+            "obp": 0.714,
+            "slug": 1.143,
+            "ops": 1.857,
+            "doubles": 3,
+            "triples": 0,
+            "homeruns": 1,
+            "rbi": 2,
+            "runs": 6,
+            "k": 1
     }
+}
     
 ]

@@ -10,6 +10,7 @@ import Tourneys from './components/Tournament/Tournaments';
 import PlayerCard from './components/Players/PlayerCard';
 import TeamCard from './components/Teams/TeamCard';
 import TourneyCard from './components/Tournament/TourneyCard';
+import Batting2024 from './components/Players/2024batting';
 
 
 
@@ -26,6 +27,7 @@ function App() {
       <Route path="/player/:id" exact component={PlayerCard} />
       <Route path="/team/:id" exact component={TeamCard} />
       <Route path="/tourney/:tourney_id" exact component={TourneyCard} />
+      <Route path="/Batting/2024" exact component={Batting2024} />
     </div>
   )
 }

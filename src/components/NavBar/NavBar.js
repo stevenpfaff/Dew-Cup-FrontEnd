@@ -27,7 +27,7 @@ function NavBar() {
                         <NavDropdown title="Minibat Stats" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="/Batting">Batting Stats</NavDropdown.Item>
                             <NavDropdown.Item href="/Pitching">Pitching Stats</NavDropdown.Item>
-                            <NavDropdown.Item href="https://docs.google.com/spreadsheets/d/1--Z4rwRCaDi32B6K8KxQHrcy5mvSjfYOzOZjyPbgK20/edit?gid=1710491935#gid=1710491935">2024 Season Stats</NavDropdown.Item>
+                            <NavDropdown.Item href="/Batting/2024">2024 Batting Stats</NavDropdown.Item>
                             <NavDropdown.Item href="https://docs.google.com/spreadsheets/d/1--Z4rwRCaDi32B6K8KxQHrcy5mvSjfYOzOZjyPbgK20/edit?gid=2146129277#gid=2146129277">2023 Season Stats</NavDropdown.Item>
                             <NavDropdown.Item href="https://docs.google.com/spreadsheets/d/1--Z4rwRCaDi32B6K8KxQHrcy5mvSjfYOzOZjyPbgK20/edit?gid=802527048#gid=802527048">2022 Season Stats</NavDropdown.Item>
                         </NavDropdown> 
