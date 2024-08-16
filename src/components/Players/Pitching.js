@@ -151,7 +151,7 @@ class Pitching extends Component {
                                     <td>{data.w}</td>
                                     <td>{data.l}</td>
                                     <td>{data.sv}</td>
-                                    <td>{data.era}</td>
+                                    <td>{parseFloat(data.era).toFixed(2)}</td>
                                     <td>{data.so}</td>
                                     <td>{data.hra}</td>
                                 </tr>

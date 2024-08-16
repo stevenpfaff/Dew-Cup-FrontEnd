@@ -185,10 +185,10 @@ class Minibats extends Component {
                                     <td>{data.mbgames}</td>
                                     <td>{data.ab}</td>
                                     <td>{data.hits}</td>
-                                    <td>{data.average}</td>
-                                    <td>{data.obp}</td>
-                                    <td>{data.slug}</td>
-                                    <td>{data.ops}</td>
+                                    <td>{parseFloat(data.average).toFixed(3)}</td>
+                                    <td>{parseFloat(data.obp).toFixed(3)}</td>
+                                    <td>{parseFloat(data.slug).toFixed(3)}</td>
+                                    <td>{parseFloat(data.ops).toFixed(3)}</td>
                                     <td>{data.doubles}</td>
                                     <td>{data.triples}</td>
                                     <td>{data.homeruns}</td>

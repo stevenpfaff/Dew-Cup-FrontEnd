@@ -95,10 +95,10 @@ const PlayerCard = () => {
                     <td>{player.mbgames}</td>
                     <td>{player.ab}</td>
                     <td>{player.hits}</td>
-                    <td>{player.average}</td>
-                    <td>{player.obp}</td>
-                    <td>{player.slug}</td>
-                    <td>{player.ops}</td>
+                    <td>{parseFloat(player.average).toFixed(3)}</td>
+                    <td>{parseFloat(player.obp).toFixed(3)}</td>
+                    <td>{parseFloat(player.slug).toFixed(3)}</td>
+                    <td>{parseFloat(player.ops).toFixed(3)}</td>
                     <td>{player.doubles}</td>
                     <td>{player.triples}</td>
                     <td>{player.homeruns}</td>
@@ -133,7 +133,7 @@ const PlayerCard = () => {
                     <td>{player.w}</td>
                     <td>{player.l}</td>
                     <td>{player.sv}</td>
-                    <td>{player.era}</td>
+                    <td>{parseFloat(player.era).toFixed(2)}</td>
                     <td>{player.so}</td>
                     <td>{player.hra}</td>
                   </tr>

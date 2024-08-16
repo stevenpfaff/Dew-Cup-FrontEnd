@@ -11,10 +11,13 @@
         "batslosses": 19,
         "runs": 410,
         "runsag": 427,
+        "average": 0.492,
+        "homeruns": 121,
         "batschampionships": 0,
         "captain": "Sven Goose",
         "image":"/Images/baboon.jpg",
-        "mini": "/Images/baboon-mini.png"
+        "mini": "/Images/baboon-mini.png",
+        "titles": ["Dew Cup I"]
     },
     {
         "id": 2,
@@ -45,10 +48,13 @@
         "batslosses": 3,
         "runs": 124,
         "runsag": 101,
+        "average": 0.503,
+        "homeruns": 27,
         "batschampionships": 2,
         "captain": "Rick Bonis",
         "image": "/Images/Squid.png",
-        "mini": "/Images/squid-mini.png"
+        "mini": "/Images/squid-mini.png",
+        "titles": ["Dew Cup II", "Dew Cup IV", "Dew Cup V", "Buddy Wood Memorial II", "Buddy Wood Memorial IV"]
     },
     {
         "id": 4,
@@ -62,10 +68,13 @@
         "batslosses": 16,
         "runs": 481,
         "runsag": 392,
+        "average": 0.518,
+        "homeruns": 155,
         "batschampionships": 5,
         "captain" : "Pesky Zub",
         "image": "/Images/mum.jpg",
-        "mini": "/Images/mummini.png"
+        "mini": "/Images/mummini.png",
+        "titles": ["Dew Cup III", "Code Red Classic I", "Buddy Wood Memorial I", "Buddy Wood Memorial III", "Coors Clash I", "Coors Clash II", "Coors Clash III"]
     },
     {
         "id": 5,
@@ -79,6 +88,8 @@
         "batslosses": 15,
         "runs": 78,
         "runsag": 158,
+        "average": 0.415,
+        "homeruns": 30,
         "batschampionships": 0,
         "captain": "BB Pfaff",
         "image":"/Images/minions.png",
