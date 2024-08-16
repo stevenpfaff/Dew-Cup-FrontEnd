@@ -5,22 +5,21 @@ import Button from '@material-ui/core/Button';
 import data from '../../data/playerstats.json';
 import './Statsheet.css';
 
-class Batting2024 extends Component {
+class Batting2022 extends Component {
     constructor(props) {
         super(props);
 
-        // Extract only the 2024 stats and filter out players with 0 or null mbgames
-        const playerData2024 = data
-            .filter((player) => player["2024_stats"] && player["2024_stats"].mbgames > 0)
+        const playerData2022 = data
+            .filter((player) => player["2022_stats"] && player["2022_stats"].mbgames > 0)
             .map((player) => {
-                const stats2024 = player["2024_stats"];
+                const stats2022 = player["2022_stats"];
                 return {
                     ...player,
-                    ...stats2024, // Spread the 2024 stats over the main player object
+                    ...stats2022,
                 };
             });
 
-        const sortedPlayerData = [...playerData2024].sort((a, b) => b.homeruns - a.homeruns);
+        const sortedPlayerData = [...playerData2022].sort((a, b) => b.homeruns - a.homeruns);
 
         this.state = {
             player: sortedPlayerData,
@@ -94,7 +93,7 @@ class Batting2024 extends Component {
         return (
             <div className="minibats-container">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <h1 className="minibats-title">2024 Batting Stats</h1>
+                <h1 className="minibats-title">2022 Batting Stats</h1>
                 <div className="table-responsive">
                     <Table striped bordered hover className="minibats-table">
                         <thead>
@@ -214,4 +213,4 @@ class Batting2024 extends Component {
     }
 }
 
-export default Batting2024;
+export default Batting2022;

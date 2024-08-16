@@ -29,8 +29,8 @@ class Minibats extends Component {
         }
 
         if (key === 'average' || key === 'slug' || key === 'obp' || key === 'ops') {
-            const playersWith50ABs = player.filter((p) => p.ab >= 50);
-            const playersWithLessThan50ABs = player.filter((p) => p.ab < 50);
+            const playersWith50ABs = player.filter((p) => p.ab >= 90);
+            const playersWithLessThan50ABs = player.filter((p) => p.ab < 90);
 
             const sorted50ABsData = [...playersWith50ABs].sort((a, b) => {
                 if (a[key] > b[key]) {
@@ -85,7 +85,7 @@ class Minibats extends Component {
             <div className="minibats-container">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <h1 className="minibats-title">Minibat All-Time Batting Stats</h1>
-                <p>*Must have 50 AB's to qualify for slashing leaderboard.</p>
+                <p>*Must have 90 AB's to qualify for slashing leaderboard.</p>
                 <div className="table-responsive">
                     <Table striped bordered hover className="minibats-table">
                         <thead>
