@@ -19,13 +19,13 @@ class Pitching2024 extends Component {
                 };
             });
 
-        const sortedPlayerData = [...playerData2024].sort((a, b) => b.homeruns - a.homeruns);
+        const sortedPlayerData = [...playerData2024].sort((a, b) => a.era - b.era);
 
         this.state = {
             player: sortedPlayerData,
             sortConfig: {
                 key: 'era',
-                direction: 'asc',
+                direction: 'desc',
             },
         };
     }
@@ -92,11 +92,11 @@ class Pitching2024 extends Component {
         const filteredPlayers = player.filter((data) => data.ip > 0 || data.ip == null);
 
         return (
-            <div className="minibats-container">
+            <div className="pitching-container">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <h1 className="minibats-title">2024 Pitching Stats</h1>
                 <div className="table-responsive">
-                    <Table striped bordered hover className="minibats-table">
+                    <Table striped bordered hover className="pitching-table">
                         <thead>
                             <tr>
                                 <th className="sticky-column">
