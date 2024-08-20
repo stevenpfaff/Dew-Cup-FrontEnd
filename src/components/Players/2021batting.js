@@ -5,11 +5,21 @@ import Button from '@material-ui/core/Button';
 import data from '../../data/playerstats.json';
 import './Statsheet.css';
 
-class Minibats extends Component {
+class Batting2021 extends Component {
     constructor(props) {
         super(props);
 
-        const sortedPlayerData = [...data].sort((a, b) => b.homeruns - a.homeruns);
+        const playerData2021 = data
+            .filter((player) => player["2021_stats"] && player["2021_stats"].mbgames > 0)
+            .map((player) => {
+                const stats2021 = player["2021_stats"];
+                return {
+                    ...player,
+                    ...stats2021,
+                };
+            });
+
+        const sortedPlayerData = [...playerData2021].sort((a, b) => b.homeruns - a.homeruns);
 
         this.state = {
             player: sortedPlayerData,
@@ -29,8 +39,8 @@ class Minibats extends Component {
         }
 
         if (key === 'average' || key === 'slug' || key === 'obp' || key === 'ops') {
-            const qualifiers = player.filter((p) => p.ab >= 70);
-            const nonQualifiers = player.filter((p) => p.ab < 70);
+            const qualifiers = player.filter((p) => p.ab >= 10);
+            const nonQualifiers = player.filter((p) => p.ab < 10);
 
             const sortedQualifiers = [...qualifiers].sort((a, b) => {
                 if (a[key] > b[key]) {
@@ -72,6 +82,7 @@ class Minibats extends Component {
         }
     };
 
+
     handlePlayerClick = (id) => {
         this.props.history.push(`/player/${id}`);
     };
@@ -79,18 +90,16 @@ class Minibats extends Component {
     render() {
         const { player } = this.state;
 
-        const filteredBats = player.filter((data) => data.mbgames !== 0);
-
         return (
             <div className="minibats-container">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <h1 className="minibats-title">Minibat All-Time Batting Stats</h1>
-                <p>*Must have 70 AB's to qualify for slashing leaderboard.</p>
+                <h1 className="minibats-title">2021 Batting Stats</h1>
+                <p>*Buddy Wood Memorial I were the only games played.</p>
                 <div className="table-responsive">
                     <Table striped bordered hover className="minibats-table">
                         <thead>
                             <tr>
-                            <th className="sticky-column">
+                                <th className="sticky-column">
                                     Player 
                                     <Button onClick={() => this.sortData('name')} style={{ color: 'white' }}>
                                         <SortNumericUp />
@@ -177,7 +186,7 @@ class Minibats extends Component {
                             </tr>
                         </thead>
                         <tbody>
-                            {filteredBats.map((data) => (
+                            {player.map((data) => (
                                 <tr key={data.id}>
                                     <td className="sticky-column" style={{ cursor: 'pointer', color: 'blue' }} onClick={() => this.handlePlayerClick(data.id)}>
                                         {data.name}
@@ -205,4 +214,4 @@ class Minibats extends Component {
     }
 }
 
-export default Minibats;
+export default Batting2021;

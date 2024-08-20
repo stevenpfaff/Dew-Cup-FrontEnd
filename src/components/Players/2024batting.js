@@ -38,12 +38,11 @@ class Batting2024 extends Component {
         if (sortConfig.key === key && sortConfig.direction === 'asc') {
             direction = 'desc';
         }
-
         if (key === 'average' || key === 'slug' || key === 'obp' || key === 'ops') {
-            const playersWith50ABs = player.filter((p) => p.ab >= 40);
-            const playersWithLessThan50ABs = player.filter((p) => p.ab < 40);
+            const qualifiers = player.filter((p) => p.ab >= 40);
+            const nonQualifiers = player.filter((p) => p.ab < 40);
 
-            const sorted50ABsData = [...playersWith50ABs].sort((a, b) => {
+            const sortedQualifiers = [...qualifiers].sort((a, b) => {
                 if (a[key] > b[key]) {
                     return direction === 'asc' ? -1 : 1;
                 }
@@ -53,7 +52,7 @@ class Batting2024 extends Component {
                 return 0;
             });
 
-            const combinedSortedData = [...sorted50ABsData, ...playersWithLessThan50ABs];
+            const combinedSortedData = [...sortedQualifiers, ...nonQualifiers];
 
             this.setState({
                 player: combinedSortedData,

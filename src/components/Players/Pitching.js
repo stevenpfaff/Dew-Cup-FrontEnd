@@ -9,12 +9,12 @@ class Pitching extends Component {
     constructor(props) {
         super(props);
 
-        const sortedPlayerData = [...data].sort((a, b) => b.homeruns - a.homeruns);
+        const sortedPlayerData = [...data].sort((a, b) => b.ip - a.ip);
 
         this.state = {
             player: sortedPlayerData,
             sortConfig: {
-                key: 'homeruns',
+                key: 'ip',
                 direction: 'desc',
             },
         };
@@ -29,10 +29,10 @@ class Pitching extends Component {
         }
 
         if (key === 'era') {
-            const playersWith10Ip = player.filter((p) => p.ip >= 20);
-            const playersWithLessThan10Ip = player.filter((p) => p.ip > 0 && p.ip < 20);
+            const qualifiers = player.filter((p) => p.ip >= 20);
+            const nonQualifiers = player.filter((p) => p.ip > 0 && p.ip < 20);
 
-            const sorted10IpData = [...playersWith10Ip].sort((a, b) => {
+            const sortedQualifiers = [...qualifiers].sort((a, b) => {
                 if (a[key] > b[key]) {
                     return direction === 'asc' ? -1 : 1;
                 }
@@ -42,7 +42,7 @@ class Pitching extends Component {
                 return 0;
             });
 
-            const combinedSortedData = [...sorted10IpData, ...playersWithLessThan10Ip];
+            const combinedSortedData = [...sortedQualifiers, ...nonQualifiers];
 
             this.setState({
                 player: combinedSortedData,

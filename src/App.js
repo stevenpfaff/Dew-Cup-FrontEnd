@@ -13,6 +13,7 @@ import TourneyCard from './components/Tournament/TourneyCard';
 import Batting2024 from './components/Players/2024batting';
 import Batting2023 from './components/Players/2023batting';
 import Batting2022 from './components/Players/2022batting';
+import Batting2021 from './components/Players/2021batting';
 import Pitching2024 from './components/Players/2024pitching';
 import Pitching2023 from './components/Players/2023pitching';
 import Pitching2022 from './components/Players/2022pitching';
@@ -35,6 +36,7 @@ function App() {
       <Route path="/Batting/2024" exact component={Batting2024} />
       <Route path="/Batting/2023" exact component={Batting2023} />
       <Route path="/Batting/2022" exact component={Batting2022} />
+      <Route path="/Batting/2021" exact component={Batting2021} />
       <Route path="/Pitching/2024" exact component={Pitching2024} />
       <Route path="/Pitching/2023" exact component={Pitching2023} />
       <Route path="/Pitching/2022" exact component={Pitching2022} />

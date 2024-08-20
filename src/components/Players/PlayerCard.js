@@ -12,6 +12,43 @@ const PlayerCard = () => {
     return <div>Player not found</div>;
   }
 
+  const yearlyStats = Object.keys(player)
+    .filter(key => key.endsWith('_stats'))
+    .map(key => ({
+      year: key.split('_')[0],
+      stats: player[key]
+    }))
+    .sort((a, b) => parseInt(a.year) - parseInt(b.year));
+
+
+  // Directly use player's career totals
+  const careerTotals = {
+    mbgames: player.mbgames,
+    ab: player.ab,
+    hits: player.hits,
+    average: player.average,
+    obp: player.obp,
+    slug: player.slug,
+    ops: player.ops,
+    doubles: player.doubles,
+    triples: player.triples,
+    homeruns: player.homeruns,
+    rbi: player.rbi,
+    runs: player.runs,
+    k: player.k,
+    ip: player.ip,
+    w: player.w,
+    l: player.l,
+    sv: player.sv,
+    so: player.so,
+    era: player.era,
+    hra: player.hra,
+    hgames: player.hgames,
+    goals: player.goals,
+    assists: player.assists,
+    points: player.points,
+  };
+
   return (
     <div className="player-card-container">
       <div className="player-image-section">
@@ -67,14 +104,15 @@ const PlayerCard = () => {
         )}
       </div>
       <div className="player-stats-section">
-        <h1 className='player-name'>Career Stats</h1>
-        {player.mbgames > 0 && (
+
+        {yearlyStats.length > 0 && (
           <>
-          <h5 className="player-stat-headers">Batting</h5>
+            <h5 className="player-stat-headers">Batting</h5>
             <div className="table-responsive">
               <Table bordered>
                 <thead>
                   <tr>
+                    <th>Year</th>
                     <th>GP</th>
                     <th>AB</th>
                     <th>H</th>
@@ -91,33 +129,54 @@ const PlayerCard = () => {
                   </tr>
                 </thead>
                 <tbody>
+                  {yearlyStats.map(({ year, stats }, index) => (
+                    <tr key={index}>
+                      <td>{year}</td>
+                      <td>{stats.mbgames}</td>
+                      <td>{stats.ab}</td>
+                      <td>{stats.hits}</td>
+                      <td>{parseFloat(stats.average).toFixed(3)}</td>
+                      <td>{parseFloat(stats.obp).toFixed(3)}</td>
+                      <td>{parseFloat(stats.slug).toFixed(3)}</td>
+                      <td>{parseFloat(stats.ops).toFixed(3)}</td>
+                      <td>{stats.doubles}</td>
+                      <td>{stats.triples}</td>
+                      <td>{stats.homeruns}</td>
+                      <td>{stats.rbi}</td>
+                      <td>{stats.runs}</td>
+                      <td>{stats.k}</td>
+                    </tr>
+                  ))}
                   <tr>
-                    <td>{player.mbgames}</td>
-                    <td>{player.ab}</td>
-                    <td>{player.hits}</td>
-                    <td>{parseFloat(player.average).toFixed(3)}</td>
-                    <td>{parseFloat(player.obp).toFixed(3)}</td>
-                    <td>{parseFloat(player.slug).toFixed(3)}</td>
-                    <td>{parseFloat(player.ops).toFixed(3)}</td>
-                    <td>{player.doubles}</td>
-                    <td>{player.triples}</td>
-                    <td>{player.homeruns}</td>
-                    <td>{player.rbi}</td>
-                    <td>{player.runs}</td>
-                    <td>{player.k}</td>
+                    <td><strong>Career</strong></td>
+                    <td><strong>{careerTotals.mbgames}</strong></td>
+                    <td><strong>{careerTotals.ab}</strong></td>
+                    <td><strong>{careerTotals.hits}</strong></td>
+                    <td><strong>{careerTotals.average.toFixed(3)}</strong></td>
+                    <td><strong>{careerTotals.obp.toFixed(3)}</strong></td>
+                    <td><strong>{careerTotals.slug.toFixed(3)}</strong></td>
+                    <td><strong>{careerTotals.ops.toFixed(3)}</strong></td>
+                    <td><strong>{careerTotals.doubles}</strong></td>
+                    <td><strong>{careerTotals.triples}</strong></td>
+                    <td><strong>{careerTotals.homeruns}</strong></td>
+                    <td><strong>{careerTotals.rbi}</strong></td>
+                    <td><strong>{careerTotals.runs}</strong></td>
+                    <td><strong>{careerTotals.k}</strong></td>
                   </tr>
                 </tbody>
               </Table>
             </div>
           </>
         )}
-        {player.ip > 0 && (
+
+{yearlyStats.some(({ stats }) => stats.ip > 0) && (
           <>
-          <h5 className='player-stat-headers'>Pitching</h5>
+            <h5 className="player-stat-headers">Pitching</h5>
             <div className="table-responsive">
               <Table bordered>
                 <thead>
                   <tr>
+                    <th>Year</th>
                     <th>IP</th>
                     <th>W</th>
                     <th>L</th>
@@ -128,20 +187,36 @@ const PlayerCard = () => {
                   </tr>
                 </thead>
                 <tbody>
+                  {yearlyStats.map(({ year, stats }, index) => (
+                    stats.ip > 0 && (
+                      <tr key={index}>
+                        <td>{year}</td>
+                        <td>{stats.ip}</td>
+                        <td>{stats.w}</td>
+                        <td>{stats.l}</td>
+                        <td>{stats.sv}</td>
+                        <td>{parseFloat(stats.era).toFixed(2)}</td>
+                        <td>{stats.so}</td>
+                        <td>{stats.hra}</td>
+                      </tr>
+                    )
+                  ))}
                   <tr>
-                    <td>{player.ip}</td>
-                    <td>{player.w}</td>
-                    <td>{player.l}</td>
-                    <td>{player.sv}</td>
-                    <td>{parseFloat(player.era).toFixed(2)}</td>
-                    <td>{player.so}</td>
-                    <td>{player.hra}</td>
+                    <td><strong>Career</strong></td>
+                    <td><strong>{careerTotals.ip}</strong></td>
+                    <td><strong>{careerTotals.w}</strong></td>
+                    <td><strong>{careerTotals.l}</strong></td>
+                    <td><strong>{careerTotals.sv}</strong></td>
+                    <td><strong>{careerTotals.era.toFixed(2)}</strong></td>
+                    <td><strong>{careerTotals.so}</strong></td>
+                    <td><strong>{careerTotals.hra}</strong></td>
                   </tr>
                 </tbody>
               </Table>
             </div>
           </>
         )}
+        
         {player.hgames > 0 && (
           <>
           <h5 className='player-stat-headers'>Hockey</h5>
