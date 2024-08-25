@@ -34,6 +34,7 @@ function NavBar() {
                             <NavDropdown.Item href="/Batting/2022">2022 Batting</NavDropdown.Item>
                             <NavDropdown.Item href="/Pitching/2022">2022 Pitching</NavDropdown.Item>
                             <NavDropdown.Item href="/Batting/2021">2021 Batting</NavDropdown.Item>
+                            <NavDropdown.Item href="/Pitching/2021">2021 Pitching</NavDropdown.Item>
                         </NavDropdown> 
                     </Nav>
                 </Navbar.Collapse>
