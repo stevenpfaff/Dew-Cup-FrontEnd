@@ -6,7 +6,7 @@ import { Nav, NavDropdown } from 'react-bootstrap';
 
 function NavBar() {
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: '#013a68' }} variant="dark">
             <Container>
                 <img src={PBS} alt="..." height="75" width="75"></img>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
