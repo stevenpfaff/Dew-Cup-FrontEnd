@@ -3,6 +3,8 @@
   flex-direction: row;
   justify-content: space-between;
   margin: 5% 5%;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
 }
 
 .player-image-section {

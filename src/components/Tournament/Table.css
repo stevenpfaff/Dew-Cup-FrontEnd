@@ -15,12 +15,16 @@ th {
   .tourney-container {
     margin: 0 20%;
     margin-bottom: 5%;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
 }
 
 .title {
     margin: 2% 0;
     font-family: inherit;
     text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
 }
 
 .table-responsive {
@@ -43,7 +47,7 @@ th {
     }
 
     .tourney-title {
-        font-size: 2rem;
+        font-size: 5rem;
     }
 
     .tourney-table th, .tourney-table td {
