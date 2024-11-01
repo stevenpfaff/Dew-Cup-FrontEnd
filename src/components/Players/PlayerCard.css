@@ -35,6 +35,7 @@
   padding: 5px;
 }
 
+
 .player-name {
   font-size: 2em; /* Adjust as needed */
   margin-bottom: 10px;
@@ -98,6 +99,11 @@
     height: 40px;
     margin-right: 10px;
     vertical-align: middle;
+  }
+
+  .player-accolades-table li {
+    font-size: .7em;
+    padding: 5px;
   }
 
   .player-name {
