@@ -69,7 +69,7 @@
 }
 
 .table td:first-child {
-    background-color: rgb(255, 255, 255);
+    background-color: #F4F4F4;
     border-right: 1px solid #dee2e6;
 }
 
