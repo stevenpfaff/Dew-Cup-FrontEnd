@@ -5,7 +5,7 @@
     margin-bottom: 5%;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 20px;
-    background-color: #ffff;
+    background-color: #F4F4F4;
 }
 
 .pitching-container {
@@ -13,6 +13,7 @@
     margin-bottom: 5%;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 24px;
+    background-color: #F4F4F4;
 }
 
 .hockey-container {
@@ -20,6 +21,7 @@
     margin-bottom: 5%;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 24px;
+    background-color: #F4F4F4;
 }
 
 .teams-container {
@@ -92,21 +94,25 @@
     .minibats-container {
         margin: 0 5%;
         margin-bottom: 8%;
+        background-color: #F4F4F4;
     }
     
     .hockey-container {
         margin: 0 5%;
         margin-bottom: 5%;
+        background-color: #F4F4F4;
     }
 
     .pitching-container {
         margin: 0 5%;
         margin-bottom: 5%;
+        background-color: #F4F4F4;
     }
-
+    
     .teams-container {
         margin: 0 4%;
         margin-bottom: 5%;
+        background-color: #F4F4F4;
     }
     
     .minibats-title {
@@ -123,21 +129,25 @@
     .minibats-container {
         margin: 0 2%;
         margin-bottom: 10%;
+        background-color: #F4F4F4;
     }
     
     .hockey-container {
         margin: 0 2%;
         margin-bottom: 10%;
+        background-color: #F4F4F4;
     }
 
     .pitching-container {
         margin: 0 2%;
         margin-bottom: 10%;
+        background-color: #F4F4F4;
     }
 
     .teams-container {
         margin: 0 2%;
         margin-bottom: 10%;
+        background-color: #F4F4F4;
     }
 
     .minibats-title {
