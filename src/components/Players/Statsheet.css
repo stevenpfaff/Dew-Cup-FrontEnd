@@ -17,11 +17,12 @@
 }
 
 .hockey-container {
-    margin: 0 20%;
+    margin: 2% auto;
     margin-bottom: 5%;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 24px;
     background-color: #F4F4F4;
+    max-width: fit-content;
 }
 
 .teams-container {
@@ -51,7 +52,7 @@
 }
 
 .hockey-table{
-    min-width: 375px;
+    max-width: fit-content;
 }
 
 
@@ -79,16 +80,7 @@
     border-right: 1px solid #dee2e6;
 }
 
-/* .sticky-column {
-    position: -webkit-sticky;
-    position: sticky;
-    left: 0;
-    background-color: white;
-    z-index: 100;
-    border-right: 2px solid #ddd;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    padding: 0;
-} */
+
 
 @media (max-width: 1024px) {
     .minibats-container {

@@ -13,11 +13,12 @@ th {
 
   }
   .tourney-container {
-    margin: 0 20%;
     margin-bottom: 5%;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 20px;
     background-color: #F4F4F4;
+    margin: 2% auto;
+    max-width: fit-content;
 }
 
 .title {

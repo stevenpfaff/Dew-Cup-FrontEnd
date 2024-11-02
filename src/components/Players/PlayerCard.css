@@ -57,7 +57,7 @@
 }
 
 .player-stats-section {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   margin-right: 5%;
 }
 
@@ -65,7 +65,7 @@
 .player-stat-headers {
   font-size: 1.5em; /* Adjust this to be smaller than .player-name */
   text-align: left; /* Align header text to the left */
-  margin-top: 15px; /* Optional: add spacing before headers */
+  margin-top: 5px; /* Optional: add spacing before headers */
 }
 
 .table-responsive {
