@@ -50,6 +50,7 @@ const PlayerCard = () => {
   };
 
   return (
+    <div class="player-card-wrapper">
     <div className="player-card-container">
       <div className="player-image-section">
         <h1 className="player-name">
@@ -243,6 +244,7 @@ const PlayerCard = () => {
           </>
         )}
       </div>
+    </div>
     </div>
   );
 };
