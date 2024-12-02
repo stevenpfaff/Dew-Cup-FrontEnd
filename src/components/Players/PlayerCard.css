@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center; /* Centers horizontally */
   align-items: center;     /* Centers vertically */
-  height: 100vh;           /* Makes the wrapper fill the entire viewport height */
+  height: 105vh;           /* Makes the wrapper fill the entire viewport height */
   margin-top: 5px;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .player-accolades-table td {
-  font-size: .9em;
+  font-size: .8em;
   padding: 5px;
 }
 
@@ -101,7 +101,7 @@
 .table-responsive td {
   text-align: center;
   padding: 10px;
-  font-size: 1em;
+  font-size: .9em;
 }
 
 /* Mobile responsive styles */
