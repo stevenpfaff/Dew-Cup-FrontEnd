@@ -38,6 +38,20 @@ th {
     vertical-align: middle;
 }
 
+.tourney-table td:first-child, 
+.tourney-table th:first-child {
+    text-align: left;
+    white-space: nowrap;
+    position: sticky;
+    left: 0;
+    z-index: 10;
+    background-color: #ffffff;
+    border-right: 1px solid #dee2e6;
+}
+
+.tourney-table th:first-child{
+    background: #013a68;
+}
 .tourney-table{
     min-width: 350px;
 }
