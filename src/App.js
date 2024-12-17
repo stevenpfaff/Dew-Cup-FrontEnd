@@ -7,7 +7,8 @@ import Minibats from './components/Players/Minibats';
 import Pitching from './components/Players/Pitching';
 import Hockey from './components/Players/Hockey';
 import Tourneys from './components/Tournament/Tournaments';
-import PlayerCard from './components/Players/PlayerCard';
+import HockeyCard from './components/Players/HockeyCard';
+import BaseballCard from './components/Players/BaseballCard';
 import TeamCard from './components/Teams/TeamCard';
 import TourneyCard from './components/Tournament/TourneyCard';
 import Batting2024 from './components/Players/2024batting';
@@ -18,6 +19,7 @@ import Pitching2024 from './components/Players/2024pitching';
 import Pitching2023 from './components/Players/2023pitching';
 import Pitching2022 from './components/Players/2022pitching';
 import Pitching2021 from './components/Players/2021pitching';
+import Test from './components/Test/Test';
 
 
 
@@ -31,9 +33,11 @@ function App() {
       <Route path="/Batting" exact component={Minibats} />
       <Route path="/Pitching" exact component={Pitching} />
       <Route path="/Hockey" exact component={Hockey} />
-      <Route path="/player/:id" exact component={PlayerCard} />
+      <Route path="/HockeyCard/:id" exact component={HockeyCard} />
+      <Route path="/BaseballCard/:id1" exact component={BaseballCard} />
       <Route path="/team/:id" exact component={TeamCard} />
       <Route path="/tourney/:tourney_id" exact component={TourneyCard} />
+      <Route path="/test" exact component={Test} />
       <Route path="/Batting/2024" exact component={Batting2024} />
       <Route path="/Batting/2023" exact component={Batting2023} />
       <Route path="/Batting/2022" exact component={Batting2022} />

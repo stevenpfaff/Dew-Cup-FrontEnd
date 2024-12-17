@@ -2,23 +2,61 @@ import { SortNumericUp } from 'react-bootstrap-icons';
 import React, { Component } from 'react';
 import { Table } from 'react-bootstrap';
 import Button from '@material-ui/core/Button';
-import hockeyData from '../../data/playerstats.json';
+import Papa from 'papaparse';
 import './Statsheet.css';
 
 class Hockey extends Component {
     constructor(props) {
         super(props);
         
-        // Pre-sort the data by points in descending order
-        const sortedHockeyData = [...hockeyData].sort((a, b) => b.points - a.points);
-
         this.state = {
-            hockey: sortedHockeyData,
+            hockey: [],
             sortConfig: {
                 key: 'points',
                 direction: 'desc',
             },
+            loading: true,
         };
+    }
+
+    componentDidMount() {
+        fetch('/hockey.csv')
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then((csvData) => {
+                Papa.parse(csvData, {
+                    header: true,
+                    skipEmptyLines: true,
+                    complete: (result) => {
+                        const parsedData = result.data.map((row) => ({
+                            ...row,
+                            hgames: parseInt(row.hgames, 10) || 0,
+                            goals: parseInt(row.goals, 10) || 0,
+                            assists: parseInt(row.assists, 10) || 0,
+                            points: parseInt(row.points, 10) || 0,
+                        }));
+
+                        const sortedHockeyData = [...parsedData].sort((a, b) => b.points - a.points);
+
+                        this.setState({
+                            hockey: sortedHockeyData,
+                            loading: false,
+                        });
+                    },
+                    error: (error) => {
+                        console.error('Error parsing CSV:', error);
+                        this.setState({ loading: false });
+                    },
+                });
+            })
+            .catch((error) => {
+                console.error('Error fetching CSV:', error);
+                this.setState({ loading: false });
+            });
     }
 
     sortData = (key) => {
@@ -49,12 +87,17 @@ class Hockey extends Component {
     };
 
     handlePlayerClick = (id) => {
-        this.props.history.push(`/player/${id}`);
+        this.props.history.push(`/HockeyCard/${id}`);
     };
 
     render() {
-        const { hockey } = this.state;
+        const { hockey, loading } = this.state;
         const filteredHockey = hockey.filter((data) => data.hgames !== 0);
+
+        if (loading) {
+            return <p>Loading...</p>;
+        }
+
         return (
             <div className="hockey-container">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />

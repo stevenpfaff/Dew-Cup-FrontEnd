@@ -1,24 +1,55 @@
-import { SortNumericUp } from 'react-bootstrap-icons';
 import React, { Component } from 'react';
 import { Table } from 'react-bootstrap';
 import Button from '@material-ui/core/Button';
-import data from '../../data/playerstats.json';
+import { SortNumericUp } from 'react-bootstrap-icons';
+import Papa from 'papaparse';
 import './Statsheet.css';
 
 class Pitching extends Component {
     constructor(props) {
         super(props);
 
-        const sortedPlayerData = [...data].sort((a, b) => b.ip - a.ip);
-
         this.state = {
-            player: sortedPlayerData,
+            player: [],
             sortConfig: {
-                key: 'ip',
-                direction: 'desc',
+                key: 'era',
+                direction: 'asc',
             },
+            loading: true,
         };
     }
+
+    componentDidMount() {
+        this.loadPitchingData();
+    }
+
+    loadPitchingData = () => {
+        Papa.parse('/pitching.csv', {
+            download: true,
+            header: true,
+            skipEmptyLines: true,
+            complete: (result) => {
+                const sortedPlayerData = [...result.data]
+                    .map((player) => ({
+                        ...player,
+                        ip: parseFloat(player.ip) || 0,
+                        era: parseFloat(player.era) || 0,
+                        w: parseInt(player.w) || 0,
+                        l: parseInt(player.l) || 0,
+                        sv: parseInt(player.sv) || 0,
+                        so: parseInt(player.so) || 0,
+                        hra: parseInt(player.hra) || 0,
+                    }))
+                    .sort((a, b) => b.ip - a.ip);
+
+                this.setState({ player: sortedPlayerData, loading: false });
+            },
+            error: (error) => {
+                console.error("Error loading pitching data:", error);
+                this.setState({ loading: false });
+            },
+        });
+    };
 
     sortData = (key) => {
         const { player, sortConfig } = this.state;
@@ -72,14 +103,17 @@ class Pitching extends Component {
         }
     };
 
-    handlePlayerClick = (id) => {
-        this.props.history.push(`/player/${id}`);
+    handlePlayerClick = (id1) => {
+        this.props.history.push(`/BaseballCard/${id1}`);
     };
 
     render() {
-        const { player } = this.state;
+        const { player, loading } = this.state;
 
-        // Filter out players with 0 IP
+        if (loading) {
+            return <div>Loading...</div>;
+        }
+
         const filteredPlayers = player.filter((data) => data.ip > 0);
 
         return (
@@ -91,8 +125,8 @@ class Pitching extends Component {
                     <Table striped bordered hover className="pitching-table">
                         <thead>
                             <tr>
-                                <th className='sticky-column'>
-                                    Player 
+                                <th className="sticky-column">
+                                    Player
                                     <Button onClick={() => this.sortData('name')} style={{ color: 'white' }}>
                                         <SortNumericUp />
                                     </Button>
@@ -110,25 +144,25 @@ class Pitching extends Component {
                                     </Button>
                                 </th>
                                 <th>
-                                    L 
+                                    L
                                     <Button onClick={() => this.sortData('l')} style={{ color: 'white' }}>
                                         <SortNumericUp />
                                     </Button>
                                 </th>
                                 <th>
-                                    SV 
-                                    <Button onClick={() => this.sortData('sv')} style={{ color: 'white' }}> 
+                                    SV
+                                    <Button onClick={() => this.sortData('sv')} style={{ color: 'white' }}>
                                         <SortNumericUp />
                                     </Button>
                                 </th>
                                 <th>
                                     ERA
-                                    <Button onClick={() => this.sortData('era')} style={{ color: 'white' }}> 
+                                    <Button onClick={() => this.sortData('era')} style={{ color: 'white' }}>
                                         <SortNumericUp />
                                     </Button>
                                 </th>
                                 <th>
-                                    K 
+                                    K
                                     <Button onClick={() => this.sortData('so')} style={{ color: 'white' }}>
                                         <SortNumericUp />
                                     </Button>
@@ -143,15 +177,19 @@ class Pitching extends Component {
                         </thead>
                         <tbody>
                             {filteredPlayers.map((data) => (
-                                <tr key={data.id}>
-                                    <td className="sticky-column" style={{ cursor: 'pointer', color: 'blue' }} onClick={() => this.handlePlayerClick(data.id)}>
+                                <tr key={data.id1}>
+                                    <td
+                                        className="sticky-column"
+                                        style={{ cursor: 'pointer', color: 'blue' }}
+                                        onClick={() => this.handlePlayerClick(data.id1)}
+                                    >
                                         {data.name}
                                     </td>
                                     <td>{data.ip}</td>
                                     <td>{data.w}</td>
                                     <td>{data.l}</td>
                                     <td>{data.sv}</td>
-                                    <td>{parseFloat(data.era).toFixed(2)}</td>
+                                    <td>{parseFloat(data.era)}</td>
                                     <td>{data.so}</td>
                                     <td>{data.hra}</td>
                                 </tr>

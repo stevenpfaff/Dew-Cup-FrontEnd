@@ -3,7 +3,6 @@
   display: flex;
   justify-content: center; /* Centers horizontally */
   align-items: center;     /* Centers vertically */
-  height: 110vh;           /* Makes the wrapper fill the entire viewport height */
   margin-top: 5px;
 }
 
@@ -38,6 +37,13 @@
   margin-bottom: 5px;
 }
 
+.player-accolades-table td {
+  font-size: 14px;
+  text-align: left;
+  padding: 5px;
+}
+
+
 .player-accolades-table th {
   background-color: rgb(1, 58, 104);
   font-weight: bold;
@@ -45,7 +51,7 @@
 }
 
 .player-accolades-table td {
-  font-size: .8em;
+  font-size: .12;
   padding: 5px;
 }
 
@@ -56,10 +62,9 @@
   text-align: left;
 }
 
-/* Player image styling */
 .player-image {
-  width: 100%; /* Full width to fit the screen */
-  max-width: 150px; /* Max width for larger screens */
+  width: 100%; 
+  max-width: 150px;
   height: auto;
   border-radius: 10px;
 }
@@ -75,7 +80,10 @@
 /* Player stats section */
 .player-stats-section {
   margin-bottom: 5px;
-  /* margin-right: 5%; */
+}
+
+.player-stats-section td {
+  font-size: 18px;
 }
 
 .player-stat-headers {
