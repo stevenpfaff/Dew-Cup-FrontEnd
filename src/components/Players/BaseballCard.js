@@ -184,7 +184,7 @@ const BaseballCard = () => {
                   <td><strong>{careerTotals.homeruns}</strong></td>
                   <td><strong>{careerTotals.rbi}</strong></td>
                   <td><strong>{careerTotals.runs}</strong></td>
-                  <td><strong>{careerTotals.so}</strong></td>
+                  <td><strong>{careerTotals.k}</strong></td>
                 </tr>
               )}
             </tbody>
