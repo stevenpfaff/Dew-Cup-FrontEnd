@@ -30,8 +30,9 @@ const HockeyCard = () => {
       loadCSV('/dewcup3.csv'),
       loadCSV('/dewcup4.csv'),
       loadCSV('/coderedclassic1.csv'),
-      loadCSV('/dewcup5.csv')
-    ]).then(([infoData, dewcup1Data, dewcup2Data, dewcup3Data, dewcup4Data, crc1Data, dewcup5Data]) => {
+      loadCSV('/dewcup5.csv'),
+      loadCSV('/dewcup6.csv')
+    ]).then(([infoData, dewcup1Data, dewcup2Data, dewcup3Data, dewcup4Data, crc1Data, dewcup5Data, dewcup6Data]) => {
       const playerInfo = infoData.find((player) => player.id === id);
       if (playerInfo) {
         playerInfo.championships = playerInfo.championships
@@ -48,9 +49,10 @@ const HockeyCard = () => {
       const dewcup4Stats = dewcup4Data.filter((stats) => stats.id === id);
       const crc1Stats = crc1Data.filter((stats) => stats.id === id);
       const dewcup5Stats = dewcup5Data.filter((stats) => stats.id === id);
+      const dewcup6Stats = dewcup6Data.filter((stats) => stats.id === id);
 
       setPlayerInfo(playerInfo);
-      setDewcupStats([...dewcup1Stats,...dewcup2Stats,...dewcup3Stats, ...dewcup4Stats, ...crc1Stats, ...dewcup5Stats]);
+      setDewcupStats([...dewcup1Stats,...dewcup2Stats,...dewcup3Stats, ...dewcup4Stats, ...crc1Stats, ...dewcup5Stats, ...dewcup6Stats]);
       setLoading(false);
       console.log(crc1Stats)
     });

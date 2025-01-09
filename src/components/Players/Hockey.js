@@ -102,7 +102,7 @@ class Hockey extends Component {
             <div className="hockey-container">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <h1 className="minibats-title">Hockey All-Time Stats</h1>
-                <p>*Individual goals and assists not tracked prior to Dew Cup IV.</p>
+                <p>*incomplete records for goals, assists, and points</p>
                 <div className="table-responsive">
                     <Table striped bordered hover className="hockey-table">
                     <thead>
