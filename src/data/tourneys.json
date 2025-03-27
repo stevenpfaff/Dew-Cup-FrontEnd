@@ -163,5 +163,15 @@
         "runnerup": "Pesky Zub",
         "players": "N/A",
         "MVP": "N/A"
+    },
+    {
+        "tourney_id": 18,
+        "tourney": "Dew Cup VI",
+        "year": "2025",
+        "winner": "Rat Girl Minions",
+        "runnerup": "Buds Wood",
+        "players": "BB Pfaff | Lauren McCormack | Megan Stautz | Rick Bonis | Seth Mlodzik | Teague",
+        "MVP": "Seth Mlodzik",
+        "image": "/Images/dewcup6.jpeg"
     }
 ]
