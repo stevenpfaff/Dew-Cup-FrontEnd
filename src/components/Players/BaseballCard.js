@@ -29,10 +29,10 @@ const BaseballCard = () => {
       });
     };
 
-    Promise.all([loadCSV('/minibat-info.csv'), loadCSV('/2024-minibats.csv'), loadCSV('/2023-minibats.csv'), loadCSV('/2022-minibats.csv'), loadCSV('/2021-minibats.csv')
+    Promise.all([loadCSV('/minibat-info.csv'), loadCSV('/2025-minibats.csv'), loadCSV('/2024-minibats.csv'), loadCSV('/2023-minibats.csv'), loadCSV('/2022-minibats.csv'), loadCSV('/2021-minibats.csv')
       , loadCSV('/minibats.csv'), loadCSV('/pitching.csv') 
     ])
-      .then(([infoData, stats2024, stats2023, stats2022, stats2021,  career, pitching]) => {
+      .then(([infoData, stats2025, stats2024, stats2023, stats2022, stats2021,  career, pitching]) => {
         const playerInfo = infoData.find((player) => player.id1 === id1);
         if (playerInfo) {
           playerInfo.championships = playerInfo.championships
@@ -44,7 +44,7 @@ const BaseballCard = () => {
             : [];
         }
 
-        const playerStats = [...stats2021, ...stats2022, ...stats2023, ...stats2024, ...career].filter((stats) => String(stats.id1) === String(id1));
+        const playerStats = [...stats2021, ...stats2022, ...stats2023, ...stats2024, ...stats2025, ...career].filter((stats) => String(stats.id1) === String(id1));
         const pitchingStats = [...pitching].filter((stats) => String(stats.id1) === String(id1));
         const careerStats = playerStats.find((stats) => stats.year === "Career");    
         const seasonStats = playerStats.filter((stats) => stats.year !== "Career");

@@ -11,6 +11,7 @@ import HockeyCard from './components/Players/HockeyCard';
 import BaseballCard from './components/Players/BaseballCard';
 import TeamCard from './components/Teams/TeamCard';
 import TourneyCard from './components/Tournament/TourneyCard';
+import Batting2025 from './components/Players/2025batting';
 import Batting2024 from './components/Players/2024batting';
 import Batting2023 from './components/Players/2023batting';
 import Batting2022 from './components/Players/2022batting';
@@ -38,6 +39,7 @@ function App() {
       <Route path="/team/:id" exact component={TeamCard} />
       <Route path="/tourney/:tourney_id" exact component={TourneyCard} />
       <Route path="/test" exact component={Test} />
+      <Route path="/Batting/2025" exact component={Batting2025} />
       <Route path="/Batting/2024" exact component={Batting2024} />
       <Route path="/Batting/2023" exact component={Batting2023} />
       <Route path="/Batting/2022" exact component={Batting2022} />

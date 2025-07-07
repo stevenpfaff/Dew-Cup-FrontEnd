@@ -27,6 +27,7 @@ function NavBar() {
                         <NavDropdown title="Minibat Stats" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="/Batting">All-Time Batting</NavDropdown.Item>
                             <NavDropdown.Item href="/Pitching">All-Time Pitching</NavDropdown.Item>
+                            <NavDropdown.Item href="/Batting/2025">2025 Batting</NavDropdown.Item>
                             <NavDropdown.Item href="/Batting/2024">2024 Batting</NavDropdown.Item>
                             {/* <NavDropdown.Item href="/Pitching/2024">2024 Pitching</NavDropdown.Item> */}
                             <NavDropdown.Item href="/Batting/2023">2023 Batting</NavDropdown.Item>
