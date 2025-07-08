@@ -124,7 +124,7 @@ class Minibats extends Component {
                                         <SortNumericUp />
                                     </Button>
                                 </th>
-                                <th>
+                                {/* <th>
                                     GP
                                     <Button
                                         onClick={() => this.sortData('mbgames')}
@@ -141,7 +141,7 @@ class Minibats extends Component {
                                     >
                                         <SortNumericUp />
                                     </Button>
-                                </th>
+                                </th> */}
                                 <th>
                                     H
                                     <Button
@@ -151,43 +151,7 @@ class Minibats extends Component {
                                         <SortNumericUp />
                                     </Button>
                                 </th>
-                                <th>
-                                    AVG
-                                    <Button
-                                        onClick={() => this.sortData('average')}
-                                        style={{ color: 'white' }}
-                                    >
-                                        <SortNumericUp />
-                                    </Button>
-                                </th>
-                                <th>
-                                    OBP
-                                    <Button
-                                        onClick={() => this.sortData('obp')}
-                                        style={{ color: 'white' }}
-                                    >
-                                        <SortNumericUp />
-                                    </Button>
-                                </th>
-                                <th>
-                                    SLG
-                                    <Button
-                                        onClick={() => this.sortData('slug')}
-                                        style={{ color: 'white' }}
-                                    >
-                                        <SortNumericUp />
-                                    </Button>
-                                </th>
-                                <th>
-                                    OPS
-                                    <Button
-                                        onClick={() => this.sortData('ops')}
-                                        style={{ color: 'white' }}
-                                    >
-                                        <SortNumericUp />
-                                    </Button>
-                                </th>
-                                <th>
+                                                                <th>
                                     2B
                                     <Button
                                         onClick={() => this.sortData('doubles')}
@@ -233,6 +197,42 @@ class Minibats extends Component {
                                     </Button>
                                 </th>
                                 <th>
+                                    AVG
+                                    <Button
+                                        onClick={() => this.sortData('average')}
+                                        style={{ color: 'white' }}
+                                    >
+                                        <SortNumericUp />
+                                    </Button>
+                                </th>
+                                <th>
+                                    OBP
+                                    <Button
+                                        onClick={() => this.sortData('obp')}
+                                        style={{ color: 'white' }}
+                                    >
+                                        <SortNumericUp />
+                                    </Button>
+                                </th>
+                                <th>
+                                    SLG
+                                    <Button
+                                        onClick={() => this.sortData('slug')}
+                                        style={{ color: 'white' }}
+                                    >
+                                        <SortNumericUp />
+                                    </Button>
+                                </th>
+                                <th>
+                                    OPS
+                                    <Button
+                                        onClick={() => this.sortData('ops')}
+                                        style={{ color: 'white' }}
+                                    >
+                                        <SortNumericUp />
+                                    </Button>
+                                </th>
+                                {/* <th>
                                     K
                                     <Button
                                         onClick={() => this.sortData('k')}
@@ -240,7 +240,7 @@ class Minibats extends Component {
                                     >
                                         <SortNumericUp />
                                     </Button>
-                                </th>
+                                </th> */}
                             </tr>
                         </thead>
                         <tbody>
@@ -253,19 +253,19 @@ class Minibats extends Component {
                                     >
                                         {data.name}
                                     </td>
-                                    <td>{data.mbgames}</td>
-                                    <td>{data.ab}</td>
+                                    {/* <td>{data.mbgames}</td>
+                                    <td>{data.ab}</td> */}
                                     <td>{data.hits}</td>
-                                    <td>{parseFloat(data.average).toFixed(3)}</td>
-                                    <td>{parseFloat(data.obp).toFixed(3)}</td>
-                                    <td>{parseFloat(data.slug).toFixed(3)}</td>
-                                    <td>{parseFloat(data.ops).toFixed(3)}</td>
                                     <td>{data.doubles}</td>
                                     <td>{data.triples}</td>
                                     <td>{data.homeruns}</td>
                                     <td>{data.rbi}</td>
                                     <td>{data.runs}</td>
-                                    <td>{data.k}</td>
+                                    <td>{parseFloat(data.average).toFixed(3)}</td>
+                                    <td>{parseFloat(data.obp).toFixed(3)}</td>
+                                    <td>{parseFloat(data.slug).toFixed(3)}</td>
+                                    <td>{parseFloat(data.ops).toFixed(3)}</td>
+                                    {/* <td>{data.k}</td> */}
                                 </tr>
                             ))}
                         </tbody>

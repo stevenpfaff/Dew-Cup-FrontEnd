@@ -127,7 +127,7 @@ class Batting2025 extends Component {
                                         <SortNumericUp />
                                     </Button>
                                 </th>
-                                <th>
+                                {/* <th>
                                     GP
                                     <Button onClick={() => this.sortData('mbgames')} style={{ color: 'white' }}>
                                         <SortNumericUp />
@@ -138,38 +138,14 @@ class Batting2025 extends Component {
                                     <Button onClick={() => this.sortData('ab')} style={{ color: 'white' }}>
                                         <SortNumericUp />
                                     </Button>
-                                </th>
+                                </th> */}
                                 <th>
                                     H
                                     <Button onClick={() => this.sortData('hits')} style={{ color: 'white' }}>
                                         <SortNumericUp />
                                     </Button>
                                 </th>
-                                <th>
-                                    AVG
-                                    <Button onClick={() => this.sortData('average')} style={{ color: 'white' }}>
-                                        <SortNumericUp />
-                                    </Button>
-                                </th>
-                                <th>
-                                    OBP
-                                    <Button onClick={() => this.sortData('obp')} style={{ color: 'white' }}>
-                                        <SortNumericUp />
-                                    </Button>
-                                </th>
-                                <th>
-                                    SLG
-                                    <Button onClick={() => this.sortData('slug')} style={{ color: 'white' }}>
-                                        <SortNumericUp />
-                                    </Button>
-                                </th>
-                                <th>
-                                    OPS
-                                    <Button onClick={() => this.sortData('ops')} style={{ color: 'white' }}>
-                                        <SortNumericUp />
-                                    </Button>
-                                </th>
-                                <th>
+                                                                <th>
                                     2B
                                     <Button onClick={() => this.sortData('doubles')} style={{ color: 'white' }}>
                                         <SortNumericUp />
@@ -200,11 +176,35 @@ class Batting2025 extends Component {
                                     </Button>
                                 </th>
                                 <th>
+                                    AVG
+                                    <Button onClick={() => this.sortData('average')} style={{ color: 'white' }}>
+                                        <SortNumericUp />
+                                    </Button>
+                                </th>
+                                <th>
+                                    OBP
+                                    <Button onClick={() => this.sortData('obp')} style={{ color: 'white' }}>
+                                        <SortNumericUp />
+                                    </Button>
+                                </th>
+                                <th>
+                                    SLG
+                                    <Button onClick={() => this.sortData('slug')} style={{ color: 'white' }}>
+                                        <SortNumericUp />
+                                    </Button>
+                                </th>
+                                <th>
+                                    OPS
+                                    <Button onClick={() => this.sortData('ops')} style={{ color: 'white' }}>
+                                        <SortNumericUp />
+                                    </Button>
+                                </th>
+                                {/* <th>
                                     K
                                     <Button onClick={() => this.sortData('k')} style={{ color: 'white' }}>
                                         <SortNumericUp />
                                     </Button>
-                                </th>
+                                </th> */}
                             </tr>
                         </thead>
                         <tbody>
@@ -213,19 +213,19 @@ class Batting2025 extends Component {
                                     <td className="sticky-column" style={{ cursor: 'pointer', color: 'blue' }} onClick={() => this.handlePlayerClick(data.id1)}>
                                         {data.name}
                                     </td>
-                                    <td>{data.mbgames}</td>
-                                    <td>{data.ab}</td>
+                                    {/* <td>{data.mbgames}</td>
+                                    <td>{data.ab}</td> */}
                                     <td>{data.hits}</td>
-                                    <td>{data.average.toFixed(3)}</td>
-                                    <td>{data.obp.toFixed(3)}</td>
-                                    <td>{data.slug.toFixed(3)}</td>
-                                    <td>{data.ops.toFixed(3)}</td>
                                     <td>{data.doubles}</td>
                                     <td>{data.triples}</td>
                                     <td>{data.homeruns}</td>
                                     <td>{data.rbi}</td>
                                     <td>{data.runs}</td>
-                                    <td>{data.so}</td>
+                                    <td>{data.average.toFixed(3)}</td>
+                                    <td>{data.obp.toFixed(3)}</td>
+                                    <td>{data.slug.toFixed(3)}</td>
+                                    <td>{data.ops.toFixed(3)}</td>
+                                    {/* <td>{data.so}</td> */}
                                 </tr>
                             ))}
                         </tbody>

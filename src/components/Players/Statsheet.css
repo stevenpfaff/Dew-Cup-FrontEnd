@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 .minibats-container {
-    margin: 0 20%;
+    margin: 0 13%;
     margin-bottom: 5%;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 20px;
@@ -91,6 +91,7 @@
         margin: 0 5%;
         margin-bottom: 8%;
         background-color:#ffffff;
+        font-size: 16px;
     }
     
     .hockey-container {
@@ -123,7 +124,7 @@
 
 @media (max-width: 768px) {
     .minibats-container {
-        margin: 0 2%;
+        margin: 0 5%;
         margin-bottom: 10%;
         background-color:#ffffff;
     }
