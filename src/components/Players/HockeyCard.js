@@ -25,13 +25,13 @@ const HockeyCard = () => {
 
     Promise.all([
       loadCSV('/info.csv'),
-      loadCSV('/dewcup1.csv'),
-      loadCSV('/dewcup2.csv'),
-      loadCSV('/dewcup3.csv'),
-      loadCSV('/dewcup4.csv'),
-      loadCSV('/coderedclassic1.csv'),
-      loadCSV('/dewcup5.csv'),
-      loadCSV('/dewcup6.csv')
+      loadCSV('/Hockey/dewcup1.csv'),
+      loadCSV('/Hockey/dewcup2.csv'),
+      loadCSV('/Hockey/dewcup3.csv'),
+      loadCSV('/Hockey/dewcup4.csv'),
+      loadCSV('/Hockey/coderedclassic1.csv'),
+      loadCSV('/Hockey/dewcup5.csv'),
+      loadCSV('/Hockey/dewcup6.csv')
     ]).then(([infoData, dewcup1Data, dewcup2Data, dewcup3Data, dewcup4Data, crc1Data, dewcup5Data, dewcup6Data]) => {
       const playerInfo = infoData.find((player) => player.id === id);
       if (playerInfo) {

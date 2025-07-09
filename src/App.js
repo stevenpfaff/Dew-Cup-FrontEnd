@@ -1,5 +1,5 @@
-import React from 'react'
-import { Route } from 'react-router-dom';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
 import Home from './components/Home/Home';
 import Teams from './components/Teams/Teams';
@@ -11,46 +11,35 @@ import HockeyCard from './components/Players/HockeyCard';
 import BaseballCard from './components/Players/BaseballCard';
 import TeamCard from './components/Teams/TeamCard';
 import TourneyCard from './components/Tournament/TourneyCard';
-import Batting2025 from './components/Players/2025batting';
-import Batting2024 from './components/Players/2024batting';
-import Batting2023 from './components/Players/2023batting';
-import Batting2022 from './components/Players/2022batting';
-import Batting2021 from './components/Players/2021batting';
-import Pitching2024 from './components/Players/2024pitching';
-import Pitching2023 from './components/Players/2023pitching';
-import Pitching2022 from './components/Players/2022pitching';
-import Pitching2021 from './components/Players/2021pitching';
-import Test from './components/Test/Test';
+import BattingStats from './components/Players/YearlyBatting';
+import { useParams } from 'react-router-dom';
 
-
+function BattingStatsWrapper() {
+  const { year } = useParams();
+  return <BattingStats year={year} />;
+}
 
 function App() {
   return (
-    <div>
+    <>
       <NavBar />
-      <Route path="/" exact component={Home} />
-      <Route path="/Teams" exact component={Teams} />
-      <Route path="/Tournaments" exact component={Tourneys} />
-      <Route path="/Batting" exact component={Minibats} />
-      <Route path="/Pitching" exact component={Pitching} />
-      <Route path="/Hockey" exact component={Hockey} />
-      <Route path="/HockeyCard/:id" exact component={HockeyCard} />
-      <Route path="/BaseballCard/:id1" exact component={BaseballCard} />
-      <Route path="/team/:id" exact component={TeamCard} />
-      <Route path="/tourney/:tourney_id" exact component={TourneyCard} />
-      <Route path="/test" exact component={Test} />
-      <Route path="/Batting/2025" exact component={Batting2025} />
-      <Route path="/Batting/2024" exact component={Batting2024} />
-      <Route path="/Batting/2023" exact component={Batting2023} />
-      <Route path="/Batting/2022" exact component={Batting2022} />
-      <Route path="/Batting/2021" exact component={Batting2021} />
-      <Route path="/Pitching/2024" exact component={Pitching2024} />
-      <Route path="/Pitching/2023" exact component={Pitching2023} />
-      <Route path="/Pitching/2022" exact component={Pitching2022} />
-      <Route path="/Pitching/2021" exact component={Pitching2021} />
-    </div>
-  )
-}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/teams" element={<Teams />} />
+        <Route path="/tournaments" element={<Tourneys />} />
+        <Route path="/batting" element={<Minibats />} />
+        <Route path="/pitching" element={<Pitching />} />
+        <Route path="/hockey" element={<Hockey />} />
+        <Route path="/hockeycard/:id" element={<HockeyCard />} />
+        <Route path="/baseballcard/:id1" element={<BaseballCard />} />
+        <Route path="/team/:id" element={<TeamCard />} />
+        <Route path="/tourney/:tourney_id" element={<TourneyCard />} />
 
+        {/* Dynamic Batting Route */}
+        <Route path="/batting/:year" element={<BattingStatsWrapper />} />
+      </Routes>
+    </>
+  );
+}
 
 export default App;

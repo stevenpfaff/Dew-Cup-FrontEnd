@@ -6,9 +6,6 @@ import BudWood from '../../Images/bud wood.png'
 import PBS from '../../Images/PBS.png'
 
 class Home extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return (

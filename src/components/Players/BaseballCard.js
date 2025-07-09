@@ -9,7 +9,7 @@ const BaseballCard = () => {
   const [playerInfo, setPlayerInfo] = useState(null);
   const [baseballStats, setBaseballStats] = useState([]);
   const [pitchingStats, setPitchingStats] = useState([]);
-  const [careerTotals, setCareerTotals] = useState(null); // Separate state for career totals
+  const [careerTotals, setCareerTotals] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -29,30 +29,33 @@ const BaseballCard = () => {
       });
     };
 
-    Promise.all([loadCSV('/minibat-info.csv'), loadCSV('/2025-minibats.csv'), loadCSV('/2024-minibats.csv'), loadCSV('/2023-minibats.csv'), loadCSV('/2022-minibats.csv'), loadCSV('/2021-minibats.csv')
-      , loadCSV('/minibats.csv'), loadCSV('/pitching.csv') 
+    Promise.all([loadCSV('/Minibats/minibat-info.csv'), loadCSV('/Minibats/2025-minibats.csv'), loadCSV('/Minibats/2024-minibats.csv'), loadCSV('/Minibats/2023-minibats.csv'), loadCSV('/Minibats/2022-minibats.csv'), loadCSV('/Minibats/2021-minibats.csv')
+      , loadCSV('/Minibats/minibats.csv'), loadCSV('/Minibats/pitching.csv') 
     ])
-      .then(([infoData, stats2025, stats2024, stats2023, stats2022, stats2021,  career, pitching]) => {
-        const playerInfo = infoData.find((player) => player.id1 === id1);
+      .then(([infoData, stats2025, stats2024, stats2023, stats2022, stats2021, career, pitching]) => {
+        const playerInfo = infoData.find((player) => String(player.id1) === String(id1));
+
         if (playerInfo) {
           playerInfo.championships = playerInfo.championships
             ? playerInfo.championships.split(',').map((c) => c.trim())
             : [];
-        
+
           playerInfo.awards = playerInfo.awards
             ? playerInfo.awards.split(',').map((a) => a.trim())
             : [];
         }
 
-        const playerStats = [...stats2021, ...stats2022, ...stats2023, ...stats2024, ...stats2025, ...career].filter((stats) => String(stats.id1) === String(id1));
-        const pitchingStats = [...pitching].filter((stats) => String(stats.id1) === String(id1));
-        const careerStats = playerStats.find((stats) => stats.year === "Career");    
+        const allStats = [...stats2021, ...stats2022, ...stats2023, ...stats2024, ...stats2025, ...career];
+        const playerStats = allStats.filter((stats) => String(stats.id1) === String(id1));
+        const pitchingStats = (pitching ?? []).filter((stats) => String(stats.id1) === String(id1));
+
+        const careerStats = playerStats.find((stats) => stats.year === "Career");
         const seasonStats = playerStats.filter((stats) => stats.year !== "Career");
 
         setPlayerInfo(playerInfo);
         setBaseballStats(seasonStats);
         setCareerTotals(careerStats);
-        setPitchingStats(pitchingStats)
+        setPitchingStats(pitchingStats);
         setLoading(false);
       })
       .catch((error) => {
