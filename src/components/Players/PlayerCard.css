@@ -1,75 +1,41 @@
-/* Apply Flexbox centering to the container */
+/* Core Layout */
 .player-card-wrapper {
   display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center;     /* Centers vertically */
+  justify-content: center;
+  align-items: center;
   margin-top: 5px;
 }
 
-/* Player card container */
 .player-card-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   padding: 20px;
-  background-color:#ffffff;
-  max-width: 1200px; /* Adjust as needed */
-  width: 100%; /* Ensure the card container scales based on screen size */
+  margin: 5%;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  background-color: #ffffff;
+  max-width: 1200px;
+  width: 100%;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 0 auto; /* Center the card horizontally within its container */
 }
 
-/* Player image section */
+/* Player Image Section */
 .player-image-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
-/* Player accolades section */
-.player-accolades-section {
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-
-.player-accolades-table {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-  margin-bottom: 5px;
-}
-
-.player-accolades-table td {
-  font-size: 14px;
-  text-align: left;
-  padding: 5px;
-}
-
-
-.player-accolades-table th {
-  background-color: rgb(1, 58, 104);
-  font-weight: bold;
-  font-size: .9em;
-}
-
-.player-accolades-table td {
-  font-size: .12;
-  padding: 5px;
-}
-
-/* Player name */
-.player-name {
-  font-size: 2em;
-  margin-bottom: 10px;
-  text-align: left;
-}
-
 .player-image {
-  width: 100%; 
-  max-width: 150px;
+  width: 100%;
   height: auto;
   border-radius: 10px;
 }
 
-/* Mini logo styling */
 .player-mini-logo {
   width: 50px;
   height: 50px;
@@ -77,8 +43,26 @@
   vertical-align: middle;
 }
 
-/* Player stats section */
+/* Player Info */
+.player-name {
+  font-size: 2em;
+  margin-bottom: 10px;
+  text-align: left;
+  font-family: inherit;
+}
+
+.player-stat-headers {
+  font-size: 1.5em;
+  text-align: left;
+  margin-top: 5px;
+  margin-bottom: 2%;
+  font-family: inherit;
+}
+
+/* Stats Section */
 .player-stats-section {
+  flex: 2;
+  margin-left: 5%;
   margin-bottom: 5px;
 }
 
@@ -86,12 +70,48 @@
   font-size: 18px;
 }
 
-.player-stat-headers {
-  font-size: 1.5em;
-  text-align: left;
-  margin-top: 5px;
+.stats-title {
+  text-align: center;
+  font-family: inherit;
+  margin-bottom: 5%;
 }
 
+.player-stats-section .stats-header {
+  text-align: center;
+  background-color: rgb(1, 58, 104);
+  color: #ffffff !important;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* Accolades Section */
+.player-accolades-section {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.player-accolades-table {
+  border: 1px solid #ddd;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.player-accolades-table th {
+  background-color: rgb(1, 58, 104);
+  font-weight: bold;
+  font-size: 0.9em;
+  padding: 5px;
+  text-align: left;
+}
+
+.player-accolades-table td {
+  font-size: 14px;
+  padding: 5px;
+  text-align: left;
+}
+
+/* Table Responsive Styles */
 .table-responsive {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -109,67 +129,76 @@
 .table-responsive td {
   text-align: center;
   padding: 10px;
-  font-size: .9em;
+  font-size: 0.9em;
 }
 
-/* Mobile responsive styles */
+
+/* Columns */
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.column2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 1024px) {
   .player-card-wrapper {
-    display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: auto; /* Allow the height to adjust on mobile */
+    height: auto;
   }
 
   .player-card-container {
-    padding: 10px; /* Reduce padding on mobile */
-    width: 90%; /* Allow the card to take up more width */
-    max-width: none; /* Remove max-width constraint */
+    flex-direction: column;
+    width: 90%;
+    padding: 10px;
+    max-width: none;
   }
 
-  .player-image {
-    max-width: 100%; /* Ensure the image fills the width of the container */
-    width: 100%; /* Take up the full width */
-    height: auto;
-  }
-
-  .player-name {
-    font-size: 1.8em; /* Slightly smaller on mobile */
-  }
-
-  .player-stat-headers {
-    font-size: 1.2em; /* Smaller font for stats headers */
-  }
-
-  .table-responsive table {
-    min-width: 100%; /* Ensure the table takes up full width */
-  }
-
-  .table-responsive th,
-  .table-responsive td {
-    font-size: 0.9em; /* Adjust font size */
-    padding: 8px; /* Reduce padding */
-  }
-}
-
-/* Further adjustments for very small screens (480px and smaller) */
-@media (max-width: 480px) {
   .player-image {
     max-width: 100%;
-    width: 100%; /* Make the image responsive */
+    width: 100%;
     height: auto;
   }
 
   .player-name {
-    font-size: 1.5em; /* Smaller text on very small screens */
+    font-size: 1.8em;
   }
 
   .player-stat-headers {
-    font-size: 1em; /* Further reduce size for small screens */
+    font-size: 1.2em;
+  }
+
+  .player-stats-section {
+    margin-left: 0;
+    width: 100%;
   }
 
   .table-responsive table {
     min-width: 100%;
+  }
+
+  .table-responsive th,
+  .table-responsive td {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .player-name {
+    font-size: 1.5em;
+  }
+
+  .player-stat-headers {
+    font-size: 1em;
   }
 
   .table-responsive th,

@@ -1,4 +1,3 @@
-// src/components/Teams/BaseballStatsTable.js
 import React from 'react';
 import { SortNumericUp } from 'react-bootstrap-icons';
 import Button from '@mui/material/Button';
