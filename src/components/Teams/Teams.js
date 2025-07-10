@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Table } from 'react-bootstrap';
 import { SortNumericUp } from 'react-bootstrap-icons';
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 import teamData from '../../data/teams.json';
 import '../Players/Statsheet.css';
@@ -9,7 +9,6 @@ import '../Players/Statsheet.css';
 const Teams = () => {
   const navigate = useNavigate();
 
-  // Initial sort by hockeychampionships desc
   const [team, setTeam] = useState([...teamData].sort((a, b) => b.hockeychampionships - a.hockeychampionships));
   const [sortConfig, setSortConfig] = useState({ key: 'hockeychampionships', direction: 'desc' });
 

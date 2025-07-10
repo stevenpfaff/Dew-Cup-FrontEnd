@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Table } from 'react-bootstrap';
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material/Button';
 import { SortNumericUp } from 'react-bootstrap-icons';
 import Papa from 'papaparse';
 import './Statsheet.css';
@@ -86,7 +85,7 @@ const Pitching = () => {
             <h1 className="minibats-title">Minibat All-Time Pitching Stats</h1>
             <p>*Must have 20 innings to qualify for the ERA Leaderboard</p>
             <div className="table-responsive">
-                <Table striped bordered hover className="pitching-table">
+                <table className="minibats-table">
                     <thead>
                         <tr>
                             <th className="sticky-column">
@@ -159,7 +158,7 @@ const Pitching = () => {
                             </tr>
                         ))}
                     </tbody>
-                </Table>
+                </table>
             </div>
         </div>
     );

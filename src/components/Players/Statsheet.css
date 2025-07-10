@@ -44,12 +44,25 @@
 }
 
 .minibats-table {
-    min-width: 900px;
+    border-collapse: collapse; /* Make borders look cleaner */
+    width: 100%; /* Optional, makes table full width */
 }
 
-.pitching-table{
-    min-width: 550px;
+/* Add borders */
+.minibats-table, 
+.minibats-table th, 
+.minibats-table td {
+    border: 1px solid #ddd;
 }
+
+.minibats-table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.minibats-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
 
 .hockey-table{
     max-width: fit-content;
@@ -64,11 +77,8 @@
 }
 
 .minibats-table td:first-child, 
-.minibats-table th:first-child,
 .hockey-table td:first-child, 
-.hockey-table th:first-child,
-.pitching-table td:first-child, 
-.pitching-table th:first-child {
+.hockey-table th:first-child{
     text-align: left;
     white-space: nowrap;
     position: sticky;
@@ -76,6 +86,29 @@
     z-index: 10;
     background-color: #ffffff;
     border-right: 1px solid #dee2e6;
+}
+
+.minibats-table th:first-child
+{
+    text-align: left;
+    white-space: nowrap;
+    position: sticky;
+    left: 0;
+    z-index: 10;
+    border-right: 1px solid #dee2e6;
+    background: #013a68;
+}
+
+.minibats-table tbody tr:nth-child(odd) td:first-child {
+    background-color: #f9f9f9;
+}
+
+.minibats-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.minibats-table tbody tr:hover td:first-child {
+    background-color: #f1f1f1;
 }
 
 .table th:first-child {

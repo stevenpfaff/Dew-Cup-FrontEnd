@@ -131,7 +131,7 @@ const BaseballCard = () => {
         <div className="player-stats-section">
           <h5 className="player-stat-headers">Batting</h5>
           <div className="table-responsive">
-          <Table bordered>
+          <table striped bordered hover className="minibats-table">
             <thead>
               <tr>
                 <th>Year</th>
@@ -191,12 +191,13 @@ const BaseballCard = () => {
                 </tr>
               )}
             </tbody>
-          </Table>
+          </table>
           </div>
           <h5 className="player-stat-headers">Pitching</h5>
-          <Table bordered>
+          <table striped bordered hover className="minibats-table">
             <thead>
               <tr>
+                <th>Year</th>
                 <th>IP</th>
                 <th>W</th>
                 <th>L</th>
@@ -210,6 +211,7 @@ const BaseballCard = () => {
               {pitchingStats.length > 0 ? (
                 pitchingStats.map((stat, index) => (
                   <tr key={index}>
+                    <td>Career</td>
                     <td>{stat.ip}</td>
                     <td>{stat.w}</td>
                     <td>{stat.l}</td>
@@ -225,7 +227,7 @@ const BaseballCard = () => {
                 </tr>
               )}
             </tbody>
-          </Table>
+          </table>
         </div>
         </div>
         </div>

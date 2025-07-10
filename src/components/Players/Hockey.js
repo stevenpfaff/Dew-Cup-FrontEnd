@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Table } from 'react-bootstrap';
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material/Button';
 import Papa from 'papaparse';
 import { SortNumericUp } from 'react-bootstrap-icons';
 import { useNavigate } from 'react-router-dom';
@@ -81,7 +80,7 @@ function Hockey() {
       <h1 className="minibats-title">Hockey All-Time Stats</h1>
       <p>*incomplete records for goals, assists, and points</p>
       <div className="table-responsive">
-        <Table striped bordered hover className="hockey-table">
+        <table  className="minibats-table">
           <thead>
             <tr>
               <th>
@@ -132,7 +131,7 @@ function Hockey() {
               </tr>
             ))}
           </tbody>
-        </Table>
+        </table>
       </div>
     </div>
   );

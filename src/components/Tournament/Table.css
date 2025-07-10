@@ -4,6 +4,7 @@ thead {
     color: white;
 
 }
+
 th {
     text-align: center;
 
@@ -33,28 +34,7 @@ th {
     overflow-x: auto;
 }
 
-.tourney-table th, .tourney-table td {
-    text-align: center;
-    vertical-align: middle;
-}
 
-.tourney-table td:first-child, 
-.tourney-table th:first-child {
-    text-align: left;
-    white-space: nowrap;
-    position: sticky;
-    left: 0;
-    z-index: 10;
-    background-color: #ffffff;
-    border-right: 1px solid #dee2e6;
-}
-
-.tourney-table th:first-child{
-    background: #013a68;
-}
-.tourney-table{
-    min-width: 350px;
-}
 
 @media (max-width: 1024px) {
     .tourney-container {
@@ -66,14 +46,6 @@ th {
         font-size: 5rem;
     }
 
-    .tourney-table th, .tourney-table td {
-        font-size: 0.8rem;
-    }
-
-    .sort-button {
-        padding: 0;
-        margin-left: 5px;
-    }
 }
 
 @media (max-width: 768px) {
@@ -86,27 +58,10 @@ th {
         font-size: 1.5rem;
     }
 
-    .tourney-table th, .tourney-table td {
-        font-size: 0.8rem;
-    }
-
-    .sort-button {
-        padding: 0;
-        margin-left: 5px;
-    }
 }
 
 @media (max-width: 480px) {
     .title {
         font-size: 1.2rem;
-    }
-
-    .tourney-table th, .tourney-table td {
-        font-size: 0.6rem;
-    }
-
-    .sort-button {
-        padding: 0;
-        margin-left: 2px;
     }
 }

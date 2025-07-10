@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Table } from 'react-bootstrap';
-import Button from '@material-ui/core/Button';
 import { SortNumericUp } from 'react-bootstrap-icons';
 import Papa from 'papaparse';
 import { useNavigate } from 'react-router-dom';
@@ -39,7 +37,6 @@ function BattingStats({ year }) {
               }));
 
             const sortedPlayerData = [...playerData].sort((a, b) => b.homeruns - a.homeruns);
-
             setPlayer(sortedPlayerData);
           },
         });
@@ -53,7 +50,6 @@ function BattingStats({ year }) {
     }
 
     const qualifiesForFilter = ['average', 'slug', 'obp', 'ops'].includes(key);
-
     const qualifiers = qualifiesForFilter ? player.filter((p) => p.ab >= 40) : player;
     const nonQualifiers = qualifiesForFilter ? player.filter((p) => p.ab < 40) : [];
 
@@ -75,7 +71,7 @@ function BattingStats({ year }) {
     <div className="minibats-container">
       <h1 className="minibats-title">{year} Batting Stats</h1>
       <div className="table-responsive">
-        <Table striped bordered hover className="minibats-table">
+        <table className="minibats-table">
           <thead>
             <tr>
               {[
@@ -91,11 +87,15 @@ function BattingStats({ year }) {
                 { key: 'slug', label: 'SLG' },
                 { key: 'ops', label: 'OPS' },
               ].map(({ key, label }) => (
-                <th key={key}>
+                <th key={key} scope="col">
                   {label}
-                  <Button onClick={() => sortData(key)} style={{ color: 'white' }}>
+                  <button
+                    onClick={() => sortData(key)}
+                    className="sort-button"
+                    aria-label={`Sort by ${label}`}
+                  >
                     <SortNumericUp />
-                  </Button>
+                  </button>
                 </th>
               ))}
             </tr>
@@ -122,7 +122,7 @@ function BattingStats({ year }) {
               </tr>
             ))}
           </tbody>
-        </Table>
+        </table>
       </div>
     </div>
   );

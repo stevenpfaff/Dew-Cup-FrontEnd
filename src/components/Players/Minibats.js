@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Table } from 'react-bootstrap';
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material/Button';
 import Papa from 'papaparse';
 import { useNavigate } from 'react-router-dom';
 import { SortNumericUp } from 'react-bootstrap-icons';
@@ -85,7 +84,7 @@ function Minibats() {
       <h1 className="minibats-title">Minibat All-Time Batting Stats</h1>
       <p>*Must have 70 AB's to qualify for slashing leaderboard.</p>
       <div className="table-responsive">
-        <Table striped bordered hover className="minibats-table">
+        <table className="minibats-table">
           <thead>
             <tr>
               <th className="sticky-column">
@@ -179,7 +178,7 @@ function Minibats() {
               </tr>
             ))}
           </tbody>
-        </Table>
+        </table>
       </div>
     </div>
   );

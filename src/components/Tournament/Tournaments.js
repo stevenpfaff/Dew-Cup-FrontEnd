@@ -1,5 +1,4 @@
 import React from 'react';
-import { Table } from 'react-bootstrap';
 import tourney from '../../data/tourneys.json';
 import { useNavigate } from 'react-router-dom';
 import './Table.css';
@@ -16,7 +15,7 @@ function Tourneys() {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <h1 className="title">Tournaments</h1>
       <div className="table-responsive">
-        <Table striped bordered hover className="tourney-table">
+        <table className="minibats-table">
           <thead>
             <tr>
               <th>Series</th>
@@ -40,7 +39,7 @@ function Tourneys() {
               </tr>
             ))}
           </tbody>
-        </Table>
+        </table>
       </div>
     </div>
   );

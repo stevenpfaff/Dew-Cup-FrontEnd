@@ -133,10 +133,9 @@ const HockeyCard = () => {
           </Table>
         )}
         </div>
-
         <div className="player-stats-section">
           <h5 className="player-stat-headers">Career Stats</h5>
-          <Table bordered>
+          <table striped bordered hover className="minibats-table">
             <thead>
               <tr>
                 <th>Tourney</th>
@@ -166,7 +165,7 @@ const HockeyCard = () => {
                 <td><strong>{careerTotals.points}</strong></td>
               </tr>
             </tbody>
-          </Table>
+          </table>
         </div>
       </div>
     </div>
