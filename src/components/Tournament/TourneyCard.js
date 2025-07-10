@@ -43,7 +43,7 @@ const TourneyCard = () => {
 
   return (
     <div className="tourney-card-container">
-      <h1 className='title'>{tourney.tourney}</h1>
+      <h1 className='title'>{tourney.name}</h1>
       <div className="tourney-image-section">
         <img src={tourney.image} className="tourney-image" alt={`${tourney.tourney}`} />
       </div>

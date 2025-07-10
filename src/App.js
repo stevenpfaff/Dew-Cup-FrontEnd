@@ -9,7 +9,6 @@ import Hockey from './components/Players/Hockey';
 import Tourneys from './components/Tournament/Tournaments';
 import HockeyCard from './components/Players/HockeyCard';
 import BaseballCard from './components/Players/BaseballCard';
-// import TeamCard from './components/Teams/TeamCard';
 import TourneyCard from './components/Tournament/TourneyCard';
 import BattingStats from './components/Players/YearlyBatting';
 import { useParams } from 'react-router-dom';

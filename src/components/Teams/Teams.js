@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Papa from 'papaparse';
-import { useNavigate } from 'react-router-dom';
 import HockeyStatsTable from './HockeyStats';
 import BaseballStatsTable from './BaseballStats';
 import '../Players/Statsheet.css';
 
 const Teams = () => {
-  const navigate = useNavigate();
   const [team, setTeam] = useState([]);
   const [sortConfig, setSortConfig] = useState({ key: 'hockeychampionships', direction: 'desc' });
 
@@ -52,9 +50,6 @@ const Teams = () => {
     setSortConfig({ key, direction });
   };
 
-  const handleTeamClick = (id) => {
-    navigate(`/team/${id}`);
-  };
 
   return (
     <div className="teams-container">
@@ -62,10 +57,10 @@ const Teams = () => {
       <h1 className="minibats-title">All-Time Team Stats</h1>
 
       <h2 className="minibats-subtitle">Hockey Stats</h2>
-      <HockeyStatsTable teams={team} sortData={sortData} onTeamClick={handleTeamClick} />
+      <HockeyStatsTable teams={team} sortData={sortData} />
 
       <h2 className="minibats-subtitle">Baseball Stats</h2>
-      <BaseballStatsTable teams={team} sortData={sortData} onTeamClick={handleTeamClick} />
+      <BaseballStatsTable teams={team} sortData={sortData} />
     </div>
   );
 };

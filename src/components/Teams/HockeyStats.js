@@ -52,11 +52,7 @@ const HockeyStatsTable = ({ teams, sortData, onTeamClick }) => (
             <td>
               <img src={team.mini} alt="N/A" style={{ width: '30px', height: '30px', marginRight: '10px' }} />
             </td>
-            <td
-              className="sticky-column"
-              style={{ cursor: 'pointer', color: 'blue' }}
-              onClick={() => onTeamClick(team.id)}
-            >
+            <td className="sticky-column">
               {team.name}
             </td>
             <td>{team.hockeywins}</td>
