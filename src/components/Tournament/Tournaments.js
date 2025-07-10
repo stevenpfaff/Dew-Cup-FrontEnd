@@ -1,10 +1,25 @@
-import React from 'react';
-import tourney from '../../data/tourneys.json';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Papa from 'papaparse';
 import './Table.css';
 
 function Tourneys() {
+  const [tourneys, setTourneys] = useState([]);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    fetch('/Tourney/tourneydata.csv')
+      .then((response) => response.text())
+      .then((csvText) => {
+        Papa.parse(csvText, {
+          header: true,
+          skipEmptyLines: true,
+          complete: (results) => {
+            setTourneys(results.data);
+          },
+        });
+      });
+  }, []);
 
   const handleTourneyClick = (tourney_id) => {
     navigate(`/tourney/${tourney_id}`);
@@ -25,13 +40,13 @@ function Tourneys() {
             </tr>
           </thead>
           <tbody>
-            {tourney.map((tourney) => (
+            {tourneys.map((tourney) => (
               <tr key={tourney.tourney_id}>
                 <td
                   style={{ cursor: 'pointer', color: 'blue' }}
-                  onClick={() => handleTourneyClick(tourney.tourney_id)}
+                  onClick={() => handleTourneyClick(tourney.id)}
                 >
-                  {tourney.tourney}
+                  {tourney.name}
                 </td>
                 <td>{tourney.year}</td>
                 <td>{tourney.winner}</td>

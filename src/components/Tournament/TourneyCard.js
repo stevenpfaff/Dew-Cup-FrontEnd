@@ -1,19 +1,45 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import data from '../../data/tourneys.json';
-import games from '../../data/games.json';
+import Papa from 'papaparse';
 import './Card.css';
 
 const TourneyCard = () => {
   const { tourney_id } = useParams();
-  const tourney = data.find(obj => obj.tourney_id === parseInt(tourney_id));
+  const [tourney, setTourney] = useState(null);
+  const [tourneyGames, setTourneyGames] = useState([]);
+
+  useEffect(() => {
+
+    Promise.all([
+      fetch('/Tourney/tourneydata.csv').then(res => res.text()),
+      fetch('/gamesdata.csv').then(res => res.text())
+    ]).then(([tourneyCsv, gamesCsv]) => {
+      const tourneyResult = Papa.parse(tourneyCsv, {
+        header: true,
+        skipEmptyLines: true,
+      });
+
+      const gamesResult = Papa.parse(gamesCsv, {
+        header: true,
+        skipEmptyLines: true,
+      });
+
+      const foundTourney = tourneyResult.data.find(
+        (obj) => parseInt(obj.id) === parseInt(tourney_id)
+      );
+
+      const filteredGames = gamesResult.data.filter(
+        (game) => parseInt(game.id) === parseInt(tourney_id)
+      );
+
+      setTourney(foundTourney);
+      setTourneyGames(filteredGames);
+    });
+  }, [tourney_id]);
 
   if (!tourney) {
     return <div>Tournament not found</div>;
   }
-
-  // Filter the games by the current tournament ID
-  const tourneyGames = games.filter(game => game.tourney_id === parseInt(tourney_id));
 
   return (
     <div className="tourney-card-container">
@@ -67,7 +93,7 @@ const TourneyCard = () => {
               </tr>
             </thead>
             <tbody>
-              {tourneyGames.map(game => (
+              {tourneyGames.map((game) => (
                 <tr key={game.game_id}>
                   <td>{game.round}</td>
                   <td>{game.team1}</td>

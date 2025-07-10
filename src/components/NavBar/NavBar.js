@@ -22,7 +22,7 @@ function NavBar() {
                         </NavDropdown>                          
                     </Nav>
                     <Nav>
-                        {/* <Nav.Link href="/teams">Team Stats</Nav.Link> */}
+                        <Nav.Link href="/teams">Team Stats</Nav.Link>
                         <Nav.Link href="/hockey">Hockey Stats</Nav.Link>
                         <NavDropdown title="Minibat Stats" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="/batting">All-Time Batting</NavDropdown.Item>
