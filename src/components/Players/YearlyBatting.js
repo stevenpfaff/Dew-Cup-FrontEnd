@@ -76,6 +76,7 @@ function BattingStats({ year }) {
             <tr>
               {[
                 { key: 'name', label: 'Player' },
+                { key: 'ab', label: 'AB' },
                 { key: 'hits', label: 'H' },
                 { key: 'doubles', label: '2B' },
                 { key: 'triples', label: '3B' },
@@ -109,6 +110,7 @@ function BattingStats({ year }) {
                 >
                   {data.name}
                 </td>
+                <td>{data.ab}</td>
                 <td>{data.hits}</td>
                 <td>{data.doubles}</td>
                 <td>{data.triples}</td>

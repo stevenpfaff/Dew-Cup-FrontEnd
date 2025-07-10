@@ -94,6 +94,12 @@ function Minibats() {
                 </Button>
               </th>
               <th>
+                AB
+                <Button onClick={() => sortData('ab')} style={{ color: 'white' }}>
+                  <SortNumericUp />
+                </Button>
+              </th>
+              <th>
                 H
                 <Button onClick={() => sortData('hits')} style={{ color: 'white' }}>
                   <SortNumericUp />
@@ -165,6 +171,7 @@ function Minibats() {
                 >
                   {data.name}
                 </td>
+                <td>{data.ab}</td>
                 <td>{data.hits}</td>
                 <td>{data.doubles}</td>
                 <td>{data.triples}</td>
