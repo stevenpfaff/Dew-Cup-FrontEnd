@@ -27,7 +27,7 @@ const Teams = () => {
           runs: Number(row.runs),
           runsag: Number(row.runsag),
           hockeychampionships: Number(row.dewcup),
-          batschampionships: Number(row.budwood),
+          batschampionships: row.budwood && row.budwood.trim() !== '' ? Number(row.budwood) : NaN,
         }));
 
         setTeam(dataWithNumbers.sort((a, b) => b.hockeychampionships - a.hockeychampionships));
@@ -59,8 +59,15 @@ const Teams = () => {
       <h2 className="minibats-subtitle">Hockey Stats</h2>
       <HockeyStatsTable teams={team} sortData={sortData} />
 
-      <h2 className="minibats-subtitle">Baseball Stats</h2>
-      <BaseballStatsTable teams={team} sortData={sortData} />
+      {team.some(t => !isNaN(t.batschampionships)) && (
+        <>
+          <h2 className="minibats-subtitle">Baseball Stats</h2>
+          <BaseballStatsTable
+            teams={team.filter(t => !isNaN(t.batschampionships))}
+            sortData={sortData}
+          />
+        </>
+      )}
     </div>
   );
 };

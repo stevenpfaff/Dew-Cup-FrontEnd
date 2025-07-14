@@ -1,7 +1,9 @@
 id,name,image,mini,h_wins,h_loss,goals,goalsag,bats_wins,bats_loss,runs,runsag,hr,budwood,dewcup
 1,Moon Baboons,/Images/baboon.jpg,/Images/baboon-mini.png,2,10,23,38,19,20,417,444,128,0,1
-2,Buds Wood,/Images/budswood.jpg,/Images/wood-mini.png,15,14,84,88,0,0,0,0,0,0,0
+2,Buds Wood,/Images/budswood.jpg,/Images/wood-mini.png,15,14,84,88,,,,,,,0
 4,Goobies Mum,/Images/mum.jpg,/Images/mummini.png,17,16,106,100,23,17,484,412,160,2,1
 3,Squid Niqs,/Images/Squid.png,/Images/squid-mini.png,21,7,102,61,10,3,124,101,27,2,3
 5,Rat Girl Minions,/Images/minions.png,/Images/minions-mini.png,8,13,60,76,1,15,78,158,30,0,1
-6,Goobies Cudas,/Images/cudas.png,/Images/cudas-mini.png,7,5,47,42,0,0,0,0,0,0,0
+8,Goobies Cudas,/Images/cudas.png,/Images/cudas-mini.png,7,5,47,42,,,,,,,0
+6,Deer Hunters,,,5,5,29,28,,,,,,,0
+7,Hellmo Vitamins,,,1,4,8,18,,,,,,,0

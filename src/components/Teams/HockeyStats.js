@@ -49,8 +49,12 @@ const HockeyStatsTable = ({ teams, sortData, onTeamClick }) => (
       <tbody>
         {teams.map((team) => (
           <tr key={team.id}>
-            <td>
-              <img src={team.mini} alt="N/A" style={{ width: '30px', height: '30px', marginRight: '10px' }} />
+            <td style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <img
+              src={team.mini}
+              alt="N/A"
+              style={{ width: '30px', height: '30px' }}
+            />
             </td>
             <td className="sticky-column">
               {team.name}

@@ -26,10 +26,10 @@
 }
 
 .teams-container {
-    margin: 0 15%;
+    margin: 0 20%;
     margin-bottom: 5%;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .minibats-title {
@@ -139,7 +139,7 @@
     }
     
     .teams-container {
-        margin: 0 4%;
+        margin: 0 5%;
         margin-bottom: 5%;
         background-color:#ffffff;
     }
