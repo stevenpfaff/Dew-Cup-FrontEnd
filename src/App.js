@@ -33,8 +33,6 @@ function App() {
         <Route path="/baseballcard/:id1" element={<BaseballCard />} />
         {/* <Route path="/team/:id" element={<TeamCard />} /> */}
         <Route path="/tourney/:tourney_id" element={<TourneyCard />} />
-
-        {/* Dynamic Batting Route */}
         <Route path="/batting/:year" element={<BattingStatsWrapper />} />
       </Routes>
     </>

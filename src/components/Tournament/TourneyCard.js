@@ -12,7 +12,7 @@ const TourneyCard = () => {
 
     Promise.all([
       fetch('/Tourney/tourneydata.csv').then(res => res.text()),
-      fetch('/gamesdata.csv').then(res => res.text())
+      fetch('/Tourney/games.csv').then(res => res.text())
     ]).then(([tourneyCsv, gamesCsv]) => {
       const tourneyResult = Papa.parse(tourneyCsv, {
         header: true,
@@ -29,8 +29,9 @@ const TourneyCard = () => {
       );
 
       const filteredGames = gamesResult.data.filter(
-        (game) => parseInt(game.id) === parseInt(tourney_id)
+        (game) => parseInt(game.tourney_id) === parseInt(tourney_id)
       );
+
 
       setTourney(foundTourney);
       setTourneyGames(filteredGames);
@@ -87,8 +88,8 @@ const TourneyCard = () => {
             <thead>
               <tr>
                 <th>Round</th>
-                <th>Team</th>
-                <th>Team</th>
+                <th>Home Team</th>
+                <th>Away Team</th>
                 <th>Score</th>
               </tr>
             </thead>
