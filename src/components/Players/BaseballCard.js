@@ -29,10 +29,10 @@ const BaseballCard = () => {
       });
     };
 
-    Promise.all([loadCSV('/Minibats/minibat-info.csv'), loadCSV('/Minibats/2025-minibats.csv'), loadCSV('/Minibats/2024-minibats.csv'), loadCSV('/Minibats/2023-minibats.csv'), loadCSV('/Minibats/2022-minibats.csv'), loadCSV('/Minibats/2021-minibats.csv')
+    Promise.all([loadCSV('/Minibats/minibat-info.csv'), loadCSV('/Minibats/2026-minibats.csv'), loadCSV('/Minibats/2025-minibats.csv'), loadCSV('/Minibats/2024-minibats.csv'), loadCSV('/Minibats/2023-minibats.csv'), loadCSV('/Minibats/2022-minibats.csv'), loadCSV('/Minibats/2021-minibats.csv')
       , loadCSV('/Minibats/minibats.csv'), loadCSV('/Minibats/pitching.csv') 
     ])
-      .then(([infoData, stats2025, stats2024, stats2023, stats2022, stats2021, career, pitching]) => {
+      .then(([infoData, stats2026, stats2025, stats2024, stats2023, stats2022, stats2021, career, pitching]) => {
         const playerInfo = infoData.find((player) => String(player.id1) === String(id1));
 
         if (playerInfo) {
@@ -45,7 +45,7 @@ const BaseballCard = () => {
             : [];
         }
 
-        const allStats = [...stats2021, ...stats2022, ...stats2023, ...stats2024, ...stats2025, ...career];
+        const allStats = [...stats2021, ...stats2022, ...stats2023, ...stats2024, ...stats2025, ...stats2026, ...career];
         const playerStats = allStats.filter((stats) => String(stats.id1) === String(id1));
         const pitchingStats = (pitching ?? []).filter((stats) => String(stats.id1) === String(id1));
 
@@ -137,15 +137,16 @@ const BaseballCard = () => {
                 <th>Year</th>
                 <th>AB</th>
                 <th>H</th>
+                <th>AVG</th>
+                <th>OBP</th>
+                <th>SLG</th>
+                <th>OPS</th>
                 <th>2B</th>
                 <th>3B</th>
                 <th>HR</th>
                 <th>RBI</th>
                 <th>R</th>
-                <th>AVG</th>
-                <th>OBP</th>
-                <th>SLG</th>
-                <th>OPS</th>
+                <th>WAR</th>
               </tr>
             </thead>
             <tbody>
@@ -155,15 +156,16 @@ const BaseballCard = () => {
                   <td>{season.year}</td>
                   <td>{season.ab}</td>
                   <td>{season.hits}</td>
+                  <td>{season.average}</td>
+                  <td>{season.obp}</td>
+                  <td>{season.slug}</td>
+                  <td>{season.ops}</td>
                   <td>{season.doubles}</td>
                   <td>{season.triples}</td>
                   <td>{season.homeruns}</td>
                   <td>{season.rbi}</td>
                   <td>{season.runs}</td>
-                  <td>{season.average}</td>
-                  <td>{season.obp}</td>
-                  <td>{season.slug}</td>
-                  <td>{season.ops}</td>
+                  <td>{season.war}</td>
                 </tr>
               ))}
 
@@ -173,15 +175,16 @@ const BaseballCard = () => {
                   <td><strong>Career</strong></td>
                   <td><strong>{careerTotals.ab}</strong></td>
                   <td><strong>{careerTotals.hits}</strong></td>
+                  <td><strong>{careerTotals.average}</strong></td>
+                  <td><strong>{careerTotals.obp}</strong></td>
+                  <td><strong>{careerTotals.slug}</strong></td>
+                  <td><strong>{careerTotals.ops}</strong></td>
                   <td><strong>{careerTotals.doubles}</strong></td>
                   <td><strong>{careerTotals.triples}</strong></td>
                   <td><strong>{careerTotals.homeruns}</strong></td>
                   <td><strong>{careerTotals.rbi}</strong></td>
                   <td><strong>{careerTotals.runs}</strong></td>
-                  <td><strong>{careerTotals.average}</strong></td>
-                  <td><strong>{careerTotals.obp}</strong></td>
-                  <td><strong>{careerTotals.slug}</strong></td>
-                  <td><strong>{careerTotals.ops}</strong></td>
+                  <td><strong>{careerTotals.war}</strong></td>
                 </tr>
               )}
             </tbody>

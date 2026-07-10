@@ -1,20 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 .minibats-container {
-    margin: 0 13%;
-    margin-bottom: 5%;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 16px;
+    background: #fff;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 20px;
-    background-color:#ffffff;
 }
 
-.pitching-container {
-    margin: 0 20%;
-    margin-bottom: 5%;
+/* .pitching-container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 16px;
+    background: #fff;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 24px;
-    background-color:#ffffff;
-}
+    font-size: 20px;
+} */
 
 .hockey-container {
     margin: 2% auto;
@@ -44,8 +46,12 @@
 }
 
 .minibats-table {
-    border-collapse: collapse; /* Make borders look cleaner */
-    width: 100%; /* Optional, makes table full width */
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.minibats-table th {
+    font-weight: normal;
 }
 
 /* Add borders */
@@ -69,11 +75,11 @@
 }
 
 
-.minibats-table th, .minibats-table td {
-    text-align: center;
-    vertical-align: middle;
-    font-size: 1rem;
-    padding: 8px;
+.minibats-table th,
+.minibats-table td {
+    font-size: 0.9rem;
+    padding: 4px 8px;
+    line-height: 1.2;
 }
 
 .minibats-table td:first-child, 
@@ -90,7 +96,7 @@
 
 .minibats-table th:first-child
 {
-    text-align: left;
+    text-align: center;
     white-space: nowrap;
     position: sticky;
     left: 0;
@@ -117,6 +123,17 @@
     border-right: 1px solid #dee2e6;
 }
 
+.sort-button {
+    min-width: 0 !important;
+    padding: 2px !important;
+    margin-left: 2px !important;
+    color: white !important;
+}
+
+.sort-button svg {
+    width: 14px;
+    height: 14px;
+}
 
 
 @media (max-width: 1024px) {

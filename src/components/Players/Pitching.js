@@ -26,9 +26,10 @@ const Pitching = () => {
                     sv: parseInt(player.sv) || 0,
                     so: parseInt(player.so) || 0,
                     hra: parseInt(player.hra) || 0,
+                    war: parseFloat(player.war) || 0,
                 }));
 
-                parsedPlayers.sort((a, b) => b.ip - a.ip);
+                parsedPlayers.sort((a, b) => b.war - a.war);
 
                 setPlayers(parsedPlayers);
                 setLoading(false);
@@ -80,7 +81,7 @@ const Pitching = () => {
     const filteredPlayers = players.filter((p) => p.ip > 0);
 
     return (
-        <div className="pitching-container">
+        <div className="minibats-container">
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <h1 className="minibats-title">Minibat All-Time Pitching Stats</h1>
             <p>*Must have 20 innings to qualify for the ERA Leaderboard</p>
@@ -90,49 +91,55 @@ const Pitching = () => {
                         <tr>
                             <th className="sticky-column">
                                 Player
-                                <Button onClick={() => sortData('name')} style={{ color: 'white' }}>
+                                <Button className="sort-button" onClick={() => sortData('name')}>
                                     <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 IP
-                                <Button onClick={() => sortData('ip')} style={{ color: 'white' }}>
+                                <Button className="sort-button" onClick={() => sortData('ip')} style={{ color: 'white' }}>
                                     <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 W
-                                <Button onClick={() => sortData('w')} style={{ color: 'white' }}>
+                                <Button className="sort-button" onClick={() => sortData('w')} style={{ color: 'white' }}>
                                     <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 L
-                                <Button onClick={() => sortData('l')} style={{ color: 'white' }}>
+                                <Button className="sort-button" onClick={() => sortData('l')} style={{ color: 'white' }}>
                                     <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 SV
-                                <Button onClick={() => sortData('sv')} style={{ color: 'white' }}>
+                                <Button className="sort-button" onClick={() => sortData('sv')} style={{ color: 'white' }}>
                                     <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 ERA
-                                <Button onClick={() => sortData('era')} style={{ color: 'white' }}>
+                                <Button className="sort-button" onClick={() => sortData('era')} style={{ color: 'white' }}>
                                     <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 K
-                                <Button onClick={() => sortData('so')} style={{ color: 'white' }}>
+                                <Button className="sort-button" onClick={() => sortData('so')} style={{ color: 'white' }}>
                                     <SortNumericUp />
                                 </Button>
                             </th>
                             <th>
                                 HR
-                                <Button onClick={() => sortData('hra')} style={{ color: 'white' }}>
+                                <Button className="sort-button" onClick={() => sortData('hra')} style={{ color: 'white' }}>
+                                    <SortNumericUp />
+                                </Button>
+                            </th>
+                               <th>
+                                WAR
+                                <Button className="sort-button" onClick={() => sortData('war')} style={{ color: 'white' }}>
                                     <SortNumericUp />
                                 </Button>
                             </th>
@@ -155,6 +162,7 @@ const Pitching = () => {
                                 <td>{data.era.toFixed(2)}</td>
                                 <td>{data.so}</td>
                                 <td>{data.hra}</td>
+                                <td>{data.war.toFixed(1)}</td>
                             </tr>
                         ))}
                     </tbody>

@@ -12,7 +12,7 @@ function Minibats() {
 
   // Load CSV on mount
   useEffect(() => {
-    fetch('/Minibats/minibats.csv')
+    fetch('/Minibats/batting.csv')
       .then((response) => response.text())
       .then((csvData) => {
         Papa.parse(csvData, {
@@ -34,11 +34,12 @@ function Minibats() {
               obp: parseFloat(player.obp) || 0,
               slug: parseFloat(player.slug) || 0,
               ops: parseFloat(player.ops) || 0,
+              war: parseFloat(player.war) || 0,
             }));
 
-            const combinedData = csvPlayerData.sort((a, b) => b.homeruns - a.homeruns);
+            const combinedData = csvPlayerData.sort((a, b) => b.war - a.war);
             setPlayer(combinedData);
-            setSortConfig({ key: 'homeruns', direction: 'desc' }); // default sort
+            setSortConfig({ key: 'war', direction: 'desc' }); // default sort
           },
           error: (error) => {
             console.error('Error loading CSV data:', error);
@@ -51,30 +52,37 @@ function Minibats() {
     navigate(`/BaseballCard/${id1}`);
   };
 
-  const sortData = (key) => {
-    let direction = 'asc';
+const sortData = (key) => {
+  let direction = 'asc';
 
-    if (sortConfig.key === key && sortConfig.direction === 'asc') {
-      direction = 'desc';
-    }
+  if (sortConfig.key === key && sortConfig.direction === 'asc') {
+    direction = 'desc';
+  }
 
-    const qualifiers = player.filter((p) => p.ab >= 70);
-    const nonQualifiers = player.filter((p) => p.ab < 70);
+  const sortArray = (array) => {
+    return [...array].sort((a, b) => {
+      if (a[key] > b[key]) return direction === 'asc' ? 1 : -1;
+      if (a[key] < b[key]) return direction === 'asc' ? -1 : 1;
+      return 0;
+    });
+  };
 
-    const sortArray = (array) => {
-      return [...array].sort((a, b) => {
-        if (a[key] > b[key]) return direction === 'asc' ? 1 : -1;
-        if (a[key] < b[key]) return direction === 'asc' ? -1 : 1;
-        return 0;
-      });
-    };
+  const qualifierStats = ['average', 'obp', 'slug', 'ops'];
+
+  if (qualifierStats.includes(key)) {
+    const qualifiers = player.filter((p) => p.ab >= 100);
+    const nonQualifiers = player.filter((p) => p.ab < 100);
 
     const sortedQualifiers = sortArray(qualifiers);
     const sortedNonQualifiers = sortArray(nonQualifiers);
 
     setPlayer([...sortedQualifiers, ...sortedNonQualifiers]);
-    setSortConfig({ key, direction });
-  };
+  } else {
+    setPlayer(sortArray(player));
+  }
+
+  setSortConfig({ key, direction });
+};
 
   const filteredBats = player.filter((data) => data.mbgames !== 0);
 
@@ -82,80 +90,86 @@ function Minibats() {
     <div className="minibats-container">
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <h1 className="minibats-title">Minibat All-Time Batting Stats</h1>
-      <p>*Must have 70 AB's to qualify for slashing leaderboard.</p>
+      <p>*Must have 100 AB's to qualify for slashing leaderboard.</p>
       <div className="table-responsive">
         <table className="minibats-table">
           <thead>
             <tr>
               <th className="sticky-column">
                 Player
-                <Button onClick={() => sortData('name')} style={{ color: 'white' }}>
+                <Button className="sort-button" onClick={() => sortData('name')}>
                   <SortNumericUp />
                 </Button>
               </th>
               <th>
                 AB
-                <Button onClick={() => sortData('ab')} style={{ color: 'white' }}>
-                  <SortNumericUp />
+                <Button className="sort-button" onClick={() => sortData('ab')}>
+                    <SortNumericUp />
                 </Button>
               </th>
               <th>
                 H
-                <Button onClick={() => sortData('hits')} style={{ color: 'white' }}>
+                <Button className="sort-button" onClick={() => sortData('hits')} style={{ color: 'white' }}>
                   <SortNumericUp />
                 </Button>
               </th>
-              <th>
-                2B
-                <Button onClick={() => sortData('doubles')} style={{ color: 'white' }}>
-                  <SortNumericUp />
-                </Button>
-              </th>
-              <th>
-                3B
-                <Button onClick={() => sortData('triples')} style={{ color: 'white' }}>
-                  <SortNumericUp />
-                </Button>
-              </th>
-              <th>
-                HR
-                <Button onClick={() => sortData('homeruns')} style={{ color: 'white' }}>
-                  <SortNumericUp />
-                </Button>
-              </th>
-              <th>
-                RBI
-                <Button onClick={() => sortData('rbi')} style={{ color: 'white' }}>
-                  <SortNumericUp />
-                </Button>
-              </th>
-              <th>
-                R
-                <Button onClick={() => sortData('runs')} style={{ color: 'white' }}>
-                  <SortNumericUp />
-                </Button>
-              </th>
-              <th>
+                            <th>
                 AVG
-                <Button onClick={() => sortData('average')} style={{ color: 'white' }}>
+                <Button className="sort-button" onClick={() => sortData('average')} style={{ color: 'white' }}>
                   <SortNumericUp />
                 </Button>
               </th>
               <th>
                 OBP
-                <Button onClick={() => sortData('obp')} style={{ color: 'white' }}>
+                <Button className="sort-button" onClick={() => sortData('obp')} style={{ color: 'white' }}>
                   <SortNumericUp />
                 </Button>
               </th>
               <th>
                 SLG
-                <Button onClick={() => sortData('slug')} style={{ color: 'white' }}>
+                <Button className="sort-button" onClick={() => sortData('slug')} style={{ color: 'white' }}>
                   <SortNumericUp />
                 </Button>
               </th>
               <th>
                 OPS
-                <Button onClick={() => sortData('ops')} style={{ color: 'white' }}>
+                <Button className="sort-button" onClick={() => sortData('ops')} style={{ color: 'white' }}>
+                  <SortNumericUp />
+                </Button>
+              </th>
+              <th>
+                2B
+                <Button className="sort-button" onClick={() => sortData('doubles')} style={{ color: 'white' }}>
+                  <SortNumericUp />
+                </Button>
+              </th>
+              <th>
+                3B
+                <Button className="sort-button" onClick={() => sortData('triples')} style={{ color: 'white' }}>
+                  <SortNumericUp />
+                </Button>
+              </th>
+              <th>
+                HR
+                <Button className="sort-button" onClick={() => sortData('homeruns')} style={{ color: 'white' }}>
+                  <SortNumericUp />
+                </Button>
+              </th>
+              <th>
+                RBI
+                <Button className="sort-button" onClick={() => sortData('rbi')} style={{ color: 'white' }}>
+                  <SortNumericUp />
+                </Button>
+              </th>
+              <th>
+                R
+                <Button className="sort-button" onClick={() => sortData('runs')} style={{ color: 'white' }}>
+                  <SortNumericUp />
+                </Button>
+              </th>
+              <th>
+                WAR
+                <Button className="sort-button" onClick={() => sortData('war')} style={{ color: 'white' }}>
                   <SortNumericUp />
                 </Button>
               </th>
@@ -173,15 +187,16 @@ function Minibats() {
                 </td>
                 <td>{data.ab}</td>
                 <td>{data.hits}</td>
+                <td>{parseFloat(data.average).toFixed(3)}</td>
+                <td>{parseFloat(data.obp).toFixed(3)}</td>
+                <td>{parseFloat(data.slug).toFixed(3)}</td>
+                <td>{parseFloat(data.ops).toFixed(3)}</td>
                 <td>{data.doubles}</td>
                 <td>{data.triples}</td>
                 <td>{data.homeruns}</td>
                 <td>{data.rbi}</td>
                 <td>{data.runs}</td>
-                <td>{parseFloat(data.average).toFixed(3)}</td>
-                <td>{parseFloat(data.obp).toFixed(3)}</td>
-                <td>{parseFloat(data.slug).toFixed(3)}</td>
-                <td>{parseFloat(data.ops).toFixed(3)}</td>
+                <td>{parseFloat(data.war).toFixed(1)}</td>
               </tr>
             ))}
           </tbody>
