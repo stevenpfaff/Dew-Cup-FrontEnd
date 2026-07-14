@@ -146,7 +146,6 @@ const BaseballCard = () => {
                 <th>HR</th>
                 <th>RBI</th>
                 <th>R</th>
-                <th>WAR</th>
               </tr>
             </thead>
             <tbody>
@@ -165,7 +164,6 @@ const BaseballCard = () => {
                   <td>{season.homeruns}</td>
                   <td>{season.rbi}</td>
                   <td>{season.runs}</td>
-                  <td>{season.war}</td>
                 </tr>
               ))}
 
@@ -184,7 +182,6 @@ const BaseballCard = () => {
                   <td><strong>{careerTotals.homeruns}</strong></td>
                   <td><strong>{careerTotals.rbi}</strong></td>
                   <td><strong>{careerTotals.runs}</strong></td>
-                  <td><strong>{careerTotals.war}</strong></td>
                 </tr>
               )}
             </tbody>
