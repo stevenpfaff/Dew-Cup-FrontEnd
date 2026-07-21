@@ -102,6 +102,12 @@ const sortData = (key) => {
                 </Button>
               </th>
               <th>
+                GP
+                <Button className="sort-button" onClick={() => sortData('mbgames')}>
+                    <SortNumericUp />
+                </Button>
+              </th>
+              <th>
                 AB
                 <Button className="sort-button" onClick={() => sortData('ab')}>
                     <SortNumericUp />
@@ -168,6 +174,12 @@ const sortData = (key) => {
                 </Button>
               </th>
               <th>
+                K
+                <Button className="sort-button" onClick={() => sortData('k')} style={{ color: 'white' }}>
+                  <SortNumericUp />
+                </Button>
+              </th>
+              <th>
                 WAR
                 <Button className="sort-button" onClick={() => sortData('war')} style={{ color: 'white' }}>
                   <SortNumericUp />
@@ -185,6 +197,7 @@ const sortData = (key) => {
                 >
                   {data.name}
                 </td>
+                <td>{data.mbgames}</td>
                 <td>{data.ab}</td>
                 <td>{data.hits}</td>
                 <td>{parseFloat(data.average).toFixed(3)}</td>
@@ -196,6 +209,7 @@ const sortData = (key) => {
                 <td>{data.homeruns}</td>
                 <td>{data.rbi}</td>
                 <td>{data.runs}</td>
+                <td>{data.k}</td>
                 <td>{parseFloat(data.war).toFixed(1)}</td>
               </tr>
             ))}

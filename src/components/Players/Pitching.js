@@ -26,6 +26,7 @@ const Pitching = () => {
                     sv: parseInt(player.sv) || 0,
                     so: parseInt(player.so) || 0,
                     hra: parseInt(player.hra) || 0,
+                    fip: parseFloat(player.fip) || 0,
                     war: parseFloat(player.war) || 0,
                 }));
 
@@ -49,7 +50,7 @@ const Pitching = () => {
 
         let sorted = [];
 
-        if (key === 'era') {
+        if (key === 'era' || 'fip') {
             const qualifiers = players.filter((p) => p.ip >= 20);
             const nonQualifiers = players.filter((p) => p.ip > 0 && p.ip < 20);
 
@@ -81,7 +82,7 @@ const Pitching = () => {
     const filteredPlayers = players.filter((p) => p.ip > 0);
 
     return (
-        <div className="minibats-container">
+        <div className="pitching-container">
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <h1 className="minibats-title">Minibat All-Time Pitching Stats</h1>
             <p>*Must have 20 innings to qualify for the ERA Leaderboard</p>
@@ -120,12 +121,6 @@ const Pitching = () => {
                                 </Button>
                             </th>
                             <th>
-                                ERA
-                                <Button className="sort-button" onClick={() => sortData('era')} style={{ color: 'white' }}>
-                                    <SortNumericUp />
-                                </Button>
-                            </th>
-                            <th>
                                 K
                                 <Button className="sort-button" onClick={() => sortData('so')} style={{ color: 'white' }}>
                                     <SortNumericUp />
@@ -134,6 +129,18 @@ const Pitching = () => {
                             <th>
                                 HR
                                 <Button className="sort-button" onClick={() => sortData('hra')} style={{ color: 'white' }}>
+                                    <SortNumericUp />
+                                </Button>
+                            </th>
+                            <th>
+                                ERA
+                                <Button className="sort-button" onClick={() => sortData('era')} style={{ color: 'white' }}>
+                                    <SortNumericUp />
+                                </Button>
+                            </th>
+                            <th>
+                                FIP
+                                <Button className="sort-button" onClick={() => sortData('fip')} style={{ color: 'white' }}>
                                     <SortNumericUp />
                                 </Button>
                             </th>
@@ -159,9 +166,10 @@ const Pitching = () => {
                                 <td>{data.w}</td>
                                 <td>{data.l}</td>
                                 <td>{data.sv}</td>
-                                <td>{data.era.toFixed(2)}</td>
                                 <td>{data.so}</td>
                                 <td>{data.hra}</td>
+                                <td>{data.era.toFixed(2)}</td>
+                                <td>{data.fip.toFixed(2)}</td>
                                 <td>{data.war.toFixed(1)}</td>
                             </tr>
                         ))}

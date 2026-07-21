@@ -30,7 +30,7 @@ const BaseballCard = () => {
     };
 
     Promise.all([loadCSV('/Minibats/minibat-info.csv'), loadCSV('/Minibats/2026-minibats.csv'), loadCSV('/Minibats/2025-minibats.csv'), loadCSV('/Minibats/2024-minibats.csv'), loadCSV('/Minibats/2023-minibats.csv'), loadCSV('/Minibats/2022-minibats.csv'), loadCSV('/Minibats/2021-minibats.csv')
-      , loadCSV('/Minibats/minibats.csv'), loadCSV('/Minibats/pitching.csv') 
+      , loadCSV('/Minibats/batting.csv'), loadCSV('/Minibats/pitching.csv') 
     ])
       .then(([infoData, stats2026, stats2025, stats2024, stats2023, stats2022, stats2021, career, pitching]) => {
         const playerInfo = infoData.find((player) => String(player.id1) === String(id1));
@@ -146,6 +146,7 @@ const BaseballCard = () => {
                 <th>HR</th>
                 <th>RBI</th>
                 <th>R</th>
+                <th>K</th>
               </tr>
             </thead>
             <tbody>
@@ -164,6 +165,7 @@ const BaseballCard = () => {
                   <td>{season.homeruns}</td>
                   <td>{season.rbi}</td>
                   <td>{season.runs}</td>
+                  <td>{season.so}</td>
                 </tr>
               ))}
 
@@ -182,6 +184,7 @@ const BaseballCard = () => {
                   <td><strong>{careerTotals.homeruns}</strong></td>
                   <td><strong>{careerTotals.rbi}</strong></td>
                   <td><strong>{careerTotals.runs}</strong></td>
+                  <td><strong>{careerTotals.k}</strong></td>
                 </tr>
               )}
             </tbody>
@@ -195,10 +198,11 @@ const BaseballCard = () => {
                 <th>IP</th>
                 <th>W</th>
                 <th>L</th>
-                <th>SV</th>
-                <th>ERA</th>
+                <th>SV</th>      
                 <th>K</th>
                 <th>HR</th>
+                <th>ERA</th>
+                <th>FIP</th>
               </tr>
             </thead>
             <tbody>
@@ -210,9 +214,10 @@ const BaseballCard = () => {
                     <td>{stat.w}</td>
                     <td>{stat.l}</td>
                     <td>{stat.sv}</td>
-                    <td>{parseFloat(stat.era).toFixed(2)}</td>
                     <td>{stat.so}</td>
                     <td>{stat.hra}</td>
+                    <td>{parseFloat(stat.era).toFixed(2)}</td>
+                    <td>{parseFloat(stat.fip).toFixed(2)}</td>  
                   </tr>
                 ))
               ) : (
