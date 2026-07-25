@@ -90,7 +90,7 @@ const sortData = (key) => {
     <div className="minibats-container">
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <h1 className="minibats-title">Minibat All-Time Batting Stats</h1>
-      <p>*Must have 100 AB's to qualify for slashing leaderboard.</p>
+      <p className='note'>*Must have 100 AB's to qualify for slashing leaderboard.</p>
       <div className="table-responsive">
         <table className="minibats-table">
           <thead>

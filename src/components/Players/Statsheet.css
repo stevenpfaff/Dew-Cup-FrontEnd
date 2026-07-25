@@ -35,10 +35,16 @@
 }
 
 .minibats-title {
-    margin: 5% 0;
+    margin: 0% 0;
     font-family: inherit;
     text-align: center;
 }
+
+.note {
+    font-size: 14px;
+    text-align: center;
+}
+
 
 .table-responsive {
     overflow-x: auto;
@@ -136,6 +142,7 @@
 }
 
 
+
 @media (max-width: 1024px) {
     .minibats-container {
         margin: 0 5%;
@@ -200,9 +207,6 @@
         font-size: 1.5rem;
     }
 
-    p {
-        font-size: .9rem;
-    }
 
     .minibats-table th, .minibats-table td {
         font-size: 0.8rem;

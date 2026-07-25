@@ -95,8 +95,6 @@ function BattingStats({ year }) {
     <div className="minibats-container">
       <h1 className="minibats-title">{year} Batting Stats</h1>
 
-      <p>*Must have 40 AB's to qualify for slashing leaderboard.</p>
-
       <div className="table-responsive">
         <table className="minibats-table">
           <thead>

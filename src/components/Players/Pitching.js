@@ -85,7 +85,7 @@ const Pitching = () => {
         <div className="pitching-container">
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <h1 className="minibats-title">Minibat All-Time Pitching Stats</h1>
-            <p>*Must have 20 innings to qualify for the ERA Leaderboard</p>
+            <p className="note">*Must have 20 innings to qualify for the ERA Leaderboard</p>
             <div className="table-responsive">
                 <table className="minibats-table">
                     <thead>
