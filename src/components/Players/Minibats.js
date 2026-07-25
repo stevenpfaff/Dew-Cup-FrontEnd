@@ -119,30 +119,6 @@ const sortData = (key) => {
                   <SortNumericUp />
                 </Button>
               </th>
-                            <th>
-                AVG
-                <Button className="sort-button" onClick={() => sortData('average')} style={{ color: 'white' }}>
-                  <SortNumericUp />
-                </Button>
-              </th>
-              <th>
-                OBP
-                <Button className="sort-button" onClick={() => sortData('obp')} style={{ color: 'white' }}>
-                  <SortNumericUp />
-                </Button>
-              </th>
-              <th>
-                SLG
-                <Button className="sort-button" onClick={() => sortData('slug')} style={{ color: 'white' }}>
-                  <SortNumericUp />
-                </Button>
-              </th>
-              <th>
-                OPS
-                <Button className="sort-button" onClick={() => sortData('ops')} style={{ color: 'white' }}>
-                  <SortNumericUp />
-                </Button>
-              </th>
               <th>
                 2B
                 <Button className="sort-button" onClick={() => sortData('doubles')} style={{ color: 'white' }}>
@@ -179,6 +155,30 @@ const sortData = (key) => {
                   <SortNumericUp />
                 </Button>
               </th>
+                                          <th>
+                AVG
+                <Button className="sort-button" onClick={() => sortData('average')} style={{ color: 'white' }}>
+                  <SortNumericUp />
+                </Button>
+              </th>
+              <th>
+                OBP
+                <Button className="sort-button" onClick={() => sortData('obp')} style={{ color: 'white' }}>
+                  <SortNumericUp />
+                </Button>
+              </th>
+              <th>
+                SLG
+                <Button className="sort-button" onClick={() => sortData('slug')} style={{ color: 'white' }}>
+                  <SortNumericUp />
+                </Button>
+              </th>
+              <th>
+                OPS
+                <Button className="sort-button" onClick={() => sortData('ops')} style={{ color: 'white' }}>
+                  <SortNumericUp />
+                </Button>
+              </th>
               <th>
                 WAR
                 <Button className="sort-button" onClick={() => sortData('war')} style={{ color: 'white' }}>
@@ -200,16 +200,16 @@ const sortData = (key) => {
                 <td>{data.mbgames}</td>
                 <td>{data.ab}</td>
                 <td>{data.hits}</td>
-                <td>{parseFloat(data.average).toFixed(3)}</td>
-                <td>{parseFloat(data.obp).toFixed(3)}</td>
-                <td>{parseFloat(data.slug).toFixed(3)}</td>
-                <td>{parseFloat(data.ops).toFixed(3)}</td>
                 <td>{data.doubles}</td>
                 <td>{data.triples}</td>
                 <td>{data.homeruns}</td>
                 <td>{data.rbi}</td>
                 <td>{data.runs}</td>
                 <td>{data.k}</td>
+                <td>{parseFloat(data.average).toFixed(3)}</td>
+                <td>{parseFloat(data.obp).toFixed(3)}</td>
+                <td>{parseFloat(data.slug).toFixed(3)}</td>
+                <td>{parseFloat(data.ops).toFixed(3)}</td>
                 <td>{parseFloat(data.war).toFixed(1)}</td>
               </tr>
             ))}

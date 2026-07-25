@@ -132,46 +132,6 @@ function BattingStats({ year }) {
               </th>
 
               <th>
-                AVG
-                <Button
-                  className="sort-button"
-                  onClick={() => sortData('average')}
-                >
-                  <SortNumericUp />
-                </Button>
-              </th>
-
-              <th>
-                OBP
-                <Button
-                  className="sort-button"
-                  onClick={() => sortData('obp')}
-                >
-                  <SortNumericUp />
-                </Button>
-              </th>
-
-              <th>
-                SLG
-                <Button
-                  className="sort-button"
-                  onClick={() => sortData('slug')}
-                >
-                  <SortNumericUp />
-                </Button>
-              </th>
-
-              <th>
-                OPS
-                <Button
-                  className="sort-button"
-                  onClick={() => sortData('ops')}
-                >
-                  <SortNumericUp />
-                </Button>
-              </th>
-
-              <th>
                 2B
                 <Button
                   className="sort-button"
@@ -222,6 +182,46 @@ function BattingStats({ year }) {
               </th>
               
               <th>
+                AVG
+                <Button
+                  className="sort-button"
+                  onClick={() => sortData('average')}
+                >
+                  <SortNumericUp />
+                </Button>
+              </th>
+
+              <th>
+                OBP
+                <Button
+                  className="sort-button"
+                  onClick={() => sortData('obp')}
+                >
+                  <SortNumericUp />
+                </Button>
+              </th>
+
+              <th>
+                SLG
+                <Button
+                  className="sort-button"
+                  onClick={() => sortData('slug')}
+                >
+                  <SortNumericUp />
+                </Button>
+              </th>
+
+              <th>
+                OPS
+                <Button
+                  className="sort-button"
+                  onClick={() => sortData('ops')}
+                >
+                  <SortNumericUp />
+                </Button>
+              </th>
+              
+              <th>
                 WAR
                 <Button
                   className="sort-button"
@@ -246,15 +246,15 @@ function BattingStats({ year }) {
 
                 <td>{data.ab}</td>
                 <td>{data.hits}</td>
-                <td>{data.average.toFixed(3)}</td>
-                <td>{data.obp.toFixed(3)}</td>
-                <td>{data.slug.toFixed(3)}</td>
-                <td>{data.ops.toFixed(3)}</td>
                 <td>{data.doubles}</td>
                 <td>{data.triples}</td>
                 <td>{data.homeruns}</td>
                 <td>{data.rbi}</td>
                 <td>{data.runs}</td>
+                <td>{data.average.toFixed(3)}</td>
+                <td>{data.obp.toFixed(3)}</td>
+                <td>{data.slug.toFixed(3)}</td>
+                <td>{data.ops.toFixed(3)}</td>
                 <td>{data.war}</td>
               </tr>
             ))}

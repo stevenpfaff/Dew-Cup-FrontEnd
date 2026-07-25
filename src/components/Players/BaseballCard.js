@@ -137,16 +137,17 @@ const BaseballCard = () => {
                 <th>Year</th>
                 <th>AB</th>
                 <th>H</th>
-                <th>AVG</th>
-                <th>OBP</th>
-                <th>SLG</th>
-                <th>OPS</th>
                 <th>2B</th>
                 <th>3B</th>
                 <th>HR</th>
                 <th>RBI</th>
                 <th>R</th>
                 <th>K</th>
+                <th>AVG</th>
+                <th>OBP</th>
+                <th>SLG</th>
+                <th>OPS</th>
+                <th>WAR</th>
               </tr>
             </thead>
             <tbody>
@@ -156,16 +157,17 @@ const BaseballCard = () => {
                   <td>{season.year}</td>
                   <td>{season.ab}</td>
                   <td>{season.hits}</td>
-                  <td>{season.average}</td>
-                  <td>{season.obp}</td>
-                  <td>{season.slug}</td>
-                  <td>{season.ops}</td>
                   <td>{season.doubles}</td>
                   <td>{season.triples}</td>
                   <td>{season.homeruns}</td>
                   <td>{season.rbi}</td>
                   <td>{season.runs}</td>
                   <td>{season.so}</td>
+                  <td>{season.average}</td>
+                  <td>{season.obp}</td>
+                  <td>{season.slug}</td>
+                  <td>{season.ops}</td>
+                  <td>{season.war}</td>
                 </tr>
               ))}
 
@@ -175,16 +177,17 @@ const BaseballCard = () => {
                   <td><strong>Career</strong></td>
                   <td><strong>{careerTotals.ab}</strong></td>
                   <td><strong>{careerTotals.hits}</strong></td>
-                  <td><strong>{careerTotals.average}</strong></td>
-                  <td><strong>{careerTotals.obp}</strong></td>
-                  <td><strong>{careerTotals.slug}</strong></td>
-                  <td><strong>{careerTotals.ops}</strong></td>
                   <td><strong>{careerTotals.doubles}</strong></td>
                   <td><strong>{careerTotals.triples}</strong></td>
                   <td><strong>{careerTotals.homeruns}</strong></td>
                   <td><strong>{careerTotals.rbi}</strong></td>
                   <td><strong>{careerTotals.runs}</strong></td>
                   <td><strong>{careerTotals.k}</strong></td>
+                  <td><strong>{careerTotals.average}</strong></td>
+                  <td><strong>{careerTotals.obp}</strong></td>
+                  <td><strong>{careerTotals.slug}</strong></td>
+                  <td><strong>{careerTotals.ops}</strong></td>
+                  <td><strong>{careerTotals.war}</strong></td>
                 </tr>
               )}
             </tbody>
