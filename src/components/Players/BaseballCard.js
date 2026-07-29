@@ -131,7 +131,7 @@ const BaseballCard = () => {
         <div className="player-stats-section">
           <h5 className="player-stat-headers">Batting</h5>
           <div className="table-responsive">
-          <table striped bordered hover className="minibats-table">
+          <table striped bordered hover className='player-stat-table'>
             <thead>
               <tr>
                 <th>Year</th>
@@ -194,7 +194,8 @@ const BaseballCard = () => {
           </table>
           </div>
           <h5 className="player-stat-headers">Pitching</h5>
-          <table striped bordered hover className="minibats-table">
+          <div className="table-responsive">
+          <table striped bordered hover className="player-stat-table">
             <thead>
               <tr>
                 <th>Year</th>
@@ -230,6 +231,7 @@ const BaseballCard = () => {
               )}
             </tbody>
           </table>
+        </div>
         </div>
         </div>
         </div>

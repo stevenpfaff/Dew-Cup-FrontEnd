@@ -1,21 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 .minibats-container {
-    max-width: 1100px;
+    max-width: fit-content;
     margin: 30px auto;
     padding: 0 16px;
     background: #fff;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 20px;
-}
-
-.pitching-container {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 0 16px;
-    background: #fff;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .hockey-container {
@@ -83,9 +74,9 @@
 
 .minibats-table th,
 .minibats-table td {
-    font-size: 0.9rem;
-    padding: 4px 8px;
-    line-height: 1.2;
+    font-size: 1rem;
+    padding: 2px 4px;
+    line-height: .75;
 }
 
 .minibats-table td:first-child, 
@@ -146,17 +137,11 @@
 @media (max-width: 1024px) {
     .minibats-container {
         margin: 0 5%;
-        margin-bottom: 8%;
+        margin-bottom: 5%;
         background-color:#ffffff;
     }
     
     .hockey-container {
-        margin: 0 5%;
-        margin-bottom: 5%;
-        background-color:#ffffff;
-    }
-
-    .pitching-container {
         margin: 0 5%;
         margin-bottom: 5%;
         background-color:#ffffff;
@@ -191,12 +176,6 @@
         background-color:#ffffff;
     }
 
-    .pitching-container {
-        margin: 0 2%;
-        margin-bottom: 10%;
-        background-color:#ffffff;
-    }
-
     .teams-container {
         margin: 0 2%;
         margin-bottom: 10%;
@@ -222,6 +201,7 @@
 @media (max-width: 480px) {
     .minibats-title {
         font-size: 1.2rem;
+        margin-top: 5px;
     }
 
 
