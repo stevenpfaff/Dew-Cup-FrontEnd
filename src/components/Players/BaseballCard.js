@@ -203,6 +203,7 @@ const BaseballCard = () => {
                 <th>HR</th>
                 <th>ERA</th>
                 <th>FIP</th>
+                <th>WAR</th>
               </tr>
             </thead>
             <tbody>
@@ -218,6 +219,7 @@ const BaseballCard = () => {
                     <td>{stat.hra}</td>
                     <td>{parseFloat(stat.era).toFixed(2)}</td>
                     <td>{parseFloat(stat.fip).toFixed(2)}</td>  
+                    <td>{parseFloat(stat.war).toFixed(1)}</td>  
                   </tr>
                 ))
               ) : (
