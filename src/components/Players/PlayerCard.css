@@ -1,68 +1,75 @@
 /* Core Layout */
 .player-card-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .player-card-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 20px;
-  margin: 5%;
-  font-family: 'Bebas Neue', sans-serif;
-  background-color: #ffffff;
-  max-width: fit-content;
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 48px;
+
+    width: min(1400px, 95%);
+    margin: 30px auto;
+    padding: 40px;
+
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid #e5e5e5;
+    box-shadow:
+        0 8px 30px rgba(0,0,0,.06);
 }
 
-/* Player Image Section */
-.player-image-section {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+.stats-card{
+    background:white;
+    border-radius:12px;
+    border:1px solid #e7e7e7;
+    padding:22px;
+    margin-bottom:28px;
 }
 
-.player-image {
-  width: 75%;
-  height: auto;
-  border-radius: 10px;
+.player-image-section{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
-.player-mini-logo {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-  vertical-align: middle;
+.player-image{
+    width:100%;
+    max-width:280px;
+    border-radius:14px;
+    object-fit:cover;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.12);
+}
+
+.player-mini-logo{
+    width:54px;
+    height:54px;
 }
 
 /* Player Info */
-.player-name {
-  font-size: 2em;
-  margin-bottom: 10px;
-  text-align: left;
-  font-family: inherit;
+.player-name{
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    font-size:3rem;
+    letter-spacing:.5px;
+    margin-bottom:25px;
 }
 
-.player-stat-headers {
-  font-size: 1.5em;
-  text-align: center;
-  margin-top: 5px;
-  margin-bottom: 2%;
-  font-family: inherit;
+.player-stat-headers{
+    font-size:2rem;
+    letter-spacing:1px;
+    margin-bottom:20px;
 }
 
 /* Stats Section */
-.player-stats-section {
-  flex: 2;
-  /* margin-left: 5%; */
-  margin-bottom: 5px;
+.player-stats-section{
+    width:100%;
 }
 
 .stats-title {
@@ -71,40 +78,6 @@
   margin-bottom: 5%;
 }
 
-/* .player-stats-section .stats-header {
-  text-align: center;
-  background-color: rgb(1, 58, 104);
-  color: #ffffff !important;
-  font-weight: bold;
-  font-size: 1.1em;
-} */
-
-/* Accolades Section */
-.player-accolades-section {
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-
-.player-accolades-table {
-  border: 1px solid #ddd;
-  width: 75%;
-  text-align: left;
-  margin-bottom: 5px;
-}
-
-.player-accolades-table th {
-  background-color: rgb(1, 58, 104);
-  font-weight: bold;
-  font-size: 0.9em;
-  padding: 5px;
-  text-align: left;
-}
-
-.player-accolades-table td {
-  font-size: 14px;
-  padding: 5px;
-  text-align: left;
-}
 
 /* Table Responsive Styles */
 .table-responsive {
@@ -113,10 +86,8 @@
   margin-bottom: 15px;
 }
 
-.table-responsive table {
-  width: fit-content;
-  margin: 0 auto;
-  table-layout: auto;
+.table-responsive table{
+    width:100%;
 }
 
 .table-responsive th,
@@ -125,102 +96,134 @@
   padding: 10px;
 }
 
-.player-stat-table, 
-.player-stat-table th, 
-.player-stat-table td {
-    border: 1px solid #ddd;
-    justify-content: center;
-    max-width: fit-content;
-    font-weight: normal;
+.player-stat-table{
+    width:100%;
+    border-collapse:collapse;
+    border:none;
 }
 
-.player-stat-table tbody tr:nth-child(odd) {
-    background-color: #f9f9f9;
+.player-stat-table th{
+    background:#0b3c68;
+    color:white;
+    font-weight:500;
+    letter-spacing:.6px;
 }
 
-.player-stat-table tbody tr:hover {
-    background-color: #f1f1f1;
+.player-stat-table tbody tr:last-child{
+    background:#eef5fb;
+    font-weight:700;
 }
 
 .player-stat-table th,
-.player-stat-table td {
-    font-size: 1.1rem;
-    padding: 8px 16px;
+.player-stat-table td{
+    padding:12px 18px;
+    border-bottom:1px solid #ececec;
+}
+
+.player-stat-table tbody tr:last-child td{
+    border-bottom:none;
+}
+
+.player-stat-table tbody tr:hover{
+    background:#f7f9fb;
+}
+
+.player-accolades{
+    width:100%;
+    max-width:280px;
+
+    margin-top:30px;
+
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+}
+
+.accolade-group h4{
+
+    color:#0b3c68;
+    font-size:1.15rem;
+
+    margin-bottom:12px;
+
+    border-bottom:2px solid #0b3c68;
+    padding-bottom:6px;
+
+}
+
+.accolade-item{
+
+    background:#f7f9fb;
+
+    border-left:4px solid #0b3c68;
+
+    padding:10px 12px;
+
+    margin-bottom:8px;
+
+    border-radius:6px;
+
+    font-size:.95rem;
+    line-height:1.4;
+
 }
 
 
-/* Columns */
-.column {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin-bottom: 20px;
+
+@media (max-width:900px){
+
+.player-card-wrapper{
+    width:100%;
+    padding:0;
+    overflow-x:hidden;
 }
 
-.column2 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.player-card-container{
+    grid-template-columns:1fr;
+    width:100%;
+    max-width:100%;
+    margin:0;
+    padding:16px;
+    box-sizing:border-box;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-  .player-card-wrapper {
-    flex-direction: column;
-    justify-content: flex-start;
-    height: auto;
-  }
-
-  .player-card-container {
-    flex-direction: column;
-    width: 90%;
-    padding: 10px;
-    max-width: none;
-  }
-
-  .player-image {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-  }
-
-  .player-name {
-    font-size: 1.8em;
-  }
-
-  .player-stat-headers {
-    font-size: 1.2em;
-  }
-
-  .player-stats-section {
-    margin-left: 0;
-    width: 100%;
-  }
-
-  .table-responsive table {
-    min-width: 100%;
-  }
-
-  .table-responsive th,
-  .table-responsive td {
-    font-size: 0.9em;
-    padding: 8px;
-  }
+.player-image-section{
+    width:100%;
+    align-items:center;
 }
 
-@media (max-width: 480px) {
-  .player-name {
-    font-size: 1.5em;
-  }
-
-  .player-stat-headers {
-    font-size: 1em;
-  }
-
-  .table-responsive th,
-  .table-responsive td {
-    font-size: 0.8em;
-    padding: 8px;
-  }
+.player-name{
+    justify-content:center;
+    text-align:center;
+    flex-wrap:wrap;
+    font-size:2.3rem;
 }
+
+.player-image{
+    max-width:320px;
+}
+
+.player-accolades{
+    max-width:100%;
+}
+
+.stats-card{
+    width:100%;
+    min-width:0;
+}
+
+.table-responsive{
+    overflow-x:auto;
+}
+
+.player-stat-table{
+    min-width:900px;
+}
+
+.player-stat-headers{
+    font-size:1.7rem;
+}
+
+}
+
 

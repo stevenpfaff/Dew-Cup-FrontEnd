@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Papa from 'papaparse';
-import { Table } from 'react-bootstrap';
 import './PlayerCard.css';
 
 const BaseballCard = () => {
@@ -94,41 +93,38 @@ const BaseballCard = () => {
           {playerInfo.name}
         </h1>
         <img src={playerInfo.image} className="player-image" alt={`${playerInfo.name}`}/>
-        {(playerInfo.championships.length > 0 || playerInfo.awards.length > 0) && (
-          <Table className="player-accolades-table">
-            <thead>
-              <tr>
-                {playerInfo.championships.length > 0 && <th>Championships</th>}
-                {playerInfo.awards.length > 0 && <th>Awards</th>}
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                {playerInfo.championships.length > 0 && (
-                  <td>
-                    <ul>
-                      {playerInfo.championships.map((championship, index) => (
-                        <li key={index}>{championship}</li>
-                      ))}
-                    </ul>
-                  </td>
-                )}
-                {playerInfo.awards.length > 0 && (
-                  <td>
-                    <ul>
-                      {playerInfo.awards.map((award, index) => (
-                        <li key={index}>{award}</li>
-                      ))}
-                    </ul>
-                  </td>
-                )}
-              </tr>
-            </tbody>
-          </Table>
-        )}
+{(playerInfo.championships.length > 0 || playerInfo.awards.length > 0) && (
+  <div className="player-accolades">
+
+    {playerInfo.championships.length > 0 && (
+      <div className="accolade-group">
+        <h4>Championships</h4>
+
+        {playerInfo.championships.map((championship, index) => (
+          <div key={index} className="accolade-item">
+            {championship}
+          </div>
+        ))}
+      </div>
+    )}
+
+    {playerInfo.awards.length > 0 && (
+      <div className="accolade-group">
+        <h4>Awards</h4>
+
+        {playerInfo.awards.map((award, index) => (
+          <div key={index} className="accolade-item">
+            {award}
+          </div>
+        ))}
+      </div>
+    )}
+
+  </div>
+)}
         </div>
 
-        <div className="player-stats-section">
+        <div className="stats-card">
           <h5 className="player-stat-headers">Batting</h5>
           <div className="table-responsive">
           <table striped bordered hover className='player-stat-table'>
@@ -174,20 +170,20 @@ const BaseballCard = () => {
               {/* Render Career Totals row */}
               {careerTotals && (
                 <tr>
-                  <td><strong>Career</strong></td>
-                  <td><strong>{careerTotals.ab}</strong></td>
-                  <td><strong>{careerTotals.hits}</strong></td>
-                  <td><strong>{careerTotals.doubles}</strong></td>
-                  <td><strong>{careerTotals.triples}</strong></td>
-                  <td><strong>{careerTotals.homeruns}</strong></td>
-                  <td><strong>{careerTotals.rbi}</strong></td>
-                  <td><strong>{careerTotals.runs}</strong></td>
-                  <td><strong>{careerTotals.k}</strong></td>
-                  <td><strong>{careerTotals.average}</strong></td>
-                  <td><strong>{careerTotals.obp}</strong></td>
-                  <td><strong>{careerTotals.slug}</strong></td>
-                  <td><strong>{careerTotals.ops}</strong></td>
-                  <td><strong>{careerTotals.war}</strong></td>
+                  <td>Career</td>
+                  <td>{careerTotals.ab}</td>
+                  <td>{careerTotals.hits}</td>
+                  <td>{careerTotals.doubles}</td>
+                  <td>{careerTotals.triples}</td>
+                  <td>{careerTotals.homeruns}</td>
+                  <td>{careerTotals.rbi}</td>
+                  <td>{careerTotals.runs}</td>
+                  <td>{careerTotals.k}</td>
+                  <td>{careerTotals.average}</td>
+                  <td>{careerTotals.obp}</td>
+                  <td>{careerTotals.slug}</td>
+                  <td>{careerTotals.ops}</td>
+                  <td>{careerTotals.war}</td>
                 </tr>
               )}
             </tbody>
