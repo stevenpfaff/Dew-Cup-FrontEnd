@@ -6,7 +6,7 @@ import Papa from 'papaparse';
 import './Statsheet.css';
 
 const Pitching = () => {
-    const [players, setPlayers] = useState([]);
+    const [player, setPlayer] = useState([]);
     const [sortConfig, setSortConfig] = useState({ key: 'era', direction: 'asc' });
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
@@ -32,7 +32,7 @@ const Pitching = () => {
 
                 parsedPlayers.sort((a, b) => b.war - a.war);
 
-                setPlayers(parsedPlayers);
+                setPlayer(parsedPlayers);
                 setLoading(false);
             },
             error: (error) => {
@@ -42,36 +42,68 @@ const Pitching = () => {
         });
     }, []);
 
+
     const sortData = (key) => {
-        let direction = 'asc';
-        if (sortConfig.key === key && sortConfig.direction === 'asc') {
-            direction = 'desc';
-        }
+  let direction = 'asc';
 
-        let sorted = [];
+  if (sortConfig.key === key && sortConfig.direction === 'asc') {
+    direction = 'desc';
+  }
 
-        if (key === 'era' || 'fip') {
-            const qualifiers = players.filter((p) => p.ip >= 20);
-            const nonQualifiers = players.filter((p) => p.ip > 0 && p.ip < 20);
+  const sortArray = (array) => {
+    return [...array].sort((a, b) => {
+      if (a[key] > b[key]) return direction === 'asc' ? 1 : -1;
+      if (a[key] < b[key]) return direction === 'asc' ? -1 : 1;
+      return 0;
+    });
+  };
 
-            const sortedQualifiers = [...qualifiers].sort((a, b) => {
-                if (a[key] > b[key]) return direction === 'asc' ? -1 : 1;
-                if (a[key] < b[key]) return direction === 'asc' ? 1 : -1;
-                return 0;
-            });
+  const qualifierStats = ['era', 'fip',];
 
-            sorted = [...sortedQualifiers, ...nonQualifiers];
-        } else {
-            sorted = [...players].sort((a, b) => {
-                if (a[key] > b[key]) return direction === 'asc' ? -1 : 1;
-                if (a[key] < b[key]) return direction === 'asc' ? 1 : -1;
-                return 0;
-            });
-        }
+  if (qualifierStats.includes(key)) {
+    const qualifiers = player.filter((p) => p.ip >= 20);
+    const nonQualifiers = player.filter((p) => p.ip < 20);
 
-        setPlayers(sorted);
-        setSortConfig({ key, direction });
-    };
+    const sortedQualifiers = sortArray(qualifiers);
+    const sortedNonQualifiers = sortArray(nonQualifiers);
+
+    setPlayer([...sortedQualifiers, ...sortedNonQualifiers]);
+  } else {
+    setPlayer(sortArray(player));
+  }
+
+  setSortConfig({ key, direction });
+};
+    // const sortData = (key) => {
+    //     let direction = 'asc';
+    //     if (sortConfig.key === key && sortConfig.direction === 'asc') {
+    //         direction = 'desc';
+    //     }
+
+    //     let sorted = [];
+
+    //     if (key === 'era' || 'fip') {
+    //         const qualifiers = players.filter((p) => p.ip >= 20);
+    //         const nonQualifiers = players.filter((p) => p.ip > 0 && p.ip < 20);
+
+    //         const sortedQualifiers = [...qualifiers].sort((a, b) => {
+    //             if (a[key] > b[key]) return direction === 'asc' ? -1 : 1;
+    //             if (a[key] < b[key]) return direction === 'asc' ? 1 : -1;
+    //             return 0;
+    //         });
+
+    //         sorted = [...sortedQualifiers, ...nonQualifiers];
+    //     } else {
+    //         sorted = [...players].sort((a, b) => {
+    //             if (a[key] > b[key]) return direction === 'asc' ? -1 : 1;
+    //             if (a[key] < b[key]) return direction === 'asc' ? 1 : -1;
+    //             return 0;
+    //         });
+    //     }
+
+    //     setPlayers(sorted);
+    //     setSortConfig({ key, direction });
+    // };
 
     const handlePlayerClick = (id1) => {
         navigate(`/BaseballCard/${id1}`);
@@ -79,7 +111,7 @@ const Pitching = () => {
 
     if (loading) return <div>Loading...</div>;
 
-    const filteredPlayers = players.filter((p) => p.ip > 0);
+    const filteredPlayers = player.filter((p) => p.ip > 0);
 
     return (
         <div className="minibats-container">

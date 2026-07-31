@@ -55,8 +55,7 @@
     display:flex;
     align-items:center;
     gap:14px;
-
-    font-size:3rem;
+    font-size:2.5rem;
     letter-spacing:.5px;
     margin-bottom:25px;
 }
@@ -111,7 +110,7 @@
 
 .player-stat-table tbody tr:last-child{
     background:#eef5fb;
-    font-weight:700;
+    font-weight:1000;
 }
 
 .player-stat-table th,
@@ -204,12 +203,13 @@
 }
 
 .player-accolades{
-    max-width:100%;
+    max-width:80%;
 }
 
 .stats-card{
     width:100%;
     min-width:0;
+    font-size: 1rem;
 }
 
 .table-responsive{
@@ -221,7 +221,7 @@
 }
 
 .player-stat-headers{
-    font-size:1.7rem;
+    font-size:1rem;
 }
 
 }
