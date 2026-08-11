@@ -75,7 +75,7 @@ function Hockey() {
   const filteredHockey = hockey.filter((data) => data.hgames !== 0);
 
   return (
-    <div className="hockey-container">
+    <div className="minibats-container">
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <h1 className="minibats-title">Hockey All-Time Stats</h1>
       <p>*incomplete records for goals, assists, and points</p>

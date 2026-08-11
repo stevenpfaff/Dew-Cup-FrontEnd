@@ -31,6 +31,7 @@ function NavBar() {
                             <NavDropdown.Item href="/batting/2022">2022 Batting</NavDropdown.Item>
                             <NavDropdown.Item href="/batting/2021">2021 Batting</NavDropdown.Item>
                         </NavDropdown>
+                        <Nav.Link href="/hockey">Hockey Stats</Nav.Link>
                         <NavDropdown title="YouTube Videos" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="https://www.youtube.com/watch?v=Qij91wxzoTA&t=70s">
                                 Dew Cup II

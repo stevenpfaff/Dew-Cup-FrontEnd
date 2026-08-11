@@ -1,15 +1,15 @@
 id,name,image,mini1,mini2,championships,awards
-1,Sven Goose,/Images/hockeygoose.jpg,/Images/wood-mini.png,/Images/baboon-mini.png,Dew Cup I,
+1,Sven Goose,/Images/hockeygoose.jpg,/Images/wood-mini.png,/Images/baboon-mini.png,"Dew Cup I, Code Red Classic II",
 2,Buddy Wood,/Images/bud.jpg,/Images/wood-mini.png,,,"Ice Technician of the Year 2021, Ice Technician of the Year 2022"
-3,Rick Bonis,/Images/bone.jpg,/Images/squid-mini.png,,"Dew Cup II, Dew Cup IV, Dew Cup V, Dew Cup VI",
+3,Rick Bonis,/Images/bone.jpg,/Images/squid-mini.png,,Dew Cup x4,
 4,Alex Fountain,,/Images/baboon-mini.png,,Dew Cup I,
 5,Jeep Aspenleiter,,/Images/baboon-mini.png,,Dew Cup I,
-6,Matt Huinker,/Images/matt.jpg,/Images/wood-mini.png,/Images/squid-mini.png,"Dew Cup I, Dew Cup V",
+6,Matt Huinker,/Images/matt.jpg,/Images/wood-mini.png,/Images/squid-mini.png,Dew Cup x2,
 7,Ryan Rigatoni,/Images/righockey.jpg,/Images/baboon-mini.png,,,
 8,Deer Hunt,/Images/hunt.jpg,/Images/squid-mini.png,,Dew Cup II,
-9,Zack Fountain,/Images/zack.jpg,/Images/squid-mini.png,/Images/baboon-mini.png,"Dew Cup I, Dew Cup V",Dew Cup V MVP
-10,Hoag Braun,/Images/hoaghockey.jpg,/Images/wood-mini.png,/Images/squid-mini.png,Dew Cup II,Dew Cup II MVP
-11,Boog Schickert,/Images/boog.png,/Images/squid-mini.png,,"Dew Cup II, Dew Cup IV",Dew Cup IV MVP
+9,Zack Fountain,/Images/zack.jpg,/Images/squid-mini.png,/Images/baboon-mini.png,Dew Cup x2,Dew Cup V MVP
+10,Hoag Braun,/Images/hoaghockey.jpg,/Images/wood-mini.png,/Images/squid-mini.png,"Dew Cup II, Code Red Classic II","Dew Cup II MVP, Code Red Classic II MVP"
+11,Boog Schickert,/Images/boog.png,/Images/squid-mini.png,,Dew Cup x2,Dew Cup IV MVP
 12,Pesky Zub,/Images/zub.jpg,/Images/mummini.png,,"Dew Cup III, Code Red Classic I",
 13,Garry Bob,/Images/garry.jpg,/Images/mummini.png,,"Dew Cup III, Code Red Classic I",Dew Cup III MVP
 14,Ethan Schickert,/Images/ethan.jpg,/Images/cudas-mini.png,/Images/mummini.png,,
@@ -17,8 +17,8 @@ id,name,image,mini1,mini2,championships,awards
 16,Rheese Rooser,/Images/weethie.jpg,,,,
 17,TJ Graczkowski,/Images/tjg.jpg,,,,
 18,Jacob Zainer,/Images/zainer.jpg,,,,
-19,Markiki Bateman,/Images/markiki.jpg,/Images/wood-mini.png,,,
-20,BB Pfaff,/Images/bb2.jpg,/Images/minions-mini.png,,"Dew Cup IV, Dew Cup VI",
+19,Markiki Bateman,/Images/markiki.jpg,/Images/wood-mini.png,,Code Red Classic II,
+20,BB Pfaff,/Images/bb2.jpg,/Images/minions-mini.png,,Dew Cup x2,
 21,Lauren Waraksa,,/Images/minions-mini.png,,,
 22,Seth Mlodzik,/Images/seth.jpg,/Images/minions-mini.png,,Dew Cup VI,Dew Cup VI MVP
 23,Name Redacted,,/Images/minions-mini.png,,,
@@ -43,7 +43,7 @@ id,name,image,mini1,mini2,championships,awards
 42,Hunt Sr.,,,,,
 43,MJG,/Images/MJ.PNG,/Images/squid-mini.png,/Images/baboon-mini.png,,
 44,Rhino Monkey,,/Images/mummini.png,,,
-45,Kaleb Baker,/Images/leb.jpg,/Images/baboon-mini.png,,,
+45,Kaleb Baker,/Images/leb.png,/Images/baboon-mini.png,,,
 46,Cyen Bero,,/Images/minions-mini.png,,,
 47,Kimberly,,/Images/minions-mini.png,,,
 48,Casey Winter,/Images/winter.jpg,/Images/mummini.png,,,
@@ -55,3 +55,4 @@ id,name,image,mini1,mini2,championships,awards
 54,Anthony Poco,,/Images/baboon-mini.png,,,
 55,Megan Stautz,,/Images/minions-mini.png,,Dew Cup VI,
 56,Teague,,/Images/minions-mini.png,,Dew Cup VI,
+58,Emma,,/Images/minions-mini.png,,,

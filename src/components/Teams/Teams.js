@@ -85,7 +85,7 @@ const Teams = () => {
   };
 
   return (
-    <div className="teams-container">
+    <div className="minibats-container">
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
