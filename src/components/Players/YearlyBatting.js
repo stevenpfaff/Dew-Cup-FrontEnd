@@ -77,8 +77,8 @@ function BattingStats({ year }) {
     const qualifierStats = ['average', 'obp', 'slug', 'ops'];
 
     if (qualifierStats.includes(key)) {
-      const qualifiers = player.filter((p) => p.ab >= 40);
-      const nonQualifiers = player.filter((p) => p.ab < 40);
+      const qualifiers = player.filter((p) => p.ab >= 20);
+      const nonQualifiers = player.filter((p) => p.ab < 20);
 
       setPlayer([
         ...sortArray(qualifiers),
@@ -104,6 +104,16 @@ function BattingStats({ year }) {
                 <Button
                   className="sort-button"
                   onClick={() => sortData('name')}
+                >
+                  <SortNumericUp />
+                </Button>
+              </th>
+
+              <th>
+                GP
+                <Button
+                  className="sort-button"
+                  onClick={() => sortData('mbgames')}
                 >
                   <SortNumericUp />
                 </Button>
@@ -241,7 +251,7 @@ function BattingStats({ year }) {
                 >
                   {data.name}
                 </td>
-
+                <td>{data.mbgames}</td>
                 <td>{data.ab}</td>
                 <td>{data.hits}</td>
                 <td>{data.doubles}</td>

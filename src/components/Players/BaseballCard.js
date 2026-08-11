@@ -131,6 +131,7 @@ const BaseballCard = () => {
             <thead>
               <tr>
                 <th>Year</th>
+                <th>GP</th>
                 <th>AB</th>
                 <th>H</th>
                 <th>2B</th>
@@ -151,6 +152,7 @@ const BaseballCard = () => {
               {baseballStats.map((season, index) => (
                 <tr key={index}>
                   <td>{season.year}</td>
+                  <td>{season.mbgames}</td>
                   <td>{season.ab}</td>
                   <td>{season.hits}</td>
                   <td>{season.doubles}</td>
@@ -171,6 +173,7 @@ const BaseballCard = () => {
               {careerTotals && (
                 <tr>
                   <td>Career</td>
+                  <td>{careerTotals.mbgames}</td>
                   <td>{careerTotals.ab}</td>
                   <td>{careerTotals.hits}</td>
                   <td>{careerTotals.doubles}</td>
@@ -183,7 +186,7 @@ const BaseballCard = () => {
                   <td>{careerTotals.obp}</td>
                   <td>{careerTotals.slug}</td>
                   <td>{careerTotals.ops}</td>
-                  <td>{careerTotals.war}</td>
+                  <td>{careerTotals.oWar}</td>
                 </tr>
               )}
             </tbody>
