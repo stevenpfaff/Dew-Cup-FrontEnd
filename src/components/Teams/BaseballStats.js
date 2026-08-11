@@ -1,13 +1,13 @@
 import React from 'react';
 import { SortNumericUp } from 'react-bootstrap-icons';
 import Button from '@mui/material/Button';
+import "../Players/Statsheet.css"
 
 const BaseballStatsTable = ({ teams, sortData, onTeamClick }) => (
-  <div className="table-responsive">
+  <div className="minibats-container">
     <table className="minibats-table">
       <thead>
         <tr>
-          <th></th>
           <th>
             Team
             <Button onClick={() => sortData('name')} style={{ color: 'white' }}>
@@ -45,7 +45,7 @@ const BaseballStatsTable = ({ teams, sortData, onTeamClick }) => (
             </Button>
           </th>
           <th>
-            Bud Wood Memorials
+            BWM
             <Button onClick={() => sortData('batschampionships')} style={{ color: 'white' }}>
               <SortNumericUp />
             </Button>
@@ -54,24 +54,24 @@ const BaseballStatsTable = ({ teams, sortData, onTeamClick }) => (
       </thead>
       <tbody>
         {teams.map((team) => (
-          <tr key={team.id}>
-            <td style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <img
-              src={team.mini}
-              alt="N/A"
-              style={{ width: '30px', height: '30px' }}
-            />
-            </td>
-            <td className="sticky-column">
-              {team.name}
-            </td>
-            <td>{team.batswins}</td>
-            <td>{team.batslosses}</td>
-            <td>{team.runs}</td>
-            <td>{team.runsag}</td>
-            <td>{team.hr}</td>
-            <td>{team.batschampionships}</td>
-          </tr>
+<tr key={team.id}>
+<td className="team-column">
+  <img
+    src={team.mini}
+    alt={team.name}
+    className="team-logo"
+  />
+  <span>{team.name}</span>
+</td>
+
+
+  <td>{team.batswins}</td>
+  <td>{team.batslosses}</td>
+  <td>{team.runs}</td>
+  <td>{team.runsag}</td>
+  <td>{team.hr}</td>
+  <td>{team.batschampionships}</td>
+</tr>
         ))}
       </tbody>
     </table>

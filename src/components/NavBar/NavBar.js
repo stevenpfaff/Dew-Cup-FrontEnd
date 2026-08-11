@@ -18,7 +18,10 @@ function NavBar() {
                     <img src={PBS} alt="PBS Logo" height="75" width="75" />
                     <Nav>
                         <Nav.Link href="/">Home</Nav.Link>
-                        <Nav.Link href="/Tournaments">Tournament Results</Nav.Link>
+                        <NavDropdown title="Team Stats" id="collasible-nav-dropdown">
+                            <NavDropdown.Item href="/teams">Team Stats</NavDropdown.Item>
+                            <NavDropdown.Item href="/tournaments">Tournament Results</NavDropdown.Item>
+                        </NavDropdown>
                         <NavDropdown title="Minibat Stats" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="/batting">All-Time Stats</NavDropdown.Item>
                             <NavDropdown.Item href="/batting/2026">2026 Batting</NavDropdown.Item>

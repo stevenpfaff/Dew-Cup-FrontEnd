@@ -166,6 +166,34 @@
     border-color: #013a68;
 }
 
+.minibats-table .logo-column {
+  width: 80px;
+  min-width: 80px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.minibats-table .logo-column img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.team-column {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.team-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
 @media (max-width: 1024px) {
     .minibats-container {
         margin: 0 5%;

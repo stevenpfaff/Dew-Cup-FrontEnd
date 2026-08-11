@@ -3,11 +3,10 @@ import { SortNumericUp } from 'react-bootstrap-icons';
 import Button from '@mui/material/Button';
 
 const HockeyStatsTable = ({ teams, sortData, onTeamClick }) => (
-  <div className="table-responsive">
+  <div className="minibats-container">
     <table className="minibats-table">
       <thead>
         <tr>
-          <th></th>
           <th>
             Team
             <Button onClick={() => sortData('name')} style={{ color: 'white' }}>
@@ -48,17 +47,15 @@ const HockeyStatsTable = ({ teams, sortData, onTeamClick }) => (
       </thead>
       <tbody>
         {teams.map((team) => (
-          <tr key={team.id}>
-            <td style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <img
-              src={team.mini}
-              alt="N/A"
-              style={{ width: '30px', height: '30px' }}
-            />
-            </td>
-            <td className="sticky-column">
-              {team.name}
-            </td>
+<tr key={team.id}>
+<td className="team-column">
+  <img
+    src={team.mini}
+    alt={team.name}
+    className="team-logo"
+  />
+  <span>{team.name}</span>
+</td>
             <td>{team.hockeywins}</td>
             <td>{team.hockeylosses}</td>
             <td>{team.goals}</td>
