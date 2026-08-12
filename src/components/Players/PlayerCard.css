@@ -169,60 +169,87 @@
 
 
 
-@media (max-width:900px){
+@media (max-width: 900px) {
 
-.player-card-wrapper{
-    width:100%;
-    padding:0;
-    overflow-x:hidden;
-}
+    .player-card-wrapper {
+        width: 100%;
+        padding: 0;
+        overflow-x: hidden;
+    }
 
-.player-card-container{
-    grid-template-columns:1fr;
-    width:100%;
-    max-width:100%;
-    margin:0;
-    padding:16px;
-    box-sizing:border-box;
-}
+    .player-card-container {
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 12px;
+        box-sizing: border-box;
+        gap: 16px;
+    }
 
-.player-image-section{
-    width:100%;
-    align-items:center;
-}
+    .player-image-section {
+        width: 100%;
+        align-items: center;
+    }
 
-.player-name{
-    justify-content:center;
-    text-align:center;
-    flex-wrap:wrap;
-    font-size:2.3rem;
-}
+    .player-name {
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+        font-size: 2rem;
+        gap: 8px;
+        margin-bottom: 18px;
+    }
 
-.player-image{
-    max-width:320px;
-}
+    .player-image {
+        max-width: 280px;
+    }
 
-.player-accolades{
-    max-width:80%;
-}
+    .player-accolades {
+        max-width: 90%;
+        margin-top: 20px;
+        gap: 18px;
+    }
 
-.stats-card{
-    width:100%;
-    min-width:0;
-    font-size: 1rem;
-}
+    .stats-card {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        padding: 12px;
+        margin-bottom: 16px;
+        font-size: 0.85rem;
+    }
 
-.table-responsive{
-    overflow-x:auto;
-}
+    .player-stat-headers {
+        font-size: 1.2rem;
+        margin: 8px 0 10px;
+    }
 
-.player-stat-table{
-    min-width:900px;
-}
+    .table-responsive {
+        width: 100%;
+        overflow-x: auto;
+        margin-bottom: 14px;
+    }
 
-.player-stat-headers{
-    font-size:1rem;
-}
+    .player-stat-table {
+        width: 100%;
+        min-width: 0;
+        border-collapse: collapse;
+        table-layout: auto;
+    }
+
+    .player-stat-table th,
+    .player-stat-table td {
+        padding: 6px 5px;
+        font-size: 0.75rem;
+        white-space: nowrap;
+    }
+
+    .player-stat-table th {
+        letter-spacing: 0;
+        font-size: 0.7rem;
+    }
+
 
 }
 
