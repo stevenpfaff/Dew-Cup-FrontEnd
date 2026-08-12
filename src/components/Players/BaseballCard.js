@@ -97,8 +97,21 @@ const totalWAR = oWAR + pWAR;
           {playerInfo.name}
         </h1>
         <img src={playerInfo.image} className="player-image" alt={`${playerInfo.name}`}/>
-        <div className="total-war">
-  <span className="total-war-label">WAR {totalWAR.toFixed(1)}</span>
+<div className="total-war">
+  <div className="total-war-stat">
+    <span className="total-war-label">WAR</span>
+    <span className="total-war-value">{totalWAR.toFixed(1)}</span>
+  </div>
+
+  <div className="total-war-stat">
+    <span className="total-war-label">HR</span>
+    <span className="total-war-value">{careerTotals?.homeruns}</span>
+  </div>
+
+  <div className="total-war-stat">
+    <span className="total-war-label">AVG</span>
+    <span className="total-war-value">{careerTotals?.average}</span>
+  </div>
 </div>
 {(playerInfo.championships.length > 0 || playerInfo.awards.length > 0) && (
   <div className="player-accolades">
