@@ -78,7 +78,7 @@ function Hockey() {
     <div className="minibats-container">
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <h1 className="minibats-title">Hockey All-Time Stats</h1>
-      <p>*incomplete records for goals, assists, and points</p>
+      <p className='note'>*incomplete records for goals, assists, and points</p>
       <div className="table-responsive">
         <table  className="minibats-table">
           <thead>
