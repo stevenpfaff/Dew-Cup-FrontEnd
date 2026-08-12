@@ -1,12 +1,12 @@
 id,name,tourney,hgames,goals,assists,points
-1,Sven Goose,Code Red Classic II,4,0,0,0
-10,Hoag Braun,Code Red Classic II,4,0,0,0
-12,Pesky Zub,Code Red Classic II,3,0,0,0
-13,Garry Bob,Code Red Classic II,3,0,0,0
-14,Ethan Schickert,Code Red Classic II,3,0,0,0
-19,Markiki Bateman,Code Red Classic II,4,0,0,0
-20,BB Pfaff,Code Red Classic II,4,0,0,0
-27,Capn Bartz,Code Red Classic II,3,0,0,0
-35,Charles Eckert,Code Red Classic II,3,0,0,0
-55,Megan Stautz,Code Red Classic II,4,0,0,0
-58,Emma,Code Red Classic II,4,0,0,0
+14,Ethan Schickert,Code Red Classic II,3,4,1,5
+35,Charles Eckert,Code Red Classic II,3,2,3,5
+1,Sven Goose,Code Red Classic II,4,1,3,4
+55,Megan Stautz,Code Red Classic II,4,2,2,4
+58,Emma,Code Red Classic II,4,3,1,4
+19,Markiki Bateman,Code Red Classic II,4,2,1,3
+10,Hoag Braun,Code Red Classic II,4,0,2,2
+12,Pesky Zub,Code Red Classic II,3,1,1,2
+20,BB Pfaff,Code Red Classic II,4,0,2,2
+13,Garry Bob,Code Red Classic II,3,0,1,1
+27,Capn Bartz,Code Red Classic II,3,0,1,1
