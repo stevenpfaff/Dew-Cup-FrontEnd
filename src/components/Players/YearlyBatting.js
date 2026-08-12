@@ -263,7 +263,7 @@ function BattingStats({ year }) {
                 <td>{data.obp.toFixed(3)}</td>
                 <td>{data.slug.toFixed(3)}</td>
                 <td>{data.ops.toFixed(3)}</td>
-                <td>{data.war}</td>
+                <td>{data.war.toFixed(1)}</td>
               </tr>
             ))}
           </tbody>

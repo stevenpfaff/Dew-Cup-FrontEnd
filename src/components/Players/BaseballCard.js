@@ -71,6 +71,10 @@ const BaseballCard = () => {
     return <div>Player not found</div>;
   }
 
+const oWAR = parseFloat(careerTotals?.oWar) || 0;
+const pWAR = parseFloat(pitchingStats[0]?.war) || 0;
+const totalWAR = oWAR + pWAR;
+
   return (
     <div className="player-card-wrapper">
       <div className="player-card-container">
@@ -93,6 +97,9 @@ const BaseballCard = () => {
           {playerInfo.name}
         </h1>
         <img src={playerInfo.image} className="player-image" alt={`${playerInfo.name}`}/>
+        <div className="total-war">
+  <span className="total-war-label">WAR {totalWAR.toFixed(1)}</span>
+</div>
 {(playerInfo.championships.length > 0 || playerInfo.awards.length > 0) && (
   <div className="player-accolades">
 
@@ -141,9 +148,9 @@ const BaseballCard = () => {
                 <th>R</th>
                 <th>K</th>
                 <th>AVG</th>
-                <th>OBP</th>
+                {/* <th>OBP</th> */}
                 <th>SLG</th>
-                <th>OPS</th>
+                {/* <th>OPS</th> */}
                 <th>WAR</th>
               </tr>
             </thead>
@@ -162,9 +169,9 @@ const BaseballCard = () => {
                   <td>{season.runs}</td>
                   <td>{season.so}</td>
                   <td>{season.average}</td>
-                  <td>{season.obp}</td>
+                  {/* <td>{season.obp}</td> */}
                   <td>{season.slug}</td>
-                  <td>{season.ops}</td>
+                  {/* <td>{season.ops}</td> */}
                   <td>{season.war}</td>
                 </tr>
               ))}
@@ -183,9 +190,9 @@ const BaseballCard = () => {
                   <td>{careerTotals.runs}</td>
                   <td>{careerTotals.k}</td>
                   <td>{careerTotals.average}</td>
-                  <td>{careerTotals.obp}</td>
+                  {/* <td>{careerTotals.obp}</td> */}
                   <td>{careerTotals.slug}</td>
-                  <td>{careerTotals.ops}</td>
+                  {/* <td>{careerTotals.ops}</td> */}
                   <td>{careerTotals.oWar}</td>
                 </tr>
               )}

@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import "../Players/Statsheet.css"
 
 const BaseballStatsTable = ({ teams, sortData, onTeamClick }) => (
-  <div className="minibats-container">
+  <div className="table-responsive">
     <table className="minibats-table">
       <thead>
         <tr>
