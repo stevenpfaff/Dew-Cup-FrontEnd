@@ -1,7 +1,7 @@
 id1,name,image,mini,mini2,championships,awards
 1,Sven Goose,/Images/sven.jpg,/Images/baboon-mini.png,,,
 2,Buddy Wood,/Images/bud.jpg,/Images/wood-mini.png,,,
-3,Rick Bonis,/Images/bone.jpg,/Images/squid-mini.png,/Images/baboon-mini.png,Buddy Wood Memorial x2,Batting Champion x2
+3,Rick Bonis,/Images/bone.jpg,/Images/squid-mini.png,/Images/baboon-mini.png,Buddy Wood Memorial x2,2022 Batting Champion
 4,Alex Fountain,,/Images/baboon-mini.png,,,
 5,Jeep Aspenleiter,,/Images/baboon-mini.png,,,
 6,Matt Huinker,/Images/matt.jpg,/Images/wood-mini.png,/Images/squid-mini.png,,
@@ -18,7 +18,7 @@ id1,name,image,mini,mini2,championships,awards
 17,TJ Graczkowski,/Images/tjg.jpg,,,,
 18,Jacob Zainer,/Images/zainer.jpg,,,,
 19,Markiki Bateman,/Images/markiki.jpg,/Images/baboon-mini.png,,,
-20,BB Pfaff,/Images/bb2.jpg,/Images/minions-mini.png,,,Jemile Weeks II
+20,BB Pfaff,/Images/bbball.png,/Images/minions-mini.png,,,Jemile Weeks II
 21,Lauren Waraksa,,/Images/minions-mini.png,,,
 22,Seth Mlodzik,,/Images/mummini.png,/Images/mummini.png,,
 23,Name Redacted,,/Images/minions-mini.png,,,
@@ -50,7 +50,7 @@ id1,name,image,mini,mini2,championships,awards
 49,Kayla Carmichael,,/Images/minions-mini.png,,,
 50,Nick R,,/Images/minions-mini.png,,,
 51,The Hound,/Images/yilly.jpeg,/Images/baboon-mini.png,,,
-52,Sam Schodron,,/Images/squid-mini.png,,Buddy Wood Memorial IV,Buddy Wood Memorial IV MVP
+52,Sam Schodron,,/Images/squid-mini.png,,Buddy Wood Memorial IV,"Buddy Wood Memorial IV MVP, 2024 Batting Champion"
 53,Joshua Baker,,/Images/squid-mini.png,,Buddy Wood Memorial IV,
 54,Anthony Poco,,/Images/baboon-mini.png,,,
 57,Cole Surprenant,,/Images/baboon-mini.png,,,
