@@ -138,7 +138,7 @@ const HockeyCard = () => {
 
   return (
     <div className="player-card-wrapper">
-      <div className="player-card-container">
+      <div className="player-card-container instagram-card">
 
         {/* LEFT SIDE - IMAGE + ACCOLADES */}
         <div className="player-image-section">

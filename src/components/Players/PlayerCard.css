@@ -289,3 +289,46 @@
 }
 
 
+/* =========================================
+   Instagram Baseball Card
+   Only affects this component
+   ========================================= */
+
+.instagram-card {
+    width: min(1100px, 950vw);
+    aspect-ratio: 1 / .86;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 320px minmax(0, 1fr);
+    gap: 32px;
+
+    padding: 40px;
+
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid #e5e5e5;
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,.06);
+}
+
+
+/* Keep the existing mobile behavior */
+@media (max-width: 900px) {
+
+    .instagram-card {
+        width: 100%;
+        aspect-ratio: auto;
+
+        grid-template-columns: 1fr;
+
+        margin: 0;
+        padding: 12px;
+
+        gap: 16px;
+
+        box-sizing: border-box;
+    }
+
+}

@@ -77,7 +77,7 @@ const totalWAR = oWAR + pWAR;
 
   return (
     <div className="player-card-wrapper">
-      <div className="player-card-container">
+      <div className="player-card-container instagram-card">
         <div className="player-image-section">
           <h1 className="player-name">
           {playerInfo.mini && (
@@ -152,17 +152,17 @@ const totalWAR = oWAR + pWAR;
               <tr>
                 <th>Year</th>
                 <th>GP</th>
-                <th>AB</th>
+                {/* <th>AB</th> */}
                 <th>H</th>
                 <th>2B</th>
                 <th>3B</th>
                 <th>HR</th>
                 <th>RBI</th>
-                <th>R</th>
-                <th>K</th>
+                {/* <th>R</th>
+                <th>K</th> */}
                 <th>AVG</th>
                 {/* <th>OBP</th> */}
-                <th>SLG</th>
+                {/* <th>SLG</th> */}
                 {/* <th>OPS</th> */}
                 <th>WAR</th>
               </tr>
@@ -173,17 +173,17 @@ const totalWAR = oWAR + pWAR;
                 <tr key={index}>
                   <td>{season.year}</td>
                   <td>{season.mbgames}</td>
-                  <td>{season.ab}</td>
+                  {/* <td>{season.ab}</td> */}
                   <td>{season.hits}</td>
                   <td>{season.doubles}</td>
                   <td>{season.triples}</td>
                   <td>{season.homeruns}</td>
                   <td>{season.rbi}</td>
-                  <td>{season.runs}</td>
-                  <td>{season.so}</td>
+                  {/* <td>{season.runs}</td>
+                  <td>{season.so}</td> */}
                   <td>{season.average}</td>
                   {/* <td>{season.obp}</td> */}
-                  <td>{season.slug}</td>
+                  {/* <td>{season.slug}</td> */}
                   {/* <td>{season.ops}</td> */}
                   <td>{season.war}</td>
                 </tr>
@@ -194,17 +194,17 @@ const totalWAR = oWAR + pWAR;
                 <tr>
                   <td>Career</td>
                   <td>{careerTotals.mbgames}</td>
-                  <td>{careerTotals.ab}</td>
+                  {/* <td>{careerTotals.ab}</td> */}
                   <td>{careerTotals.hits}</td>
                   <td>{careerTotals.doubles}</td>
                   <td>{careerTotals.triples}</td>
                   <td>{careerTotals.homeruns}</td>
                   <td>{careerTotals.rbi}</td>
-                  <td>{careerTotals.runs}</td>
-                  <td>{careerTotals.k}</td>
+                  {/* <td>{careerTotals.runs}</td>
+                  <td>{careerTotals.k}</td> */}
                   <td>{careerTotals.average}</td>
                   {/* <td>{careerTotals.obp}</td> */}
-                  <td>{careerTotals.slug}</td>
+                  {/* <td>{careerTotals.slug}</td> */}
                   {/* <td>{careerTotals.ops}</td> */}
                   <td>{careerTotals.oWar}</td>
                 </tr>
@@ -225,7 +225,7 @@ const totalWAR = oWAR + pWAR;
                 <th>K</th>
                 <th>HR</th>
                 <th>ERA</th>
-                <th>FIP</th>
+                {/* <th>FIP</th> */}
                 <th>WAR</th>
               </tr>
             </thead>
@@ -241,7 +241,7 @@ const totalWAR = oWAR + pWAR;
                     <td>{stat.so}</td>
                     <td>{stat.hra}</td>
                     <td>{parseFloat(stat.era).toFixed(2)}</td>
-                    <td>{parseFloat(stat.fip).toFixed(2)}</td>  
+                    {/* <td>{parseFloat(stat.fip).toFixed(2)}</td>   */}
                     <td>{parseFloat(stat.war).toFixed(1)}</td>  
                   </tr>
                 ))
