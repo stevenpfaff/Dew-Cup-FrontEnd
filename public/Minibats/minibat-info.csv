@@ -10,8 +10,8 @@ id1,name,image,mini,mini2,championships,awards
 9,Zack Fountain,/Images/zack.jpg,/Images/squid-mini.png,/Images/baboon-mini.png,,
 10,Hoag Braun,/Images/hoag.jpg,/Images/baboon-mini.png,,,2021 Batting Champion
 11,Boog Schickert,/Images/boog.png,/Images/squid-mini.png,/Images/mummini.png,Buddy Wood Memorial II,"2022 MVP, 2022 Homerun Champion"
-12,Pesky Zub,/Images/zub.jpg,/Images/mummini.png,,Buddy Wood Memorial x2,"Jemile Weeks x2, 2024 Homerun Champion"
-13,Garry Bob,/Images/Gbob.png,/Images/mummini.png,,Buddy Wood Memorial x2,"MVP x3, Jemile Weeks IV, Triple Crown, Homerun Champion x2"
+12,Pesky Zub,/Images/zub.jpg,/Images/mummini.png,,Buddy Wood Memorial x3,"Jemile Weeks x2, 2024 Homerun Champion"
+13,Garry Bob,/Images/Gbob.png,/Images/mummini.png,,Buddy Wood Memorial x3,"MVP x3, Jemile Weeks IV, Triple Crown, Homerun Champion x2"
 14,Ethan Schickert,/Images/ethan.jpg,/Images/mummini.png,,,2022 Cy Young
 15,Brock Deist,/Images/Brock.jpg,/Images/mummini.png,,Buddy Wood Memorial I,
 16,Rheese Rooser,/Images/weethie.jpg,/Images/baboon-mini.png,,,
@@ -33,7 +33,7 @@ id1,name,image,mini,mini2,championships,awards
 32,Big Ted,,/Images/minions-mini.png,/Images/mummini.png,Buddy Wood Memorial I,
 33,Alex Hunt,,/Images/squid-mini.png,,,
 34,Shawn Volesky,,/Images/squid-mini.png,,,
-35,Charles Eckert,/Images/Chuckly.PNG,/Images/mummini.png,,Buddy Wood Memorial III,
+35,Charles Eckert,/Images/Chuckly.PNG,/Images/mummini.png,,Buddy Wood Memorial x2,Buddy Wood Memorial V MVP
 36,Coop y,,/Images/mummini.png,,,
 37,Mitchell Zale,/Images/zale.jpg,/Images/minions-mini.png,,,
 38,Evan Gady,,,,,
@@ -54,3 +54,11 @@ id1,name,image,mini,mini2,championships,awards
 53,Joshua Baker,,/Images/squid-mini.png,,Buddy Wood Memorial IV,
 54,Anthony Poco,,/Images/baboon-mini.png,,,
 57,Cole Surprenant,,/Images/baboon-mini.png,,,
+59,Tyler Krause,,,,,
+60,Trent Wolcock,,,,,
+61,Donny Weber,,,,,
+62,Ben,,,,,
+63,Brandon Haaz,,,,,
+64,Dawson Rausch,,,,,
+65,Jack Lichwa,,,,,
+66,Chip Vorwerk,,/Images/baboon-mini.png,,,

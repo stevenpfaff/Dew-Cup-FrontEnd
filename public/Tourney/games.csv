@@ -103,3 +103,7 @@ game_id,tourney_id,round,team1,team2,team1score,team2score
 102,16,Round Robin,Goobies Mum,Rat Girl Minions,4,5
 103,16,Round Robin,Rat Girl Minions,Goobies Mum,5,3
 104,16,Championship,Rat Girl Minions,Moon Baboons,3,5
+105,17,Round Robin,Rat Girl Minions,Goobies Mum,4,15
+106,17,Round Robin,Moon Baboons,Goobies Mum,8,12
+107,17,Round Robin,Rat Girl Minions,Moon Baboons,5,15
+107,17,Championship,Goobies Mum,Moon Baboons,23,12
