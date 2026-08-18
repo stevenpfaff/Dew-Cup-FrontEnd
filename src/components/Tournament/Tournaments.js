@@ -43,35 +43,48 @@ function Tourneys() {
 
       <h1 className="title">Tournaments</h1>
 
-      <div className="stats-toggle">
-        <button
-          className={
-            sport === 'minibats'
-              ? 'toggle-button active'
-              : 'toggle-button'
-          }
-          onClick={() => handleSportChange('minibats')}
-        >
-          MiniBats
-        </button>
+<div className="stats-toggle">
+  <button
+    className={
+      sport === 'minibats'
+        ? 'toggle-button active'
+        : 'toggle-button'
+    }
+    onClick={() => handleSportChange('minibats')}
+  >
+    MiniBats
+  </button>
 
-        <button
-          className={
-            sport === 'hockey'
-              ? 'toggle-button active'
-              : 'toggle-button'
-          }
-          onClick={() => handleSportChange('hockey')}
-        >
-          Hockey
-        </button>
-      </div>
+  <button
+    className={
+      sport === 'hockey'
+        ? 'toggle-button active'
+        : 'toggle-button'
+    }
+    onClick={() => handleSportChange('hockey')}
+  >
+    Hockey
+  </button>
 
-      <h2 className="minibats-subtitle">
-        {sport === 'hockey'
-          ? 'Hockey Tournaments'
-          : 'MiniBats Tournaments'}
-      </h2>
+  <button
+    className={
+      sport === 'homerun'
+        ? 'toggle-button active'
+        : 'toggle-button'
+    }
+    onClick={() => handleSportChange('homerun')}
+  >
+    Home Run Derby
+  </button>
+</div>
+
+<h2 className="minibats-subtitle">
+  {sport === 'hockey'
+    ? 'Hockey Tournaments'
+    : sport === 'homerun'
+      ? 'Home Run Derbies'
+      : 'MiniBat Tournaments'}
+</h2>
 
       <div className="table-responsive">
         <table className="minibats-table">
@@ -79,6 +92,7 @@ function Tourneys() {
             <tr>
               <th>Series</th>
               <th>Year</th>
+              <th>Venue</th>
               <th>Winner</th>
               <th>Runner Up</th>
               <th>MVP</th>
@@ -98,6 +112,7 @@ function Tourneys() {
                 </td>
 
                 <td>{tourney.year}</td>
+                <td>{tourney.venue}</td>
                 <td>{tourney.winner}</td>
                 <td>{tourney.runnerup}</td>
                 <td>{tourney.MVP}</td>

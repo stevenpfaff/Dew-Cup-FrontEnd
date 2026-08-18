@@ -1,18 +1,18 @@
-id,sport,name,image,year,winner,runnerup,MVP,players
-1,hockey,Dew Cup I,/Images/dc1.jpg,2019,Moon Baboons,Buds Wood,N/A,Alex Fountain | Jeep Aspenleiter | Matt Huinker | Steven Pfaff | Zack Fountain
-2,hockey,Dew Cup II,/Images/dc 2.jpg,2021,Squid Niqs,Goobies Mum,Hoag Braun,Boog Schickert | Deer Hunt | Hoag Braun | Rick Bonis
-3,hockey,Dew Cup III,/Images/dc3.jpg,2021,Goobies Mum,Buds Wood,Garry Bob,Capn Bartz | Garry Bob | Pesky Zub
-4,minibats,Buddy Wood Memorial I,/Images/budwood1.jpg,2021,Goobies Mum,Moon Baboons,Garry Bob,Big Ted | Brock Deist | Garry Bob | Pesky Zub | Seth Mlodzik
-5,minibats,Jemile Weeks Homerun Derby I,/Images/zubderby.jpg,2021,Pesky Zub,Garry Bob,N/A,N/A
-6,hockey,Dew Cup IV,/Images/sqn22.jpg,2022,Squid Niqs,Buds Wood,Boog Schickert,BB Pfaff | Boog Schickert | Hannah Vogel | Rick Bonis
-7,hockey,Code Red Classic I,/Images/bgmcrc.jpg,2022,Goobies Mum,Goobies Cudas,Charles Eckert,Charles Eckert | Garry Bob | Pesky Zub
-8,minibats,Buddy Wood Memorial II,/Images/bw2.jpg,2022,Squid Niqs,Goobies Mum,Deer Hunt,Boog Schickert | Deer Hunt | MJG | Rick Bonis
-9,minibats,Jemile Weeks Homerun Derby II,/Images/bbderby.jpg,2022,BB Pfaff,Hoag Braun,N/A,N/A
-10,hockey,Dew Cup V,/Images/sqd.jpg,2023,Squid Niqs,Goobies Cudas,Zack Fountain,Matt Huinker | Rick Bonis | Zack Fountain
-11,minibats,Buddy Wood Memorial III,/Images/bgm.jpg,2023,Goobies Mum,Moon Baboons,Garry Bob,Charles Eckert | Garry Bob | Pesky Zub | Rhino Monkey
-12,minibats,Jemile Weeks Homerun Derby III,,2023,Pesky Zub,Marvin Bateman,N/A,N/A
-13,minibats,Buddy Wood Memorial IV,/Images/squid.jpg,2024,Squid Niqs,Goobies Mum,Sam Schodron,Joshua Baker | MJG | Rick Bonis | Sam Schodron
-14,minibats,Jemile Weeks Homerun Derby IV,,2024,Garry Bob,Pesky Zub,N/A,N/A
-15,hockey,Dew Cup VI,/Images/dewcup6.jpeg,2025,Rat Girl Minions,Buds Wood,Seth Mlodzik,BB Pfaff | Lauren McCormack | Megan Stautz | Rick Bonis | Teague
-16,hockey,Code Red Classic II,/Images/crc2.jpg,2026,Moon Baboons,Rat Girl Minions,Hoag Braun,Hoag Braun | Markiki Bateman | Steven Pfaff
-17,minibats,Buddy Wood Memorial V,,2026,Goobies Mum,Moon Baboons,Charles Eckert,Charles Eckert | Garry Bob | Pesky Zub
+id,sport,name,image,year,winner,runnerup,MVP,players,venue
+1,hockey,Dew Cup I,/Images/dc1.jpg,2019,Moon Baboons,Buds Wood,N/A,Alex Fountain | Jeep Aspenleiter | Matt Huinker | Steven Pfaff | Zack Fountain,Jackson Trailer Park
+2,hockey,Dew Cup II,/Images/dc 2.jpg,2021,Squid Niqs,Goobies Mum,Hoag Braun,Boog Schickert | Deer Hunt | Hoag Braun | Rick Bonis,Hasmer Lake
+3,hockey,Dew Cup III,/Images/dc3.jpg,2021,Goobies Mum,Buds Wood,Garry Bob,Capn Bartz | Garry Bob | Pesky Zub,Regner Park
+4,minibats,Buddy Wood Memorial I,/Images/budwood1.jpg,2021,Goobies Mum,Moon Baboons,Garry Bob,Big Ted | Brock Deist | Garry Bob | Pesky Zub | Seth Mlodzik,Pfaff Field I
+5,homerun,Jemile Weeks Homerun Derby I,/Images/zubderby.jpg,2021,Pesky Zub,Garry Bob,N/A,N/A,Pfaff Field I
+6,hockey,Dew Cup IV,/Images/sqn22.jpg,2022,Squid Niqs,Buds Wood,Boog Schickert,BB Pfaff | Boog Schickert | Hannah Vogel | Rick Bonis,Hasmer Lake
+7,hockey,Code Red Classic I,/Images/bgmcrc.jpg,2022,Goobies Mum,Goobies Cudas,Charles Eckert,Charles Eckert | Garry Bob | Pesky Zub,Hasmer Lake
+8,minibats,Buddy Wood Memorial II,/Images/bw2.jpg,2022,Squid Niqs,Goobies Mum,Deer Hunt,Boog Schickert | Deer Hunt | MJG | Rick Bonis,Pfaff Field II
+9,homerun,Jemile Weeks Homerun Derby II,/Images/bbderby.jpg,2022,BB Pfaff,Hoag Braun,N/A,N/A,Pfaff Field II
+10,hockey,Dew Cup V,/Images/sqd.jpg,2023,Squid Niqs,Goobies Cudas,Zack Fountain,Matt Huinker | Rick Bonis | Zack Fountain,Hasmer Lake
+11,minibats,Buddy Wood Memorial III,/Images/bgm.jpg,2023,Goobies Mum,Moon Baboons,Garry Bob,Charles Eckert | Garry Bob | Pesky Zub | Rhino Monkey,Jackson Town Hall
+12,homerun,Jemile Weeks Homerun Derby III,,2023,Pesky Zub,Marvin Bateman,N/A,N/A,Jackson Town Hall
+13,minibats,Buddy Wood Memorial IV,/Images/squid.jpg,2024,Squid Niqs,Goobies Mum,Sam Schodron,Joshua Baker | MJG | Rick Bonis | Sam Schodron,Kuester Island
+14,homerun,Jemile Weeks Homerun Derby IV,,2024,Garry Bob,Pesky Zub,N/A,N/A,Kuester Island
+15,hockey,Dew Cup VI,/Images/dewcup6.jpeg,2025,Rat Girl Minions,Buds Wood,Seth Mlodzik,BB Pfaff | Lauren McCormack | Megan Stautz | Rick Bonis | Teague,Hasmer Lake
+16,hockey,Code Red Classic II,/Images/crc2.jpg,2026,Moon Baboons,Rat Girl Minions,Hoag Braun,Hoag Braun | Markiki Bateman | Steven Pfaff,Tilly Lake
+17,minibats,Buddy Wood Memorial V,,2026,Goobies Mum,Moon Baboons,Charles Eckert,Charles Eckert | Garry Bob | Pesky Zub,Pfaff Field III

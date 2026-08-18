@@ -54,7 +54,7 @@ class Home extends Component {
                 <section id="about">
                     <h2>Jemile Weeks Homerun Derby</h2>
                     <p>
-                        Folowing every Buddy Wood Memorial, a homerun derby takes place in honor of the great major leaguer
+                        Following every Buddy Wood Memorial, a homerun derby takes place in honor of the great major leaguer
                         Jemile Weeks.
                     </p>
                     <div className="gallery">
@@ -67,24 +67,12 @@ class Home extends Component {
                 <img src={Crc} alt="..." height="75" width="150"></img>
                     <p>
                         In 2022, the weather was near perfect for pond hockey and it allowed us to operate a second tournament.
-                        Unfortunately, this could not be registered as a Dew Cup due to Mr. Wood being away at basic training.
+                        Unfortunately, this could not be registered as a Dew Cup due to Mr. Wood being away at basic training. This event happened
+                        again in 2026.
                     </p>
                     <div className="gallery">
+                        <img src="./Images/crc2.jpg" alt="Rat Girl Minions 2022 Code Red Classic" />
                         <img src="./Images/bgmcrc.jpg" alt="Goobies Mum 2022 Code Red Classic" />
-                        <img src="./Images/rgm.jpg" alt="Rat Girl Minions 2022 Code Red Classic" />
-                    </div>
-                </section>
-
-                <section id="about">
-                    <h2>Coors Clash</h2>
-                    <p>
-                        The Fellas began routinely getting together on Sunday afternoons during the summer in 2022 to play
-                        minibats. We began tracking this as the Coors Clash, which can be looked at as similar to a "regular season"
-                        that leads up to the Buddy Wood Memorial.
-                    </p>
-                    <div className="gallery">
-                        <img src="./Images/coors1.PNG" alt="2022 Coors Clash" />
-                        <img src="./Images/hont.PNG" alt="Deer Hunt in action" />
                     </div>
                 </section>
 
