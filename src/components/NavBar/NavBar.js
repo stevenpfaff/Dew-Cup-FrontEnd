@@ -24,12 +24,12 @@ function NavBar() {
                         </NavDropdown>
                         <NavDropdown title="Minibat Stats" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="/batting">All-Time Stats</NavDropdown.Item>
-                            <NavDropdown.Item href="/batting/2026">2026 Batting</NavDropdown.Item>
-                            <NavDropdown.Item href="/batting/2025">2025 Batting</NavDropdown.Item>
-                            <NavDropdown.Item href="/batting/2024">2024 Batting</NavDropdown.Item>
-                            <NavDropdown.Item href="/batting/2023">2023 Batting</NavDropdown.Item>
-                            <NavDropdown.Item href="/batting/2022">2022 Batting</NavDropdown.Item>
-                            <NavDropdown.Item href="/batting/2021">2021 Batting</NavDropdown.Item>
+                            <NavDropdown.Item href="/yearly/2026">2026 Stats</NavDropdown.Item>
+                            <NavDropdown.Item href="/yearly/2025">2025 Stats</NavDropdown.Item>
+                            <NavDropdown.Item href="/yearly/2024">2024 Stats</NavDropdown.Item>
+                            <NavDropdown.Item href="/yearly/2023">2023 Stats</NavDropdown.Item>
+                            <NavDropdown.Item href="/yearly/2022">2022 Stats</NavDropdown.Item>
+                            <NavDropdown.Item href="/yearly/2021">2021 Stats</NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link href="/hockey">Hockey Stats</Nav.Link>
                         <NavDropdown title="YouTube Videos" id="collasible-nav-dropdown">
