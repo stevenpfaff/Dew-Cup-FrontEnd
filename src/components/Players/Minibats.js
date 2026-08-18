@@ -132,8 +132,8 @@ function Minibats() {
             statType === 'hitting' &&
             ['average', 'obp', 'slug', 'ops'].includes(key)
         ) {
-            const qualifiers = players.filter((p) => p.ab >= 100);
-            const nonQualifiers = players.filter((p) => p.ab < 100);
+            const qualifiers = players.filter((p) => p.ab >= 85);
+            const nonQualifiers = players.filter((p) => p.ab < 85);
 
             const sortedQualifiers = sortArray(qualifiers);
             const sortedNonQualifiers = sortArray(nonQualifiers);
