@@ -11,6 +11,8 @@ import HockeyCard from './components/Players/HockeyCard';
 import BaseballCard from './components/Players/BaseballCard';
 import TourneyCard from './components/Tournament/TourneyCard';
 import YearlyStats from './components/Players/YearlyStats';
+import Venues from './components/Misc/Venues';
+import SeasonRecords from './components/Misc/SeasonRecords';
 import { useParams } from 'react-router-dom';
 
 function StatsWrapper() {
@@ -35,7 +37,9 @@ function App() {
         <Route path="/baseballcard/:id1" element={<BaseballCard />} />
         {/* <Route path="/team/:id" element={<TeamCard />} /> */}
         <Route path="/tourney/:tourney_id" element={<TourneyCard />} />
-       <Route path="/yearly/:year" element={<StatsWrapper />} />
+        <Route path="/yearly/:year" element={<StatsWrapper />} />
+        <Route path="/venues" element={<Venues />} />
+        <Route path="/records" element={<SeasonRecords/>} />
       </Routes>
     </>
   );

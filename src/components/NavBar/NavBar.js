@@ -30,6 +30,8 @@ function NavBar() {
                             <NavDropdown.Item href="/yearly/2023">2023 Stats</NavDropdown.Item>
                             <NavDropdown.Item href="/yearly/2022">2022 Stats</NavDropdown.Item>
                             <NavDropdown.Item href="/yearly/2021">2021 Stats</NavDropdown.Item>
+                            <NavDropdown.Item href="/venues">Venue Data</NavDropdown.Item>
+                            <NavDropdown.Item href="/records">Season Records</NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link href="/hockey">Hockey Stats</Nav.Link>
                         <NavDropdown title="YouTube Videos" id="collasible-nav-dropdown">
