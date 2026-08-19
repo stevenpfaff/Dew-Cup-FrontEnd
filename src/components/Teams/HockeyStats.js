@@ -3,6 +3,12 @@ import { SortNumericUp } from 'react-bootstrap-icons';
 import Button from '@mui/material/Button';
 
 const HockeyStatsTable = ({ teams, sortData, onTeamClick }) => (
+  <div className="minibats-container">
+
+  <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+  />
   <div className="table-responsive">
     <table className="minibats-table">
       <thead>
@@ -65,6 +71,7 @@ const HockeyStatsTable = ({ teams, sortData, onTeamClick }) => (
         ))}
       </tbody>
     </table>
+  </div>
   </div>
 );
 
