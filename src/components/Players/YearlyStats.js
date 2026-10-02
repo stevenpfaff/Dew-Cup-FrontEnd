@@ -161,16 +161,7 @@ function YearlyStats({ year }) {
 
   return (
     <div className="minibats-container">
-
-      <h1 className="minibats-title">
-        {year}{' '}
-        {statType === 'batting'
-          ? 'Batting'
-          : 'Pitching'}{' '}
-        Stats
-      </h1>
-
-            <div className="stats-toggle">
+                  <div className="stats-toggle">
 
         <button
           className={
@@ -201,6 +192,14 @@ function YearlyStats({ year }) {
         </button>
 
       </div>
+
+      <h1 className="minibats-title">
+        {year}{' '}
+        {statType === 'batting'
+          ? 'Batting'
+          : 'Pitching'}{' '}
+        Stats
+      </h1>
 
       <div className="table-responsive">
         <table className="minibats-table">

@@ -170,17 +170,7 @@ function Minibats() {
                 name="viewport"
                 content="width=device-width, initial-scale=1.0"
             />
-
-            <h1 className="minibats-title">
-                Minibat All-Time{' '}
-                {statType === 'hitting'
-                    ? 'Batting'
-                    : 'Pitching'}{' '}
-                Stats
-            </h1>
-
-
-            {/* HITTING / PITCHING TOGGLE */}
+                       {/* HITTING / PITCHING TOGGLE */}
             <div className="stats-toggle">
 
                 <button
@@ -213,11 +203,17 @@ function Minibats() {
 
             </div>
 
-
+            <h1 className="minibats-title">
+                Minibat All-Time{' '}
+                {statType === 'hitting'
+                    ? 'Batting'
+                    : 'Pitching'}{' '}
+                Stats
+            </h1>
             {/* HITTING QUALIFIER */}
             {statType === 'hitting' && (
                 <p className="note">
-                    *Must have 100 AB's to qualify for slashing leaderboard.
+                    *Must have 85 AB's to qualify for slashing leaderboard.
                 </p>
             )}
 

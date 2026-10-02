@@ -77,7 +77,7 @@ const totalWAR = oWAR + pWAR;
 
   return (
     <div className="player-card-wrapper">
-      <div className="player-card-container instagram-card">
+      <div className="player-card-container">
         <div className="player-image-section">
           <h1 className="player-name">
           {playerInfo.mini && (
@@ -225,7 +225,7 @@ const totalWAR = oWAR + pWAR;
                 <th>K</th>
                 <th>HR</th>
                 <th>ERA</th>
-                {/* <th>FIP</th> */}
+                <th>FIP</th>
                 <th>WAR</th>
               </tr>
             </thead>
@@ -234,14 +234,14 @@ const totalWAR = oWAR + pWAR;
                 pitchingStats.map((stat, index) => (
                   <tr key={index}>
                     <td>Career</td>
-                    <td>{stat.ip}</td>
+                    <td>{parseFloat(stat.ip).toFixed(0)}</td>
                     <td>{stat.w}</td>
                     <td>{stat.l}</td>
                     <td>{stat.sv}</td>
                     <td>{stat.so}</td>
                     <td>{stat.hra}</td>
                     <td>{parseFloat(stat.era).toFixed(2)}</td>
-                    {/* <td>{parseFloat(stat.fip).toFixed(2)}</td>   */}
+                    <td>{parseFloat(stat.fip).toFixed(2)}</td>  
                     <td>{parseFloat(stat.war).toFixed(1)}</td>  
                   </tr>
                 ))
